@@ -517,11 +517,11 @@
 
   <!-- Hero Section -->
   <section
-    class="relative pt-[96px] px-[20px] pb-[40px] md:pb-[87px] md:pt-[140px] overflow-hidden relative -mt-[80px] h-full flex items-center"
-    style="background-image: url('Testdino Landing Page Images/home-bg.png'); background-repeat: no-repeat; background-size: cover; background-position: center bottom;">
+    class="relative pt-[96px] px-[20px] pb-[40px] md:pb-[87px] md:pt-[140px] overflow-hidden relative -mt-[80px] h-full min-h-[72vh] md:min-h-[82vh] flex items-center"
+    style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.8) 25%, rgba(255,255,255,0.55) 55%, rgba(255,255,255,0.2) 85%, rgba(255,255,255,0) 100%), url('Testdino Landing Page Images/beautiful-shot-mountains-trees-covered-snow-fog.jpg'); background-repeat: no-repeat; background-size: 100% 100%, 150% auto; background-position: center top, center 18%;">
     <!-- Decorative Star -->
 
-    <div class="mx-auto max-w-[1280px]">
+    <div class="mx-auto max-w-[1680px]">
       <!-- Hero Content -->
       <div class="text-center mb-[46px] md:mb-10">
         <div class="flex items-center justify-center mb-[12px] md:mb-6">
@@ -618,10 +618,10 @@
 
         </ul>
         <!-- Image/Video Container -->
-        <div class="flex w-full max-w-full md:max-w-[1084px] mx-auto"
+        <div class="flex w-full max-w-full md:max-w-[1920px] lg:max-w-[2200px] xl:max-w-[2560px] 2xl:max-w-[3200px] mx-auto"
           style="gap:10px;opacity:1;border-radius:12px;border-width:1px;padding:1px;">
           <div id="imageWrapper"
-            class="relative flex overflow-hidden shadow-[0_20px_25px_0_rgba(0,0,0,0.03)] w-full h-[220px] md:h-[480px] lg:h-[600px] mx-auto rounded-[12px] border border-[#E2E4E9] p-[1px] bg-white"
+            class="relative flex overflow-hidden shadow-[0_20px_25px_0_rgba(0,0,0,0.06)] w-full h-[220px] md:h-[600px] lg:h-[700px] mx-auto rounded-[12px] border border-[#E2E4E9] p-[1px] bg-white"
             style="width:100%;">
             <!-- Static fallback image, shown by default -->
             <img id="mainImage" src="Testdino Landing Page Images/Hero section thumbnail image/Test Runs.svg"
@@ -651,43 +651,41 @@
             </div>
           </div>
         </div>
-        <h5 class="ff-Manrope text-[20px] md:text-[24px] leading-normal text-[#0B0C0E] font-[600] mt-[16px] md:mt-6">AI
-          Failure Categorization</h5>
-        <p
-          class="text-strat text-[14px] md:text-[16px] mt-[8px] leading-[24px] flex-grow flex items-start justify-strat">
-          Know exactly what broke. Get instant failure classification with confidence scores. Gets smarter with every
-          test run you execute.</p>
       </div>
-      <div class="bg-white-100 p-[17px] md:p-6 rounded-2xl flex flex-col h-full item-calm-box bg-white">
-        <img src="Testdino Landing Page Images/Service section images/Failure classification.svg" alt=""
-          class="mx-auto h-100 w-100">
-        <h5 class="ff-Manrope text-[20px] md:text-[24px] leading-normal text-[#0B0C0E] font-[600] mt-[16px] md:mt-6">
-          Failure Classification</h5>
-        <p
-          class="text-strat text-[14px] md:text-[16px] mt-[8px] leading-[24px] flex-grow flex items-start justify-strat">
-          Know exactly why tests fail. Get detailed breakdowns of failure types and flaky patterns.</p>
-      </div>
-      <div class="bg-white-100 p-[17px] md:p-6 rounded-2xl flex flex-col h-full item-calm-box bg-white">
-        <img src="Testdino Landing Page Images/Service section images/AI insights.svg" alt=""
-          class="mx-auto h-100 w-100">
-        <h5 class="ff-Manrope text-[20px] md:text-[24px] leading-normal text-[#0B0C0E] font-[600] mt-[16px] md:mt-6">AI
-          Insights</h5>
-        <p
-          class="text-strat text-[14px] md:text-[16px] mt-[8px] leading-[24px] flex-grow flex items-start justify-strat">
-          Save hours of debugging time. Get automated insights to solve problems.</p>
-      </div>
-      <div class="bg-white-100 p-[17px] md:p-6 rounded-2xl flex flex-col h-full item-calm-box bg-white">
-        <img src="Testdino Landing Page Images/Service section images/Smart recommendations.svg" alt=""
-          class="mx-auto h-100 w-100">
-        <h5 class="ff-Manrope text-[20px] md:text-[24px] leading-normal text-[#0B0C0E] font-[600] mt-[16px] md:mt-6">
-          Smart Recommendations</h5>
-        <p
-          class="text-strat text-[14px] md:text-[16px] mt-[8px] leading-[24px] flex-grow flex items-start justify-strat">
-          Don't just find problems. Get step-by-step fixes that work.</p>
-      </div>
-    </div>
-    </div>
+    
   </section>
+
+    <!-- Automated test intelligence (Cards 2x2) -->
+    <section class="py-[48px] md:py-[96px] bg-white">
+      <div class="container mx-auto px-4 max-w-[1280px]">
+        <div class="text-center mb-[24px] md:mb-[48px]">
+          <h2 class="ff-Manrope text-[28px] md:text-[42px] text-[#0B0C0E] font-[700]">Automated test intelligence</h2>
+          <p class="text-[14px] md:text-[16px] text-[#0B0C0E] max-w-3xl mx-auto">Stop manually analyzing test failures. Our AI identifies issues and provides solutions automatically, saving development teams hours daily</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-[16px] md:gap-[24px]">
+          <div class="p-[17px] md:p-6 rounded-2xl border border-[#E2E4E9] bg-white">
+            <img src="Testdino Landing Page Images/Service section images/AI failure categorization.svg" alt="AI failure categorization" class="w-full h-auto rounded-lg">
+            <h5 class="ff-Manrope text-[20px] md:text-[24px] leading-normal text-[#0B0C0E] font-[600] mt-[16px] md:mt-6">AI failure categorization</h5>
+            <p class="text-strat text-[14px] md:text-[16px] mt-[8px] leading-[24px]">Know exactly what broke. Get instant failure classification with confidence scores. Gets smarter with every test run you execute.</p>
+          </div>
+          <div class="p-[17px] md:p-6 rounded-2xl border border-[#E2E4E9] bg-white">
+            <img src="Testdino Landing Page Images/Service section images/Failure classification.svg" alt="Failure classification" class="w-full h-auto rounded-lg">
+            <h5 class="ff-Manrope text-[20px] md:text-[24px] leading-normal text-[#0B0C0E] font-[600] mt-[16px] md:mt-6">Failure classification</h5>
+            <p class="text-strat text-[14px] md:text-[16px] mt-[8px] leading-[24px]">Know exactly why tests fail. Get detailed breakdowns of failure types and flaky patterns.</p>
+          </div>
+          <div class="p-[17px] md:p-6 rounded-2xl border border-[#E2E4E9] bg-white">
+            <img src="Testdino Landing Page Images/Service section images/AI insights.svg" alt="AI insights" class="w-full h-auto rounded-lg">
+            <h5 class="ff-Manrope text-[20px] md:text-[24px] leading-normal text-[#0B0C0E] font-[600] mt-[16px] md:mt-6">AI insights</h5>
+            <p class="text-strat text-[14px] md:text-[16px] mt-[8px] leading-[24px]">Save hours of debugging time. Get automated insights to solve problems.</p>
+          </div>
+          <div class="p-[17px] md:p-6 rounded-2xl border border-[#E2E4E9] bg-white">
+            <img src="Testdino Landing Page Images/Service section images/Smart recommendations.svg" alt="Smart recommendations" class="w-full h-auto rounded-lg">
+            <h5 class="ff-Manrope text-[20px] md:text-[24px] leading-normal text-[#0B0C0E] font-[600] mt-[16px] md:mt-6">Smart recommendations</h5>
+            <p class="text-strat text-[14px] md:text-[16px] mt-[8px] leading-[24px]">Don't just find problems. Get step-by-step fixes that work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
   <!-- Interactive Feature Section -->
   <section class="pt-[40px] pb-[56px] md:pt-[90px] md:pb-[120px] mb-py-20 bg-white">
@@ -808,7 +806,8 @@
                           </div>
                           <div class="flex items-center space-x-3">
                             <span class="text-[14px] leading-[14px] md:text-[16px]">
-                              <img class="w-[16px] h-[16px]" src="https://testdino.com/wp-content/themes/Testdino/images/fi_1442912.svg">
+                              <img class="w-[16px] h-[16px]"
+                                src="Testdino Landing Page Images/icons/fi_1442912.svg">
                             </span>
                             <span class="ff-geist text-[14px] leading-[14px] md:text-[16px]">Compare performance across
                               all environments.</span>
