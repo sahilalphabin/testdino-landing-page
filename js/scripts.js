@@ -252,9 +252,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const featureId = button.getAttribute('data-feature-id');
       const imgSrc = button.getAttribute('data-img-src');
 
-      // update the right side image
-      if (interactiveFeatureMockup && imgSrc)
-        interactiveFeatureMockup.src = 'https://testdino.com/wp-content/themes/Testdino/images/' + imgSrc;
+      // update the right side image (use provided path directly)
+      if (interactiveFeatureMockup && imgSrc) {
+        interactiveFeatureMockup.src = imgSrc;
+      }
 
       // Show/hide mockups based on data-id
       mockups.forEach(mockup => {
