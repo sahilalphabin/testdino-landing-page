@@ -118,10 +118,10 @@ $(function () {
   // home section img 
 function changeImage(id, el) {
   const imageMap = {
-    image1: 'https://testdino.com/wp-content/themes/Testdino/images/Test Runs bg.svg',
-    image2: 'https://testdino.com/wp-content/themes/Testdino/images/Pull Requests bg.svg',
-    image3: 'https://testdino.com/wp-content/themes/Testdino/images/AI Insights bg.svg',
-    image4: 'https://testdino.com/wp-content/themes/Testdino/images/Analytics bg.svg'
+    image1: 'Testdino Landing Page Images/Analytics section images/Test Runs bg.svg',
+    image2: 'Testdino Landing Page Images/Analytics section images/Pull Requests bg.svg',
+    image3: 'Testdino Landing Page Images/Analytics section images/AI Insights bg.svg',
+    image4: 'Testdino Landing Page Images/Analytics section images/Analytics bg.svg'
   };
 
   const videoMap = {
