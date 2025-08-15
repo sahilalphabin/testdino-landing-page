@@ -9,9 +9,10 @@ window.addEventListener('scroll', () => {
   nav.style.margin = '10px auto';
   nav.style.padding = '10px 20px';
   nav.style.boxShadow = '0px 4px 12px rgba(0, 0, 0, 0.25)';
-  nav.style.backgroundColor = "#fff";
+  nav.style.backgroundColor = "rgba(255, 255, 255, 0.6)";
   header.style.padding = '0 16px';
-  header.style.backgroundColor = 'transparent';
+  nav.style.backdropFilter = 'blur(12px)';
+
 
   // Add margin-top: 25px on mobile screens
   if (window.innerWidth <= 768) {
@@ -27,7 +28,8 @@ window.addEventListener('scroll', () => {
     nav.style.boxShadow = 'none';
     header.style.padding = '0 16px';
     nav.style.backgroundColor = "transparent"
-    header.style.backgroundColor = 'transparent'; // remove background
+    nav.style.backdropFilter = 'blur(12px)';
+
   }
 });
 
