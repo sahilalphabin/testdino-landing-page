@@ -664,6 +664,9 @@ input[type=range]::-moz-range-thumb {
   right: -4px;
 }
 
+#videoWrapper{
+  display: none !important;
+}
 
 
 .sec-google-widget-main .leading-tight {

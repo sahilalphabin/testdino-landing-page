@@ -135,26 +135,29 @@ function changeImage(id, el) {
 
   const imageWrapper = document.getElementById('imageWrapper');
   const videoUrl = videoMap[id];
-
-  // Replace entire wrapper content (image + svg)
+  // Replace entire wrapper content with responsive video iframe
   imageWrapper.innerHTML = `
-    <img id="mainImage" src="${imageMap[id]}" class="w-full h-full transition-all duration-500" alt="Dashboard Image">
-    <a href="javascript:void(0)" id="svgOverlay" data-video="${videoUrl}"
-      class="group absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-      onclick="playVideo(this)">
-      <svg class="md:w-16 md:h-16 w-[17px] h-[12px] fill-[#ACACAC] group-hover:fill-red-500 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-          <path d="M33.3329 49.9998L50.6329 39.9998L33.3329 29.9998V49.9998ZM71.8663 23.8998C72.2996 25.4665 72.5996 27.5665 72.7996 30.2332C73.0329 32.8998 73.1329 35.1998 73.1329 37.1998L73.3329 39.9998C73.3329 47.2998 72.7996 52.6665 71.8663 56.0998C71.0329 59.0998 69.0996 61.0332 66.0996 61.8665C64.5329 62.2998 61.6663 62.5998 57.2663 62.7998C52.9329 63.0332 48.9663 63.1332 45.2996 63.1332L39.9996 63.3332C26.0329 63.3332 17.3329 62.7998 13.8996 61.8665C10.8996 61.0332 8.96626 59.0998 8.13293 56.0998C7.69959 54.5332 7.39959 52.4332 7.19959 49.7665C6.96626 47.0998 6.86626 44.7998 6.86626 42.7998L6.66626 39.9998C6.66626 32.6998 7.19959 27.3332 8.13293 23.8998C8.96626 20.8998 10.8996 18.9665 13.8996 18.1332C15.4663 17.6998 18.3329 17.3998 22.7329 17.1998C27.0663 16.9665 31.0329 16.8665 34.6996 16.8665L39.9996 16.6665C53.9663 16.6665 62.6663 17.1998 66.0996 18.1332C69.0996 18.9665 71.0329 20.8998 71.8663 23.8998Z"/>
-        </svg>
-    </a>
+    <div style="position:relative;width:90vw;margin:0 auto;">
+      <div style="padding-top:56.25%;"></div>
+      <iframe
+        src="${videoUrl}"
+        style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;min-height:220px;"
+        class="transition-all duration-500 w-full h-full"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        title="Demo Video"
+      ></iframe>
+    </div>
   `;
 
- // Update active button styles
+  // Update active button styles
   const buttons = document.querySelectorAll('#sidebarList button');
   buttons.forEach(btn => {
-    btn.classList.remove('bg-[#F1F2F4]', 'font-[700]','border', 'border-[#D4D4D4]');
+    btn.classList.remove('bg-[#F1F2F4]', 'font-[700]', 'border', 'border-[#D4D4D4]');
   });
 
-  el.classList.add('bg-[#F1F2F4]', 'font-[700]','border', 'border-[#D4D4D4]');
+  el.classList.add('bg-[#F1F2F4]', 'font-[700]', 'border', 'border-[#D4D4D4]');
 }
 
 function playVideo(el) {
@@ -162,11 +165,18 @@ function playVideo(el) {
   const imageWrapper = document.getElementById('imageWrapper');
 
   imageWrapper.innerHTML = `
-    <iframe class="w-[100%] h-[188px] md:w-[1260px] md:h-[440px]"
-      src="${videoUrl}"
-      frameborder="0"
-      allow="autoplay; encrypted-media"
-      allowfullscreen></iframe>
+    <div style="position:relative;width:90vw;margin:0 auto;">
+      <div style="padding-top:56.25%;"></div>
+      <iframe
+        src="${videoUrl}"
+        style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;min-height:220px;"
+        class="transition-all duration-500 w-full h-full"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        title="Demo Video"
+      ></iframe>
+    </div>
   `;
 }
 
