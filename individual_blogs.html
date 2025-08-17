@@ -175,74 +175,106 @@
         <!-- Left Sidebar - Table of Contents -->
         <div class="lg:w-1/4 mb-12 lg:mb-0">
           <div class="sticky top-28">
-            <nav id="toc-nav" class="space-y-6 ">
+            <nav id="toc-nav" class="flex flex-col gap-2">
               <a href="#why-security" 
-                 class="block text-[14px] font-bold text-[#171717] leading-tight relative pl-4 toc-link"
+                 class="toc-link relative pl-4 transition-all duration-200"
                  data-section="why-security">
-                Why Mobile App Security Can’t Be an Afterthought
+                <span class="text-[16px] font-bold text-[#171717] leading-tight">Why Mobile App Security Can't Be an Afterthought</span>
               </a>
               <a href="#what-makes-secure" 
-                 class="block text-[14px] text-[#404040] leading-tight hover:text-[#171717] transition-colors toc-link"
+                 class="toc-link relative pl-4 transition-all duration-200"
                  data-section="what-makes-secure">
-                What Makes a Mobile App Secure?
+                <span class="text-[16px] text-[#404040] leading-tight">What Makes a Mobile App Secure?</span>
               </a>
               <a href="#key-features" 
-                 class="block text-[14px] text-[#404040] leading-tight hover:text-[#171717] transition-colors toc-link"
+                 class="toc-link relative pl-4 transition-all duration-200"
                  data-section="key-features">
-                Key Features of a Mobile App<br/>Security Company
+                <span class="text-[16px] text-[#404040] leading-tight">Key Features of a Mobile App<br/>Security Company</span>
               </a>
               <a href="#security-practices" 
-                 class="block text-[14px] text-[#404040] leading-tight hover:text-[#171717] transition-colors toc-link"
+                 class="toc-link relative pl-4 transition-all duration-200"
                  data-section="security-practices">
-                Security Practices and Protocols
+                <span class="text-[16px] text-[#404040] leading-tight">Security Practices and Protocols</span>
               </a>
               <a href="#top-10-leaders" 
-                 class="block text-[14px] text-[#404040] leading-tight hover:text-[#171717] transition-colors toc-link"
+                 class="toc-link relative pl-4 transition-all duration-200"
                  data-section="top-10-leaders">
-                Meet the Top 10 Mobile App Security<br/>Leaders of 2025
+                <span class="text-[16px] text-[#404040] leading-tight">Meet the Top 10 Mobile App Security<br/>Leaders of 2025</span>
               </a>
               <a href="#choosing-partner" 
-                 class="block text-[14px] text-[#404040] leading-tight hover:text-[#171717] transition-colors toc-link"
+                 class="toc-link relative pl-4 transition-all duration-200"
                  data-section="choosing-partner">
-                Choosing the Best Security Partner
+                <span class="text-[16px] text-[#404040] leading-tight">Choosing the Best Security Partner</span>
               </a>
               <a href="#conclusion" 
-                 class="block text-[14px] text-[#404040] leading-tight hover:text-[#171717] transition-colors toc-link"
+                 class="toc-link relative pl-4 transition-all duration-200"
                  data-section="conclusion">
-                Conclusion
+                <span class="text-[16px] text-[#404040] leading-tight">Conclusion</span>
               </a>
             </nav>
           </div>
         </div>
-        <script>
-          // Highlight active section in ToC as user scrolls
-          document.addEventListener('DOMContentLoaded', function () {
-            const tocLinks = Array.from(document.querySelectorAll('.toc-link'));
-            const sectionIds = tocLinks.map(link => link.getAttribute('href'));
-            const sections = sectionIds.map(id => document.querySelector(id));
-            function onScroll() {
-              let activeIdx = 0;
-              for (let i = 0; i < sections.length; i++) {
-                if (sections[i] && window.scrollY + 120 >= sections[i].offsetTop) {
-                  activeIdx = i;
-                }
-              }
-              tocLinks.forEach((link, idx) => {
-                if (idx === activeIdx) {
-                  link.classList.add('font-bold', 'text-[#171717]');
-                  link.classList.remove('text-[#404040]');
-                  link.classList.add('before:absolute', 'before:left-0', 'before:top-1/2', 'before:w-1', 'before:h-4', 'before:bg-[#171717]', 'before:transform', 'before:-translate-y-1/2', 'before:rounded-r', 'pl-4', 'relative');
-                } else {
-                  link.classList.remove('font-bold', 'text-[#171717]');
-                  link.classList.add('text-[#404040]');
-                  link.classList.remove('before:absolute', 'before:left-0', 'before:top-1/2', 'before:w-1', 'before:h-4', 'before:bg-[#171717]', 'before:transform', 'before:-translate-y-1/2', 'before:rounded-r', 'pl-4', 'relative');
-                }
-              });
-            }
-            window.addEventListener('scroll', onScroll, { passive: true });
-            onScroll();
-          });
-        </script>
+                 <script>
+           // Highlight active section in ToC as user scrolls
+           document.addEventListener('DOMContentLoaded', function () {
+             const tocLinks = Array.from(document.querySelectorAll('.toc-link'));
+             const sectionIds = tocLinks.map(link => link.getAttribute('href'));
+             const sections = sectionIds.map(id => document.querySelector(id));
+             
+             function onScroll() {
+               let activeIdx = 0;
+               for (let i = 0; i < sections.length; i++) {
+                 if (sections[i] && window.scrollY + 120 >= sections[i].offsetTop) {
+                   activeIdx = i;
+                 }
+               }
+               
+               tocLinks.forEach((link, idx) => {
+                 const textSpan = link.querySelector('span');
+                 if (idx === activeIdx) {
+                   // Active section: bold text, dark color, full-height, narrow left bar
+                   textSpan.classList.add('text-[#171717]');
+                   textSpan.classList.remove('text-[#404040]');
+                   link.classList.add(
+                     'before:absolute',
+                     'before:left-0',
+                     'before:top-0',
+                     'before:w-[2px]',
+                     'before:h-full',
+                     'before:bg-[#171717]',
+                     'before:transform'
+                   );
+                   link.classList.remove(
+                     'before:top-1/2',
+                     'before:-translate-y-1/2',
+                     'before:w-1',
+                     'before:h-4'
+                   );
+                 } else {
+                   // Inactive section: normal text, gray color, no bar
+                   textSpan.classList.remove('text-[#171717]');
+                   textSpan.classList.add('text-[#404040]');
+                   link.classList.remove(
+                     'before:absolute',
+                     'before:left-0',
+                     'before:top-0',
+                     'before:w-[2px]',
+                     'before:h-full',
+                     'before:bg-[#171717]',
+                     'before:transform',
+                     'before:top-1/2',
+                     'before:-translate-y-1/2',
+                     'before:w-1',
+                     'before:h-4'
+                   );
+                 }
+               });
+             }
+             
+             window.addEventListener('scroll', onScroll, { passive: true });
+             onScroll();
+           });
+         </script>
 
         <!-- Main Content Area -->
         <div class="lg:w-3/4">
@@ -593,8 +625,8 @@
   <section class="py-16 bg-gray-50">
     <div class="max-w-[1200px] mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-[#171717] mb-4 ff-Manrope">Get started fast</h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        <h2 class="text-4xl font-bold text-[#171717] mb-4 ff-Manrope">Get started fast</h2>
+        <p class="text-md text-gray-600 max-w-4xl mx-auto">
           Step-by-step guides, real-world examples, and proven strategies to maximize your test reporting success
         </p>
         </div>
