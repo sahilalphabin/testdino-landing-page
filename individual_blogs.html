@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name='robots' content='noindex, nofollow' />
+  
+  <!-- Global CSS styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/input.css">
+
+  <title>Top 10 Mobile App Security Companies in USA for 2025 - Testdino</title>
+</head>
+
+<body class="flex min-h-screen flex-col bg-white">
+  <!-- Navigation -->
+  <div class="sticky h-[56px] md:h-[80px] px-4 w-full top-0 z-50 flex items-center justify-center font-inter bg-white border-gray-100" id="header">
+    <nav class="flex w-[1200px] mx-auto items-center justify-between rounded-[20px] relative transition-all duration-300" id="nav">
+      <div class="flex w-full items-center justify-between">
+        <!-- Logo -->
+        <a href="https://testdino.com" class="flex-shrink-0">
+          <div class="flex items-center gap-[8px]">
+            <img src="Testdino Landing Page Images/icons/logo_testdino.svg" alt="Testdino" class="h-auto">
+          </div>
+        </a>
+
+        <!-- Centered Nav Links -->
+        <div class="hidden md:flex flex-1 justify-center items-center gap-[32px]">
+          <a href="/" target="_self" class="text-[#171717] hover:text-black-300 transition-colors">Home</a>
+          <a href="/pricing/" target="_self" class="text-[#171717] hover:text-black-300 transition-colors">Pricing</a>
+          <a href="/docs/" target="_self" class="text-[#171717] hover:text-black-300 transition-colors">Docs</a>
+          <a href="blogs.html" target="_self" class="text-[#171717] hover:text-black-300 transition-colors font-[700]">Blog</a>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="#" target="_self" type="button" id="pop-up" class="pop-up hidden md:block rounded-[6px] bg-black px-[16px] py-[8px] text-[#ffffff] hover:bg-[#151515] transition-colors text-[16px]">Join waitlist</a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-black p-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+            <rect width="30" height="2" fill="#141414" />
+            <rect x="6" y="8" width="24" height="2" fill="#141414" />
+            <rect y="16" width="30" height="2" fill="#141414" />
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 h-full bg-[rgba(23,23,23,0.32)] z-50 md:hidden hidden">
+          <div class="flex flex-col bg-[#FFFFFF]">
+            <!-- Mobile Header -->
+            <div class="flex items-center justify-between px-[16px] py-[12px]">
+              <div class="flex items-center gap-2">
+                <img src="Testdino Landing Page Images/icons/logo_testdino.svg" alt="Testdino" class="h-auto">
+              </div>
+              <button id="close-mobile-menu" class="text-[#171717] p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none">
+                  <rect x="1.02203" y="15.8296" width="20.757" height="1.83901" transform="rotate(-45 1.02203 15.8296)" fill="#141414" />
+                  <rect x="1.90918" y="0.869999" width="20.757" height="1.83901" transform="rotate(45 1.90918 0.869999)" fill="#141414" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Mobile Menu Items -->
+            <div class="flex-1 px-6 pt-[30px] space-y-6 overflow-y-auto flex flex-col items-center justify-center">
+              <div class="space-y-4 flex flex-col items-center">
+                <a href="/" target="_self" class="block text-[#171717] text-[18px] leading-[24px] py-2 mobile-menu-link font-[700] text-center">Home</a>
+                <a href="/pricing/" target="_self" class="block text-[#171717] text-[18px] leading-[24px] py-2 mobile-menu-link text-center">Pricing</a>
+                <a href="/docs/" target="_self" class="block text-[#171717] text-[18px] leading-[24px] py-2 mobile-menu-link text-center">Docs</a>
+                <a href="blogs.html" target="_self" class="block text-[#171717] text-[18px] leading-[24px] py-2 mobile-menu-link text-center">Blog</a>
+              </div>
+            </div>
+
+            <!-- Mobile CTA -->
+            <div class="px-6 py-[32px] py-0">
+              <a href="#" target="_self" class="block w-full text-center rounded-[6px] bg-[#171717] px-6 py-3 text-[#ffffff] mobile-menu-link">Join waitlist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Main Blog Content -->
+  <main class="flex-1 py-8 md:py-12">
+    <div class="max-w-[1200px] mx-auto px-4">
+      <div class="lg:flex lg:gap-12">
+        <!-- Left Sidebar - Table of Contents -->
+        <div class="lg:w-1/4 mb-8 lg:mb-0">
+          <div class="sticky top-24">
+            <h3 class="text-lg font-semibold text-[#171717] mb-4 ff-Manrope">Why Mobile App Security Can't Be an Afterthought?</h3>
+            <nav class="space-y-3">
+              <a href="#what-makes-secure" class="block text-sm text-gray-600 hover:text-[#171717] transition-colors">What Makes Mobile App Secure?</a>
+              <a href="#key-features" class="block text-sm text-gray-600 hover:text-[#171717] transition-colors">Key Features of a Mobile App Security Company</a>
+              <a href="#security-practices" class="block text-sm text-gray-600 hover:text-[#171717] transition-colors">Security Practices and Protocols</a>
+              <a href="#top-10-leaders" class="block text-sm text-gray-600 hover:text-[#171717] transition-colors">Meet the Top 10 Mobile App Security Leaders of 2025</a>
+              <a href="#choosing-partner" class="block text-sm text-gray-600 hover:text-[#171717] transition-colors">Choosing the Best Security Partner</a>
+              <a href="#conclusion" class="block text-sm text-gray-600 hover:text-[#171717] transition-colors">Conclusion</a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="lg:w-3/4">
+          <!-- Blog Header -->
+          <div class="mb-8">
+            <h1 class="text-[32px] md:text-[40px] lg:text-[48px] font-bold text-[#171717] mb-4 leading-tight ff-Manrope">
+              Top 10 Mobile App Security Companies in USA for 2025
+            </h1>
+            
+            <div class="flex items-center gap-4 mb-6">
+              <img src="Testdino Landing Page Images/icons/Profile-1.webp" alt="Testdino team" class="w-10 h-10 rounded-full">
+              <div>
+                <p class="text-sm font-medium text-[#171717]">Testdino team</p>
+                <p class="text-sm text-gray-500">Jun 21, 2025</p>
+              </div>
+              <div class="flex gap-2 ml-auto">
+                <button class="p-2 text-gray-400 hover:text-[#171717] transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
+                  </svg>
+                </button>
+                <button class="p-2 text-gray-400 hover:text-[#171717] transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="mb-8">
+              <img src="Testdino Landing Page Images/blog_images/Green Fern.png" alt="Laptop with code and green plant" class="w-[600px] h-[340px] object-cover rounded-lg mx-auto">
+            </div>
+          </div>
+
+          <!-- Introduction -->
+          <div class="prose max-w-none mb-8">
+            <p class="text-lg text-gray-700 leading-relaxed">
+              Imagine downloading an app, and inputting your personal data, and a hacker in seconds finds a flaw to steal your information. Sounds scary, right? And today, mobile app security is no longer an add-on, it's the basis for user trust and business integrity.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed mt-4">
+              The overall global average cost per data breach was <span class="text-blue-600 font-semibold">$4.88M</span> and the highest spending emerged from the healthcare industry. Data protection of customers is critical to the stability of mobile apps, so client trust and confidence remain intact.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed mt-4">
+              Your defense should also get smarter, because so should cybercriminals. So when there are so many security providers out there, how do you choose the right one? That is where we come in! Fortunately for you, we have collated a list of the top 10 mobile app security companies in the USA for 2025, so you can confidently make a decision.
+            </p>
+          </div>
+
+          <!-- Why Mobile App Security Section -->
+          <section id="what-makes-secure" class="mb-12">
+            <h2 class="text-2xl font-bold text-[#171717] mb-6 ff-Manrope">Why Mobile App Security Can't Be an Afterthought?</h2>
+            <p class="text-lg text-gray-700 mb-6">
+              Before choosing a security provider, ensure they tick all the right boxes:
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <h3 class="font-semibold text-[#171717] mb-2">Data Protection</h3>
+                  <p class="text-gray-700">Safeguarding sensitive user information and business data from unauthorized access.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <h3 class="font-semibold text-[#171717] mb-2">Multi-Factor Authentication (MFA)</h3>
+                  <p class="text-gray-700">Adding multiple layers of verification to prevent unauthorized access.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <h3 class="font-semibold text-[#171717] mb-2">Real-Time Threat Detection</h3>
+                  <p class="text-gray-700">Monitoring and identifying security threats as they occur.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Embedded CTA Banner 1 -->
+          <div class="bg-blue-900 text-white p-6 rounded-lg mb-8">
+            <h3 class="text-xl font-semibold mb-3">Supercharge Your QA Pipeline with One-Click Integrations</h3>
+            <button class="bg-white text-blue-900 px-6 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors">
+              Get started now
+            </button>
+          </div>
+
+          <!-- Top 10 Leaders Section -->
+          <section id="top-10-leaders" class="mb-12">
+            <h2 class="text-2xl font-bold text-[#171717] mb-6 ff-Manrope">Meet the Top 10 Mobile App Security Leaders of 2025</h2>
+            <p class="text-gray-700 mb-6">
+              After extensive research and analysis, we've identified the top mobile app security companies that are setting industry standards and protecting businesses worldwide.
+            </p>
+
+            <!-- Code Snippet -->
+            <div class="bg-gray-100 p-4 rounded-lg mb-6">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-sm font-medium text-gray-700">Playwright Reporter Configuration</span>
+                <button class="text-sm text-blue-600 hover:text-blue-800 font-medium">Copy code</button>
+              </div>
+              <pre class="text-sm text-gray-800 overflow-x-auto"><code>{
+  "reporter": "html",
+  "outputDir": "./test-results",
+  "retries": 2,
+  "timeout": 30000
+}</code></pre>
+            </div>
+
+            <!-- Company 1 -->
+            <div class="mb-8">
+              <h3 class="text-xl font-bold text-[#171717] mb-3">1. Alphabin</h3>
+              <p class="text-lg font-semibold text-blue-600 mb-3">The Unmatched Leader in Mobile Security</p>
+              <p class="text-gray-700 mb-4">
+                Alphabin stands at the forefront of mobile app security with its cutting-edge AI-powered threat intelligence platform. Their comprehensive approach to security has made them the go-to choice for Fortune 500 companies.
+              </p>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 class="font-semibold text-[#171717] mb-1">AI-Powered Threat Intelligence</h4>
+                    <p class="text-sm text-gray-600">Advanced machine learning algorithms for proactive threat detection</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 class="font-semibold text-[#171717] mb-1">Proactive Vulnerability Scanning</h4>
+                    <p class="text-sm text-gray-600">Continuous monitoring and early threat identification</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 class="font-semibold text-[#171717] mb-1">DevSecOps Integration</h4>
+                    <p class="text-sm text-gray-600">Seamless security integration into development workflows</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 class="font-semibold text-[#171717] mb-1">24/7 Customer Support</h4>
+                    <p class="text-sm text-gray-600">Round-the-clock expert assistance and monitoring</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Company 2 -->
+            <div class="mb-8">
+              <h3 class="text-xl font-bold text-[#171717] mb-3">2. Veracode</h3>
+              <p class="text-lg font-semibold text-blue-600 mb-3">The Application Security Powerhouse</p>
+              <p class="text-gray-700 mb-4">
+                Veracode specializes in comprehensive application security testing, providing businesses with the tools and insights needed to build secure applications from the ground up.
+              </p>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 class="font-semibold text-[#171717] mb-1">SAST & DAST</h4>
+                    <p class="text-sm text-gray-600">Static and dynamic application security testing</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 class="font-semibold text-[#171717] mb-1">AI-Driven Threat Detection</h4>
+                    <p class="text-sm text-gray-600">Intelligent security analysis and risk assessment</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 class="font-semibold text-[#171717] mb-1">Seamless DevOps Integration</h4>
+                    <p class="text-sm text-gray-600">Security tools that work with existing workflows</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Embedded CTA Banner 2 -->
+          <div class="bg-blue-900 text-white p-6 rounded-lg mb-8">
+            <h3 class="text-xl font-semibold mb-3">Supercharge Your QA Pipeline with One-Click Integrations</h3>
+            <button class="bg-white text-blue-900 px-6 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors">
+              Get started now
+            </button>
+          </div>
+
+          <!-- Conclusion -->
+          <section id="conclusion" class="mb-12">
+            <h2 class="text-2xl font-bold text-[#171717] mb-6 ff-Manrope">Conclusion</h2>
+            <p class="text-gray-700 mb-6">
+              By 2025, mobile app security is not simply an IT problem, but it is a business problem. Among the giants of the industry, Alphabin ranks first due to its AI-based, on-top security model that keeps businesses one step ahead of cybersecurity threats.
+            </p>
+            <p class="text-gray-700 mb-6">
+              Each on this list specializes in security, but none can match Alphabin in terms of experience, integration, and security for future technologies to cater to the needs of any serious business in the mobile security industry.
+            </p>
+            <p class="text-gray-700">
+              Do not wait for a breach of security to occur and then start reacting to it. Get the best mobile security today with Alphabin, a leading company in mobile security services.
+            </p>
+          </section>
+
+          <!-- Author Bio -->
+          <div class="mt-8">
+            <div class="bg-gray-50 border border-gray-200 rounded-lg flex items-center gap-4 p-6">
+              <img src="Testdino Landing Page Images/icons/Profile-1.webp" alt="John Wick" class="w-16 h-16 rounded-full object-cover flex-shrink-0">
+              <div>
+                <h3 class="text-lg font-semibold text-[#171717] mb-1">John Wick</h3>
+                <p class="text-gray-600 mb-2">Mr. Wick is an SEO director who has 10 years of experience in SEO, agency side. Iste iure numquam logam laboriosam deleniti recusandae ipsum ut. Quo fugiat vero eveniet dicta accusamus ut voluptas. who has 10 years of experience in SEO, agency side.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Get Started Fast Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-[1200px] mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-[#171717] mb-4 ff-Manrope">Get started fast</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Step-by-step guides, real-world examples, and proven strategies to maximize your test reporting success
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <!-- Blog Card 1 -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+          <img src="Testdino Landing Page Images/icons/ai.webp" alt="AI Circuit Board" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-lg mb-3">Lifecycle marketing</span>
+            <h3 class="text-lg font-bold text-[#171717] mb-2">3 marketing tools you should be paying attention to in 2024</h3>
+          </div>
+        </div>
+
+        <!-- Blog Card 2 -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+          <img src="Testdino Landing Page Images/icons/leptop-img.png" alt="Laptop" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-lg mb-3">Lifecycle marketing</span>
+            <h3 class="text-lg font-bold text-[#171717] mb-2">3 marketing tools you should be paying attention to in 2024</h3>
+          </div>
+        </div>
+
+        <!-- Blog Card 3 -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+          <img src="Testdino Landing Page Images/icons/leptop-2-img.png" alt="Person using laptop" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-lg mb-3">Lifecycle marketing</span>
+            <h3 class="text-lg font-bold text-[#171717] mb-2">3 marketing tools you should be paying attention to in 2024</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="blogs.html" class="inline-block bg-[#171717] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#333333] transition-colors">
+          Browse all
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#FAFAFA] py-8 md:pt-20 px-4 md:pb-10 ff-geist">
+    <div class="container mx-auto max-w-7xl">
+      <!-- Main Footer Content -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-0 lg:mb-8 md:mb-8">
+        <!-- Logo and Newsletter -->
+        <div class="lg:col-span-2 flex flex-col items-start">
+          <div class="flex items-center mb-6 md:mb-8">
+            <div class="flex h-auto items-center justify-center">
+              <img src="Testdino Landing Page Images/icons/logo_testdino.svg" alt="Testdino" class="w-40 md:w-56 lg:w-64">
+            </div>
+          </div>
+          <p class="text-[#0b0c0e]/80 mb-4 text-lg md:text-1xl">Join our email list for product updates, tips, and offers.</p>
+          <div class="flex w-full max-w-[400px] flex-col md:flex-row footer-form">
+            <input type="email" placeholder="Email address" class="flex-1 rounded-[6px] mr-0 md:mr-2 ff-geist border border-[#E5E5E5] mb-2 md:mb-0 bg-white px-4 py-2 text-[#0b0c0e] focus:outline-none focus:ring-2 focus:ring-[#E5E5E5]">
+            <button type="submit" class="rounded-[6px] bg-[#0b0c0e] px-6 py-3 text-white font-medium hover:bg-gray-800 transition-colors">Subscribe</button>
+          </div>
+          
+          <!-- Social Icons -->
+          <div class="flex space-x-3 mb-[16px] mt-6">
+            <a href="#" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-lg border border-[#E5E5E5] hover:bg-gray-100 transition-colors">
+              <img src="Testdino Landing Page Images/icons/x-logo.svg" alt="Twitter">
+            </a>
+            <a href="#" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-lg border border-[#E5E5E5] hover:bg-gray-100 transition-colors">
+              <img src="Testdino Landing Page Images/icons/in-logo.svg" alt="LinkedIn">
+            </a>
+            <a href="#" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-lg border border-[#E5E5E5] hover:bg-gray-100 transition-colors">
+              <img src="Testdino Landing Page Images/icons/git-logo.svg" alt="GitHub">
+            </a>
+          </div>
+        </div>
+
+        <!-- Resources and Legal Links -->
+        <div class="flex gap-[81px] sm:flex-row sm:gap-[150px] lg:col-span-3 lg:justify-end">
+          <!-- Resources Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-[#0b0c0e] mb-6 ff-Manrope">Resources</h3>
+            <ul class="space-y-6 text-[#0b0c0e]/80">
+              <li><a href="/pricing/" target="_self" class="hover:text-[#333333] transition-colors">Pricing</a></li>
+              <li><a href="/docs/" target="_self" class="hover:text-[#333333] transition-colors">Documentation</a></li>
+              <li><a href="blogs.html" target="_self" class="hover:text-[#333333] transition-colors">Blog</a></li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h3 class="text-lg font-semibold text-[#0b0c0e] mb-6 ff-Manrope">Legal</h3>
+            <ul class="space-y-6 text-[#0b0c0e]/80">
+              <li><a href="/terms-conditions/" target="_self" class="hover:text-[#333333] transition-colors">Terms & Conditions</a></li>
+              <li><a href="/privacy-policy/" target="_self" class="hover:text-[#333333] transition-colors">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center mt-8 pt-6">
+      <div class="w-[85%] border-t border-[#E5E5E5] flex justify-center">
+        <p class="text-[#0b0c0e]/70 text-center text-base md:text-lg mt-6">© 2025 Testdino. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Popup Modal -->
+  <div id="popup-overlay" class="fixed inset-0 bg-[#17171766] h-[100vh] z-[9999] ff-geist bg-opacity-[40%] flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg p-4 md:p-8 w-full max-w-[390px] md:max-w-[470px] mx-4">
+      <h2 class="text-[26px] font-[700] text-[#262626] mb-6">Join our waitlist</h2>
+      <p class="text-[12px] py-2 px-3 rounded-l text-[#073192] border border-[#A3D0F8] bg-[#E6F3FD] text-left mb-6">
+        🔥The first 50 qualified sign-ups will be invited to our private beta and will receive a <span class="font-semibold">lifetime discount</span> on Testdino.
+      </p>
+      
+      <form class="space-y-4">
+        <div>
+          <label for="name" class="block text-[16px] font-[400] text-[#404040]">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" class="mt-2 block w-full px-4 py-3 border border-gray-300 bg-white text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300">
+        </div>
+        
+        <div>
+          <label for="organizationName" class="block text-[16px] font-[400] text-[#404040]">Organization Name</label>
+          <input type="text" id="organizationName" name="organizationName" placeholder="Enter your organization name" class="mt-2 block w-full px-4 py-3 border border-gray-300 bg-white text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300">
+        </div>
+        
+        <div>
+          <label for="workEmail" class="block text-[16px] font-[400] text-[#404040]">Work Email</label>
+          <input type="email" id="workEmail" name="workEmail" placeholder="Enter your work email" class="mt-2 block w-full px-4 py-3 border border-gray-300 bg-white text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300">
+        </div>
+        
+        <div>
+          <label for="biggestIssue" class="block text-[16px] font-[400] text-[#404040]">Biggest issue with your current reports</label>
+          <textarea id="biggestIssue" name="biggestIssue" rows="4" placeholder="e.g.&#10;• Flaky tests, no root cause shown&#10;• Too noisy, lacks insights&#10;• Briefly share your test reporting pain…" class="mt-2 block w-full px-4 py-3 border border-gray-300 bg-white text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300 resize-none"></textarea>
+        </div>
+        
+        <div class="flex space-x-4 pt-4">
+          <button type="button" id="cancel-button" class="flex-1 px-6 py-3 bg-white border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Cancel</button>
+          <button type="submit" class="flex-1 px-6 py-3 bg-[#0B0B0E] border border-transparent rounded-md text-sm font-medium text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">Join</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/scripts.js" defer></script>
+  <script>
+    // Mobile menu functionality
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      document.getElementById('mobile-menu-overlay').classList.remove('hidden');
+    });
+
+    document.getElementById('close-mobile-menu').addEventListener('click', function() {
+      document.getElementById('mobile-menu-overlay').classList.add('hidden');
+    });
+
+    // Popup functionality
+    document.querySelectorAll('.pop-up').forEach(function(button) {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('popup-overlay').classList.remove('hidden');
+      });
+    });
+
+    document.getElementById('cancel-button').addEventListener('click', function() {
+      document.getElementById('popup-overlay').classList.add('hidden');
+    });
+
+    // Close popup when clicking outside
+    document.getElementById('popup-overlay').addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+
+</html>
