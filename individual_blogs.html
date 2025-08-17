@@ -94,7 +94,7 @@
 
   <!-- Category Navigation -->
   <div class="bg-gray-50 border-gray-200">
-    <div class="max-w-[1200px] mx-auto px-4">
+    <div class="max-w-[1300px] mx-auto px-4">
       <div class="flex items-center gap-8 py-4 overflow-x-auto">
         <img src="Testdino Landing Page Images/blog_images/Frame 2147227012.png" alt="arrow-left" class="w-10 h-10">
         <a href="#" class="text-sm font-semibold text-[#0B0C0E] whitespace-nowrap">Agency Success Guide</a>
@@ -108,7 +108,7 @@
 
   <!-- Main Blog Content -->
   <main class="flex-1 py-12 md:py-20">
-    <div class="max-w-[1200px] mx-auto px-4">
+    <div class="max-w-[1300px] mx-auto px-4">
       <!-- Blog Header Section - Full Width -->
       <div class="mb-20">
         <div class="lg:flex lg:gap-24 items-start">
@@ -233,7 +233,7 @@
                  const textSpan = link.querySelector('span');
                  if (idx === activeIdx) {
                    // Active section: bold text, dark color, full-height, narrow left bar
-                   textSpan.classList.add('text-[#171717]');
+                   textSpan.classList.add('font-bold', 'text-[#171717]');
                    textSpan.classList.remove('text-[#404040]');
                    link.classList.add(
                      'before:absolute',
@@ -252,7 +252,7 @@
                    );
                  } else {
                    // Inactive section: normal text, gray color, no bar
-                   textSpan.classList.remove('text-[#171717]');
+                   textSpan.classList.remove('font-bold', 'text-[#171717]');
                    textSpan.classList.add('text-[#404040]');
                    link.classList.remove(
                      'before:absolute',
@@ -623,7 +623,7 @@
 
   <!-- Get Started Fast Section -->
   <section class="py-16 bg-gray-50">
-    <div class="max-w-[1200px] mx-auto px-4">
+    <div class="max-w-[1300px] mx-auto px-4">
       <div class="text-center mb-12">
         <h2 class="text-4xl font-bold text-[#171717] mb-4 ff-Manrope">Get started fast</h2>
         <p class="text-md text-gray-600 max-w-4xl mx-auto">
