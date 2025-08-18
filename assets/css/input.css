@@ -1326,5 +1326,46 @@ input[type=range]::-moz-range-thumb {
     }
 }
 
+/* Blog Content Typography Classes */
+.blog-header {
+  font-size: 1.875rem; /* text-3xl equivalent */
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: #0B0C0E;
+  margin-bottom: 1.5rem;
+}
+
+.blog-text {
+  font-size: 1.125rem; /* text-lg equivalent */
+  line-height: 1.75rem;
+  color: #404040;
+  margin-bottom: 1.5rem;
+}
+
+.blog-content-section {
+  padding-left: 6rem; /* lg:pl-24 equivalent */
+  padding-right: 6rem; /* lg:pr-24 equivalent */
+}
+
+/* Responsive adjustments for the content sections */
+@media (max-width: 1024px) {
+  .blog-content-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  .blog-text {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
 
 

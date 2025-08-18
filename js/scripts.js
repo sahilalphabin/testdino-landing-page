@@ -5,7 +5,7 @@ const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
  if (window.scrollY > 0) {
   // Apply styles when scrolled
-  nav.style.width = '646px';
+  nav.style.width = '700px';
   nav.style.margin = '10px auto';
   nav.style.padding = '10px 20px';
   nav.style.boxShadow = '0px 4px 12px rgba(0, 0, 0, 0.25)';
@@ -22,7 +22,7 @@ window.addEventListener('scroll', () => {
   }
 } else {
     // Reset styles when at top
-    nav.style.width = '1200px';
+    nav.style.width = '1300px';
     nav.style.margin = '0 auto';
     nav.style.padding = '0';
     nav.style.boxShadow = 'none';
