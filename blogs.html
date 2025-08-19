@@ -213,12 +213,14 @@
             </div>
               </div>
       <!-- Pagination -->
-      <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 py-6 bg-[#fafafa]">
+      <div class="flex flex-row md:flex-row items-center justify-center gap-4 md:gap-6 py-6 bg-[#fafafa]">
         <button class="flex items-center gap-1 text-[#171717] font-medium px-2 py-2 rounded transition-colors hover:bg-gray-100 disabled:text-gray-300 disabled:cursor-not-allowed w-full md:w-auto justify-center" disabled>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
           Previous
         </button>
         <div class="flex items-center gap-2 flex-wrap justify-center">
+          <button class="w-10 h-10 rounded-lg text-gray-600 font-medium hover:bg-gray-100 transition-colors hidden md:block border border-gray-300">1</button>
+          <button class="w-10 h-10 rounded-lg text-gray-600 font-medium hover:bg-gray-100 transition-colors hidden md:block">2</button>
           <span class="text-gray-400 px-2 hidden md:inline">...</span>
           <button class="w-10 h-10 rounded-lg text-gray-600 font-medium hover:bg-gray-100 transition-colors hidden md:block">9</button>
           <button class="w-10 h-10 rounded-lg text-gray-600 font-medium hover:bg-gray-100 transition-colors hidden md:block">10</button>
