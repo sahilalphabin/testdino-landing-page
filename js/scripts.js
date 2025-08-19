@@ -520,27 +520,47 @@ $(function () {
 
     // pricing page rs range section
 document.addEventListener('DOMContentLoaded', function () {
-const slider = document.getElementById('executionSlider');
-const displayValue = document.getElementById('displayValue');
+    const slider = document.getElementById('testExecutionSlider');
+    const displayValue = document.getElementById('testExecutionValue');
+    const pricingCards = document.querySelectorAll('.pricing-card');
 
-if (!slider || !displayValue) {
-    console.warn("Slider or display element not found!");
-    return;
-}
+    if (!slider || !displayValue) {
+        console.warn("Slider or display element not found!");
+        return;
+    }
 
-function updateSliderDisplay() {
-    const value = parseInt(slider.value);
-    displayValue.textContent = value.toLocaleString();
+    function updateSliderDisplay() {
+        const value = parseInt(slider.value);
+        const values = ['Free', '5k', '25k', '50k', '100k', '250k'];
+        const selectedValue = values[value];
+        displayValue.textContent = selectedValue;
 
-    const min = parseFloat(slider.min);
-    const max = parseFloat(slider.max);
-    const percentage = ((value - min) / (max - min)) * 100;
+        // Highlight the appropriate pricing card based on slider value
+        pricingCards.forEach(card => {
+            card.classList.remove('active-plan');
+        });
 
-    slider.style.setProperty('--range-fill-percentage', `${percentage}%`);
-}
+        // Map slider values to card indices
+        // 0 = Free, 1 = 5k (Community), 2 = 25k (Pro), 3 = 50k, 4 = 100k (Team), 5 = 250k (Enterprise)
+        let activeCardIndex = 0;
+        if (value === 0 || value === 1) activeCardIndex = 0; // Free/Community
+        else if (value === 2) activeCardIndex = 1; // Pro
+        else if (value === 3 || value === 4) activeCardIndex = 2; // Team
+        else if (value === 5) activeCardIndex = 3; // Enterprise
 
-updateSliderDisplay();
-slider.addEventListener('input', updateSliderDisplay);
+        if (pricingCards[activeCardIndex]) {
+            pricingCards[activeCardIndex].classList.add('active-plan');
+        }
+
+        const min = parseFloat(slider.min);
+        const max = parseFloat(slider.max);
+        const percentage = ((value - min) / (max - min)) * 100;
+
+        slider.style.background = `linear-gradient(to right, #171717 0%, #171717 ${percentage}%, #e2e8f0 ${percentage}%, #e2e8f0 100%)`;
+    }
+
+    updateSliderDisplay();
+    slider.addEventListener('input', updateSliderDisplay);
 });
 
         

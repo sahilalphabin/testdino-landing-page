@@ -1,0 +1,150 @@
+/* Pricing page specific styles */
+
+/* Most popular tag */
+.tag-most-popular {
+  background: linear-gradient(90deg, #5B75EE 0%, #9C1DE2 100%);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+/* AI feature sections container */
+.ai-features-container {
+  width: 100%;
+  padding: 16px;
+  background: #EEF4FF;
+  border-radius: 6px;
+  border-top: 4px solid #5B75EE;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ai-features-container .ai-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.ai-features-container .ai-header p {
+  color: #171717;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ai-features-container .feature-item {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 0;
+}
+
+.ai-features-container .feature-item p {
+  color: #171717;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* AI feature section for individual items */
+.ai-feature-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  background-color: #F1F8FF;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #D1E5FF;
+}
+
+/* Enterprise AI features */
+.enterprise-ai-feature {
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.enterprise-ai-feature p {
+  background: linear-gradient(90deg, #5B75EE 0%, #9C1DE2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+/* Plan cards with gradient border */
+.plan-card-gradient {
+  border-top: 4px solid transparent;
+  border-image-source: linear-gradient(90deg, #5B75EE 0%, #9C1DE2 100%);
+  border-image-slice: 1;
+}
+
+/* Feature list item */
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-item img {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+}
+
+/* Button arrow */
+.btn-arrow {
+  width: 14px;
+  height: 14px;
+  margin-left: 0.5rem;
+}
+
+/* Active pricing plan */
+.active-plan {
+  border: 2px solid #5B75EE !important;
+  box-shadow: 0 4px 12px rgba(91, 117, 238, 0.15) !important;
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
+/* Custom slider styles */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 5px;
+  background: #e2e8f0;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #171717;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #171717;
+  cursor: pointer;
+}
