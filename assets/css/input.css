@@ -1362,7 +1362,7 @@ input[type=range]::-moz-range-thumb {
   }
   
   .blog-text {
-    font-size: 1rem;
+    font-size: 18px;
     line-height: 1.625rem;
   }
 }
