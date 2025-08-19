@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='robots' content='noindex, nofollow' />
+    <!-- Global CSS styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/input.css">
+
+    <style>
+        /* Custom styles for slider */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 8px;
+            border-radius: 5px;
+            background: #e2e8f0;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #171717;
+            cursor: pointer;
+            transition: all 0.15s ease-in-out;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+
+        /* Custom radio buttons */
+        input[type="radio"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #d1d5db;
+            border-radius: 50%;
+            outline: none;
+            transition: all 0.15s ease-in-out;
+        }
+
+        input[type="radio"]:checked {
+            border-color: #171717;
+            background-color: #171717;
+            box-shadow: inset 0 0 0 4px white;
+        }
+    </style>
+
+    <title>Pricing - Testdino</title>
+</head>
+
+<body class="flex min-h-screen flex-col bg-white">
+    <!-- Navigation -->
+    <div class="sticky h-[56px] md:h-[80px] px-4 w-full top-0 z-50 flex items-center justify-center font-inter border-gray-100"
+        id="header">
+        <nav class="flex w-[1200px] mx-auto items-center justify-between rounded-[20px] relative transition-all duration-300"
+            id="nav">
+            <div class="flex w-full items-center justify-between">
+                <!-- Logo -->
+                <a href="https://testdino.com" class="flex-shrink-0">
+                    <div class="flex items-center gap-[8px]">
+                        <img src="Testdino Landing Page Images/icons/logo_testdino.svg" alt="Testdino" class="h-auto">
+                    </div>
+                </a>
+
+                <!-- Centered Nav Links -->
+                <div class="hidden md:flex flex-1 justify-center items-center gap-[32px]">
+                    <a href="/" target="_self" class="text-[#171717] hover:text-black-300 transition-colors">Home</a>
+                    <a href="pricing.html" target="_self"
+                        class="text-[#171717] hover:text-black-300 transition-colors">Pricing</a>
+                    <a href="docs.html" target="_self"
+                        class="text-[#171717] hover:text-black-300 transition-colors">Docs</a>
+                    <a href="blogs.html" target="_self"
+                        class="text-[#171717] hover:text-black-300 transition-colors font-[700]">Blog</a>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="#" target="_self" type="button" id="pop-up"
+                    class="pop-up hidden md:block rounded-[6px] bg-black px-[16px] py-[8px] text-[#ffffff] hover:bg-[#151515] transition-colors text-[16px]">Join
+                    waitlist</a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-black p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+                        <rect width="30" height="2" fill="#141414" />
+                        <rect x="6" y="8" width="24" height="2" fill="#141414" />
+                        <rect y="16" width="30" height="2" fill="#141414" />
+                    </svg>
+                </button>
+
+                <!-- Mobile Menu Overlay -->
+                <div id="mobile-menu-overlay"
+                    class="fixed inset-0 h-full bg-[rgba(23,23,23,0.32)] z-50 md:hidden hidden">
+                    <div class="flex flex-col bg-[#FFFFFF]">
+                        <!-- Mobile Header -->
+                        <div class="flex items-center justify-between px-[16px] py-[12px]">
+                            <div class="flex items-center gap-2">
+                                <img src="Testdino Landing Page Images/icons/logo_testdino.svg" alt="Testdino"
+                                    class="h-auto">
+                            </div>
+                            <button id="close-mobile-menu" class="text-[#171717] p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18"
+                                    fill="none">
+                                    <rect x="1.02203" y="15.8296" width="20.757" height="1.83901"
+                                        transform="rotate(-45 1.02203 15.8296)" fill="#141414" />
+                                    <rect x="1.90918" y="0.869999" width="20.757" height="1.83901"
+                                        transform="rotate(45 1.90918 0.869999)" fill="#141414" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Mobile Menu Items -->
+                        <div
+                            class="flex-1 px-6 pt-[30px] space-y-6 overflow-y-auto flex flex-col items-center justify-center">
+                            <div class="space-y-4 flex flex-col items-center">
+                                <a href="/" target="_self"
+                                    class="block text-[#171717] text-[18px] leading-[24px] py-2 mobile-menu-link text-center">Home</a>
+                                <a href="pricing.html" target="_self"
+                                    class="block text-[#171717] text-[18px] leading-[24px] py-2 mobile-menu-link text-center">Pricing</a>
+                                <a href="docs.html" target="_self"
+                                    class="block text-[#171717] text-[18px] leading-[24px] py-2 mobile-menu-link text-center">Docs</a>
+                                <a href="/blogs.html" target="_self"
+                                    class="block text-[#171717] text-[18px] leading-[24px] py-2 font-[700] mobile-menu-link text-center">Blog</a>
+                            </div>
+                        </div>
+
+                        <!-- Mobile CTA -->
+                        <div class="px-6 py-[32px] py-0">
+                            <a href="#" target="_self"
+                                class="block w-full  text-center rounded-[6px] bg-[#171717] px-6 py-3 text-[#ffffff] mobile-menu-link">Join
+                                waitlist</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- DEPLOY WITH ZERO DOUBTS -->
+    <section class="py-4 px-4 md:pt-[60px] md:pb-[100px] relative bg-[#FAFAFA]">
+        <div class="mx-auto max-w-[1000px]">
+            <div class="flex flex-col items-center">
+                <div class="bg-white rounded-lg px-4 py-2 mb-6 inline-flex items-center shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                    </svg>
+                    <span class="text-sm text-gray-700">No credit card required.</span>
+                </div>
+
+                <div class="text-center mb-[10px] md:mb-10 animate-fade-in" data-animate="true">
+                    <h2 class="text-[28px] md:text-[42px] text-[#0B0C0E] leading-normal ff-Manrope">Deploy with <span
+                            class="font-bold relative">zero
+                            <img src="Testdino Landing Page Images/Pricing/icons/Vector 54.svg" alt="Underline"
+                                class="absolute w-full left-0 -bottom-1">
+                        </span> doubts</h2>
+                </div>
+
+                <div class="mt-6 md:mt-10">
+                    <a href="#"
+                        class="bg-[#171717] text-white px-8 py-3 rounded-md text-[16px] font-medium hover:bg-black transition-colors">Start
+                        free trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing plan container -->
+    <section class="py-4 px-4 md:pt-[60px] md:pb-[100px] relative bg-[#FAFAFA]">
+        <div class="mx-auto max-w-[1000px]">
+            <div class="text-center mb-[10px] md:mb-10 animate-fade-in" data-animate="true">
+                <h2 class="text-[28px] md:text-[42px] text-[#0B0C0E] leading-normal ff-Manrope">Pricing</h2>
+            </div>
+
+            <!-- Pricing calculator -->
+
+            <!-- Test execution slider and billing frequency radio -->
+            <div class="flex flex-col md:flex-row justify-center gap-8 mb-12">
+                <!-- Test execution slider -->
+                <div class="flex-1 bg-white p-6 rounded-xl shadow-sm" style="border: 1px solid #E2E4E9;">
+                    <div class="mb-4">
+                        <p class="text-[16px] mb-2">I need <span
+                                class="bg-[#E7EFFE] text-[#004AB3] px-2 py-1 rounded font-bold"
+                                id="testExecutionValue">5k</span> test executions per month </p>
+                        <div class="relative">
+                            <input type="range" min="0" max="5" value="1" step="1"
+                                class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                                id="testExecutionSlider">
+                            <div class="flex justify-between text-xs text-gray-600 px-1 mt-2">
+                                <span>Free</span>
+                                <span>5k</span>
+                                <span>25k</span>
+                                <span>50k</span>
+                                <span>100k</span>
+                                <span>250k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Billing frequency radio -->
+                <div class="flex-1 bg-white p-6 rounded-xl shadow-sm" style="border: 1px solid #E2E4E9;">
+                    <div class="mb-4">
+                        <p class="text-[16px] mb-4">Bill me:</p>
+                        <div class="flex flex-row gap-4">
+                            <label class="inline-flex items-center cursor-pointer">
+                                <input type="radio" name="billing" value="monthly" class="form-radio h-5 w-5 text-black"
+                                    checked>
+                                <span class="ml-2">Monthly</span>
+                            </label>
+                            <label class="inline-flex items-center cursor-pointer">
+                                <input type="radio" name="billing" value="annually"
+                                    class="form-radio h-5 w-5 text-black">
+                                <span class="ml-2">Annually</span>
+                                <span class="ml-2 text-xs bg-[#E7EFFE] text-[#004AB3] px-2 py-1 rounded">save 20%</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pricing cards -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Community Plan -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+                    style="border: 1px solid #E2E4E9;">
+                    <div class="flex items-center mb-2">
+                        <img src="Testdino Landing Page Images/Pricing/icons/community.svg" alt="Community" class="w-6 h-6 mr-2">
+                        <h3 class="text-lg font-medium text-gray-900 ff-Manrope">Community</h3>
+                    </div>
+                    <p class="text-sm text-gray-500 mb-4">Perfect for individual developers</p>
+                    <div class="mt-4 mb-6">
+                        <p class="text-3xl font-bold ff-Manrope">Free</p>
+                    </div>
+                    <button class="w-full py-2 px-4 bg-black text-white rounded-lg mb-6 flex items-center justify-center">
+                        Get started free
+                        <img src="Testdino Landing Page Images/Pricing/icons/start_trial_arrow.svg" alt="Arrow" class="ml-2 w-4 h-4">
+                    </button>
+                    <p class="text-sm text-gray-700 mb-4">Free, forever</p>
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">5000 test executions/month</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Single user</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">7-day data retention</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Role specific dashboards</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Pull requests view</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Test execution history</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Advanced analytics</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Community support</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pro Plan -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+                    style="border: 1px solid #E2E4E9;">
+                    <div class="flex items-center mb-2">
+                        <img src="Testdino Landing Page Images/Pricing/icons/pro.svg" alt="Pro" class="w-6 h-6 mr-2">
+                        <h3 class="text-lg font-medium text-gray-900 ff-Manrope">Pro Plan</h3>
+                    </div>
+                    <p class="text-sm text-gray-500 mb-4">For dev teams shipping to production</p>
+                    <div class="mt-4 mb-6">
+                        <p class="text-3xl font-bold ff-Manrope">$18 <span class="text-sm font-normal">/month</span></p>
+                    </div>
+                    <button class="w-full py-2 px-4 bg-black text-white rounded-lg mb-6 flex items-center justify-center">
+                        Start 14-day trial
+                        <img src="Testdino Landing Page Images/Pricing/icons/start_trial_arrow.svg" alt="Arrow" class="ml-2 w-4 h-4">
+                    </button>
+                    <p class="text-sm text-gray-700 mb-4">Everything in Community, plus:</p>
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">25,000 test executions/month</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Up to 5 users</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">90-day data retention</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Trends Analysis</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Custom alerts & notifications</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Slack integration</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Email support</p>
+                        </div>
+                        <div class="flex items-start gap-2 mt-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/AI.svg" alt="AI" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Get started with AI</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">AI-powered failure detection</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">AI Insights at dashboard</p>
+                        </div>
+                    </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Custom reports & dashboards</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Email & support</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">API integrations</p>
+                        </div>
+                </div>
+                <!-- Team Plan -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+                    style="border: 1px solid #E2E4E9;">
+                    <div class="flex items-center mb-2">
+                        <img src="Testdino Landing Page Images/Pricing/icons/teams.svg" alt="Team" class="w-6 h-6 mr-2">
+                        <h3 class="text-lg font-medium text-gray-900 ff-Manrope">Team Plan</h3>
+                        <span class="ml-2 text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full font-medium">MOST POPULAR</span>
+                    </div>
+                    <p class="text-sm text-gray-500 mb-4">Engineering teams at scale</p>
+                    <div class="mt-4 mb-6">
+                        <p class="text-3xl font-bold ff-Manrope">$49 <span class="text-sm font-normal">/month</span></p>
+                    </div>
+                    <button class="w-full py-2 px-4 bg-black text-white rounded-lg mb-6 flex items-center justify-center">
+                        Start 14-day trial
+                        <img src="Testdino Landing Page Images/Pricing/icons/start_trial_arrow.svg" alt="Arrow" class="ml-2 w-4 h-4">
+                    </button>
+                    <p class="text-sm text-gray-700 mb-4">Everything in Pro Plan, plus:</p>
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">100,000 test executions/month</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Unlimited users & projects</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">1-year data retention</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">JIRA / Linear integrations</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Role-based access control</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Custom integrations & webhooks</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Live chat support</p>
+                        </div>
+                        <div class="flex items-start gap-2 mt-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/AI.svg" alt="AI" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Unlock full power of AI</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">AI Insights for test case</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">AI Insights for entire project</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Test coverage gap</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Enterprise Plan -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+                    style="border: 1px solid #E2E4E9;">
+                    <div class="flex items-center mb-2">
+                        <img src="Testdino Landing Page Images/Pricing/icons/enterprise.svg" alt="Enterprise" class="w-6 h-6 mr-2">
+                        <h3 class="text-lg font-medium text-gray-900 ff-Manrope">Enterprise</h3>
+                    </div>
+                    <p class="text-sm text-gray-500 mb-4">For large companies with security needs</p>
+                    <div class="mt-4 mb-6">
+                        <p class="text-3xl font-bold ff-Manrope">Custom</p>
+                    </div>
+                    <button class="w-full py-2 px-4 bg-black text-white rounded-lg mb-6 flex items-center justify-center">
+                        Contact sales
+                        <img src="Testdino Landing Page Images/Pricing/icons/start_trial_arrow.svg" alt="Arrow" class="ml-2 w-4 h-4">
+                    </button>
+                    <p class="text-sm text-gray-700 mb-4">Everything in Team Plan, plus:</p>
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Custom execution limits</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Unlimited data retention</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">On-premise deployment options</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">99.9% SLA guarantee</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">24/7 dedicated support</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Single Sign-On (SSO)</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Advanced compliance features</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/AI.svg" alt="AI" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Advanced AI features</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Priority feature requests</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Professional services & training</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Dedicated customer success manager</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark" class="w-5 h-5 mt-0.5">
+                            <p class="text-sm text-gray-700">Advanced security & audit logs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Compare Features across plans -->
+    <section class="py-4 px-4 md:pt-[60px] md:pb-[100px] relative bg-[#FAFAFA]">
+        <div class="mx-auto max-w-[1000px]">
+            <div class="text-center mb-[10px] md:mb-10 animate-fade-in" data-animate="true">
+                <h2 class="text-[28px] md:text-[42px] text-[#0B0C0E] leading-normal ff-Manrope">Compare features across plans</h2>
+                <p class="text-sm text-gray-600 mt-2">Choose the plan that best fits your testing needs</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="py-4 px-4 md:pt-[60px] md:pb-[100px] relative bg-[#FAFAFA]">
+        <div class="mx-auto max-w-[1000px]">
+            <div class="text-center mb-[10px] md:mb-10
+                      How do I get a quote for my organization’s penetration test?
+                     animate-fade-in" data-animate="true">
+                <h2 class="text-[28px] md:text-[42px] text-[#0B0C0E] leading-normal ff-Manrope">FAQs</h2>
+            </div>
+            <!-- Dropdown Item 1 (Active State) -->
+            <!-- Added border and border color for active state -->
+            <div
+                class="accordion-item mb-[24px] pb-[22px] md:mb-6 overflow-hidden transition-all duration-300 ease-in-out bg-white rounded-xl border-b-1 border-[#E2E4E9]">
+                <button
+                    class="w-full text-left px-6 pt-[10px] md:mb-4 flex justify-between items-center focus:outline-none"
+                    onclick="toggleAccordion(this)">
+                    <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
+                        What is Testdino?
+                    </span>
+                    <svg class="w-6 h-6 text-gray-700 transform transition-transform duration-300" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="accordion-content mt-[12px] md:mt-[4] px-6 text-[#0B0C0E] ff-geist" style="display: block;">
+                    <p class="text-[#0B0C0E] text-[16px] md:text-[16px]">Testdino is smart test reporting and analytics
+                        platform
+                        built for Playwright and Selenium.
+                        It helps QA and dev teams analyze test failures faster, detect flakiness, and ship with
+                        confidence.</p>
+                </div>
+            </div>
+
+
+            <div
+                class="accordion-item mb-[24px] pb-[22px] md:mb-6 overflow-hidden transition-all duration-300 ease-in-out">
+                <button
+                    class="w-full text-left px-6 pt-[10px] md:mb-4 flex justify-between items-center focus:outline-none"
+                    onclick="toggleAccordion(this)">
+                    <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
+                        How does Testdino work?
+                    </span>
+                    <svg class="w-6 h-6 text-gray-700 transform transition-transform duration-300" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="accordion-content mt-[12px] md:mt-[4] px-6 text-[#0B0C0E] ff-geist" style="display: none;">
+                    <p class="-[#0B0C0E] text-[16px] md:text-[16px]">Testdino connects to your CI pipeline (GitHub
+                        Actions,
+                        GitLab, etc.) and analyzes every test run.
+                        It collects execution data, classifies failures using AI, and visualizes trends across branches,
+                        commits,
+                        and environments .</p>
+                </div>
+            </div>
+
+
+            <!-- Dropdown Item 2 (Normal State) -->
+            <!-- No border for normal state -->
+            <div
+                class="accordion-item mb-[24px] pb-[22px] md:mb-6 overflow-hidden transition-all duration-300 ease-in-out">
+                <button
+                    class="w-full text-left px-6 pt-[10px] md:mb-4 flex justify-between items-center focus:outline-none"
+                    onclick="toggleAccordion(this)">
+                    <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
+                        What kind of AI insights does it provide?
+                    </span>
+                    <svg class="w-6 h-6 text-gray-700 transform transition-transform duration-300" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="accordion-content mt-[12px] md:mt-[4] px-6 text-[#0B0C0E] ff-geist" style="display: none;">
+                    <p class="mb-4 -[#0B0C0E] text-[16px] md:text-[16px]">Testdino’s AI doesn’t just report failures —
+                        it explains
+                        them.</p>
+                    <p class="mb-4 -[#0B0C0E] text-[16px] md:text-[16px]">Powered by a trained language model, it reads
+                        your test
+                        failures like a senior developer and suggests the fix. Whether it’s a <br> flaky selector, a UI
+                        change, or a
+                        real bug, you’ll get a root-cause diagnosis with confidence scores, historical context, and <br>
+                        actionable
+                        recommendations.</p>
+                    <p class="-[#0B0C0E] text-[16px] md:text-[16px]">Instead of logs, you get insight.<br>Instead of
+                        re-runs, you
+                        get resolution.</p>
+                </div>
+            </div>
+            <!-- Dropdown Item 3 (Normal State) -->
+            <!-- No border for normal state -->
+            <div
+                class="accordion-item mb-[24px] pb-[22px] md:mb-6 overflow-hidden transition-all duration-300 ease-in-out">
+                <button
+                    class="w-full text-left px-6 pt-[10px] md:mb-4 flex justify-between items-center focus:outline-none"
+                    onclick="toggleAccordion(this)">
+                    <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
+                        What testing frameworks does it support?
+                    </span>
+                    <svg class="w-6 h-6 text-gray-700 transform transition-transform duration-300" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="accordion-content mt-[12px] md:mt-[4] px-6 text-[#0B0C0E] ff-geist" style="display: none;">
+                    <p class="-[#0B0C0E] text-[16px] md:text-[16px]">Currently Playwright only. Support for Selenium and
+                        Cypress
+                        are coming soon .</p>
+                </div>
+            </div>
+            <!-- Dropdown Item 4 (Normal State) -->
+            <!-- No border for normal state -->
+            <div
+                class="accordion-item mb-[24px] pb-[22px] md:mb-6 overflow-hidden transition-all duration-300 ease-in-out">
+                <button
+                    class="w-full text-left px-6 pt-[10px] md:mb-4 flex justify-between items-center focus:outline-none"
+                    onclick="toggleAccordion(this)">
+                    <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
+                        Can it detect flaky tests automatically?
+                    </span>
+                    <svg class="w-6 h-6 text-gray-700 transform transition-transform duration-300" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="accordion-content mt-[12px] md:mt-[4] px-6 text-[#0B0C0E] ff-geist" style="display: none;">
+                    <p class="-[#0B0C0E] text-[16px] md:text-[16px]">Yes. Testdino spots inconsistent pass/fail patterns
+                        and flags
+                        them as flaky. It also categorizes flakiness into timing, network, <br> or environment-related
+                        issues .</p>
+                </div>
+            </div>
+            <!-- Dropdown Item 5 (Normal State) -->
+            <!-- No border for normal state -->
+            <div
+                class="accordion-item mb-[24px] pb-[22px] md:mb-6 overflow-hidden transition-all duration-300 ease-in-out">
+                <button
+                    class="w-full text-left px-6 pt-[10px] md:mb-4 flex justify-between items-center focus:outline-none"
+                    onclick="toggleAccordion(this)">
+                    <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
+                        Can I get alerts or export reports?
+                    </span>
+                    <svg class="w-6 h-6 text-gray-700 transform transition-transform duration-300" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="accordion-content mt-[12px] md:mt-[4] px-6 text-[#0B0C0E] ff-geist" style="display: none;">
+                    <p class="-[#0B0C0E] text-[16px] md:text-[16px] mb-1">Absolutely</p>
+                    <ul class="-[#0B0C0E] text-[16px] md:text-[16px] list-disc list-inside leading-[24px] space-y-2">
+                        <li>
+                            Slack, Teams, and email alerts
+                        </li>
+                        <li>
+                            Export test runs as CSV/PDF
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- No border for normal state -->
+            <div
+                class="accordion-item mb-[24px] pb-[22px] md:mb-6 overflow-hidden transition-all duration-300 ease-in-out">
+                <button
+                    class="w-full text-left px-6 pt-[10px] md:mb-4 flex justify-between items-center focus:outline-none"
+                    onclick="toggleAccordion(this)">
+                    <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
+                        Is it customizable to our environments, branches, and workflows?
+                    </span>
+                    <svg class="w-6 h-6 text-gray-700 transform transition-transform duration-300" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="accordion-content mt-[12px] md:mt-[4] px-6 text-[#0B0C0E] ff-geist" style="display: none;">
+                    <p class="-[#0B0C0E] text-[16px] md:text-[16px] mb-1">Fully. You can configure:</p>
+                    <ul class="-[#0B0C0E] text-[16px] md:text-[16px] list-disc list-inside leading-[24px] space-y-2">
+                        <li>
+                            Branch and environment mappings
+                        </li>
+                        <li>
+                            Test tagging (e.g., production-sanity)
+                        </li>
+                        <li>Alerting thresholds</li>
+                        <li>Custom flake thresholds and filters</li>
+                    </ul>
+                    <p class="text-[#0B0C0E] mt-[15px]">It works with pre-PR, post-merge, and multi-env workflows .</p>
+                </div>
+            </div>
+            <div
+                class="accordion-item mb-[24px] pb-[22px] md:mb-6 overflow-hidden transition-all duration-300 ease-in-out">
+                <button
+                    class="w-full text-left px-6 pt-[10px] md:mb-4 flex justify-between items-center focus:outline-none"
+                    onclick="toggleAccordion(this)">
+                    <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
+                        How much time does Testdino save each developer?
+                    </span>
+                    <svg class="w-6 h-6 text-gray-700 transform transition-transform duration-300" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content mt-[12px] md:mt-[4] px-6 text-[#0B0C0E] ff-geist" style="display: none;">
+                    <p class="-[#0B0C0E] text-[16px] md:text-[16px]"> <span class="font-[700]">Each developer saves 6–8
+                            hours per
+                            week</span> by avoiding flaky test reruns, log hunting, slow triage and lack of analytics
+                    </p>
+                </div>
+            </div>
+            <div
+                class="accordion-item mb-[24px] pb-[22px] md:mb-6 overflow-hidden transition-all duration-300 ease-in-out">
+                <button
+                    class="w-full text-left px-6 pt-[10px] md:mb-4 flex justify-between items-center focus:outline-none"
+                    onclick="toggleAccordion(this)">
+                    <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
+                        What's included in the beta?
+                    </span>
+                    <svg class="w-6 h-6 text-gray-700 transform transition-transform duration-300" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content mt-[12px] md:mt-[4] px-6 text-[#0B0C0E] ff-geist" style="display: none;">
+                    <p class="-[#0B0C0E] text-[16px] md:text-[16px]">
+                    <p>Beta users get full access to all features during the testing period, <b>plus a lifetime
+                            discount</b> when
+                        we launch. This includes AI insights, integrations, alerts, and premium support - all free
+                        during beta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Call to Action Section -->
+    <section class="py-[44px] px-[20px] md:pt-[90px] md:pb-[60px] bg-[#FAFAFA]">
+        <div class="w-full max-w-[1280px] mx-auto flex justify-center items-start flex-col px-[20px] md:px-[48px] py-[10px] h-[420px] md:h-[385px] rounded-[8px] relative before:absolute before:inset-0 before:z-10 before:bg-[linear-gradient(270deg,rgba(255,255,255,0)_0%,rgba(34,34,34,0.25)_65.63%,rgba(0,0,0,0.5)_100%)] overflow-hidden"
+            style="background-image: url('Testdino Landing Page Images/blog_images/Frame\ 2147226979.svg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+            <div class="z-10 mt-0">
+                <h4 class="ff-Manrope text-[28px] md:text-[42px] mb-[24px] md:mb-6 font-[500] text-white z-10">No more
+                    hunting through<br>
+                    <span class="ff-poppines italic"> endless logs</span>
+                </h4>
+                <button type="button" id="pop-up"
+                    class="pop-up bg-[#FFFF] ff-geist rounded-lg inline-block px-6 md:px-[16px] py-2 md:py-[10px] text-[#171717] font-medium hover:bg-[#333333] hover:text-[#fff] transition-colors font-[500] text-[12px] md:text-[16px]">
+                    Join waitlist
+                </button>
+            </div>
+            <img src="Testdino Landing Page Images/blog_images/Group 626031.svg" alt="Logo"
+                class="block md:hidden absolute right-[20px] bottom-[20px] w-[200px] h-[200px] mt-0" />
+            <img src="Testdino Landing Page Images/blog_images/Group 626031.svg" alt="Logo"
+                class="hidden md:block absolute right-[60px] top-[105px] w-[300px] h-[300px] mt-0" />
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#FAFAFA] py-8 md:pt-20 px-4 md:pb-10 ff-geist">
+        <div class="container mx-auto max-w-7xl">
+            <img src="Testdino Landing Page Images/icons/CTA DINO.svg" alt="Logo"
+                class="hidden md:block w-6 h-6 absolute right-[160px] top-[40px] scale-[4.5]" />
+
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-0 lg:mb-8 md:mb-8">
+                <!-- Logo and Newsletter -->
+                <div class="lg:col-span-2 flex flex-col items-start">
+                    <div class="flex items-center mb-6 md:mb-8">
+                        <div class="flex h-auto items-center justify-center">
+                            <img src="Testdino Landing Page Images/icons/logo_testdino.svg" alt="Testdino"
+                                class="w-40 md:w-56 lg:w-64">
+                        </div>
+                    </div>
+                    <p class="text-[#0b0c0e]/80 mb-4 text-lg md:text-1xl">Join our email list for product updates, tips,
+                        and offers.</p>
+                    <div class="flex w-full max-w-[400px] flex-col md:flex-row footer-form">
+                        <input type="email" placeholder="Email address"
+                            class="flex-1 rounded-[6px] mr-0 md:mr-2 ff-geist border border-[#E5E5E5] mb-2 md:mb-0 bg-white px-4 py-2 text-[#0b0c0e] focus:outline-none focus:ring-2 focus:ring-[#E5E5E5]">
+                        <button type="submit"
+                            class="rounded-[6px] bg-[#0b0c0e] px-6 py-3 text-white font-medium hover:bg-gray-800 transition-colors">Subscribe</button>
+                    </div>
+
+                    <!-- Social Icons -->
+                    <div class="flex space-x-3 mb-[16px] mt-6">
+                        <a href="#" target="_blank"
+                            class="w-9 h-9 flex items-center justify-center rounded-lg border border-[#E5E5E5] hover:bg-gray-100 transition-colors">
+                            <img src="Testdino Landing Page Images/icons/x-logo.svg" alt="Twitter">
+                        </a>
+                        <a href="#" target="_blank"
+                            class="w-9 h-9 flex items-center justify-center rounded-lg border border-[#E5E5E5] hover:bg-gray-100 transition-colors">
+                            <img src="Testdino Landing Page Images/icons/in-logo.svg" alt="LinkedIn">
+                        </a>
+                        <a href="#" target="_blank"
+                            class="w-9 h-9 flex items-center justify-center rounded-lg border border-[#E5E5E5] hover:bg-gray-100 transition-colors">
+                            <img src="Testdino Landing Page Images/icons/git-logo.svg" alt="GitHub">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Resources and Legal Links -->
+                <div class="flex gap-[81px] sm:flex-row sm:gap-[150px] lg:col-span-3 lg:justify-end">
+                    <!-- Resources Section -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-[#0b0c0e] mb-6 ff-Manrope">Resources</h3>
+                        <ul class="space-y-6 text-[#0b0c0e]/80">
+                            <li><a href="pricing.html" target="_self"
+                                    class="hover:text-[#333333] transition-colors">Pricing</a></li>
+                            <li><a href="docs.html" target="_self"
+                                    class="hover:text-[#333333] transition-colors">Documentation</a></li>
+                            <li><a href="blogs.html" target="_self"
+                                    class="hover:text-[#333333] transition-colors">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Legal -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-[#0b0c0e] mb-6 ff-Manrope">Legal</h3>
+                        <ul class="space-y-6 text-[#0b0c0e]/80">
+                            <li><a href="/terms-conditions/" target="_self"
+                                    class="hover:text-[#333333] transition-colors">Terms & Conditions</a></li>
+                            <li><a href="/privacy-policy/" target="_self"
+                                    class="hover:text-[#333333] transition-colors">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center mt-8 pt-6">
+            <div class="w-[85%] border-t border-[#E5E5E5] flex justify-center">
+                <p class="text-[#0b0c0e]/70 text-center text-base md:text-lg mt-6">© 2025 Testdino. All rights reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Popup Modal -->
+    <div id="popup-overlay" class="popup-modal-overlay hidden">
+        <div class="popup-modal-container">
+            <h2 class="popup-modal-title">Join our waitlist</h2>
+            <p class="popup-modal-alert">
+                <span>🎉</span> First 50 qualified users get private beta access + lifetime discount!
+            </p>
+
+            <form class="popup-modal-form">
+                <div class="popup-modal-form-group">
+                    <label for="name" class="popup-modal-label">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" class="popup-modal-input">
+                </div>
+
+                <div class="popup-modal-form-group">
+                    <label for="role" class="popup-modal-label">Your role</label>
+                    <input type="text" id="role" name="role"
+                        placeholder="Enter your role (DevOps, Fullstack Engineer, SDET, QA etc.)"
+                        class="popup-modal-input">
+                </div>
+
+                <div class="popup-modal-form-group">
+                    <label for="workEmail" class="popup-modal-label">Work Email</label>
+                    <input type="email" id="workEmail" name="workEmail" placeholder="Enter your business email"
+                        class="popup-modal-input">
+                </div>
+
+                <div class="popup-modal-form-group">
+                    <label for="biggestIssue" class="popup-modal-label">Biggest issue with your current reports</label>
+                    <textarea id="biggestIssue" name="biggestIssue" rows="4"
+                        placeholder="e.g.&#10;• Flaky tests, no root cause shown&#10;• Too noisy, lacks insights&#10;• Briefly share your test reporting pain…"
+                        class="popup-modal-input popup-modal-textarea"></textarea>
+                </div>
+
+                <div class="popup-modal-actions">
+                    <button type="button" id="cancel-button"
+                        class="popup-modal-btn popup-modal-btn-cancel">Cancel</button>
+                    <button type="submit" class="popup-modal-btn popup-modal-btn-submit">Join</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/scripts.js" defer></script>
+    <script>
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            document.getElementById('mobile-menu-overlay').classList.remove('hidden');
+        });
+
+        document.getElementById('close-mobile-menu').addEventListener('click', function () {
+            document.getElementById('mobile-menu-overlay').classList.add('hidden');
+        });
+
+        // Popup functionality
+        document.querySelectorAll('.pop-up').forEach(function (button) {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.getElementById('popup-overlay').classList.remove('hidden');
+            });
+        });
+
+        document.getElementById('cancel-button').addEventListener('click', function () {
+            document.getElementById('popup-overlay').classList.add('hidden');
+        });
+
+        // Close popup when clicking outside
+        document.getElementById('popup-overlay').addEventListener('click', function (e) {
+            if (e.target === this) {
+                this.classList.add('hidden');
+            }
+        });
+
+        // Pricing slider functionality
+        const testExecutionSlider = document.getElementById('testExecutionSlider');
+        const testExecutionValue = document.getElementById('testExecutionValue');
+
+        if (testExecutionSlider && testExecutionValue) {
+            const values = ['Free', '5k', '25k', '50k', '100k', '250k'];
+
+            testExecutionSlider.addEventListener('input', function () {
+                const index = parseInt(this.value);
+                testExecutionValue.textContent = values[index];
+            });
+        }
+    </script>
+</body>
+
+</html>
