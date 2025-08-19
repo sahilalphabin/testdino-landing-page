@@ -138,7 +138,7 @@
 
     <!-- DEPLOY WITH ZERO DOUBTS -->
     <section class="py-4 px-4 md:pt-[60px] relative bg-[#FAFAFA]">
-        <div class="mx-auto max-w-[1300px]">
+        <div class="mx-auto max-w-[1250px]">
             <div class="flex flex-col items-center">
                 <div class="bg-white rounded-lg px-4 py-2 mb-6 inline-flex items-center shadow-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-600" fill="none"
@@ -161,8 +161,8 @@
     </section>
 
     <!-- Pricing plan container -->
-    <section class="py-4 px-4 md:pb-[100px] relative bg-[#FAFAFA]">
-        <div class="mx-auto max-w-[1300px]">
+    <section class="py-4 px-4 md:pb-[100px] relative bg-[#FAFAFA]" id="pricing-section">
+        <div class="mx-auto max-w-[1250px]">
             <!-- Pricing calculator -->
              
             <!-- Test execution slider and billing frequency radio -->
@@ -210,7 +210,7 @@
                 </div>
             </div>
             <!-- Pricing cards -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6" id="pricing-cards">
                 <!-- Community Plan -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 pricing-card"
                     style="border: 1px solid #E2E4E9;">
@@ -226,8 +226,8 @@
                         Get started free
                         <img src="Testdino Landing Page Images/Pricing/icons/start_trial_arrow.svg" alt="Arrow" class="btn-arrow">
                     </button>
-                    <p class="text-sm text-gray-700 mb-4">Free, forever</p>
-                    <div class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-700 font-bold mb-4">Free, forever</p>
+                    <div class="flex flex-col gap-3 flex-grow">
                         <div class="feature-item">
                             <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark">
                             <p class="text-sm text-gray-700"><span class="font-bold">5000</span> test executions/month</p>
@@ -267,6 +267,7 @@
                     style="border-right: 1px solid #E2E4E9; border-bottom: 1px solid #E2E4E9; border-left: 1px solid #E2E4E9;">
                     <div class="flex items-center mb-2">
                         <img src="Testdino Landing Page Images/Pricing/icons/pro.svg" alt="Pro" class="w-6 h-6 mr-2">
+                        <br>
                         <h3 class="text-lg font-medium text-gray-900 ff-Manrope">Pro Plan</h3>
                     </div>
                     <p class="text-sm text-gray-500 mb-4">For dev teams shipping to production</p>
@@ -277,8 +278,8 @@
                         Start 14-day trial
                         <img src="Testdino Landing Page Images/Pricing/icons/start_trial_arrow.svg" alt="Arrow" class="btn-arrow">
                     </button>
-                    <p class="text-sm text-gray-700 mb-4">Everything in Community, plus:</p>
-                    <div class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-700 font-bold mb-4">Everything in Community, plus:</p>
+                    <div class="flex flex-col gap-3 flex-grow">
                         <div class="feature-item">
                             <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark">
                             <p class="text-sm text-gray-700"><span class="font-bold">25,000</span> test executions/month</p>
@@ -329,6 +330,7 @@
                     style="border-right: 1px solid #E2E4E9; border-bottom: 1px solid #E2E4E9; border-left: 1px solid #E2E4E9;">
                     <div class="flex items-center mb-2">
                         <img src="Testdino Landing Page Images/Pricing/icons/teams.svg" alt="Team" class="w-6 h-6 mr-2">
+                        <br>
                         <h3 class="text-lg font-medium text-gray-900 ff-Manrope">Team Plan</h3>
                         <span class="tag-most-popular">MOST POPULAR</span>
                     </div>
@@ -340,8 +342,8 @@
                         Start 14-day trial
                         <img src="Testdino Landing Page Images/Pricing/icons/start_trial_arrow.svg" alt="Arrow" class="btn-arrow">
                     </button>
-                    <p class="text-sm text-gray-700 mb-4">Everything in Pro Plan, plus:</p>
-                    <div class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-700 font-bold mb-4">Everything in Pro Plan, plus:</p>
+                    <div class="flex flex-col gap-3 flex-grow">
                         <div class="feature-item">
                             <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark">
                             <p class="text-sm text-gray-700"><span class="font-bold">100,000</span> test executions/month</p>
@@ -405,8 +407,8 @@
                         Contact sales
                         <img src="Testdino Landing Page Images/Pricing/icons/start_trial_arrow.svg" alt="Arrow" class="btn-arrow">
                     </button>
-                    <p class="text-sm text-gray-700 mb-4">Everything in Team Plan, plus:</p>
-                    <div class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-700 font-bold   mb-4">Everything in Team Plan, plus:</p>
+                    <div class="flex flex-col gap-3 flex-grow">
                         <div class="feature-item">
                             <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark">
                             <p class="text-sm text-gray-700"><span class="font-bold">Custom</span> execution limits</p>
@@ -435,11 +437,9 @@
                             <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark">
                             <p class="text-sm text-gray-700">Advanced compliance features</p>
                         </div>
-                        <div class="ai-features-container">
-                            <div class="ai-header">
-                                <img src="Testdino Landing Page Images/Pricing/icons/AI.svg" alt="AI" class="w-4 h-4">
-                                <p>Advanced AI features</p>
-                            </div>
+                        <div class="feature-item">
+                            <img src="Testdino Landing Page Images/Pricing/icons/AI.svg" alt="AI" class="w-4 h-4">
+                            <div class="advanced-ai-text">Advanced AI features</div>
                         </div>
                         <div class="feature-item">
                             <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark">
@@ -462,9 +462,10 @@
             </div>
         </div>
     </section>
+
     <!-- Compare Features across plans -->  
     <section class="py-4 px-4 md:pt-[60px] md:pb-[100px] relative bg-[#FAFAFA]">
-        <div class="mx-auto max-w-[1300px]">
+        <div class="mx-auto max-w-[1250px]">
             <div class="text-center mb-[10px] md:mb-10 animate-fade-in" data-animate="true">
                 <h2 class="text-[28px] md:text-[42px] text-[#0B0C0E] leading-normal ff-Manrope">Compare features across plans</h2>
                 <p class="text-sm text-gray-600 mt-2">Choose the plan that best fits your testing needs</p>
@@ -475,7 +476,7 @@
 
     <!-- Frequently Asked Questions -->
     <section class="py-4 px-4 md:pt-[60px] md:pb-[100px] relative bg-[#FAFAFA]">
-        <div class="mx-auto max-w-[1300px]">
+        <div class="mx-auto max-w-[1250px]">
             <div class="text-center mb-[10px] md:mb-10
                       How do I get a quote for my organization’s penetration test?
                      animate-fade-in" data-animate="true">
@@ -703,8 +704,6 @@
             </div>
         </div>
     </section>
-
-
 
     <!-- Call to Action Section -->
     <section class="py-[44px] px-[20px] md:pt-[90px] md:pb-[60px] bg-[#FAFAFA]">

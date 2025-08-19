@@ -12,16 +12,20 @@
 }
 
 /* AI feature sections container */
+/* AI features container - dimensions from Figma */
 .ai-features-container {
   width: 100%;
   padding: 16px;
-  background: #EEF4FF;
+  background: #EEF4FF; /* Light blue background */
   border-radius: 6px;
-  border-top: 4px solid #5B75EE;
+  border-top: 4px solid transparent;
+  border-image-source: linear-gradient(90deg, #5B75EE 0%, #9C1DE2 100%); /* Blue to purple gradient */
+  border-image-slice: 1;
   display: flex;
   flex-direction: column;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1.5rem; /* 24px */
+  margin-bottom: 0.5rem; /* 8px */
+  box-sizing: border-box;
 }
 
 .ai-features-container .ai-header {
@@ -62,6 +66,18 @@
   border: 1px solid #D1E5FF;
 }
 
+/* Advanced AI features text style */
+.advanced-ai-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #5B75EE;
+  font-size: 14px;
+  font-family: Geist;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
 /* Enterprise AI features */
 .enterprise-ai-feature {
   display: flex;
@@ -95,10 +111,12 @@
   margin-bottom: 0.5rem;
 }
 
+/* Feature item icon dimensions from Figma */
 .feature-item img {
-  width: 16px;
+  width: 16px; /* Desktop icon size */
   height: 16px;
   margin-top: 2px;
+  flex-shrink: 0; /* Prevent icon from shrinking */
 }
 
 /* Button arrow */
@@ -106,6 +124,135 @@
   width: 14px;
   height: 14px;
   margin-left: 0.5rem;
+}
+
+/* Pricing card base styles */
+.pricing-card {
+  /* Exact dimensions from Figma */
+  min-height: 650px; /* Desktop card height */
+  min-width: 310px; /* Minimum width to prevent content squeezing */
+  width: 100%;
+  max-width: 308px; /* Desktop card width from Figma (308px) */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive pricing cards */
+@media (max-width: 1340px) {
+  /* Custom breakpoint for two columns at 1340px */
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .tag-most-popular {
+    display: inline-block;
+    margin-top: 4px;
+    margin-left: 0;
+  }
+  
+  #pricing-section .flex-col.md\:flex-row {
+    flex-direction: column !important;
+  }
+  
+  /* Adjust card dimensions for 1024px - 1340px */
+  #pricing-cards {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .pricing-card {
+    max-width: 280px; /* Slightly smaller cards */
+  }
+}
+
+@media (max-width: 767px) {
+  .ai-features-container {
+    width: calc(100% + 24px);
+    margin-left: -12px;
+    padding: 12px;
+  }
+  
+  .pricing-card {
+    padding: 16px; /* Tablet padding */
+    min-height: 600px; /* Tablet height */
+    max-width: 100%; /* Full width on tablet */
+  }
+  
+  #pricing-section .flex-1 {
+    margin-bottom: 16px;
+  }
+  
+  .grid.sm\:grid-cols-2 {
+    gap: 16px; /* Smaller gap on tablet */
+  }
+}
+
+@media (max-width: 639px) {
+  .pricing-card {
+    width: 100%;
+    min-height: 550px; /* Mobile height */
+    max-width: 100%; /* Full width on mobile */
+  }
+  
+  .ai-features-container .feature-item {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  
+  .ai-features-container {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  /* Adjust icon sizes for mobile */
+  .feature-item img {
+    width: 14px;
+    height: 14px;
+  }
+  
+  /* Adjust text sizes for mobile */
+  .pricing-card h3 {
+    font-size: 16px; /* 1rem */
+  }
+  
+  .pricing-card p.text-sm {
+    font-size: 12px; /* 0.75rem */
+  }
+}
+
+/* Single column layout for very small screens */
+@media (max-width: 600px) {
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+  
+  .pricing-card {
+    min-height: 500px; /* Small mobile height */
+    max-width: 320px; /* From Figma mobile width */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 12px; /* Smaller padding on small screens */
+  }
+  
+  /* Adjust spacing for better mobile experience */
+  .pricing-card p.text-3xl {
+    font-size: 1.5rem; /* 24px */
+  }
+  
+  .feature-item {
+    margin-bottom: 0.25rem;
+    gap: 0.5rem;
+  }
+  
+  /* Grid gap adjustment */
+  .grid {
+    gap: 12px !important;
+  }
 }
 
 /* Active pricing plan */
