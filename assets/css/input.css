@@ -1476,121 +1476,209 @@ input[type=range]::-moz-range-thumb {
 
 .popup-modal-container {
   background-color: white;
-  border-radius: 8px;
-  padding: 1rem 2rem;
+  border-radius: 16px;
+  padding: 32px;
   width: 100%;
   max-width: 470px;
+  height: auto;
   margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
 }
 
 .popup-modal-title {
   font-size: 26px;
   font-weight: 700;
+  font-family: "Geist", sans-serif;
   color: #262626;
-  margin-bottom: 1.5rem;
+  margin: 0;
+  align-self: stretch;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .popup-modal-alert {
   font-size: 12px;
-  padding: 0.5rem 0.75rem;
+  padding: 8px 12px;
   border-radius: 6px;
-  border: 1px solid #A3D0F8;
   background-color: #E6F3FD;
+  border: 1px solid #A3D0F8;
   color: #073192;
+  font-family: "Geist", sans-serif;
+  font-weight: 400;
   text-align: left;
-  margin-bottom: 1.5rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  word-wrap: break-word;
 }
 
 .popup-modal-form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 24px;
+  align-self: stretch;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .popup-modal-form-group {
-  margin-bottom: 1rem;
+  margin: 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .popup-modal-label {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Geist", sans-serif;
   font-size: 16px;
   font-weight: 400;
+  font-style: normal;
   color: #404040;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
+  line-height: 100%;
+  letter-spacing: 0%;
+  word-wrap: break-word;
 }
 
 .popup-modal-input {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 12px;
   border: 1px solid #E5E5E5;
   border-radius: 6px;
   background-color: white;
-  color: #404040;
+  color: #0B0C0E;
   font-size: 14px;
+  height: 42px;
+  overflow: hidden;
+}
+
+.popup-modal-input::placeholder {
+  font-family: "Geist", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #A3A3A3;
+  align-self: stretch;
 }
 
 .popup-modal-input:focus {
   outline: none;
-  border-color: #171717;
-  box-shadow: 0 0 0 2px rgba(23, 23, 23, 0.1);
+  border-color: #645CFC;
+  box-shadow: 0 0 0 2px rgba(100, 92, 252, 0.1);
 }
 
 .popup-modal-textarea {
-  min-height: 100px;
+  min-height: 120px;
+  height: 120px;
   resize: none;
+  font-size: 12px;
+  justify-content: flex-start;
+}
+
+.popup-modal-textarea::placeholder {
+  font-family: \"Geist\", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 150%;
+  color: #A3A3A3;
 }
 
 .popup-modal-actions {
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .popup-modal-btn {
-  flex: 1;
-  padding: 0.75rem 1rem;
+  flex: 1 1 0;
+  height: 40px;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 16px;
+  font-family: "Geist", sans-serif;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: break-word;
 }
 
 .popup-modal-btn-cancel {
   background-color: white;
   border: 1px solid #E3E3E8;
-  color: #404040;
+  color: #09090B;
+  padding: 10px 32px;
+  gap: 6px;
 }
 
 .popup-modal-btn-cancel:hover {
   background-color: #f5f5f5;
+  border-color: #D1D1D6;
 }
 
 .popup-modal-btn-submit {
-  background-color: #0B0B0E;
+  background-color: #171717;
   border: 1px solid transparent;
   color: white;
+  padding: 10px 16px;
 }
 
 .popup-modal-btn-submit:hover {
-  background-color: #333333;
+  background-color: #2C2C2C;
+}
+
+/* Style for the Contact Form 7 response output */
+.wpcf7-response-output {
+  display: none !important; /* Hide the blue bar completely */
 }
 
 @media (max-width: 640px) {
   .popup-modal-container {
-    padding: 1rem;
+    padding: 24px;
     max-width: 90%;
+    height: auto;
   }
   
   .popup-modal-actions {
     flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px; /* Add space at the bottom on mobile */
   }
   
   .popup-modal-btn {
     width: 100%;
+  }
+  
+  .popup-modal-btn-cancel,
+  .popup-modal-btn-submit {
+    padding: 10px 16px;
   }
 }
 
