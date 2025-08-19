@@ -1434,4 +1434,30 @@ input[type=range]::-moz-range-thumb {
   }
 }
 
+/* Product-led growth tag styling */
+.tag-product-led-growth {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: #F5F5F5;
+  border: 1px solid #E0E0E0;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #171717;
+  transition: all 0.2s ease-in-out;
+}
+
+.tag-product-led-growth:hover {
+  background-color: #E5E5E5;
+  border-color: #D0D0D0;
+}
+
+/* Responsive adjustments for the tag */
+@media (max-width: 768px) {
+  .tag-product-led-growth {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+}
+
 
