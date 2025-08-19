@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name='robots' content='noindex, nofollow' />
-
   <!-- Global CSS styles -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -38,7 +37,7 @@
 
         <!-- Centered Nav Links -->
         <div class="hidden md:flex flex-1 justify-center items-center gap-[32px]">
-          <a href="/" target="_self" class="text-[#171717] hover:text-black-300 transition-colors font-[700]">Home</a>
+          <a href="/" target="_self" class="text-[#171717] hover:text-black-300 transition-colors">Home</a>
           <a href="/pricing/" target="_self" class="text-[#171717] hover:text-black-300 transition-colors">Pricing</a>
           <a href="/docs/" target="_self" class="text-[#171717] hover:text-black-300 transition-colors">Docs</a>
           <a href="/blogs.html" target="_self" class="text-[#171717] hover:text-black-300 transition-colors font-[700]">Blog</a>
@@ -75,16 +74,16 @@
             <!-- Mobile Menu Items -->
             <div class="flex-1 px-6 pt-[30px] space-y-6 overflow-y-auto flex flex-col items-center justify-center">
               <div class="space-y-4 flex flex-col items-center">
-                <a href="/" target="_self" class="block text-[#171717] text-[18px] leading-[24px] py-2 mobile-menu-link font-[700] text-center">Home</a>
+                <a href="/" target="_self" class="block text-[#171717] text-[18px] leading-[24px] py-2 mobile-menu-link text-center">Home</a>
                 <a href="/pricing/" target="_self" class="block text-[#171717] text-[18px] leading-[24px] py-2 mobile-menu-link text-center">Pricing</a>
                 <a href="/docs/" target="_self" class="block text-[#171717] text-[18px] leading-[24px] py-2 mobile-menu-link text-center">Docs</a>
-                <a href="/blogs.html" target="_self" class="block text-[#171717] text-[18px] leading-[24px] py-2 mobile-menu-link text-center">Blog</a>
+                <a href="/blogs.html" target="_self" class="block text-[#171717] text-[18px] leading-[24px] py-2 font-[700] mobile-menu-link text-center">Blog</a>
               </div>
             </div>
 
             <!-- Mobile CTA -->
             <div class="px-6 py-[32px] py-0">
-              <a href="#" target="_self" class="block w-full text-center rounded-[6px] bg-[#171717] px-6 py-3 text-[#ffffff] mobile-menu-link">Join waitlist</a>
+              <a href="#" target="_self" class="block w-full  text-center rounded-[6px] bg-[#171717] px-6 py-3 text-[#ffffff] mobile-menu-link">Join waitlist</a>
             </div>
           </div>
         </div>
@@ -320,37 +319,37 @@
   </footer>
 
   <!-- Popup Modal -->
-  <div id="popup-overlay" class="fixed inset-0 bg-[#17171766] h-[100vh] z-[9999] ff-geist bg-opacity-[40%] flex items-center justify-center hidden">
-    <div class="bg-white rounded-lg p-4 md:p-8 w-full max-w-[390px] md:max-w-[470px] mx-4">
-      <h2 class="text-[26px] font-[700] text-[#262626] mb-6">Join our waitlist</h2>
-      <p class="text-[12px] py-2 px-3 rounded-l text-[#073192] border border-[#A3D0F8] bg-[#E6F3FD] text-left mb-6">
-        🔥The first 50 qualified sign-ups will be invited to our private beta and will receive a <span class="font-semibold">lifetime discount</span> on Testdino.
+  <div id="popup-overlay" class="popup-modal-overlay hidden">
+    <div class="popup-modal-container">
+      <h2 class="popup-modal-title">Join our waitlist</h2>
+      <p class="popup-modal-alert">
+        🔥 First 50 qualified users get private beta access + lifetime discount!
       </p>
       
-      <form class="space-y-4">
-        <div>
-          <label for="name" class="block text-[16px] font-[400] text-[#404040]">Name</label>
-          <input type="text" id="name" name="name" placeholder="Enter your full name" class="mt-2 block w-full px-4 py-3 border border-gray-300 bg-white text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300">
-    </div>
+      <form class="popup-modal-form">
+        <div class="popup-modal-form-group">
+          <label for="name" class="popup-modal-label">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" class="popup-modal-input">
+        </div>
 
-        <div>
-          <label for="organizationName" class="block text-[16px] font-[400] text-[#404040]">Organization Name</label>
-          <input type="text" id="organizationName" name="organizationName" placeholder="Enter your organization name" class="mt-2 block w-full px-4 py-3 border border-gray-300 bg-white text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300">
-  </div>
-        
-        <div>
-          <label for="workEmail" class="block text-[16px] font-[400] text-[#404040]">Work Email</label>
-          <input type="email" id="workEmail" name="workEmail" placeholder="Enter your work email" class="mt-2 block w-full px-4 py-3 border border-gray-300 bg-white text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300">
+        <div class="popup-modal-form-group">
+          <label for="organizationName" class="popup-modal-label">Organization Name</label>
+          <input type="text" id="organizationName" name="organizationName" placeholder="Enter your organization name" class="popup-modal-input">
         </div>
         
-        <div>
-          <label for="biggestIssue" class="block text-[16px] font-[400] text-[#404040]">Biggest issue with your current reports</label>
-          <textarea id="biggestIssue" name="biggestIssue" rows="4" placeholder="e.g.&#10;• Flaky tests, no root cause shown&#10;• Too noisy, lacks insights&#10;• Briefly share your test reporting pain…" class="mt-2 block w-full px-4 py-3 border border-gray-300 bg-white text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300 resize-none"></textarea>
+        <div class="popup-modal-form-group">
+          <label for="workEmail" class="popup-modal-label">Work Email</label>
+          <input type="email" id="workEmail" name="workEmail" placeholder="Enter your work email" class="popup-modal-input">
         </div>
         
-        <div class="flex space-x-4 pt-4">
-          <button type="button" id="cancel-button" class="flex-1 px-6 py-3 bg-white border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Cancel</button>
-          <button type="submit" class="flex-1 px-6 py-3 bg-[#0B0B0E] border border-transparent rounded-md text-sm font-medium text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">Join</button>
+        <div class="popup-modal-form-group">
+          <label for="biggestIssue" class="popup-modal-label">Biggest issue with your current reports</label>
+          <textarea id="biggestIssue" name="biggestIssue" rows="4" placeholder="e.g.&#10;• Flaky tests, no root cause shown&#10;• Too noisy, lacks insights&#10;• Briefly share your test reporting pain…" class="popup-modal-input popup-modal-textarea"></textarea>
+        </div>
+        
+        <div class="popup-modal-actions">
+          <button type="button" id="cancel-button" class="popup-modal-btn popup-modal-btn-cancel">Cancel</button>
+          <button type="submit" class="popup-modal-btn popup-modal-btn-submit">Join</button>
         </div>
       </form>
     </div>

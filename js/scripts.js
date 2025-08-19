@@ -22,7 +22,7 @@ window.addEventListener('scroll', () => {
   }
 } else {
     // Reset styles when at top
-    nav.style.width = '1300px';
+    nav.style.width = '1250px';
     nav.style.margin = '0 auto';
     nav.style.padding = '0';
     nav.style.boxShadow = 'none';
