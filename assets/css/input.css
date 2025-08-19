@@ -688,6 +688,25 @@ input[type=range]::-moz-range-thumb {
 .js .slider-single.slick-initialized > div:nth-child(1n+2) { display: block }
 
 
+.popup-modal-btn-submit{
+  background: #645CFC;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 200px;
+  font-size: 16px;
+}
+
+.cancel-button{
+  background: #fff;
+  border: 1px solid #E2E4E9;
+  border-radius: 10px;
+  width: 200px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+
+
 /* 
 .slider-nav h3::before {
 	content: "";
@@ -1493,6 +1512,7 @@ input[type=range]::-moz-range-thumb {
 
 .popup-modal-title {
   font-size: 26px;
+  max-width: 400px;
   font-weight: 700;
   font-family: "Geist", sans-serif;
   color: #262626;
@@ -1505,6 +1525,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 .popup-modal-alert {
+  max-width: 400px;
   font-size: 12px;
   padding: 8px 12px;
   border-radius: 6px;
@@ -1660,7 +1681,7 @@ input[type=range]::-moz-range-thumb {
   display: none !important; /* Hide the blue bar completely */
 }
 
-@media (max-width: 640px) {
+@media (max-width: 440px) {
   .popup-modal-container {
     padding: 24px;
     max-width: 90%;
