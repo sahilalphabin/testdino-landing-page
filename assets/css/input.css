@@ -1336,7 +1336,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 .blog-text {
-  font-size: 1.125rem; /* text-lg equivalent */
+  font-size: 18px; /* text-lg equivalent */
   line-height: 1.75rem;
   color: #404040;
   margin-bottom: 1.5rem;
