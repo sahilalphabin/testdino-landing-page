@@ -124,25 +124,59 @@
         Don't settle for average testing: Embrace diversity, leverage data, & get exclusive insights from QA leaders.
       </p>
 
-      <!-- Category Filters -->
-      <div class="flex flex-wrap justify-center gap-[16px] mb-8">
+      <!-- Category Filters (Selectable, selected: bg-[#E5E5E5] border-[#D4D4D4], unselected: bg-white border-[#E8E8E8], no bold on unselected) -->
+      <div class="flex flex-wrap justify-center gap-[16px] mb-8" id="blog-category-filters">
         <button
-          class="w-[49px] h-[40px] px-4 py-[7px] bg-[#E5E5E5] rounded-[4px] border-radius-2 text-sm font-medium border transition-colors">All</button>
+          class="w-[49px] h-[40px] px-4 py-[7px] rounded-[4px] border border-[#D4D4D4] text-sm font-medium transition-colors bg-[#E5E5E5] text-[#171717] category-btn"
+          data-category="all">
+          All
+        </button>
         <button
-          class="w-auto h-[40px] px-4 py-[7px] text-[#404040] rounded-[4px] border-radius-2 bg-white text-sm border transition-colors">Agency
-          Success Guide</button>
+          class="w-auto h-[40px] px-4 py-[7px] rounded-[4px] border border-[#E8E8E8] text-sm font-normal transition-colors bg-white text-[#404040] category-btn"
+          data-category="agency-success-guide">
+          Agency Success Guide
+        </button>
         <button
-          class="w-auto h-[40px] px-4 py-[7px] text-[#404040] rounded-[4px] border-radius-2 bg-white text-sm border transition-colors">Marketing</button>
+          class="w-auto h-[40px] px-4 py-[7px] rounded-[4px] border border-[#E8E8E8] text-sm font-normal transition-colors bg-white text-[#404040] category-btn"
+          data-category="marketing">
+          Marketing
+        </button>
         <button
-          class="w-auto h-[40px] px-4 py-[7px] text-[#404040] rounded-[4px] border-radius-2 bg-white text-sm border transition-colors">Product-led
-          growth</button>
+          class="w-auto h-[40px] px-4 py-[7px] rounded-[4px] border border-[#E8E8E8] text-sm font-normal transition-colors bg-white text-[#404040] category-btn"
+          data-category="product-led-growth">
+          Product-led growth
+        </button>
         <button
-          class="w-auto h-[40px] px-4 py-[7px] text-[#404040] rounded-[4px] border-radius-2 bg-white text-sm border transition-colors">Lifecycle
-          marketing</button>
+          class="w-auto h-[40px] px-4 py-[7px] rounded-[4px] border border-[#E8E8E8] text-sm font-normal transition-colors bg-white text-[#404040] category-btn"
+          data-category="lifecycle-marketing">
+          Lifecycle marketing
+        </button>
         <button
-          class="w-auto h-[40px] px-4 py-[7px] text-[#404040] rounded-[4px] border-radius-2 bg-white text-sm border transition-colors">Customer
-          service</button>
+          class="w-auto h-[40px] px-4 py-[7px] rounded-[4px] border border-[#E8E8E8] text-sm font-normal transition-colors bg-white text-[#404040] category-btn"
+          data-category="customer-service">
+          Customer service
+        </button>
       </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const filterContainer = document.getElementById('blog-category-filters');
+          if (!filterContainer) return;
+          filterContainer.addEventListener('click', function (e) {
+            const btn = e.target.closest('.category-btn');
+            if (!btn) return;
+            filterContainer.querySelectorAll('.category-btn').forEach((b, i) => {
+              if (b === btn) {
+                b.classList.remove('bg-white', 'text-[#404040]', 'font-normal', 'border-[#E8E8E8]');
+                b.classList.add('bg-[#E5E5E5]', 'text-[#171717]', 'font-medium', 'border-[#D4D4D4]');
+              } else {
+                b.classList.remove('bg-[#E5E5E5]', 'text-[#171717]', 'font-medium', 'border-[#D4D4D4]');
+                b.classList.add('bg-white', 'text-[#404040]', 'font-normal', 'border-[#E8E8E8]');
+              }
+            });
+            // TODO: Filter blog posts by btn.dataset.category
+          });
+        });
+      </script>
 
       <!-- Search Bar -->
       <div class="flex justify-center mx-auto">
@@ -165,7 +199,7 @@
     <div class="max-w-[1200px] mx-auto">
       <!-- Featured Blog Post (Large Card) -->
       <div class="mb-12">
-        <div class="bg-white rounded-xl shadow-sm overflow-hidden cursor-pointer hover:shadow-md transition-shadow"
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden cursor-pointer"
           onclick="window.location.href='individual_blogs.html'">
           <div class="md:flex border-2 border-gray-100 p-[8px]">
             <!-- Left: Image -->
