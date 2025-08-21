@@ -10,6 +10,7 @@ window.addEventListener('scroll', () => {
   nav.style.padding = '10px 20px';
   nav.style.boxShadow = '0px 4px 12px rgba(0, 0, 0, 0.25)';
   nav.style.backgroundColor = "rgba(255, 255, 255, 0.6)";
+  nav.style.borderRadius = '20px';
   header.style.padding = '0 16px';
   nav.style.backdropFilter = 'blur(12px)';
 
@@ -26,6 +27,7 @@ window.addEventListener('scroll', () => {
     nav.style.margin = '0 auto';
     nav.style.padding = '0';
     nav.style.boxShadow = 'none';
+    nav.style.borderRadius = '20px';
     header.style.padding = '0 16px';
     nav.style.backgroundColor = "transparent"
     nav.style.backdropFilter = 'blur(12px)';
