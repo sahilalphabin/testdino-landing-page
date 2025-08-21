@@ -1761,7 +1761,7 @@ input[type=range]::-moz-range-thumb {
   max-width: 470px;
   height: auto;
   margin: 0 1rem;
-  display: flex;
+  display: block;
   flex-direction: column;
   gap: 28px;
   justify-content: flex-start;
