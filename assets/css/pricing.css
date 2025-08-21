@@ -288,3 +288,68 @@ input[type="range"]::-moz-range-thumb {
   border: 2px solid #171717;
   cursor: pointer;
 }
+
+/* Usage Limits Table Styling */
+.usage-limits-table {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.usage-limits-row {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.usage-limits-row:hover {
+  background-color: rgba(249, 250, 251, 0.8);
+}
+
+.usage-limits-header {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.usage-limits-highlighted {
+  background: linear-gradient(135deg, #eff6ff 0%, #f3e8ff 100%);
+  position: relative;
+}
+
+.usage-limits-highlighted::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #5B75EE 0%, #9C1DE2 100%);
+}
+
+/* Mobile responsiveness for usage limits */
+@media (max-width: 767px) {
+  .usage-limits-table {
+    border-radius: 0.5rem;
+    margin: 0 -0.5rem;
+  }
+  
+  .usage-limits-row {
+    flex-direction: column;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .usage-limits-row:last-child {
+    border-bottom: none;
+  }
+  
+  .usage-limits-row .w-full:first-child {
+    background-color: #f9fafb;
+    font-weight: 600;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .usage-limits-row .flex-col .w-full {
+    border-left: none;
+    border-bottom: 1px solid #f3f4f6;
+    padding: 0.75rem 1rem;
+  }
+  
+  .usage-limits-row .flex-col .w-full:last-child {
+    border-bottom: none;
+  }
+}

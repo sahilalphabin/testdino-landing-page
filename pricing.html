@@ -529,6 +529,7 @@
 
     <!-- Compare Features across plans -->
     <section class="py-4 px-4 md:pt-[60px] md:pb-[100px] relative bg-[#FFFFFF]">
+        
         <!-- Features across plans -->
         <div class="mx-auto max-w-[1200px]">
             <div class="text-center mb-[10px] md:mb-10 animate-fade-in" data-animate="true">
@@ -611,7 +612,133 @@
                 </div>
             </div>
         </div>
+        
         <!-- Usage Limits -->
+        <div class="mx-auto max-w-[1200px] mt-8">
+            <div class="bg-white rounded-lg border border-[#E5E5E5] overflow-hidden usage-limits-table">
+                <!-- Usage Limits Header -->
+                <div class="flex flex-col md:flex-row border-b border-[#E5E5E5] usage-limits-header">
+                    <div class="w-full md:w-1/5 px-4 py-6 flex items-center gap-3">
+                        <h3 class="text-[20px] text-[#212123] font-[600] ff-geist leading-[24px]">Usage Limits</h3>
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </div>
+                    <div class="hidden md:flex w-4/5">
+                        <div class="w-1/4 px-4 py-6"></div>
+                        <div class="w-1/4 px-4 py-6"></div>
+                        <div class="w-1/4 px-4 py-6"></div>
+                        <div class="w-1/4 px-4 py-6"></div>
+                    </div>
+                </div>
+
+                <!-- Test Results per Month -->
+                <div class="flex flex-col md:flex-row border-b border-[#E5E5E5] usage-limits-row">
+                    <div class="w-full md:w-1/5 px-4 py-4 flex items-center">
+                        <span class="text-[16px] text-[#212123] font-[400] ff-geist">Test Results per Month</span>
+                    </div>
+                    <div class="flex flex-col md:flex-row w-full md:w-4/5">
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center">
+                            <span class="text-[16px] text-[#212123] font-[400] ff-geist">5,000</span>
+                        </div>
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center">
+                            <span class="text-[16px] text-[#212123] font-[400] ff-geist">25,000</span>
+                        </div>
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center usage-limits-highlighted">
+                            <span class="text-[16px] text-[#212123] font-[700] ff-geist">100,000</span>
+                        </div>
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center">
+                            <span class="text-[16px] text-[#212123] font-[400] ff-geist">Unlimited</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Members -->
+                <div class="flex flex-col md:flex-row border-b border-[#E5E5E5] usage-limits-row">
+                    <div class="w-full md:w-1/5 px-4 py-4 flex items-center">
+                        <span class="text-[16px] text-[#212123] font-[400] ff-geist">Team Members</span>
+                    </div>
+                    <div class="flex flex-col md:flex-row w-full md:w-4/5">
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center">
+                            <span class="text-[16px] text-[#212123] font-[400] ff-geist">1</span>
+                        </div>
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center">
+                            <span class="text-[16px] text-[#212123] font-[400] ff-geist">5</span>
+                        </div>
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center usage-limits-highlighted">
+                            <span class="text-[16px] text-[#212123] font-[700] ff-geist">Unlimited</span>
+                        </div>
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center">
+                            <span class="text-[16px] text-[#212123] font-[400] ff-geist">Unlimited</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects -->
+                <div class="flex flex-col md:flex-row border-b border-[#E5E5E5] usage-limits-row">
+                    <div class="w-full md:w-1/5 px-4 py-4 flex items-center">
+                        <span class="text-[16px] text-[#212123] font-[400] ff-geist">Projects</span>
+                    </div>
+                    <div class="flex flex-col md:flex-row w-full md:w-4/5">
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center">
+                            <span class="text-[16px] text-[#212123] font-[400] ff-geist">1</span>
+                        </div>
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center">
+                            <span class="text-[16px] text-[#212123] font-[400] ff-geist">3</span>
+                        </div>
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center usage-limits-highlighted">
+                            <span class="text-[16px] text-[#212123] font-[700] ff-geist">Unlimited</span>
+                        </div>
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center">
+                            <span class="text-[16px] text-[#212123] font-[400] ff-geist">Unlimited</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Retention -->
+                <div class="flex flex-col md:flex-row border-b border-[#E5E5E5] usage-limits-row">
+                    <div class="w-full md:w-1/5 px-4 py-4 flex items-center">
+                        <span class="text-[16px] text-[#212123] font-[400] ff-geist">Data Retention</span>
+                    </div>
+                    <div class="flex flex-col md:flex-row w-full md:w-4/5">
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center">
+                            <span class="text-[16px] text-[#212123] font-[400] ff-geist">14 days</span>
+                        </div>
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center">
+                            <span class="text-[16px] text-[#212123] font-[400] ff-geist">90 days</span>
+                        </div>
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center usage-limits-highlighted">
+                            <span class="text-[16px] text-[#212123] font-[700] ff-geist">1 year</span>
+                        </div>
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center">
+                            <span class="text-[16px] text-[#212123] font-[400] ff-geist">Unlimited</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screenshot Storage -->
+                <div class="flex flex-col md:flex-row usage-limits-row">
+                    <div class="w-full md:w-1/5 px-4 py-4 flex items-center">
+                        <span class="text-[16px] text-[#212123] font-[400] ff-geist">Screenshot Storage</span>
+                    </div>
+                    <div class="flex flex-col md:flex-row w-full md:w-4/5">
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center">
+                            <span class="text-[16px] text-[#212123] font-[400] ff-geist">100MB</span>
+                        </div>
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center">
+                            <span class="text-[16px] text-[#212123] font-[400] ff-geist">5GB</span>
+                        </div>
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center usage-limits-highlighted">
+                            <span class="text-[16px] text-[#212123] font-[700] ff-geist">50GB</span>
+                        </div>
+                        <div class="w-full md:w-1/4 px-4 py-4 border-l border-[#E5E5E5] text-center">
+                            <span class="text-[16px] text-[#212123] font-[400] ff-geist">Unlimited</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- AI Powered Features -->
         <!-- Analytics & Insights -->
         <!-- Integrations -->
@@ -662,6 +789,11 @@
         </div>
       </div>
     </section>
+
+    <!-- Teams love What We Built -->
+    <!--<section class="py-4 px-4 md:pt-[60px] md:pb-[100px] relative bg-[#FFFFFF]">
+
+    </section> -->
 
     <!-- Frequently Asked Questions -->
     <section class="py-4 px-4 md:pt-[60px] md:pb-[100px] relative bg-[#FAFAFA]">
