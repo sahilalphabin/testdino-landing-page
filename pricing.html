@@ -45,6 +45,106 @@
             background-color: #171717;
             box-shadow: inset 0 0 0 4px white;
         }
+
+        /* Gradient border styles for pricing cards */
+        .pricing-card {
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .pricing-card.recommended {
+            border: 2px solid transparent !important;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(135deg, #8B5CF6, #EC4899) border-box !important;
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.15) !important;
+            border-radius: 16px !important;
+        }
+
+        .pricing-card:hover,
+        .pricing-card.user-selected {
+            border: 2px solid transparent !important;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(135deg, #8B5CF6, #EC4899) border-box !important;
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.15) !important;
+            border-radius: 16px !important;
+        }
+
+        /* Ensure only one card has gradient at a time */
+        .pricing-card:hover ~ .pricing-card.recommended,
+        .pricing-card.user-selected ~ .pricing-card.recommended,
+        .pricing-card:hover.recommended,
+        .pricing-card.user-selected.recommended {
+            border: 1px solid #E2E4E9 !important;
+            background: white !important;
+            box-shadow: none !important;
+        }
+    </style>
+
+    <style>
+        /* Slider tick labels exact positioning */
+        .slider-labels {
+            position: relative;
+            height: 18px;
+        }
+        .slider-labels .slider-label {
+            position: absolute;
+            top: 0;
+            transform: translateX(-50%);
+            font-size: 15px;
+            color: #4B5563; /* gray-600 */
+            white-space: nowrap;
+        }
+        .slider-labels .slider-label:nth-child(1) { left: 0%; transform: translateX(0); }
+        .slider-labels .slider-label:nth-child(2) { left: 33.3333%; }
+        .slider-labels .slider-label:nth-child(3) { left: 66.6667%; }
+        .slider-labels .slider-label:nth-child(4) { left: 100%; transform: translateX(-100%); }
+    </style>
+
+    <style>
+        /* Test execution slider - consistent alignment and filled track */
+        #testExecutionSlider {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 6px;
+            border-radius: 9999px;
+            background: linear-gradient(to right, #171717 0%, #171717 20%, #E5E7EB 20%, #E5E7EB 100%) !important;
+            outline: none;
+        }
+        #testExecutionSlider::-webkit-slider-runnable-track {
+            height: 6px;
+            background: transparent;
+            border-radius: 9999px;
+        }
+        #testExecutionSlider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            background: #ffffff;
+            border: 2px solid #171717;
+            border-radius: 9999px;
+            margin-top: -2.5px; /* centers the thumb on the 6px track */
+            cursor: pointer;
+        }
+        /* Firefox */
+        #testExecutionSlider::-moz-range-track {
+            height: 5px;
+            background: transparent;
+            border-radius: 9999px;
+        }
+        #testExecutionSlider::-moz-range-progress {
+            height: 6px;
+            background: #171717;
+            border-radius: 9999px;
+        }
+        #testExecutionSlider::-moz-range-thumb {
+            width: -6px;
+            height: 16px;
+            background: #ffffff;
+            border: 2px solid #171717;
+            border-radius: 9999px;
+            cursor: pointer;
+        }
     </style>
 
     <title>Pricing - Testdino</title>
@@ -173,18 +273,16 @@
                     <div class="mb-4">
                         <p class="text-[16px] mb-2">I need <span
                                 class="bg-[#E7EFFE] text-[#004AB3] px-2 py-1 rounded font-bold"
-                                id="testExecutionValue">5k</span> test executions per month </p>
+                                id="testExecutionValue">25k</span> test executions per month </p>
                         <div class="relative">
-                            <input type="range" min="0" max="5" value="1" step="1"
+                            <input type="range" min="0" max="3" value="1" step="1"
                                 class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                                 id="testExecutionSlider">
-                            <div class="flex justify-between text-xs text-gray-600 px-1 mt-2">
-                                <span>Free</span>
-                                <span>5k</span>
-                                <span>25k</span>
-                                <span>50k</span>
-                                <span>100k</span>
-                                <span>250k</span>
+                            <div class="slider-labels mt-2">
+                                <span class="slider-label">Free</span>
+                                <span class="slider-label">25k</span>
+                                <span class="slider-label">100k</span>
+                                <span class="slider-label">100k+</span>
                             </div>
                         </div>
                     </div>
@@ -204,7 +302,7 @@
                                 <input type="radio" name="billing" value="annually"
                                     class="form-radio h-5 w-5 text-black">
                                 <span class="ml-2">Annually</span>
-                                <span class="ml-2 text-xs bg-[#E7EFFE] text-[#004AB3] px-2 py-1 rounded">save 20%</span>
+                                <span class="ml-2 text-xs bg-[#E7EFFE] text-[#004AB3] px-2 py-1 rounded">SAVE UP TO 20%</span>
                             </label>
                         </div>
                     </div>
@@ -216,11 +314,10 @@
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 pricing-card"
                     style="border: 1px solid #E2E4E9;">
                     <div class="flex items-center mb-2">
-                        <img src="Testdino Landing Page Images/Pricing/icons/community.svg" alt="Community"
-                            class="w-6 h-6 mr-2">
-                        <h3 class="text-lg font-medium text-gray-900 ff-Manrope">Community</h3>
+                        <img src="Testdino Landing Page Images/Pricing/icons/community.svg" alt="Community" class="w-9 h-9 mr-2">
                     </div>
-                    <p class="text-sm text-gray-500 mb-4">Perfect for individual developers</p>
+                    <span class="text-lg font-bold text-gray-900 ff-Manrope">Community</span>
+                    <p class="text-xs text-gray-500 mb-4">Perfect for individual developers</p>
                     <div class="mt-4 mb-6">
                         <p class="text-3xl font-bold ff-Manrope">Free</p>
                     </div>
@@ -268,14 +365,14 @@
                     </div>
                 </div>
                 <!-- Pro Plan -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 plan-card-gradient pricing-card"
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 pricing-card"
                     style="border-right: 1px solid #E2E4E9; border-bottom: 1px solid #E2E4E9; border-left: 1px solid #E2E4E9;">
                     <div class="flex items-center mb-2">
-                        <img src="Testdino Landing Page Images/Pricing/icons/pro.svg" alt="Pro" class="w-6 h-6 mr-2">
-                        <br>
-                        <h3 class="text-lg font-medium text-gray-900 ff-Manrope">Pro Plan</h3>
+                        <img src="Testdino Landing Page Images/Pricing/icons/pro.svg" alt="Pro" class="w-9 h-9 mr-2">
                     </div>
-                    <p class="text-sm text-gray-500 mb-4">For dev teams shipping to production</p>
+                        <span class="text-lg font-bold text-gray-900 ff-Manrope">Pro Plan</span>
+                    
+                    <p class="text-xs text-gray-500 mb-4">For dev teams shipping to production</p>
                     <div class="mt-4 mb-6">
                         <p class="text-3xl font-bold ff-Manrope">$18 <span class="text-sm font-normal">/month</span></p>
                     </div>
@@ -316,6 +413,7 @@
                             <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark">
                             <p class="text-sm text-gray-700">Email support</p>
                         </div>
+                        <br>
                         <div class="ai-features-container">
                             <div class="ai-header">
                                 <img src="Testdino Landing Page Images/Pricing/icons/AI.svg" alt="AI" class="w-4 h-4">
@@ -334,15 +432,14 @@
 
                 </div>
                 <!-- Team Plan -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 plan-card-gradient pricing-card"
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 pricing-card"
                     style="border-right: 1px solid #E2E4E9; border-bottom: 1px solid #E2E4E9; border-left: 1px solid #E2E4E9;">
                     <div class="flex items-center mb-2">
-                        <img src="Testdino Landing Page Images/Pricing/icons/teams.svg" alt="Team" class="w-6 h-6 mr-2">
-                        <br>
-                        <h3 class="text-lg font-medium text-gray-900 ff-Manrope">Team Plan</h3>
+                        <img src="Testdino Landing Page Images/Pricing/icons/teams.svg" alt="Team" class="w-9 h-9 mr-2">
                         <span class="tag-most-popular">MOST POPULAR</span>
                     </div>
-                    <p class="text-sm text-gray-500 mb-4">Engineering teams at scale</p>
+                        <span class="text-lg font-bold text-gray-900 ff-Manrope">Team Plan</span>
+                    <p class="text-xs text-gray-500 mb-4">Engineering teams at scale</p>
                     <div class="mt-4 mb-6">
                         <p class="text-3xl font-bold ff-Manrope">$49 <span class="text-sm font-normal">/month</span></p>
                     </div>
@@ -408,11 +505,10 @@
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 pricing-card"
                     style="border: 1px solid #E2E4E9;">
                     <div class="flex items-center mb-2">
-                        <img src="Testdino Landing Page Images/Pricing/icons/enterprise.svg" alt="Enterprise"
-                            class="w-6 h-6 mr-2">
-                        <h3 class="text-lg font-medium text-gray-900 ff-Manrope">Enterprise</h3>
+                        <img src="Testdino Landing Page Images/Pricing/icons/enterprise.svg" alt="Enterprise" class="w-9 h-9 mr-2">
                     </div>
-                    <p class="text-sm text-gray-500 mb-4">For large companies with security needs</p>
+                    <span class="text-lg font-bold text-gray-900 ff-Manrope">Enterprise</span>
+                    <p class="text-xs text-gray-500 mb-4">For large companies with security needs</p>
                     <div class="mt-4 mb-6">
                         <p class="text-3xl font-bold ff-Manrope">Custom</p>
                     </div>
@@ -974,15 +1070,98 @@
         // Pricing slider functionality
         const testExecutionSlider = document.getElementById('testExecutionSlider');
         const testExecutionValue = document.getElementById('testExecutionValue');
+        const pricingCards = document.querySelectorAll('.pricing-card');
 
         if (testExecutionSlider && testExecutionValue) {
-            const values = ['Free', '5k', '25k', '50k', '100k', '250k'];
+            const values = ['Free', '25k', '100k', '100k+'];
+
+            function updateRecommendedCard() {
+                // Remove recommended class from all cards
+                pricingCards.forEach(card => {
+                    card.classList.remove('recommended');
+                });
+
+                const index = parseInt(testExecutionSlider.value);
+                const currentValue = values[index];
+
+                // Add recommended class based on slider value
+                if (currentValue === 'Free') {
+                    // Community plan
+                    pricingCards[0].classList.add('recommended');
+                } else if (currentValue === '25k') {
+                    // Pro plan
+                    pricingCards[1].classList.add('recommended');
+                } else if (currentValue === '100k') {
+                    // Team plan
+                    pricingCards[2].classList.add('recommended');
+                } else if (currentValue === '100k+') {
+                    // Enterprise plan
+                    pricingCards[3].classList.add('recommended');
+                }
+            }
 
             testExecutionSlider.addEventListener('input', function () {
                 const index = parseInt(this.value);
                 testExecutionValue.textContent = values[index];
+                updateRecommendedCard();
+
+                // Update slider filled track to selected tick
+                const percentSteps = [0, 33.3333, 66.6667, 100];
+                const pct = percentSteps[index];
+                testExecutionSlider.style.setProperty('background', `linear-gradient(to right, #171717 0%, #171717 ${pct}%, #E5E7EB ${pct}%, #E5E7EB 100%)`, 'important');
             });
+
+            // Initialize the recommended card on page load
+            updateRecommendedCard();
+
+            // Initialize slider fill on load
+            (function initSliderFill() {
+                const index = parseInt(testExecutionSlider.value);
+                const percentSteps = [0, 33.3333, 66.6667, 100];
+                const pct = percentSteps[index];
+                testExecutionSlider.style.setProperty('background', `linear-gradient(to right, #171717 0%, #171717 ${pct}%, #E5E7EB ${pct}%, #E5E7EB 100%)`, 'important');
+            })();
         }
+
+        // Card hover/click selection behavior
+        if (pricingCards && pricingCards.length) {
+            pricingCards.forEach(card => {
+                // Ensure pointer cursor
+                card.style.cursor = 'pointer';
+
+                // Click to select card
+                card.addEventListener('click', function () {
+                    pricingCards.forEach(c => c.classList.remove('user-selected'));
+                    this.classList.add('user-selected');
+                });
+
+                // Hover to temporarily show gradient
+                card.addEventListener('mouseenter', function () {
+                    pricingCards.forEach(c => c.classList.remove('recommended'));
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    if (!document.querySelector('.pricing-card.user-selected')) {
+                        updateRecommendedCard();
+                    }
+                });
+            });
+
+            // When slider changes, clear user selection so recommendation takes over
+            if (testExecutionSlider) {
+                testExecutionSlider.addEventListener('input', function () {
+                    pricingCards.forEach(c => c.classList.remove('user-selected'));
+                });
+            }
+        }
+
+        // Click outside pricing cards to clear selection
+        document.addEventListener('click', function (event) {
+            const isPricingCard = event.target.closest('.pricing-card');
+            if (!isPricingCard) {
+                pricingCards.forEach(card => card.classList.remove('user-selected'));
+            }
+        });
     </script>
 </body>
 
