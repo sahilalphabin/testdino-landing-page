@@ -145,7 +145,7 @@
             </div>
 
             <!-- Main Title -->
-            <h1 class="text-[22px] md:text-[32px] lg:text-[32px] text-[#0B0C0E] mb-8 leading-tight ff-Manrope">
+            <h1 class="text-[22px] md:text-[32px] lg:text-[32px] text-[#0B0C0E] mb- leading-tight ff-Manrope">
               Top 10 Mobile App Security Companies in USA for 2025
             </h1>
 
@@ -204,6 +204,8 @@
     </div>
     <!-- Line -->
     <div class="w-full h-[1px] bg-[#E0E0E0]" style="margin-top: 1px; margin-bottom: 80px;"></div>
+    
+    <!-- Blog Content -->
     <div class="max-w-[1200px] mx-auto">
       <!-- Two Column Layout -->
       <div class="lg:flex lg:gap-10">
@@ -222,7 +224,7 @@
               </a>
               <a href="#key-features" class="toc-link relative pl-4 transition-all duration-200"
                 data-section="key-features">
-                <span class="text-[16px] text-[#404040] font-light leading-tight">Key Features of a Mobile App<br />Security
+                <span class="text-[16px] text-[#404040] font-light leading-tight">Key Features of a Mobile App Security
                   Company</span>
               </a>
               <a href="#security-practices" class="toc-link relative pl-4 transition-all duration-200"
@@ -231,7 +233,7 @@
               </a>
               <a href="#top-10-leaders" class="toc-link relative pl-4 transition-all duration-200"
                 data-section="top-10-leaders">
-                <span class="text-[16px] text-[#404040] font-light leading-tight">Meet the Top 10 Mobile App Security<br />Leaders
+                <span class="text-[16px] text-[#404040] font-light leading-tight">Meet the Top 10 Mobile App Security Leaders
                   of 2025</span>
               </a>
               <a href="#choosing-partner" class="toc-link relative pl-4 transition-all duration-200"
@@ -265,7 +267,7 @@
                 if (idx === activeIdx) {
                   // Active section: bold text, dark color, full-height, narrow left bar
                   textSpan.classList.add('font-bold', 'text-[#171717]');
-                  textSpan.classList.remove('text-[#404040]');
+                  textSpan.classList.remove('text-[#404040]', 'font-light');
                   link.classList.add(
                     'before:absolute',
                     'before:left-0',
@@ -274,12 +276,14 @@
                     'before:h-full',
                     'before:bg-[#171717]',
                     'before:transform'
+
+                    
                   );
                   link.classList.remove(
                     'before:top-1/2',
                     'before:-translate-y-1/2',
                     'before:w-1',
-                    'before:h-4'
+                    'before:h-4',
                   );
                 } else {
                   // Inactive section: normal text, gray color, no bar
@@ -296,7 +300,8 @@
                     'before:top-1/2',
                     'before:-translate-y-1/2',
                     'before:w-1',
-                    'before:h-4'
+                    'before:h-4',
+                    'font-light'
                   );
                 }
               });
@@ -514,8 +519,8 @@
 
             <!-- Company 1 -->
             <div class="mb-8">
-              <h3 class="text-xl font-bold  mb-3">1. Alphabin</h3>
-              <p class="text-lg font-semibold mb-3">The Unmatched Leader in Mobile Security</p>
+              <h3 class="text-[22px] font-bold  mb-3">1. Alphabin</h3>
+              <p class="text-[22px] font-semibold mb-3">The Unmatched Leader in Mobile Security</p>
               <p class=" mb-4" style="font-size: 18px;">
                 Alphabin stands at the forefront of mobile app security with its cutting-edge AI-powered threat
                 intelligence platform. Their comprehensive approach to security has made them the go-to choice for
@@ -558,8 +563,8 @@
 
             <!-- Company 2 -->
             <div class="mb-8">
-              <h3 class="text-xl font-bold  mb-3">2. Veracode</h3>
-              <p class="text-lg font-semibold mb-3">The Application Security Powerhouse</p>
+              <h3 class="text-[22px] font-bold  mb-3">2. Veracode</h3>
+              <p class="text-[22px] font-semibold mb-3">The Application Security Powerhouse</p>
               <p class=" mb-4" style="font-size: 18px;">
                 Veracode specializes in comprehensive application security testing, providing businesses with the tools
                 and insights needed to build secure applications from the ground up.

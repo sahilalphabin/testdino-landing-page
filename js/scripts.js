@@ -605,7 +605,7 @@ const textarea = document.getElementById("reportIssue");
 
   // 
 
- const links = document.querySelectorAll("ul a");
+ const links = document.querySelectorAll("ul a:not(.toc-link)");
 
   const observerOptions = {
     root: null,
@@ -616,18 +616,18 @@ const textarea = document.getElementById("reportIssue");
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       const id = entry.target.getAttribute("id");
-      const link = document.querySelector(`ul a[href="#${id}"]`);
+      const link = document.querySelector(`ul a:not(.toc-link)[href="#${id}"]`);
 
       if (entry.isIntersecting && link) {
         // Remove all classes from every link
         links.forEach((el) => {
-          el.classList.remove("text-[#171717]", "font-[700]");
-          el.classList.add("text-[#25223B]", "font-[300]");
+          el.classList.remove("text-[#171717]", "font-bold");
+          el.classList.add("text-[#25223B]");
         });
 
         // Add active classes to current link
-        link.classList.add("text-[#171717]", "font-[700]");
-        link.classList.remove("text-[#25223B]", "font-[300]");
+        link.classList.add("text-[#171717]", "font-bold");
+        link.classList.remove("text-[#25223B]");
       }
     });
   }, observerOptions);
