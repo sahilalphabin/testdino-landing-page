@@ -1,0 +1,34 @@
+/* Rotating Text Animation CSS */
+
+/* Footer Form Control Spacing */
+.footer-form .wpcf7-form-control-wrap{
+  margin-right: 12px;
+}
+
+/* Rotating Text Animation */
+.rotating-text {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.5em; /* same as line height of your text */
+  vertical-align: bottom;
+}
+
+.rotating-text span {
+  display: block;
+  animation: slideUp 12s infinite;
+}
+
+@keyframes slideUp {
+  0%, 20% { transform: translateY(0%); }
+  25%, 45% { transform: translateY(-100%); }
+  50%, 70% { transform: translateY(-200%); }
+  75%, 95% { transform: translateY(-300%); }
+  100% { transform: translateY(0%); } /* loop back smoothly */
+}
+
+/* Responsive adjustments for rotating text */
+@media (max-width: 768px) {
+  .rotating-text {
+    height: 1.2em; /* Slightly smaller on mobile */
+  }
+}

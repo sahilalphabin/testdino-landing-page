@@ -90,6 +90,7 @@
   <!-- Geist (via Vercel UI CDN – optional, includes UI styles) -->
   <link rel="stylesheet" href="https://unpkg.com/@geist-ui/react@latest/dist/geist-ui.css" />
   <link rel="stylesheet" href="assets/css/input.css">
+  <link rel="stylesheet" href="assets/css/rotating-text.css">
 
 </head>
 
@@ -1160,9 +1161,14 @@
       class="w-full max-w-[1280px] mx-auto h-60 flex justify-center items-start flex-col px-4 h-[520px] md:px-16 py-2 md:py-[165px] rounded-xl relative before:absolute before:inset-0 before:z-10 before:bg-[linear-gradient(270deg,rgba(255,255,255,0)_0%,rgba(34,34,34,0.25)_65.63%,rgba(0,0,0,0.5)_100%)] overflow-hidden"
       style="background-image: url('Testdino Landing Page Images/icons/dinosor-bg.webp'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
       <div class="z-10">
-        <h4 class="ff-Manrope text-[28px] md:text-[42px] mb-[24px] md:mb-6 font-[500] text-white z-10">Stop wasting <br
-            class="block md:hidden"> time on<br>
-          <span class="ff-poppines italic"> flaky tests</span>
+        <h4 class="ff-Manrope text-[28px] md:text-[42px] mb-[24px] md:mb-6 font-[600] text-white z-10">
+          Stop wasting <br class="block md:hidden"> time on<br>
+          <span class="rotating-text ff-poppines italic font-[400]">
+            <span>flaky tests</span>
+            <span>broken builds</span>
+            <span>re-run roulette</span>
+            <span>false failures</span>
+          </span>
         </h4>
         <button type="button" id="pop-up"
           class="pop-up bg-[#FFFF] ff-geist rounded-lg inline-block px-6 md:px-[16px] py-2 md:py-[10px] text-[#171717] font-medium hover:bg-[#333333] hover:text-[#fff] transition-colors font-[500] text-[12px] md:text-[16px]">
@@ -1244,108 +1250,58 @@
   </div>
   <!-- popup end -->
 
-
-
+  <!-- Footer -->
   <footer class="bg-[#FAFAFA] py-8 md:pt-20 px-4 md:pb-10 ff-geist">
-    <div class="container mx-auto max-w-7xl">
+    <div class="container mx-auto max-w-7xl"> 
+      <img src="Testdino Landing Page Images/icons/CTA DINO.svg" alt="Logo" class="hidden md:block w-6 h-6 absolute right-[160px] top-[40px] scale-[4.5]" />
+
       <!-- Main Footer Content -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-0 lg:mb-8 md:mb-8">
         <!-- Logo and Newsletter -->
         <div class="lg:col-span-2 flex flex-col items-start">
           <div class="flex items-center mb-6 md:mb-8">
             <div class="flex h-auto items-center justify-center">
-              <img src="Testdino Landing Page Images/icons/logo_testdino.svg" alt="" class="w-40 md:w-56 lg:w-64">
+              <img src="Testdino Landing Page Images/icons/logo_testdino.svg" alt="Testdino" class="w-40 md:w-56 lg:w-64">
             </div>
-            <!-- <span class="text-xl font-bold text-[#0b0c0e]">Testdino</span> -->
           </div>
-          <div class="wpcf7 no-js" id="wpcf7-f282-o2" lang="en-US" dir="ltr" data-wpcf7-id="282">
-            <div class="screen-reader-response">
-              <p role="status" aria-live="polite" aria-atomic="true"></p>
+          <p class="text-[#0b0c0e]/80 mb-4 text-lg md:text-1xl" style="font-size: 16px;">Join our email list for product updates, tips, and offers.</p>
+          <div class="flex w-full h-[40px] max-w-[400px] flex-col md:flex-row footer-form">
+            <input type="email" placeholder="Email address" class="flex-1 rounded-[6px] mr-0 md:mr-2 ff-geist border border-[#E5E5E5] mb-2 md:mb-0 bg-white px-4 py-2 text-[#0b0c0e] focus:outline-none focus:ring-2 focus:ring-[#E5E5E5]">
+            <button type="submit" class="rounded-[6px] bg-[#0b0c0e] px-6 py-3 text-white font-medium hover:bg-gray-800 transition-colors">Subscribe</button>
             </div>
-            <p class="text-[#0b0c0e]/80 mb-4 text-lg md:text-1xl">Join our email list for product updates, tips, and
-              offers.</p>
-            <form action="/#wpcf7-f282-o2" method="post" class="wpcf7-form init" aria-label="Contact form"
-              novalidate="novalidate" data-status="init">
-              <fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="282" /><input
-                  type="hidden" name="_wpcf7_version" value="6.1" /><input type="hidden" name="_wpcf7_locale"
-                  value="en_US" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f282-o2" /><input
-                  type="hidden" name="_wpcf7_container_post" value="0" /><input type="hidden"
-                  name="_wpcf7_posted_data_hash" value="" />
-              </fieldset>
-              <div class="flex w-full max-w-1200px flex-col md:flex-row footer-form">
-                <span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxlength="300"
-                    class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email block w-full px-4 py-3 border border-gray-300 bg-white text-gray-700 rounded-md focusoutline-none focusring-2 focusring-gray-300 smtext-sm"
-                    aria-required="true" aria-invalid="false" placeholder="example@mail.com" value="" type="email"
-                    name="your-email" /></span>
-                <button type="submit"
-                  class="rounded-[6px] bg-[#0b0c0e] px-6 py-3 text-white font-medium hover:bg-gray-800 transition-colors">
-                  Subscribe
-                </button>
-              </div>
-              <div class="wpcf7-response-output" aria-hidden="true"></div>
-            </form>
-          </div>
-          <div class="flex items-center mb-6 md:mb-8"></div>
+          
           <!-- Social Icons -->
-          <div class="flex space-x-3 mb-[16px]">
-            <a href="#" target="_blank"
-              class="w-9 h-9 flex items-center justify-center rounded-lg border border-[#E5E5E5] hover:bg-gray-100 transition-colors">
+          <div class="flex space-x-3 h-[40px] mb-[16px] mt-6">
+            <a href="#" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-lg border border-[#E5E5E5] hover:bg-gray-100 transition-colors">
               <img src="Testdino Landing Page Images/icons/x-logo.svg" alt="Twitter">
             </a>
-            <a href="#" target="_blank"
-              class="w-9 h-9 flex items-center justify-center rounded-lg border border-[#E5E5E5] hover:bg-gray-100 transition-colors">
+            <a href="#" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-lg border border-[#E5E5E5] hover:bg-gray-100 transition-colors">
               <img src="Testdino Landing Page Images/icons/in-logo.svg" alt="LinkedIn">
             </a>
-            <a href="#" target="_blank"
-              class="w-9 h-9 flex items-center justify-center rounded-lg border border-[#E5E5E5] hover:bg-gray-100 transition-colors">
+            <a href="#" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-lg border border-[#E5E5E5] hover:bg-gray-100 transition-colors">
               <img src="Testdino Landing Page Images/icons/git-logo.svg" alt="GitHub">
             </a>
           </div>
-          <!-- Email Input -->
-          <!-- <div class="flex w-full max-w-[1200px] flex-col md:flex-row">
-                    <input type="email" placeholder="example@mail.com"
-                        class="flex-1 rounded-[6px] mr-0 md:mr-2 ff-geist border border-[#E5E5E5] mb-2 md:mb-0 bg-white px-4 py-2 text-[#0b0c0e] focus:outline-none focus:ring-2 focus:ring-[#E5E5E5]" />
-                    <button type="submit"
-                        class="rounded-[6px] bg-[#0b0c0e] px-6 py-3 text-white font-medium hover:bg-gray-800 transition-colors">
-                        Submit
-                    </button>
-                </div> -->
         </div>
 
         <!-- Resources and Legal Links -->
         <div class="flex gap-[81px] sm:flex-row sm:gap-[150px] lg:col-span-3 lg:justify-end">
           <!-- Resources Section -->
           <div>
-            <h3 class="text-lg font-semibold text-[#0b0c0e] mb-6 ff-Manrope-f">Resources</h3>
+            <h3 class="text-lg font-semibold text-[#0b0c0e] mb-6 ff-Manrope">Resources</h3>
             <ul class="space-y-6 text-[#0b0c0e]/80">
-              <li>
-                <a href="pricing.html" target="_self" class="hover:text-[#333333] transition-colors">
-                  Pricing </a>
-              </li>
-              <li>
-                <a href="docs.html" target="_self" class="hover:text-[#333333] transition-colors">
-                  Documentation </a>
-              </li>
-              <li>
-                <a href="blogs.html" target="_self" class="hover:text-[#333333] transition-colors">
-                  Blog </a>
-              </li>
+              <li><a href="pricing.html" target="_self" class="hover:text-[#333333] transition-colors">Pricing</a></li>
+              <li><a href="docs.html" target="_self" class="hover:text-[#333333] transition-colors">Documentation</a></li>
+              <li><a href="blogs.html" target="_self" class="hover:text-[#333333] transition-colors">Blog</a></li>
             </ul>
           </div>
 
           <!-- Legal -->
           <div>
-            <h3 class="text-lg font-semibold text-[#0b0c0e] mb-6 ff-Manrope-f">
-              Legal </h3>
+            <h3 class="text-lg font-semibold text-[#0b0c0e] mb-6 ff-Manrope">Legal</h3>
             <ul class="space-y-6 text-[#0b0c0e]/80">
-              <li>
-                <a href="/terms-conditions/" target="_self" class="hover:text-[#333333] transition-colors">
-                  Terms &amp; Conditions </a>
-              </li>
-              <li>
-                <a href="/privacy-policy/" target="_self" class="hover:text-[#333333] transition-colors">
-                  Privacy Policy </a>
-              </li>
+              <li><a href="/terms-conditions/" target="_self" class="hover:text-[#333333] transition-colors">Terms & Conditions</a></li>
+              <li><a href="/privacy-policy/" target="_self" class="hover:text-[#333333] transition-colors">Privacy Policy</a></li>
             </ul>
           </div>
         </div>
@@ -1354,7 +1310,7 @@
 
     <div class="flex justify-center mt-8 pt-6">
       <div class="w-[85%] border-t border-[#E5E5E5] flex justify-center">
-        <p class="text-[#0b0c0e]/70 text-center text-base md:text-lg mt-6">© 2025 Testdino. All rights reserved</p>
+        <p class="text-[#0b0c0e]/70 text-center md:text-lg mt-6">© 2025 Testdino. All rights reserved</p>
       </div>
     </div>
   </footer>
