@@ -1233,16 +1233,16 @@ input[type=range]::-moz-range-thumb {
   }
   
   /* Compact author section for mobile */
-  main .flex.items-center.gap-10 {
-    gap: 0.75rem !important;
+  main .flex.items-center.gap-\[12px\] {
+    gap: 0.5rem !important;
   }
   
-  main .w-12.h-12 {
-    width: 2rem !important;
-    height: 2rem !important;
+  main .w-\[46px\].h-\[46px\] {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
   }
   
-  main .flex.items-center.gap-10 .text-sm {
+  main .flex.items-center.gap-\[12px\] .text-\[14px\] {
     font-size: 0.75rem !important;
   }
   
@@ -1324,8 +1324,63 @@ input[type=range]::-moz-range-thumb {
   
   /* Mobile typography improvements */
   .blog-content-section {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  /* Mobile content margins */
+  main .max-w-\[1200px\] {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  main .lg\:flex {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  /* Mobile blog header content margins */
+  main .lg\:flex > div:first-child {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  /* Mobile category tag and title margins */
+  main .tag-product-led-growth {
+    margin-left: 0.5rem !important;
+  }
+  
+  main h1 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  main .lg\:flex p {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  /* Feature boxes and content sections consistent margins */
+  .feature-box {
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+  }
+  
+  main section {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  /* Category navigation mobile margins */
+  .bg-gray-50.border-gray-200 {
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+    border-radius: 0.5rem !important;
+  }
+  
+  .bg-gray-50.border-gray-200 .max-w-\[1200px\] {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
   
   .blog-text {
