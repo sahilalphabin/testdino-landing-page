@@ -470,7 +470,69 @@
                 <h2 class="text-[28px] md:text-[42px] text-[#0B0C0E] leading-normal ff-Manrope">Compare features across plans</h2>
                 <p class="text-sm text-gray-600 mt-2">Choose the plan that best fits your testing needs</p>
             </div>
+    <!-- Comparison table -->
+        <!-- Comparison table with pricing tiers -->
+        <div class="flex flex-col md:flex-row gap-6 justify-center min-h-[500px]">
+            <!-- Features column -->
+            <div class="flex flex-col w-full md:w-1/5">
+                <div class="h-[60px] flex items-end pb-2">
+                    <h3 class="text-[36px] text-[#212123] font-[600] ff-geist">Features</h3>
+                </div>
+                <div class="flex items-center gap-2 mt-4 mb-6">
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-center">
+                            <input type="radio" id="monthly" name="billing" checked class="mr-2" />
+                            <label for="monthly" class="text-[14px] text-[#171717] font-[500] ff-geist">Monthly</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" id="annually" name="billing" class="mr-2" />
+                            <label for="annually" class="text-[14px] text-[#171717] font-[500] ff-geist">Annually</label>
+                            <span class="text-[10px] text-[#004AB3] font-[600] uppercase ff-geist leading-[10px] ml-1">Save up to 20%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Community tier -->
+            <div class="flex flex-col w-full md:w-1/5 rounded-lg p-6 ">
+                <h4 class="text-[18px] text-[#171717] font-[700] ff-geist">Community</h4>
+                <div class="flex items-baseline mt-2">
+                    <span class="text-[34px] text-[#171717] font-[600] ff-geist leading-[40px]">$0</span>
+                    <span class="text-[14px] text-[#525252] font-[400] ff-geist ml-1">/month</span>
+                </div>
+                <button class="mt-6 bg-black text-[#FAFAFA] rounded-md py-2 text-[14px] font-[500] ff-geist">Get started free</button>
+            </div>
+
+            <!-- Pro Plan tier -->
+            <div class="flex flex-col w-full md:w-1/5 rounded-lg p-6 ">
+                <h4 class="text-[18px] text-[#171717] font-[700] ff-geist">Pro Plan</h4>
+                <div class="flex items-baseline mt-2">
+                    <span class="text-[34px] text-[#171717] font-[600] ff-geist leading-[40px]">$18</span>
+                    <span class="text-[14px] text-[#525252] font-[400] ff-geist ml-1">/month</span>
+                </div>
+                <button class="mt-6 bg-black text-[#FAFAFA] rounded-md py-2 text-[14px] font-[500] ff-geist">Start 14-day trial</button>
+            </div>
+
+            <!-- Startups tier -->
+            <div class="flex flex-col w-full md:w-1/5 rounded-lg p-6 relative">
+                <div class="absolute -top-3 right-4">
+                    <span class="tag-most-popular text-[8px] font-[600] ff-geist leading-[10px]">MOST POPULAR</span>
+                </div>
+                <h4 class="text-[18px] text-[#171717] font-[700] ff-geist">Startups</h4>
+                <div class="flex items-baseline mt-2">
+                    <span class="text-[34px] text-[#171717] font-[600] ff-geist leading-[40px]">$49</span>
+                    <span class="text-[14px] text-[#525252] font-[400] ff-geist ml-1">/month</span>
+                </div>
+                <button class="mt-6 bg-black text-[#FAFAFA] rounded-md py-2 text-[14px] font-[500] ff-geist">Start 14-day trial</button>
+            </div>
             
+            <!-- Enterprise tier -->
+            <div class="flex flex-col w-full md:w-1/5 rounded-lg p-6">
+                <h4 class="text-[18px] text-[#171717] font-[700] ff-geist">Custom</h4>
+                <div class="flex items-baseline mt-2">
+                    <span class="text-[34px] text-[#171717] font-[600] ff-geist leading-[40px]">Custom</span>
+                </div>
+                <button class="mt-6 bg-black text-[#FAFAFA] rounded-md py-2 text-[14px] font-[500] ff-geist">Contact sales</button>
         </div>
     </section>
 
