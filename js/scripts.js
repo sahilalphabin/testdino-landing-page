@@ -229,8 +229,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const otherDescriptionDiv = otherItem.querySelector(".overflow-hidden")
         const otherCircleDiv = otherItem.querySelector(".circle-active-div")
 
-        otherButton.classList.remove("font-[800]", "text-[#0B0C0E]","bg-[#FAFAFA]")
-        otherButton.classList.add("font-[700]", "text-[#555861]", "group-hover:text-[#212121]")
+        // Remove active classes and add inactive classes
+        otherButton.classList.remove("font-[800]", "text-[#0B0C0E]", "bg-[#F5F5F5]")
+        otherButton.classList.add("font-[700]", "text-[#555861]", "group-hover:text-[#212121]", "bg-white")
         if (otherDescriptionDiv) {
           // otherDescriptionDiv.style.maxHeight = "0"
           otherDescriptionDiv.style.display = "none"
@@ -241,8 +242,8 @@ document.addEventListener("DOMContentLoaded", () => {
       })
 
       // Activate the clicked item
-      button.classList.add("font-[800]", "text-[#0B0C0E]","bg-[#FAFAFA]")
-      button.classList.remove("font-[700]", "text-[#555861]", "group-hover:text-[#212121]")
+      button.classList.remove("font-[700]", "text-[#555861]", "group-hover:text-[#212121]", "bg-white")
+      button.classList.add("font-[800]", "text-[#0B0C0E]", "bg-[#F5F5F5]")
       if (descriptionDiv) {
         // descriptionDiv.style.maxHeight = descriptionDiv.scrollHeight + "px",
         //   descriptionDiv.style.display = "block"
