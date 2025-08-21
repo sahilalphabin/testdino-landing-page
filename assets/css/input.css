@@ -1387,7 +1387,7 @@ input[type=range]::-moz-range-thumb {
   .blog-text {
     font-size: 1rem !important;
     line-height: 1.5 !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: 16px !important;
   }
   
   .blog-header {
@@ -1620,7 +1620,7 @@ input[type=range]::-moz-range-thumb {
   font-size: 18px; /* text-lg equivalent */
   line-height: 1.75rem;
   color: #404040;
-  margin-bottom: 1.5rem;
+  margin-bottom: 16px;
 }
 
 .blog-content-section {
@@ -1647,6 +1647,7 @@ input[type=range]::-moz-range-thumb {
   .blog-text {
     font-size: 18px;
     line-height: 1.625rem;
+    margin-bottom: 16px;
   }
 }
 
