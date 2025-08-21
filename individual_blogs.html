@@ -145,7 +145,7 @@
             </div>
 
             <!-- Main Title -->
-            <h1 class="text-[22px] md:text-[32px] lg:text-[32px] text-[#0B0C0E] mb- leading-tight ff-Manrope">
+            <h1 class="text-[22px] md:text-[32px] lg:text-[32px] text-[#0B0C0E] mb-[16px] leading-tight ff-Manrope">
               Top 10 Mobile App Security Companies in USA for 2025
             </h1>
 
@@ -864,6 +864,11 @@
 
   <script src="js/scripts.js" defer></script>
   <script>
+    // Ensure popup is hidden on page load/reload
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('popup-overlay').classList.add('hidden');
+    });
+
     // Mobile menu functionality
     document.getElementById('mobile-menu-button').addEventListener('click', function () {
       document.getElementById('mobile-menu-overlay').classList.remove('hidden');

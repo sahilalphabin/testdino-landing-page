@@ -1753,6 +1753,10 @@ input[type=range]::-moz-range-thumb {
   font-family: "Geist", sans-serif;
 }
 
+.popup-modal-overlay.hidden {
+  display: none !important;
+}
+
 .popup-modal-container {
   background-color: white;
   border-radius: 16px;

@@ -1,3 +1,11 @@
+// Ensure popup modal is hidden on page load (vanilla JS - loads before jQuery)
+document.addEventListener('DOMContentLoaded', function() {
+  const popupOverlay = document.getElementById('popup-overlay');
+  if (popupOverlay) {
+    popupOverlay.classList.add('hidden');
+  }
+});
+
 // header
 const nav = document.getElementById('nav');
 const header = document.getElementById('header');
@@ -499,6 +507,9 @@ function toggleAccordion(button) {
 
 
 $(function () {
+  // Ensure popup is hidden on page load/reload
+  $('#popup-overlay').addClass('hidden');
+  
   // Show popup when any .pop-up button is clicked
   $('.pop-up').on('click', function (e) {
     e.preventDefault();           // Prevent default behavior (like <a href="#"> or <button>)
