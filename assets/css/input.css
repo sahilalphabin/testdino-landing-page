@@ -1683,6 +1683,9 @@ input[type=range]::-moz-range-thumb {
   align-items: flex-start;
   gap: 0.5rem;
 }
+.numbered-item  h4 {
+  font-size: 18px;
+}
 
 .numbered-item .number {
   font-size: 1rem;
