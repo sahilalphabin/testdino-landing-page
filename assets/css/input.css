@@ -1812,6 +1812,7 @@ input[type=range]::-moz-range-thumb {
   gap: 8px;
   align-self: stretch;
   word-wrap: break-word;
+  margin-bottom: 16px;
 }
 
 .popup-modal-form {
