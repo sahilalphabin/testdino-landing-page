@@ -478,6 +478,8 @@
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #E5E5E5;
 }
 
 .feature-item--table {
