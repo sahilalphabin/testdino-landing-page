@@ -720,6 +720,6 @@ input[type="range"]::-moz-range-thumb {
     width: 40% !important; /* features/label column */
   }
   .comparison-table__tiers > div {
-    width: 15% !important; /* each plan column */
+    width: 225px !important; /* each plan column */
   }
 }
