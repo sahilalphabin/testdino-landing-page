@@ -802,20 +802,10 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .mobile-tab-btn.active {
-  background: #171717;
-  color: white;
-  font-weight: 600;
-  box-shadow: 0 2px 4px rgba(23, 23, 23, 0.15);
-}
-
-.mobile-tab-btn:hover {
-  color: #374151;
-  background: rgba(107, 114, 128, 0.05);
-}
-
-.mobile-tab-btn.active:hover {
-  color: white;
-  background: #171717;
+  font-weight: 800;
+  font-size: 16px;
+  border-bottom: 2px solid #171717;
+  color: #171717;
 }
 
 /* Mobile tabs container styling */
