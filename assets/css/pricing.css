@@ -734,7 +734,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* Why teams choose - stack cards up to 1100px */
-@media (max-width: 1100px) {
+@media (max-width: 1300px) {
   .why-choose .why-cards {
     flex-direction: column !important;
     gap: 16px;
