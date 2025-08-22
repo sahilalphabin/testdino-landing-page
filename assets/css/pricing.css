@@ -1,5 +1,3 @@
-/* Pricing page specific styles */
-
 /* Most popular tag */
 .tag-most-popular {
   background: linear-gradient(90deg, #5B75EE 0%, #9C1DE2 100%);
@@ -9,6 +7,95 @@
   font-size: 10px;
   font-weight: 500;
   margin-left: 25px;
+}
+
+/* Pricing table components */
+.pricing-table {
+  background: white;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+}
+
+.pricing-table-header {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #E5E5E5;
+  padding: 0;
+}
+
+.pricing-table-header-content {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.75rem;
+  padding: 1.5rem 1rem;
+  width: 100%;
+}
+
+.comparison-table__header-content {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.75rem;
+  padding: 1.5rem 1rem;
+  width: 100%;
+}
+
+.pricing-table-title {
+  font-size: 17.5px;
+  color: #212123;
+  font-weight: 600;
+  font-family: 'Geist', sans-serif;
+  line-height: 24px;
+}
+
+.pricing-table-row {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.pricing-table-row:last-child {
+  border-bottom: none;
+}
+
+.pricing-table-cell {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-left: 1px solid #E5E5E5;
+}
+
+.pricing-table-cell:first-child {
+  border-left: none;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.pricing-table-cell--label {
+  width: 100%;
+  font-size: 16px;
+  color: #212123;
+  font-weight: 400;
+  font-family: 'Geist', sans-serif;
+}
+
+.pricing-table-cell--value {
+  font-size: 16px;
+  color: #212123;
+  font-weight: 400;
+  font-family: 'Geist', sans-serif;
+}
+
+.pricing-table-cell--value.font-bold {
+  font-weight: 700;
+}
+
+.pricing-table-cell--highlighted {
+  background-color: rgba(91, 117, 238, 0.05);
 }
 
 /* AI feature sections container */
@@ -54,6 +141,100 @@
   font-weight: 500;
 }
 
+/* ==============================================
+   UTILITY CLASSES - Reusable Utilities
+   ============================================== */
+
+/* Icon utilities */
+.check-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.check-icon--small {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+}
+
+.check-icon--large {
+  width: 24px;
+  height: 24px;
+}
+
+/* Text utilities */
+.text-gradient {
+  background: linear-gradient(90deg, #5B75EE 0%, #9C1DE2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+.text-brand-blue {
+  color: #5B75EE;
+}
+
+.text-neutral {
+  color: #212123;
+}
+
+.text-muted {
+  color: #6B7280;
+}
+
+/* Layout utilities */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-center-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Spacing utilities */
+.gap-xs { gap: 0.25rem; }
+.gap-sm { gap: 0.5rem; }
+.gap-md { gap: 0.75rem; }
+.gap-lg { gap: 1rem; }
+.gap-xl { gap: 1.5rem; }
+
+/* Background utilities */
+.bg-blue-light {
+  background-color: #F1F8FF;
+}
+
+.bg-blue-lighter {
+  background-color: #EEF4FF;
+}
+
+.bg-highlight {
+  background-color: rgba(91, 117, 238, 0.05);
+}
+
+/* Border utilities */
+.border-blue {
+  border: 1px solid #D1E5FF;
+}
+
+.border-blue-top {
+  border-top: 6px solid #5B75EE;
+}
+
+.border-neutral {
+  border: 1px solid #E5E5E5;
+}
+
 /* AI feature section for individual items */
 .ai-feature-section {
   display: flex;
@@ -96,14 +277,43 @@
   font-weight: 600;
 }
 
-/* Plan cards with gradient border */
+/* ==============================================
+   STATE CLASSES - Interactive States
+   ============================================== */
+
+/* Active/Selected states */
+.plan-active {
+  border: 2px solid #5B75EE !important;
+  box-shadow: 0 4px 12px rgba(91, 117, 238, 0.15) !important;
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
+.cell-highlighted {
+  background-color: rgba(91, 117, 238, 0.05);
+  font-weight: 700;
+}
+
+/* ==============================================
+   COMPONENT VARIANTS - Specific Components
+   ============================================== */
+
+/* Plan cards */
+.plan-card {
+  min-height: 650px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .plan-card-gradient {
   border-top: 4px solid transparent;
   border-image-source: linear-gradient(90deg, #5B75EE 0%, #9C1DE2 100%);
   border-image-slice: 1;
 }
 
-/* Feature list item */
+/* Feature items */
 .feature-item {
   display: flex;
   align-items: flex-start;
@@ -111,27 +321,104 @@
   margin-bottom: 0.5rem;
 }
 
-.feature-item img {
+.feature-item--table {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+
+.feature-item__icon {
   width: 16px;
   height: 16px;
   margin-top: 2px;
 }
 
-/* Button arrow */
+.feature-item__text {
+  font-size: 16px;
+  color: #212123;
+  font-weight: 400;
+  font-family: 'Geist', sans-serif;
+}
+
+/* Buttons */
 .btn-arrow {
   width: 14px;
   height: 14px;
   margin-left: 0.5rem;
 }
 
-/* Pricing card base styles */
-.pricing-card {
-  min-height: 650px;
-  height: 100%;
+/* Table specific components */
+.comparison-table {
+  background: white;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.comparison-table__section {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.comparison-table__header {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  border-bottom: 1px solid #E5E5E5;
 }
+
+.comparison-table__header--desktop {
+  display: none;
+}
+
+.comparison-table__row {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.comparison-table__row:last-child {
+  border-bottom: none;
+}
+
+.comparison-table__cell {
+  padding: 1rem;
+  border-left: 1px solid #E5E5E5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.comparison-table__cell:first-child {
+  border-left: none;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.comparison-table__cell--label {
+  width: 100%;
+  font-size: 16px;
+  color: #212123;
+  font-weight: 400;
+  font-family: 'Geist', sans-serif;
+}
+
+.comparison-table__cell--value {
+  font-size: 16px;
+  color: #212123;
+  font-weight: 400;
+  font-family: 'Geist', sans-serif;
+}
+
+.comparison-table__cell--highlighted {
+  background-color: rgba(91, 117, 238, 0.05);
+  font-weight: 700;
+}
+
+/* ==============================================
+   RESPONSIVE DESIGN - Breakpoint Styles
+   ============================================== */
 
 /* Responsive pricing cards */
 @media (max-width: 1340px) {
@@ -248,15 +535,45 @@
   }
 }
 
-/* Active pricing plan */
-.active-plan {
-  border: 2px solid #5B75EE !important;
-  box-shadow: 0 4px 12px rgba(91, 117, 238, 0.15) !important;
-  transform: translateY(-4px);
-  transition: all 0.3s ease;
-}
+/* ==============================================
+   FORM COMPONENTS - Custom Form Elements
+   ============================================== */
 
 /* Custom slider styles */
+.range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 5px;
+  background: #e2e8f0;
+  outline: none;
+  width: 100%;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #171717;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+.range-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #171717;
+  cursor: pointer;
+}
+
+/* Legacy support for input[type="range"] */
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
@@ -287,4 +604,104 @@ input[type="range"]::-moz-range-thumb {
   background: #ffffff;
   border: 2px solid #171717;
   cursor: pointer;
+}
+
+/* ==============================================
+   LEGACY CLASSES - Backwards Compatibility
+   ============================================== */
+
+/* Legacy active plan class */
+.active-plan {
+  border: 2px solid #5B75EE !important;
+  box-shadow: 0 4px 12px rgba(91, 117, 238, 0.15) !important;
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
+/* Legacy usage limits classes */
+.usage-limits-table {
+  background: white;
+  overflow: hidden;
+}
+
+.usage-limits-header {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #E5E5E5;
+  padding: 0;
+}
+
+.usage-limits-row {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.usage-limits-highlighted {
+  background-color: rgba(91, 117, 238, 0.05);
+}
+
+/* Legacy pricing card class */
+.pricing-card {
+  min-height: 650px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* ==============================================
+   RESPONSIVE UTILITY CLASSES
+   ============================================== */
+
+/* Desktop responsive utilities */
+@media (min-width: 768px) {
+  .comparison-table__header--desktop {
+    display: flex !important;
+  }
+  
+  .comparison-table__row {
+    flex-direction: row !important;
+  }
+  
+  .comparison-table__cell {
+    width: 25%;
+  }
+  
+  .comparison-table__cell:first-child {
+    width: 20%;
+  }
+}
+
+/* Tablet responsive utilities */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .pricing-table-cell {
+    padding: 0.75rem;
+  }
+  
+  .check-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Mobile responsive utilities */
+@media (max-width: 767px) {
+  .comparison-table__cell {
+    padding: 0.75rem;
+    width: 100% !important;
+  }
+  
+  .check-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .pricing-table-title {
+    font-size: 16px;
+  }
+  
+  .pricing-table-cell--value {
+    font-size: 14px;
+  }
 }
