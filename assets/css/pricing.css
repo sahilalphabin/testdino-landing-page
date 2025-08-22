@@ -375,7 +375,6 @@
 .comparison-table__header {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #E5E5E5;
 }
 
 .comparison-table__header--desktop {
