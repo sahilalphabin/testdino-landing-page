@@ -779,7 +779,7 @@ input[type="range"]::-moz-range-thumb {
 /* Mobile tab navigation styles */
 .mobile-tabs-nav {
   position: sticky;
-  top: 80px;
+  top: 66px;
   z-index: 50;
   background: white;
   padding-top: 10px;
@@ -843,12 +843,10 @@ input[type="range"]::-moz-range-thumb {
   .comparison-table__cell[data-tier].mobile-active {
     display: flex !important;
     flex: 1 !important;
-    justify-content: flex-start !important;
-    text-align: left !important;
+    justify-content: center;
+    text-align: center;
     padding: 16px !important;
-    /* border-left: 1px solid #E5E5E5 !important; */
-    /* border-right: 0px solid #E5E5E5 !important; */
-    align-items: flex-start !important;
+    align-items: center;
   }
   
   /* Ensure proper row layout on mobile */
