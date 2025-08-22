@@ -678,6 +678,24 @@
             </div>
         </div>
 
+        <!-- Mobile Tabs Navigation (Hidden on Desktop) -->
+        <div class="mobile-tabs-nav md:hidden mb-6 mx-auto max-w-[1200px] px-4">
+            <div class="flex bg-gray-100 rounded-lg p-1 gap-1">
+                <button class="mobile-tab-btn flex-1 py-2 px-3 text-sm font-medium rounded-md transition-all duration-200 active" data-tier="community">
+                    Community
+                </button>
+                <button class="mobile-tab-btn flex-1 py-2 px-3 text-sm font-medium rounded-md transition-all duration-200" data-tier="pro">
+                    Pro Plan
+                </button>
+                <button class="mobile-tab-btn flex-1 py-2 px-3 text-sm font-medium rounded-md transition-all duration-200" data-tier="startups">
+                    Startups
+                </button>
+                <button class="mobile-tab-btn flex-1 py-2 px-3 text-sm font-medium rounded-md transition-all duration-200" data-tier="custom">
+                    Custom
+                </button>
+            </div>
+        </div>
+
         <!-- Usage Limits -->
         <div class="comparison-table" data-collapsed="false">
             <!-- Usage Limits Header -->
@@ -694,92 +712,92 @@
                     <div class="comparison-table__cell comparison-table__cell--label">
                         <span class="comparison-table__cell--value">Test Results per Month</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <span class="comparison-table__cell--value">5,000</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <span class="comparison-table__cell--value">25,000</span>
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <span class="comparison-table__cell--value font-bold">100,000</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <span class="comparison-table__cell--value">Unlimited</span>
                     </div>
                 </div>
 
                 <!-- Team Members -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Team Members</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <span class="comparison-table__cell--value">1</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <span class="comparison-table__cell--value">5</span>
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <span class="comparison-table__cell--value font-bold">Unlimited</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <span class="comparison-table__cell--value">Unlimited</span>
                     </div>
                 </div>
 
                 <!-- Projects -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Projects</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <span class="comparison-table__cell--value">1</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <span class="comparison-table__cell--value">3</span>
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <span class="comparison-table__cell--value font-bold">Unlimited</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <span class="comparison-table__cell--value">Unlimited</span>
                     </div>
                 </div>
 
                 <!-- Data Retention -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Data Retention</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <span class="comparison-table__cell--value">14 days</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <span class="comparison-table__cell--value">90 days</span>
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <span class="comparison-table__cell--value font-bold">1 year</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <span class="comparison-table__cell--value">Unlimited</span>
                     </div>
                 </div>
 
                 <!-- Screenshot Storage -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Screenshot Storage</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <span class="comparison-table__cell--value">100MB</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <span class="comparison-table__cell--value">5GB</span>
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <span class="comparison-table__cell--value font-bold">50GB</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <span class="comparison-table__cell--value">Unlimited</span>
                     </div>
                 </div>
@@ -803,56 +821,56 @@
                         <span class="comparison-table__cell--value">Failure Categorisation</span>
                     </div>
                
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <span class="comparison-table__cell--value">Basic</span>
                     </div>
 
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
                 </div>
 
                 <!-- Confidence Scoring -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Confidence Scoring</span>
                     </div>
                    
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
                 </div>
 
                 <!-- Root Cause Analysis -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Root Cause Analysis</span>
                     </div>
                     
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
                 </div>
@@ -860,37 +878,37 @@
 
                 <!-- Feedback Learning -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Feedback Learning</span>
                     </div>
                    
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro" >
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
                 </div>
 
                 <!-- Predictive Analysis -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Predictive Analysis</span>
                     </div>
                     
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="startups">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
                 </div>
@@ -913,128 +931,128 @@
                     <div class="comparison-table__cell comparison-table__cell--label">
                         <span class="comparison-table__cell--value">Role Specific Dashboards</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
                 </div>
 
                 <!-- Flaky Test Detection -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Flaky Test Detection</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <span class="comparison-table__cell--value">Basic</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
                 </div>
 
                 <!-- Performance Metrics -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Performance Metrics</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <span class="comparison-table__cell--value">Basic</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
                 </div>
 
                 <!-- Cross Enviroment Analysis -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Cross Enviroment Analysis</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <span class="comparison-table__cell--value"></span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
                 </div>
 
                 <!-- Parallelization Insights -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Parallelization Insights</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <span class="comparison-table__cell--value"></span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
                 </div>
                 <!-- Historical Trends -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Historical Trends</span>
                     </div>
-                    <div class="comparison-table__cell">
-                        <span class="comparison-table__cell--value"></span>
-                    </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
+                        <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
+                    </div>
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
                 </div>
 
                 <!-- Custom Reports -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Custom Reports</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <span class="comparison-table__cell--value"></span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
                 </div>
@@ -1058,73 +1076,73 @@
                     <div class="comparison-table__cell comparison-table__cell--label">
                         <span class="comparison-table__cell--value">GitHub </span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
                 </div>
 
                 <!-- Slack Notifications -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Slack Notifications</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <span class="comparison-table__cell--value"></span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
                 </div>
 
                 <!-- JIRA Integration -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">JIRA Integration</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <span class="comparison-table__cell--value"></span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
                 </div>
 
                 <!-- Linear Integration -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Linear Integration</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <span class="comparison-table__cell--value"></span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
                 </div>
@@ -1149,71 +1167,71 @@
                     <div class="comparison-table__cell comparison-table__cell--label">
                         <span class="comparison-table__cell--value">Rest API access</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <span class="comparison-table__cell--value">Basic</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <span class="comparison-table__cell--value">Advanced</span>
                     </div>
                 </div>
 
                 <!-- CLI tool -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label" >
                         <span class="comparison-table__cell--value">CLI tool</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell  comparison-table__cell--value">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
                 </div>
 
                 <!-- Webhook Events -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Webhook Events</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <span class="comparison-table__cell--value">3 Events</span>
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <span class="comparison-table__cell--value font-bold">All Events</span>
                     </div>
-                    <div class="comparison-table__cell comparison-table__cell--value">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <span class="comparison-table__cell--value">All events</span>
                     </div>
                 </div>
 
                 <!-- Rate Limits -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Rate Limits</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <span class="comparison-table__cell--value">20/min</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <span class="comparison-table__cell--value">100/min</span>
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <span class="comparison-table__cell--value">500/min</span>
                     </div>
-                    <div class="comparison-table__cell comparison-table__cell--value">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <span class="comparison-table__cell--value">Custom</span>
                     </div>
                 </div>
@@ -1237,105 +1255,104 @@
                         <span class="comparison-table__cell--value">Bearer Token Auth</span>
                     </div>
                     
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
                 </div>
 
                 <!-- Public Sharing -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Public Sharing</span>
                     </div>
                     
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
                 </div>
 
                 <!-- Role Based Access -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Role Based Access</span>
                     </div>
                   
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon">
                     </div>
                 </div>
 
                 <!-- SSO Integration -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">SSO Integration</span>
                     </div>
-                    
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
                 </div>
 
                 <!-- Audit Logs -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Audit Logs</span>
                     </div>
                    
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
                 </div>
 
                 <!-- On Premise Deployment-->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">On Premise Deployment</span>
                     </div>
                    
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                     </div>
-                    <div class="comparison-table__cell ">
+                    <div class="comparison-table__cell" data-tier="startups">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
                 </div>
@@ -1358,53 +1375,50 @@
                     <div class="comparison-table__cell comparison-table__cell--label">
                         <span class="comparison-table__cell--value">Response Time</span>
                     </div>
-                   
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                         <span class="comparison-table__cell--value">Best Efforts</span>
                     </div>
-
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                         <span class="comparison-table__cell--value ">24 Hours</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <span class="comparison-table__cell--value font-bold">4 Hours</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <span class="comparison-table__cell--value ">1 Hour</span>
                     </div>
                 </div>
 
                 <!-- Live chat -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Live Chat</span>
                     </div>
-                   
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="startups">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
                 </div>
 
                 <!-- Phone support -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Phone Support</span>
                     </div>
                     
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="startups">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
                 </div>
@@ -1412,33 +1426,32 @@
 
                 <!-- Professional services -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Professional Services</span>
                     </div>
-            
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="startups">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
                 </div>
 
                 <!-- Training -->
                 <div class="comparison-table__row">
-                    <div class="comparison-table__cell comparison-table__cell--label">
+                    <div class="comparison-table__cell comparison-table__cell--label" data-tier="label">
                         <span class="comparison-table__cell--value">Training</span>
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="community">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="pro">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="startups">
                     </div>
-                    <div class="comparison-table__cell">
+                    <div class="comparison-table__cell" data-tier="custom">
                         <img src="Testdino Landing Page Images\Pricing\icons\tick.svg" alt="check" class="check-icon" loading="lazy">
                     </div>
                 </div>

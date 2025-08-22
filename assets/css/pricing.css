@@ -46,8 +46,8 @@
 .comparison-table__header-content { cursor: pointer; }
 
 /* Collapsible behavior: hide rows when collapsed */
-.comparison-table[data-collapsed="true"] .comparison-table__row { display: none; }
-.comparison-table[data-collapsed="true"] .comparison-table__section .comparison-table__row { display: none; }
+.comparison-table[data-collapsed="true"] .comparison-table__row { display: none !important; }
+.comparison-table[data-collapsed="true"] .comparison-table__section .comparison-table__row { display: none !important; }
 
 /* Rotate arrow icon when collapsed (assumes the arrow img is within header-content) */
 .comparison-table__header-content img { transition: transform 200ms ease; }
@@ -769,5 +769,183 @@ input[type="range"]::-moz-range-thumb {
   }
   .comparison-table__tiers > div {
     width: 225px !important; /* each plan column */
+  }
+}
+
+/* ==============================================
+   MOBILE TABS STYLES
+   ============================================== */
+
+/* Mobile tab navigation styles */
+.mobile-tabs-nav {
+  position: sticky;
+  top: 80px;
+  z-index: 50;
+  background: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-tab-btn {
+  background: transparent;
+  color: #6B7280;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mobile-tab-btn.active {
+  background: #171717;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(23, 23, 23, 0.15);
+}
+
+.mobile-tab-btn:hover {
+  color: #374151;
+  background: rgba(107, 114, 128, 0.05);
+}
+
+.mobile-tab-btn.active:hover {
+  color: white;
+  background: #171717;
+}
+
+/* Mobile tabs container styling */
+.mobile-tabs-nav .flex {
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.mobile-tabs-nav .flex::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobile column visibility controls */
+@media (max-width: 767px) {
+  /* Hide all columns by default on mobile */
+  .comparison-table__cell[data-tier] {
+    display: none;
+  }
+  
+  /* Always show the label column - 234px fixed width as per Figma */
+  .comparison-table__cell[data-tier="label"] {
+    display: flex !important;
+    width: 234px !important;
+    min-width: 234px !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    padding: 16px 20px !important;
+    border-right: none !important;
+    align-items: center !important;
+  }
+  
+  /* Show selected tier column - flexible width */
+  .comparison-table__cell[data-tier].mobile-active {
+    display: flex !important;
+    flex: 1 !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 16px !important;
+    border-left: 1px solid #E5E5E5 !important;
+    align-items: center !important;
+  }
+  
+  /* Ensure proper row layout on mobile */
+  .comparison-table__row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    min-height: 60px !important;
+    height: 60px !important;
+    border-bottom: 1px solid #E5E5E5;
+    background: white;
+  }
+  
+  /* Hide the desktop tier headers on mobile */
+  .comparison-table__tiers {
+    display: none !important;
+  }
+  
+  /* Mobile table container improvements */
+  .comparison-table {
+    margin-top: 0 !important;
+    margin-bottom: 16px !important;
+    background: white;
+    overflow: hidden;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+  }
+  
+  /* Mobile table header styling - matches Figma exactly */
+  .comparison-table__header {
+    background: white;
+    border-bottom: 1px solid #E5E5E5;
+  }
+  
+  .comparison-table__header-content {
+    width: 234px !important;
+    padding: 24px 20px 16px 20px !important;
+    background: white !important;
+    border-bottom: 1px solid #E5E5E5 !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+  
+  /* Mobile table cell text sizing - matches Figma */
+  .comparison-table__cell--value {
+    font-size: 16px !important;
+    line-height: 24px !important;
+    font-weight: 400 !important;
+    color: #212123 !important;
+    font-family: 'Geist', sans-serif !important;
+  }
+  
+  /* Mobile pricing table title - matches Figma */
+  .pricing-table-title {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #212123 !important;
+    font-family: 'Geist', sans-serif !important;
+    line-height: 24px !important;
+  }
+  
+  /* Mobile table section styling */
+  .comparison-table__section {
+    background: white;
+    border: none;
+  }
+  
+  /* Remove any extra borders/spacing on mobile */
+  .comparison-table__cell {
+    border-left: none !important;
+  }
+  
+  .comparison-table__cell:first-child {
+    border-left: none !important;
+  }
+  
+  /* Mobile dropdown arrow styling */
+  .comparison-table__header-content img {
+    width: 24px !important;
+    height: 24px !important;
+    transition: transform 200ms ease;
+  }
+  
+  /* Ensure dropdown functionality works on mobile */
+  .comparison-table__header-content {
+    cursor: pointer !important;
   }
 }
