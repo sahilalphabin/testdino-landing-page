@@ -42,6 +42,17 @@
   width: 100%;
 }
 
+/* Make header look clickable */
+.comparison-table__header-content { cursor: pointer; }
+
+/* Collapsible behavior: hide rows when collapsed */
+.comparison-table[data-collapsed="true"] .comparison-table__row { display: none; }
+.comparison-table[data-collapsed="true"] .comparison-table__section .comparison-table__row { display: none; }
+
+/* Rotate arrow icon when collapsed (assumes the arrow img is within header-content) */
+.comparison-table__header-content img { transition: transform 200ms ease; }
+.comparison-table[data-collapsed="true"] .comparison-table__header-content img { transform: rotate(-90deg); }
+
 .pricing-table-title {
   font-size: 17.5px;
   color: #212123;

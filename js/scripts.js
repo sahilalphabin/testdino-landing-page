@@ -46,45 +46,57 @@ window.addEventListener('scroll', () => {
 
 // Show the loader
   function showLoader() {
-    document.getElementById("customLoader").classList.remove("hidden");
+    const loader = document.getElementById("customLoader");
+    if (loader) {
+      loader.classList.remove("hidden");
+    }
   }
 
   // Hide the loader
   function hideLoader() {
-    document.getElementById("customLoader").classList.add("hidden");
+    const loader = document.getElementById("customLoader");
+    if (loader) {
+      loader.classList.add("hidden");
+    }
   }
 
   // Show loader on page load and hide after 3 seconds
   window.addEventListener('DOMContentLoaded', () => {
-    showLoader();
-
-    setTimeout(() => {
-      hideLoader();
-    }, 1000);
-  });
-
-$(function () {
-  $('#text-copy').on('click', function () {
-    const textToCopy = $('#copied-item-text').text().trim();
-
-    navigator.clipboard.writeText(textToCopy).then(() => {
-      // Optional: add visual feedback
-      const $button = $('#text-copy');
-      const originalText = $button.find('span.md\\:block').text(); // Copy code
-      const originalMobile = $button.find('span.block').text(); // C
-
-      $button.find('span.md\\:block').text('Copied').addClass('text-green-500');
-      $button.find('span.block').text('âœ“').addClass('text-green-500');
+    const loader = document.getElementById("customLoader");
+    if (loader) {
+      showLoader();
 
       setTimeout(() => {
-        $button.find('span.md\\:block').text(originalText).removeClass('text-green-500');
-        $button.find('span.block').text(originalMobile).removeClass('text-green-500');
-      }, 4000);
-    }).catch(err => {
-      console.error('Failed to copy text:', err);
+        hideLoader();
+      }, 1000);
+    }
+  });
+
+// Guard jQuery code - only run if jQuery is loaded
+if (typeof $ !== 'undefined') {
+  $(function () {
+    $('#text-copy').on('click', function () {
+      const textToCopy = $('#copied-item-text').text().trim();
+
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        // Optional: add visual feedback
+        const $button = $('#text-copy');
+        const originalText = $button.find('span.md\\:block').text(); // Copy code
+        const originalMobile = $button.find('span.block').text(); // C
+
+        $button.find('span.md\\:block').text('Copied').addClass('text-green-500');
+        $button.find('span.block').text('âœ"').addClass('text-green-500');
+
+        setTimeout(() => {
+          $button.find('span.md\\:block').text(originalText).removeClass('text-green-500');
+          $button.find('span.block').text(originalMobile).removeClass('text-green-500');
+        }, 4000);
+      }).catch(err => {
+        console.error('Failed to copy text:', err);
+      });
     });
   });
-});
+}
 
 
 
@@ -95,36 +107,39 @@ $(function () {
 
 
 
-$(function () {
-  const $slider = $('#executionSlider');
-  const $display = $('#displayValue');
+// Guard jQuery code - only run if jQuery is loaded
+if (typeof $ !== 'undefined') {
+  $(function () {
+    const $slider = $('#executionSlider');
+    const $display = $('#displayValue');
 
-  if ($slider.length && $display.length) {
-    function updateSliderBackground($slider) {
-      const min = parseFloat($slider.attr('min'));
-      const max = parseFloat($slider.attr('max'));
-      const val = parseFloat($slider.val());
-      const percent = ((val - min) / (max - min)) * 100;
+    if ($slider.length && $display.length) {
+      function updateSliderBackground($slider) {
+        const min = parseFloat($slider.attr('min'));
+        const max = parseFloat($slider.attr('max'));
+        const val = parseFloat($slider.val());
+        const percent = ((val - min) / (max - min)) * 100;
 
-      $slider.css('background', `linear-gradient(to right, #000 0%, #000 ${percent}%, #e5e7eb ${percent}%, #e5e7eb 100%)`);
-    }
+        $slider.css('background', `linear-gradient(to right, #000 0%, #000 ${percent}%, #e5e7eb ${percent}%, #e5e7eb 100%)`);
+      }
 
-    function formatNumber(num) {
-      return Number(num).toLocaleString();
-    }
+      function formatNumber(num) {
+        return Number(num).toLocaleString();
+      }
 
-    $slider.on('input', function () {
+      $slider.on('input', function () {
+        updateSliderBackground($slider);
+        $display.text(formatNumber($(this).val()));
+      });
+
+      // Initialize on load
       updateSliderBackground($slider);
-      $display.text(formatNumber($(this).val()));
-    });
-
-    // Initialize on load
-    updateSliderBackground($slider);
-    $display.text(formatNumber($slider.val()));
-  } else {
-    console.warn('Slider or display element not found!');
-  }
-});
+      $display.text(formatNumber($slider.val()));
+    } else {
+      console.warn('Slider or display element not found!');
+    }
+  });
+}
   
 
   // home section img 
@@ -393,6 +408,33 @@ document.addEventListener("DOMContentLoaded", () => {
     )
     observer.observe(wiserWaySectionHeader)
   }
+
+  // --- Pricing comparison table: header dropdown toggle ---
+  const comparisonTableHeaders = document.querySelectorAll('.comparison-table .comparison-table__header-content')
+  comparisonTableHeaders.forEach((headerEl) => {
+    const tableContainer = headerEl.closest('.comparison-table')
+    if (!tableContainer) return
+
+    // Accessibility affordances
+    headerEl.setAttribute('role', 'button')
+    headerEl.setAttribute('tabindex', '0')
+    headerEl.setAttribute('aria-expanded', 'true')
+
+    function toggleComparisonSection() {
+      const isCollapsed = tableContainer.getAttribute('data-collapsed') === 'true'
+      const nextState = (!isCollapsed).toString()
+      tableContainer.setAttribute('data-collapsed', nextState)
+      headerEl.setAttribute('aria-expanded', isCollapsed ? 'true' : 'false')
+    }
+
+    headerEl.addEventListener('click', toggleComparisonSection)
+    headerEl.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Enter' || ev.key === ' ') {
+        ev.preventDefault()
+        toggleComparisonSection()
+      }
+    })
+  })
 })
 
 
@@ -506,30 +548,33 @@ function toggleAccordion(button) {
 
 
 
-$(function () {
-  // Ensure popup is hidden on page load/reload
-  $('#popup-overlay').addClass('hidden');
-  
-  // Show popup when any .pop-up button is clicked
-  $('.pop-up').on('click', function (e) {
-    e.preventDefault();           // Prevent default behavior (like <a href="#"> or <button>)
-    e.stopPropagation();          // Prevent event bubbling
-    $('#popup-overlay').removeClass('hidden');
-  });
-
-  // Hide popup when clicking outside the popup content
-  $('#popup-overlay').on('click', function (e) {
-    if ($(e.target).is('#popup-overlay')) {
-      $('#popup-overlay').addClass('hidden');
-    }
-  });
-
-  // Hide popup when "Cancel" button is clicked
-  $('#cancel-button').on('click', function (e) {
-    e.preventDefault();           // Optional: prevent form submission if inside a form
+// Guard jQuery code - only run if jQuery is loaded
+if (typeof $ !== 'undefined') {
+  $(function () {
+    // Ensure popup is hidden on page load/reload
     $('#popup-overlay').addClass('hidden');
+    
+    // Show popup when any .pop-up button is clicked
+    $('.pop-up').on('click', function (e) {
+      e.preventDefault();           // Prevent default behavior (like <a href="#"> or <button>)
+      e.stopPropagation();          // Prevent event bubbling
+      $('#popup-overlay').removeClass('hidden');
+    });
+
+    // Hide popup when clicking outside the popup content
+    $('#popup-overlay').on('click', function (e) {
+      if ($(e.target).is('#popup-overlay')) {
+        $('#popup-overlay').addClass('hidden');
+      }
+    });
+
+    // Hide popup when "Cancel" button is clicked
+    $('#cancel-button').on('click', function (e) {
+      e.preventDefault();           // Optional: prevent form submission if inside a form
+      $('#popup-overlay').addClass('hidden');
+    });
   });
-});
+}
 
     // pricing page rs range section
 document.addEventListener('DOMContentLoaded', function () {
