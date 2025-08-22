@@ -664,12 +664,17 @@ input[type="range"]::-moz-range-thumb {
     flex-direction: row !important;
   }
   
+  /* Desktop widths and alignment: wider label, narrower value cells */
   .comparison-table__cell {
-    width: 25%;
+    width: 225px;
+    justify-content: center; /* push content cells to the end */
+    text-align: center;
   }
   
   .comparison-table__cell:first-child {
-    width: 20%;
+    width: 40%; /* increase label cell width */
+    justify-content: flex-start;
+    text-align: left;
   }
 }
 
@@ -703,5 +708,18 @@ input[type="range"]::-moz-range-thumb {
   
   .pricing-table-cell--value {
     font-size: 14px;
+  }
+}
+
+/* Match tier header widths with table cells on desktop */
+@media (min-width: 768px) {
+  .comparison-table__tiers {
+    gap: 0 !important; /* remove gaps so widths align exactly */
+  }
+  .comparison-table__tiers > div:first-child {
+    width: 40% !important; /* features/label column */
+  }
+  .comparison-table__tiers > div {
+    width: 15% !important; /* each plan column */
   }
 }
