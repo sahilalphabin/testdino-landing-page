@@ -681,18 +681,34 @@
 
         <!-- Mobile Tabs Navigation (Hidden on Desktop) -->
         <div class="mobile-tabs-nav md:hidden mb-6 mx-auto max-w-[1200px] px-4">
-            <div class="flex bg-gray-100 rounded-lg p-1 gap-1">
-                <button class="mobile-tab-btn flex-1 py-2 px-3 text-sm font-medium rounded-md transition-all duration-200 active" data-tier="community">
-                    Community
+            <div class="flex border-b border-gray-200">
+                <button
+                    onclick="toggleTable('community')"
+                    class="mobile-tab-btn flex-1 py-3 text-base font-semibold transition-all duration-200 border-b-2 border-transparent text-[#171717] hover:text-black focus:outline-none active"
+                    data-tier="community"
+                >
+                    <span class="block">Community</span>
                 </button>
-                <button class="mobile-tab-btn flex-1 py-2 px-3 text-sm font-medium rounded-md transition-all duration-200" data-tier="pro">
-                    Pro Plan
+                <button
+                    onclick="toggleTable('pro')"
+                    class="mobile-tab-btn flex-1 py-3 text-base font-normal transition-all duration-200 border-b-2 border-transparent text-[#171717] hover:text-black focus:outline-none"
+                    data-tier="pro"
+                >
+                    <span class="block">Pro Plan</span>
                 </button>
-                <button class="mobile-tab-btn flex-1 py-2 px-3 text-sm font-medium rounded-md transition-all duration-200" data-tier="startups">
-                    Startups
+                <button
+                    onclick="toggleTable('startups')"
+                    class="mobile-tab-btn flex-1 py-3 text-base font-normal transition-all duration-200 border-b-2 border-transparent text-[#171717] hover:text-black focus:outline-none"
+                    data-tier="startups"
+                >
+                    <span class="block">Startups</span>
                 </button>
-                <button class="mobile-tab-btn flex-1 py-2 px-3 text-sm font-medium rounded-md transition-all duration-200" data-tier="custom">
-                    Custom
+                <button
+                    onclick="toggleTable('custom')"
+                    class="mobile-tab-btn flex-1 py-3 text-base font-normal transition-all duration-200 border-b-2 border-transparent text-[#171717] hover:text-black focus:outline-none"
+                    data-tier="custom"
+                >
+                    <span class="block">Enterprise</span>
                 </button>
             </div>
         </div>

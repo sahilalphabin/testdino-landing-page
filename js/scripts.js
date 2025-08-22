@@ -580,17 +580,96 @@ if (typeof $ !== 'undefined') {
 // (Slider logic moved inline into index.html to meet deployment constraints)
 
         
-function toggleTable() {
+// Original toggle function for dropdown tables
+function toggleDropdownTable() {
     const tableContent = document.getElementById('tableContent');
     const arrow = document.getElementById('arrow');
     
-    if (tableContent.style.display === 'none') {
+    if (tableContent && tableContent.style.display === 'none') {
         tableContent.style.display = 'block';
         arrow.classList.remove('rotate-180');
-    } else {
+    } else if (tableContent) {
         tableContent.style.display = 'none';
         arrow.classList.add('rotate-180');
     }
+}
+
+// Set active tab and show/hide columns - defined early
+window.setActiveTab = function(tierName) {
+  
+  // Update tab button states
+  const tabButtons = document.querySelectorAll('.mobile-tab-btn');
+  tabButtons.forEach(btn => {
+    if (btn.getAttribute('data-tier') === tierName) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+  
+  // Update column visibility
+  const allCells = document.querySelectorAll('.comparison-table__cell[data-tier]');
+  allCells.forEach(cell => {
+    const cellTier = cell.getAttribute('data-tier');
+    
+    // Remove mobile-active class from all cells
+    cell.classList.remove('mobile-active');
+    
+    // Add mobile-active class to selected tier cells or label cells
+    if (cellTier === tierName || cellTier === 'label') {
+      cell.classList.add('mobile-active');
+    }
+  });
+
+};
+
+// Auto-add data attributes to table cells that don't have them - defined early
+window.addMissingDataAttributes = function() {
+  const rows = document.querySelectorAll('.comparison-table__row');
+  
+  rows.forEach(row => {
+    const cells = row.querySelectorAll('.comparison-table__cell');
+    cells.forEach((cell, index) => {
+      // Skip if already has data-tier attribute
+      if (cell.hasAttribute('data-tier')) return;
+      
+      // Add data-tier based on column position
+      const tierMap = ['label', 'community', 'pro', 'startups', 'custom'];
+      if (index < tierMap.length) {
+        cell.setAttribute('data-tier', tierMap[index]);
+      }
+    });
+  });
+  
+  // Ensure all first cells have data-tier="label" attribute
+  rows.forEach(row => {
+    const firstCell = row.querySelector('.comparison-table__cell:first-child');
+    if (firstCell && !firstCell.hasAttribute('data-tier')) {
+      firstCell.setAttribute('data-tier', 'label');
+    }
+  });
+};
+
+// Initialize data attributes and default tab immediately
+if (document.readyState !== 'loading') {
+  window.addMissingDataAttributes();
+  // Set default tab after a brief delay to ensure DOM is ready
+  setTimeout(() => {
+    window.setActiveTab('community');
+  }, 100);
+} else {
+  document.addEventListener('DOMContentLoaded', function() {
+    window.addMissingDataAttributes();
+    // Set default tab
+    setTimeout(() => {
+      window.setActiveTab('community');
+    }, 100);
+  });
+}
+
+// Mobile tabs toggle function
+function toggleTable(tierName) {
+    window.setActiveTab(tierName);
 }
 
 const textarea = document.getElementById("reportIssue");
@@ -670,117 +749,102 @@ const textarea = document.getElementById("reportIssue");
 // ==============================================
 
 // Global variables to store the functions
-let setActiveTab, addMissingDataAttributes;
+let addMissingDataAttributes;
 
-// Set active tab and show/hide columns
-setActiveTab = function(tierName) {
-  console.log('Setting active tab to:', tierName);
-  
-  // Update tab button states
-  const tabButtons = document.querySelectorAll('.mobile-tab-btn');
-  tabButtons.forEach(btn => {
-    if (btn.getAttribute('data-tier') === tierName) {
-      btn.classList.add('active');
-    } else {
-      btn.classList.remove('active');
-    }
-  });
-  
-  // Update column visibility
-  const allCells = document.querySelectorAll('.comparison-table__cell[data-tier]');
-  allCells.forEach(cell => {
-    const cellTier = cell.getAttribute('data-tier');
-    
-    // Remove mobile-active class from all cells
-    cell.classList.remove('mobile-active');
-    
-    // Add mobile-active class to selected tier cells or label cells
-    if (cellTier === tierName || cellTier === 'label') {
-      cell.classList.add('mobile-active');
-    }
-  });
-  
-  console.log('Tab switch completed for:', tierName);
-};
 
-// Auto-add data attributes to table cells that don't have them
-addMissingDataAttributes = function() {
-  const rows = document.querySelectorAll('.comparison-table__row');
-  console.log('Found rows:', rows.length);
-  
-  rows.forEach(row => {
-    const cells = row.querySelectorAll('.comparison-table__cell');
-    cells.forEach((cell, index) => {
-      // Skip if already has data-tier attribute
-      if (cell.hasAttribute('data-tier')) return;
-      
-      // Add data-tier based on column position
-      const tierMap = ['label', 'community', 'pro', 'startups', 'custom'];
-      if (index < tierMap.length) {
-        cell.setAttribute('data-tier', tierMap[index]);
-        console.log('Added data-tier:', tierMap[index], 'to cell');
-      }
-    });
-  });
-  
-  // Ensure all first cells have data-tier="label" attribute
-  rows.forEach(row => {
-    const firstCell = row.querySelector('.comparison-table__cell:first-child');
-    if (firstCell && !firstCell.hasAttribute('data-tier')) {
-      firstCell.setAttribute('data-tier', 'label');
-      console.log('Added data-tier="label" to first cell');
-    }
-  });
-};
-
-// Initialize mobile tabs functionality with direct event delegation
+// Initialize mobile tabs functionality with direct event listeners
 function initMobilePricingTabs() {
-  console.log('initMobilePricingTabs function called');
   
-  // Add missing data attributes
-  addMissingDataAttributes();
+  // Add missing data attributes if not already done
+  if (window.addMissingDataAttributes) {
+    window.addMissingDataAttributes();
+  }
   
-  // Use event delegation on document to catch clicks on mobile tab buttons
-  document.addEventListener('click', function(e) {
-    if (e.target.matches('.mobile-tab-btn')) {
-      e.preventDefault();
-      const selectedTier = e.target.getAttribute('data-tier');
-      console.log('Tab clicked via delegation:', selectedTier);
-      setActiveTab(selectedTier);
-    }
-  });
-  
-  // Set initial active tab after a short delay to ensure DOM is ready
-  setTimeout(() => {
+  // Function to attach event listeners directly to buttons
+  function attachListeners() {
     const tabButtons = document.querySelectorAll('.mobile-tab-btn');
-    console.log('Setting initial tab. Found buttons:', tabButtons.length);
-    setActiveTab('community');
-  }, 100);
+    
+    tabButtons.forEach((button, index) => {
+      
+      // Remove any existing listeners first
+      button.removeEventListener('click', handleTabClick);
+      
+      // Add new listener
+      button.addEventListener('click', handleTabClick, true);
+      
+      // Also add it as onclick for backup
+      button.onclick = function(e) {
+        handleTabClick(e);
+      };
+    });
+    
+    // Set initial active tab to community
+    setTimeout(() => {
+      if (window.setActiveTab) {
+        window.setActiveTab('community');
+      }
+    }, 50);
+  }
+  
+  // Tab click handler function
+  function handleTabClick(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    const selectedTier = e.target.getAttribute('data-tier');
+    if (window.setActiveTab) {
+      window.setActiveTab(selectedTier);
+    }
+  }
+  
+  // Try to attach listeners immediately
+  attachListeners();
+  
+  // Also try again after a delay in case DOM wasn't ready
+  setTimeout(attachListeners, 200);
+  
+  // And try one more time after a longer delay
+  setTimeout(attachListeners, 1000);
 }
+
+// Initialize immediately to make functions available
+setTimeout(() => {
+  initMobilePricingTabs();
+}, 100);
 
 // Run when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('DOM loaded, initializing mobile pricing tabs...');
   initMobilePricingTabs();
 });
 
 // Also run immediately in case DOM is already loaded
 if (document.readyState !== 'loading') {
-  console.log('DOM already loaded, initializing immediately...');
   initMobilePricingTabs();
 }
 
 // Global function for testing from console
 window.testMobileTabs = function() {
-  console.log('Testing mobile tabs manually...');
   const tabButtons = document.querySelectorAll('.mobile-tab-btn');
   const tableCells = document.querySelectorAll('.comparison-table__cell[data-tier]');
-  console.log('Tab buttons found:', tabButtons.length);
-  console.log('Table cells with data-tier:', tableCells.length);
   
   if (tabButtons.length > 0) {
-    console.log('Simulating click on first tab button...');
+    tabButtons.forEach((button, index) => {
+      button.onclick = function() {
+        const tier = this.getAttribute('data-tier');
+        setActiveTab(tier);
+      };
+    });
+    
     tabButtons[0].click();
   }
 };
+
+// Global function to manually set active tab
+window.setTab = function(tierName) {
+  setActiveTab(tierName);
+};
+
+// Ensure community tab is selected by default after everything loads
+setTimeout(() => {
+  window.setActiveTab('community');
+}, 200);
         

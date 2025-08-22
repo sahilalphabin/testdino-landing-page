@@ -845,7 +845,7 @@ input[type="range"]::-moz-range-thumb {
     justify-content: flex-start !important;
     text-align: left !important;
     padding: 16px 20px !important;
-    border-right: none !important;
+    border-right: 1px solid #E5E5E5 !important;
     align-items: center !important;
   }
   
@@ -853,11 +853,12 @@ input[type="range"]::-moz-range-thumb {
   .comparison-table__cell[data-tier].mobile-active {
     display: flex !important;
     flex: 1 !important;
-    justify-content: center !important;
-    text-align: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
     padding: 16px !important;
-    border-left: 1px solid #E5E5E5 !important;
-    align-items: center !important;
+    /* border-left: 1px solid #E5E5E5 !important; */
+    /* border-right: 0px solid #E5E5E5 !important; */
+    align-items: flex-start !important;
   }
   
   /* Ensure proper row layout on mobile */
@@ -885,6 +886,7 @@ input[type="range"]::-moz-range-thumb {
     border-radius: 0;
     box-shadow: none;
     border: none;
+    border-bottom: 1px solid #E5E5E5 !important;
   }
   
   /* Mobile table header styling - matches Figma exactly */
