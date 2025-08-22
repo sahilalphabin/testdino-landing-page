@@ -709,6 +709,16 @@ input[type="range"]::-moz-range-thumb {
   .pricing-table-cell--value {
     font-size: 14px;
   }
+  /* Why teams choose - mobile cards full width and stacked */
+  .why-choose .why-cards {
+    gap: 16px;
+  }
+  .why-choose .why-card {
+    min-width: 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto;
+  }
 }
 
 /* Match tier header widths with table cells on desktop */
