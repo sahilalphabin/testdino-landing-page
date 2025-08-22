@@ -300,6 +300,14 @@
   transition: all 0.3s ease;
 }
 
+/* Black active state for Free and Enterprise card highlighting */
+.active-plan--black {
+  border: 2px solid #171717 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
 .cell-highlighted {
   background-color: rgba(91, 117, 238, 0.05);
   font-weight: 700;
