@@ -478,7 +478,7 @@ function toggleAccordion(button) {
   const content = currentItem.querySelector('.accordion-content');
   const svg = button.querySelector('svg');
 
-  const activeClasses = ['bg-white', 'rounded-xl', 'border-b-1', 'border-[#E2E4E9]'];
+  const activeClasses = ['bg-white', 'border-b-1', 'border-[#E2E4E9]'];
 
   // Close all others
   document.querySelectorAll('.accordion-item').forEach(item => {
@@ -497,7 +497,6 @@ function toggleAccordion(button) {
   content.style.display = isOpen ? 'none' : 'block';
   svg.classList.toggle('rotate-180', !isOpen);
   currentItem.classList.toggle('bg-white', !isOpen);
-  currentItem.classList.toggle('rounded-xl', !isOpen);
   currentItem.classList.toggle('border-b-1', !isOpen);
   currentItem.classList.toggle('border-[#E2E4E9]', !isOpen);
   // currentItem.classList.toggle('', !isOpen);
