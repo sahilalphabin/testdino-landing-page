@@ -1592,7 +1592,7 @@
         const min = parseFloat(slider.min);
         const max = parseFloat(slider.max);
         const percentage = ((value - min) / (max - min)) * 100;
-        slider.style.background = `linear-gradient(to right, #171717 0%, #171717 ${percentage}%, #e2e8f0 ${percentage}%, #e2e8f0 100%)`;
+        slider.style.background = `linear-gradient(to right, #171717 0%, #171717 ${percentage}%, #ffffff ${percentage}%, #ffffff 100%)`;
       }
 
       updateSliderDisplay();

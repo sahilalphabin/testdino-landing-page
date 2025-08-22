@@ -110,14 +110,15 @@
         #testExecutionSlider {
             -webkit-appearance: none;
             appearance: none;
-            height: 6px;
+            height: 8px; /* match track height for a single, clean bar */
             border-radius: 9999px;
-            background: linear-gradient(to right, #171717 0%, #171717 20%, #E5E7EB 20%, #E5E7EB 100%) !important;
+            background: linear-gradient(to right, #171717 0%, #171717 20%, #ffffff 20%, #ffffff 100%) !important;
             outline: none;
+            box-shadow: inset 0 0 0 1px #E2E4E9; /* subtle border */
         }
 
         #testExecutionSlider::-webkit-slider-runnable-track {
-            height: 6px;
+            height: 8px;
             background: transparent;
             border-radius: 9999px;
         }
@@ -130,26 +131,26 @@
             background: #ffffff;
             border: 2px solid #171717;
             border-radius: 9999px;
-            margin-top: -2.5px;
-            /* centers the thumb on the 6px track */
+            margin-top: -4px; /* centers the 16px thumb on 8px track */
             cursor: pointer;
+            transform: translateY(0); /* override any inherited transforms */
         }
 
         /* Firefox */
         #testExecutionSlider::-moz-range-track {
-            height: 5px;
+            height: 8px;
             background: transparent;
             border-radius: 9999px;
         }
 
         #testExecutionSlider::-moz-range-progress {
-            height: 6px;
+            height: 8px;
             background: #171717;
             border-radius: 9999px;
         }
 
         #testExecutionSlider::-moz-range-thumb {
-            width: -6px;
+            width: 16px;
             height: 16px;
             background: #ffffff;
             border: 2px solid #171717;
@@ -287,7 +288,7 @@
                                 id="testExecutionValue">25k</span> test executions per month </p>
                         <div class="relative">
                             <input type="range" min="0" max="5" value="1" step="1"
-                                class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                                class="w-full h-2 bg-white rounded-lg appearance-none cursor-pointer"
                                 id="testExecutionSlider">
                             <div class="slider-labels mt-2">
                                 <span class="slider-label">Free</span>
@@ -617,13 +618,13 @@
                                 <input type="radio" id="monthly" name="billing" checked class="mr-2" />
                                 <label for="monthly"
                                     class="text-[14px] text-[#171717] font-[500] ff-geist">Monthly</label>
-                            </div>
-                            <div class="flex items-center">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
                                 <input type="radio" id="annually" name="billing" class="mr-2" />
                                 <label for="annually"
                                     class="text-[14px] text-[#171717] font-[500] ff-geist">Annually</label>
+                                    &nbsp;
                                 <span
-                                    class="text-[10px] text-[#004AB3] font-[600] uppercase ff-geist leading-[10px] ml-1">Save
+                                    class="text-[10px] text-[#004AB3] font-[600] uppercase ff-geist leading-[10px] ml-1" style="border: 1px solid #E7EFFE; padding: 4px; background-color: #E7EFFE; border-radius: 4px;">Save
                                     up to 20%</span>
                             </div>
                         </div>
@@ -2230,7 +2231,7 @@
                 const min = parseFloat(slider.min);
                 const max = parseFloat(slider.max);
                 const percentage = ((value - min) / (max - min)) * 100;
-                slider.style.setProperty('background', `linear-gradient(to right, #171717 0%, #171717 ${percentage}%, #e2e8f0 ${percentage}%, #e2e8f0 100%)`, 'important');
+                slider.style.setProperty('background', `linear-gradient(to right, #171717 0%, #171717 ${percentage}%, #ffffff ${percentage}%, #ffffff 100%)`, 'important');
             }
 
             updateSliderDisplay();
