@@ -274,14 +274,14 @@
     </section>
 
     <!-- Pricing plan container -->
-    <section class="py-4 px-4 md:pb-[100px] relative bg-[#FAFAFA]" id="pricing-section">
-        <div class="mx-auto max-w-[1200px]">
+    <section class="pricing-section relative" id="pricing-section">
+        <div class="pricing-container">
             <!-- Pricing calculator -->
 
             <!-- Test execution slider and billing frequency radio -->
-            <div class="flex flex-col md:flex-row justify-center gap-8 mb-12">
+            <div class="pricing-calculator">
                 <!-- Test execution slider -->
-                <div class="flex-1 bg-white p-6 rounded-xl shadow-sm" style="border: 1px solid #E2E4E9;">
+                <div class="pricing-calculator-card">
                     <div class="mb-4">
                         <p class="text-[16px] mb-2">I need <span
                                 class="bg-[#E7EFFE] text-[#004AB3] px-2 py-1 rounded font-bold"
@@ -303,7 +303,7 @@
                 </div>
 
                 <!-- Billing frequency radio -->
-                <div class="flex-1 bg-white p-6 rounded-xl shadow-sm" style="border: 1px solid #E2E4E9;">
+                <div class="pricing-calculator-card">
                     <div class="mb-4">
                         <p class="text-[16px] mb-4">Bill me:</p>
                         <div class="flex flex-row gap-4">
@@ -324,27 +324,25 @@
                 </div>
             </div>
             <!-- Pricing cards -->
-            <div class="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8" id="pricing-cards">
+            <div class="pricing-cards-grid" id="pricing-cards">
                 <!-- Community Plan -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 pricing-card"
-                    style="border: 1px solid #E2E4E9;">
-                    <div class="flex items-center mb-2">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 pricing-card pricing-card--neutral">
+                    <div class="pricing-card-header">
                         <img src="Testdino Landing Page Images/Pricing/icons/community.svg" alt="Community"
                             class="w-9 h-9 mr-2">
                     </div>
-                    <span class="text-lg font-bold text-gray-900 ff-Manrope">Community</span>
-                    <p class="text-xs text-gray-500 mb-4">Perfect for individual developers</p>
-                    <div class="mt-4 mb-6">
-                        <p class="text-3xl font-bold ff-Manrope">Free</p>
+                    <span class="pricing-card-title">Community</span>
+                    <p class="pricing-card-subtitle">Perfect for individual developers</p>
+                    <div class="pricing-card-price">
+                        <p class="pricing-card-price-text">Free</p>
                     </div>
-                    <button
-                        class="w-full py-2 px-4 bg-black text-white rounded-lg mb-6 flex items-center justify-center">
+                    <button class="pricing-card-button">
                         Get started free
                         <img src="Testdino Landing Page Images/Pricing/icons/start_trial_arrow.svg" alt="Arrow"
                             class="btn-arrow">
                     </button>
                     <p class="text-sm text-gray-700 font-bold mb-4">Free, forever</p>
-                    <div class="flex flex-col gap-3 flex-grow">
+                    <div class="pricing-card-features">
                         <div class="feature-item">
                             <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark">
                             <p class="text-sm text-gray-700"><span class="font-bold">5000</span> test executions/month
@@ -381,25 +379,23 @@
                     </div>
                 </div>
                 <!-- Pro Plan -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 pricing-card"
-                    style="border-right: 1px solid #E2E4E9; border-bottom: 1px solid #E2E4E9; border-left: 1px solid #E2E4E9;">
-                    <div class="flex items-center mb-2">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 pricing-card pricing-card--pro">
+                    <div class="pricing-card-header">
                         <img src="Testdino Landing Page Images/Pricing/icons/pro.svg" alt="Pro" class="w-9 h-9 mr-2">
                     </div>
-                    <span class="text-lg font-bold text-gray-900 ff-Manrope">Pro Plan</span>
+                    <span class="pricing-card-title">Pro Plan</span>
 
-                    <p class="text-xs text-gray-500 mb-4">For dev teams shipping to production</p>
-                    <div class="mt-4 mb-6">
-                        <p class="text-3xl font-bold ff-Manrope">$18 <span class="text-sm font-normal">/month</span></p>
+                    <p class="pricing-card-subtitle">For dev teams shipping to production</p>
+                    <div class="pricing-card-price">
+                        <p class="pricing-card-price-text">$18 <span class="pricing-card-price-unit">/month</span></p>
                     </div>
-                    <button
-                        class="w-full py-2 px-4 bg-black text-white rounded-lg mb-6 flex items-center justify-center">
+                    <button class="pricing-card-button">
                         Start 14-day trial
                         <img src="Testdino Landing Page Images/Pricing/icons/start_trial_arrow.svg" alt="Arrow"
                             class="btn-arrow">
                     </button>
                     <p class="text-sm text-gray-700 font-bold mb-4">Everything in Community, plus:</p>
-                    <div class="flex flex-col gap-3 flex-grow">
+                    <div class="pricing-card-features">
                         <div class="feature-item">
                             <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark">
                             <p class="text-sm text-gray-700"><span class="font-bold">25,000</span> test executions/month
@@ -447,25 +443,23 @@
 
                 </div>
                 <!-- Team Plan -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 pricing-card"
-                    style="border-right: 1px solid #E2E4E9; border-bottom: 1px solid #E2E4E9; border-left: 1px solid #E2E4E9;">
-                    <div class="flex items-center mb-2">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 pricing-card pricing-card--team">
+                    <div class="pricing-card-header">
                         <img src="Testdino Landing Page Images/Pricing/icons/teams.svg" alt="Team" class="w-9 h-9 mr-2">
                         <span class="tag-most-popular">MOST POPULAR</span>
                     </div>
-                    <span class="text-lg font-bold text-gray-900 ff-Manrope">Team Plan</span>
-                    <p class="text-xs text-gray-500 mb-4">Engineering teams at scale</p>
-                    <div class="mt-4 mb-6">
-                        <p class="text-3xl font-bold ff-Manrope">$49 <span class="text-sm font-normal">/month</span></p>
+                    <span class="pricing-card-title">Team Plan</span>
+                    <p class="pricing-card-subtitle">Engineering teams at scale</p>
+                    <div class="pricing-card-price">
+                        <p class="pricing-card-price-text">$49 <span class="pricing-card-price-unit">/month</span></p>
                     </div>
-                    <button
-                        class="w-full py-2 px-4 bg-black text-white rounded-lg mb-6 flex items-center justify-center">
+                    <button class="pricing-card-button">
                         Start 14-day trial
                         <img src="Testdino Landing Page Images/Pricing/icons/start_trial_arrow.svg" alt="Arrow"
                             class="btn-arrow">
                     </button>
                     <p class="text-sm text-gray-700 font-bold mb-4">Everything in Pro Plan, plus:</p>
-                    <div class="flex flex-col gap-3 flex-grow">
+                    <div class="pricing-card-features">
                         <div class="feature-item">
                             <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark">
                             <p class="text-sm text-gray-700"><span class="font-bold">100,000</span> test
@@ -517,25 +511,23 @@
                     </div>
                 </div>
                 <!-- Enterprise Plan -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 pricing-card"
-                    style="border: 1px solid #E2E4E9;">
-                    <div class="flex items-center mb-2">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 pricing-card pricing-card--neutral">
+                    <div class="pricing-card-header">
                         <img src="Testdino Landing Page Images/Pricing/icons/enterprise.svg" alt="Enterprise"
                             class="w-9 h-9 mr-2">
                     </div>
-                    <span class="text-lg font-bold text-gray-900 ff-Manrope">Enterprise</span>
-                    <p class="text-xs text-gray-500 mb-4">For large companies with security needs</p>
-                    <div class="mt-4 mb-6">
-                        <p class="text-3xl font-bold ff-Manrope">Custom</p>
+                    <span class="pricing-card-title">Enterprise</span>
+                    <p class="pricing-card-subtitle">For large companies with security needs</p>
+                    <div class="pricing-card-price">
+                        <p class="pricing-card-price-text">Custom</p>
                     </div>
-                    <button
-                        class="w-full py-2 px-4 bg-black text-white rounded-lg mb-6 flex items-center justify-center">
+                    <button class="pricing-card-button">
                         Contact sales
                         <img src="Testdino Landing Page Images/Pricing/icons/start_trial_arrow.svg" alt="Arrow"
                             class="btn-arrow">
                     </button>
-                    <p class="text-sm text-gray-700 font-bold   mb-4">Everything in Team Plan, plus:</p>
-                    <div class="flex flex-col gap-3 flex-grow">
+                    <p class="text-sm text-gray-700 font-bold mb-4">Everything in Team Plan, plus:</p>
+                    <div class="pricing-card-features">
                         <div class="feature-item">
                             <img src="Testdino Landing Page Images/Pricing/icons/tick.svg" alt="Checkmark">
                             <p class="text-sm text-gray-700"><span class="font-bold">Custom</span> execution limits</p>

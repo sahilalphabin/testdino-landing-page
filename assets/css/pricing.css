@@ -111,8 +111,8 @@
 
 /* AI feature sections container */
 .ai-features-container {
-  width: 117%;
-  height: 205px;
+  width: 115%;
+  height: 100%;
   padding: 20px;
   background: #EEF4FF;
   margin-right: 0;
@@ -122,7 +122,6 @@
   display: flex;
   flex-direction: column;
   margin-top: auto;
-  margin-bottom: 0.5rem;
   align-self: center;
 }
 
@@ -314,6 +313,147 @@
 }
 
 /* ==============================================
+   PRICING CARD VARIANTS - Specific Pricing Components
+   ============================================== */
+
+/* Pricing card border variants */
+.pricing-card--neutral {
+  border: 1px solid #E2E4E9;
+}
+
+.pricing-card--pro {
+  border-right: 1px solid #E2E4E9;
+  border-bottom: 1px solid #E2E4E9;
+  border-left: 1px solid #E2E4E9;
+}
+
+.pricing-card--team {
+  border-right: 1px solid #E2E4E9;
+  border-bottom: 1px solid #E2E4E9;
+  border-left: 1px solid #E2E4E9;
+}
+
+/* Pricing card layout utilities */
+.pricing-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+  font-family: 'Manrope', sans-serif;
+}
+
+.pricing-card-subtitle {
+  font-size: 0.75rem;
+  color: #6B7280;
+  margin-bottom: 1rem;
+}
+
+.pricing-card-price {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-card-price-text {
+  font-size: 1.875rem;
+  font-weight: 700;
+  font-family: 'Manrope', sans-serif;
+}
+
+.pricing-card-price-unit {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.pricing-card-button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #000000;
+  color: white;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pricing-card-button:hover {
+  background-color: #333333;
+}
+
+.pricing-card-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-grow: 1;
+}
+
+/* Pricing section layout */
+.pricing-section {
+  padding: 1rem 1rem 6.25rem;
+  background-color: #FAFAFA;
+}
+
+@media (min-width: 768px) {
+  .pricing-section {
+    padding-bottom: 100px;
+  }
+}
+
+.pricing-container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.pricing-calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .pricing-calculator {
+    flex-direction: row;
+  }
+}
+
+.pricing-calculator-card {
+  flex: 1;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #E2E4E9;
+}
+
+.pricing-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .pricing-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .pricing-cards-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* ==============================================
    COMPONENT VARIANTS - Specific Components
    ============================================== */
 
@@ -335,7 +475,7 @@
 /* Feature items */
 .feature-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.75rem;
   margin-bottom: 0.5rem;
 }
@@ -460,9 +600,9 @@
 
 @media (max-width: 767px) {
   .ai-features-container {
-    width: calc(100% + 24px);
-    margin-left: -12px;
-    padding: 12px;
+    width: 100%;
+    /* margin-left: -12px;
+    padding: 12px; */
   }
   
   .pricing-card {
