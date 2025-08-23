@@ -117,13 +117,28 @@
   background: #EEF4FF;
   margin-right: 0;
   margin-left: 0;
-  border-radius: 6px;
-  border-top: 6px solid #5B75EE;
   display: flex;
   flex-direction: column;
   margin-top: auto;
   align-self: center;
+  border-radius: 6px;
+  /* Use border-image for gradient border, but also add a transparent border for border-radius to apply */
+  border-top: 4px solid transparent;
+  border-image: linear-gradient(90deg, #5B75EE 0%, #9C1DE2 90%) 1;
+  /* Ensure border-radius clips the border-image */
+  -webkit-mask-image: 
+    linear-gradient(#fff 0 0), 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-origin: border-box;
+  -webkit-mask-clip: content-box, border-box;
+  mask-image: 
+    linear-gradient(#fff 0 0), 
+    linear-gradient(#fff 0 0);
+  mask-origin: border-box;
+  mask-clip: content-box, border-box;
+  overflow: hidden;
 }
+
 
 .ai-features-container .ai-header {
   display: flex;
