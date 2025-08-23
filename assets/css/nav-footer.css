@@ -350,7 +350,7 @@
   display: flex;
   width: 100%;
   height: 40px;
-  max-width: 600px;
+  max-width: 400px;
   flex-direction: row;
   gap: 12px;
   align-items: center;
@@ -522,7 +522,7 @@
 
 @media (min-width: 768px) {
   .faq-section {
-    padding-top: 60px;
+    padding-top: 90px;
     padding-bottom: 100px;
   }
 }
@@ -532,7 +532,7 @@
   font-size: 28px;
   color: #0B0C0E;
   line-height: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-family: "Manrope", sans-serif;
 }
 
