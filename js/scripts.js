@@ -47,7 +47,6 @@ window.addEventListener('scroll', () => {
     nav.style.boxShadow = 'none';
     nav.style.borderRadius = '20px';
     header.style.padding = '0 16px';
-    nav.style.backgroundColor = "transparent"
     nav.style.backdropFilter = 'blur(12px)';
 
   }
