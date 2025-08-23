@@ -24,6 +24,7 @@
         href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/input.css">
+    <link rel="stylesheet" href="assets/css/nav-footer.css">
     <link rel="stylesheet" href="assets/css/pricing.css">
     <link rel="stylesheet" href="assets/css/rotating-text.css">
 
@@ -164,36 +165,29 @@
 
 <body class="flex min-h-screen flex-col bg-[#FAFAFA]">
     <!-- Navigation -->
-    <div class="sticky h-[56px] md:h-[80px] px-4 w-full top-0 z-50 flex items-center justify-center font-inter border-gray-100"
-        id="header">
-        <nav class="flex w-[1200px] mx-auto items-center justify-between rounded-[20px] relative transition-all duration-300"
-            id="nav">
-            <div class="flex w-full items-center justify-between">
+    <div class="header-container" id="header">
+        <nav class="nav-wrapper" id="nav">
+            <div class="nav-content">
                 <!-- Logo -->
-                <a href="https://testdino.com" class="flex-shrink-0">
-                    <div class="flex items-center gap-[8px]">
-                        <img src="Testdino Landing Page Images/icons/logo_testdino.svg" alt="Testdino" class="h-auto">
+                <a href="https://testdino.com" class="nav-logo">
+                    <div class="nav-logo-link">
+                        <img src="Testdino Landing Page Images/icons/logo_testdino.svg" alt="Testdino" class="nav-logo-img">
                     </div>
                 </a>
 
-                <!-- Centered Nav Links -->
-                <div class="hidden md:flex flex-1 justify-center items-center gap-[32px]">
-                    <a href="/" target="_self" class="text-[#171717] hover:text-black-300 transition-colors">Home</a>
-                    <a href="pricing.html" target="_self"
-                        class="text-[#171717] hover:text-black-300 transition-colors font-[700]">Pricing</a>
-                    <a href="docs.html" target="_self"
-                        class="text-[#171717] hover:text-black-300 transition-colors">Docs</a>
-                    <a href="blogs.html" target="_self"
-                        class="text-[#171717] hover:text-black-300 transition-colors">Blog</a>
+                <!-- Desktop Nav Links -->
+                <div class="nav-links-desktop">
+                    <a href="/" target="_self" class="nav-link">Home</a>
+                    <a href="pricing.html" target="_self" class="nav-link nav-link--active">Pricing</a>
+                    <a href="docs.html" target="_self" class="nav-link">Docs</a>
+                    <a href="blogs.html" target="_self" class="nav-link">Blog</a>
                 </div>
 
                 <!-- CTA Button -->
-                <a href="#" target="_self" type="button" id="pop-up"
-                    class="pop-up hidden md:block rounded-[6px] bg-black px-[16px] py-[8px] text-[#ffffff] hover:bg-[#151515] transition-colors text-[16px]">Join
-                    waitlist</a>
+                <a href="#" target="_self" type="button" id="pop-up" class="pop-up nav-cta-button">Join waitlist</a>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden text-black p-2">
+                <button id="mobile-menu-button" class="mobile-menu-button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
                         <rect width="30" height="2" fill="#141414" />
                         <rect x="6" y="8" width="24" height="2" fill="#141414" />
@@ -202,16 +196,14 @@
                 </button>
 
                 <!-- Mobile Menu Overlay -->
-                <div id="mobile-menu-overlay"
-                    class="fixed inset-0 h-full bg-black bg-opacity-50 z-50 md:hidden hidden">
-                    <div class="flex flex-col bg-[#FFFFFF]">
+                <div id="mobile-menu-overlay" class="mobile-menu-overlay hidden">
+                    <div class="mobile-menu-content">
                         <!-- Mobile Header -->
-                        <div class="flex items-center justify-between px-[16px] py-[12px]">
-                            <div class="flex items-center gap-2">
-                                <img src="Testdino Landing Page Images/icons/logo_testdino.svg" alt="Testdino"
-                                    class="h-auto">
+                        <div class="mobile-menu-header">
+                            <div class="mobile-menu-logo">
+                                <img src="Testdino Landing Page Images/icons/logo_testdino.svg" alt="Testdino" class="nav-logo-img">
                             </div>
-                            <button id="close-mobile-menu" class="text-[#171717] p-2">
+                            <button id="close-mobile-menu" class="mobile-menu-close">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18"
                                     fill="none">
                                     <rect x="1.02203" y="15.8296" width="20.757" height="1.83901"
@@ -222,26 +214,19 @@
                             </button>
                         </div>
 
-                        <!-- Mobile Menu Items -->
-                        <div
-                            class="flex-1 px-6 pt-[30px] space-y-6 overflow-y-auto flex flex-col items-center justify-center">
-                            <div class="space-y-4 flex flex-col items-center">
-                                <a href="/" target="_self"
-                                    class="block text-[#171717] text-[18px] leading-[24px] py-2 mobile-menu-link text-center">Home</a>
-                                <a href="pricing.html" target="_self"
-                                    class="block text-[#171717] text-[18px] leading-[24px] py-2 mobile-menu-link text-center">Pricing</a>
-                                <a href="docs.html" target="_self"
-                                    class="block text-[#171717] text-[18px] leading-[24px] py-2 mobile-menu-link text-center">Docs</a>
-                                <a href="/blogs.html" target="_self"
-                                    class="block text-[#171717] text-[18px] leading-[24px] py-2 font-[700] mobile-menu-link text-center">Blog</a>
+                        <!-- Mobile Menu Navigation -->
+                        <div class="mobile-menu-nav">
+                            <div class="mobile-menu-links">
+                                <a href="/" target="_self" class="mobile-menu-link">Home</a>
+                                <a href="pricing.html" target="_self" class="mobile-menu-link mobile-menu-link--active">Pricing</a>
+                                <a href="docs.html" target="_self" class="mobile-menu-link">Docs</a>
+                                <a href="/blogs.html" target="_self" class="mobile-menu-link">Blog</a>
                             </div>
                         </div>
 
                         <!-- Mobile CTA -->
-                        <div class="px-6 py-[32px] py-0">
-                            <a href="#" target="_self" id="pop-up"
-                                class="pop-up block w-full  text-center rounded-[6px] bg-[#171717] px-6 py-3 text-[#ffffff] mobile-menu-link">Join
-                                waitlist</a>
+                        <div class="mobile-menu-cta">
+                            <a href="#" target="_self" id="pop-up" class="pop-up mobile-menu-cta-button">Join waitlist</a>
                         </div>
                     </div>
                 </div>
@@ -2047,83 +2032,66 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#FAFAFA] py-8 md:pt-20 px-4 md:pb-10 ff-geist">
-        <div class="container mx-auto max-w-7xl">
-            <img src="Testdino Landing Page Images/icons/CTA DINO.svg" alt="Logo"
-                class="hidden md:block w-6 h-6 absolute right-[160px] top-[40px] scale-[4.5]" />
+    <footer class="footer-container">
+        <div class="footer-content">
+            <img src="Testdino Landing Page Images/icons/CTA DINO.svg" alt="Logo" class="footer-dino-logo" />
 
             <!-- Main Footer Content -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-0 lg:mb-8 md:mb-8">
+            <div class="footer-main-grid">
                 <!-- Logo and Newsletter -->
-                <div class="lg:col-span-2 flex flex-col items-start">
-                    <div class="flex items-center mb-6 md:mb-8">
-                        <div class="flex h-auto items-center justify-center">
-                            <img src="Testdino Landing Page Images/icons/logo_testdino.svg" alt="Testdino"
-                                class="w-40 md:w-56 lg:w-64">
+                <div class="footer-newsletter">
+                    <div class="footer-logo-container">
+                        <div class="footer-logo">
+                            <img src="Testdino Landing Page Images/icons/logo_testdino.svg" alt="Testdino">
                         </div>
                     </div>
-                    <p class="text-[#0b0c0e]/80 mb-4 text-lg md:text-1xl" style="font-size: 16px;">Join our email list
-                        for product
-                        updates, tips, and offers.</p>
-                    <div class="flex w-full h-[40px] max-w-[400px] flex-col md:flex-row footer-form">
-                        <input type="email" placeholder="Email address"
-                            class="flex-1 rounded-[6px] mr-0 md:mr-2 ff-geist border border-[#E5E5E5] mb-2 md:mb-0 bg-white px-4 py-2 text-[#0b0c0e] focus:outline-none focus:ring-2 focus:ring-[#E5E5E5]">
-                        <button type="submit"
-                            class="rounded-[6px] bg-[#0b0c0e] px-6 py-3 text-white font-[500] hover:bg-gray-800 transition-colors">Subscribe</button>
+                    <p class="footer-newsletter-text">Join our email list for product updates, tips, and offers.</p>
+                    <div class="footer-form">
+                        <input type="email" placeholder="example@mail.com" class="footer-form-input">
+                        <button type="submit" class="footer-form-button">Subscribe</button>
                     </div>
 
                     <!-- Social Icons -->
-                    <div class="flex space-x-3 h-[40px] mb-[16px] mt-6 md:mt-[16px]">
-                        <a href="#" target="_blank"
-                            class="w-9 h-9 flex items-center justify-center rounded-lg border border-[#E5E5E5] hover:bg-gray-100 transition-colors">
+                    <div class="footer-social">
+                        <a href="#" target="_blank" class="footer-social-link">
                             <img src="Testdino Landing Page Images/icons/x-logo.svg" alt="Twitter">
                         </a>
-                        <a href="#" target="_blank"
-                            class="w-9 h-9 flex items-center justify-center rounded-lg border border-[#E5E5E5] hover:bg-gray-100 transition-colors">
+                        <a href="#" target="_blank" class="footer-social-link">
                             <img src="Testdino Landing Page Images/icons/in-logo.svg" alt="LinkedIn">
                         </a>
-                        <a href="#" target="_blank"
-                            class="w-9 h-9 flex items-center justify-center rounded-lg border border-[#E5E5E5] hover:bg-gray-100 transition-colors">
+                        <a href="#" target="_blank" class="footer-social-link">
                             <img src="Testdino Landing Page Images/icons/git-logo.svg" alt="GitHub">
                         </a>
                     </div>
                 </div>
 
-                <!-- Resources and Legal Links -->
-                <div class="flex gap-[81px] sm:flex-row sm:gap-[150px] lg:col-span-3 lg:justify-end">
+                <!-- Footer Links Section -->
+                <div class="footer-links-section">
                     <!-- Resources Section -->
-                    <div>
-                        <h3 class="text-lg font-semibold text-[#0b0c0e] mb-6 ff-Manrope">Resources</h3>
-                        <ul class="space-y-6 text-[#0b0c0e]/80">
-                            <li><a href="pricing.html" target="_self"
-                                    class="hover:text-[#333333] transition-colors">Pricing</a></li>
-                            <li><a href="docs.html" target="_self"
-                                    class="hover:text-[#333333] transition-colors">Documentation</a>
-                            </li>
-                            <li><a href="blogs.html" target="_self"
-                                    class="hover:text-[#333333] transition-colors">Blog</a></li>
+                    <div class="footer-links-group">
+                        <h3 class="footer-links-title">Resources</h3>
+                        <ul class="footer-links-list">
+                            <li class="footer-links-item"><a href="pricing.html" target="_self" class="footer-links-link">Pricing</a></li>
+                            <li class="footer-links-item"><a href="docs.html" target="_self" class="footer-links-link">Documentation</a></li>
+                            <li class="footer-links-item"><a href="blogs.html" target="_self" class="footer-links-link">Blog</a></li>
                         </ul>
                     </div>
 
                     <!-- Legal -->
-                    <div>
-                        <h3 class="text-lg font-semibold text-[#0b0c0e] mb-6 ff-Manrope">Legal</h3>
-                        <ul class="space-y-6 text-[#0b0c0e]/80">
-                            <li><a href="/terms-conditions/" target="_self"
-                                    class="hover:text-[#333333] transition-colors">Terms &
-                                    Conditions</a></li>
-                            <li><a href="/privacy-policy/" target="_self"
-                                    class="hover:text-[#333333] transition-colors">Privacy
-                                    Policy</a></li>
+                    <div class="footer-links-group">
+                        <h3 class="footer-links-title">Legal</h3>
+                        <ul class="footer-links-list">
+                            <li class="footer-links-item"><a href="/terms-conditions/" target="_self" class="footer-links-link">Terms & Conditions</a></li>
+                            <li class="footer-links-item"><a href="/privacy-policy/" target="_self" class="footer-links-link">Privacy Policy</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="flex justify-center mt-8 pt-6">
-            <div class="w-[85%] border-t border-[#E5E5E5] flex justify-center">
-                <p class="text-[#0b0c0e]/70 text-center text-[16px] mt-6">© 2025 Testdino. All rights reserved</p>
+        <div class="footer-bottom">
+            <div class="footer-bottom-border">
+                <p class="footer-copyright">© 2025 Testdino. All rights reserved</p>
             </div>
         </div>
     </footer>
@@ -2173,14 +2141,7 @@
 
     <script src="js/scripts.js" defer></script>
     <script>
-        // Mobile menu functionality
-        document.getElementById('mobile-menu-button').addEventListener('click', function () {
-            document.getElementById('mobile-menu-overlay').classList.remove('hidden');
-        });
-
-        document.getElementById('close-mobile-menu').addEventListener('click', function () {
-            document.getElementById('mobile-menu-overlay').classList.add('hidden');
-        });
+        // Mobile menu functionality is handled by scripts.js
 
         // Popup functionality
         document.querySelectorAll('.pop-up').forEach(function (button) {

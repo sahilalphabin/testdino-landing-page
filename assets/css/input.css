@@ -21,9 +21,7 @@
   display: block;
 }
 
-.footer-form{
-  flex-direction: row !important;
-}
+/* Moved to nav-footer.css */
 
 
 .slick-slider {
@@ -1557,11 +1555,7 @@ input[type=range]::-moz-range-thumb {
   .wiser-way-collect-right .absolute {
     bottom: 22px;
   }
-  .header-close-img {
-    width: 17px;
-    height: 17px;
-    margin-top: 4px;
-  }
+  /* Moved to nav-footer.css */
   .blog-content-wrapper h2{
     font-size: 20px;
   }
@@ -1597,14 +1591,7 @@ input[type=range]::-moz-range-thumb {
       width: 100%;
     }
 
-    .footer-form button{
-      font-size: 12px;
-      padding: 12px 16px;
-    }
-    .footer-form input{
-      font-size: 14px;
-      padding: 12px 11px;
-    }
+    /* Moved to nav-footer.css */
 }
 
 /* Blog Content Typography Classes */

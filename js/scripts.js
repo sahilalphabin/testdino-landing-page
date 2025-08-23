@@ -11,6 +11,15 @@ const nav = document.getElementById('nav');
 const header = document.getElementById('header');
 
 window.addEventListener('scroll', () => {
+  // Check if mobile menu is open
+  const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+  const isMobileMenuOpen = mobileMenuOverlay && !mobileMenuOverlay.classList.contains('hidden');
+  
+  // Don't apply scroll styles if mobile menu is open
+  if (isMobileMenuOpen) {
+    return;
+  }
+  
  if (window.scrollY > 0) {
   // Apply styles when scrolled
   nav.style.width = '700px';
@@ -20,11 +29,12 @@ window.addEventListener('scroll', () => {
   nav.style.backgroundColor = "rgba(255, 255, 255, 0.6)";
   nav.style.borderRadius = '20px';
   header.style.padding = '0 16px';
+  
   nav.style.backdropFilter = 'blur(12px)';
 
 
   // Add margin-top: 25px on mobile screens
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 900) {
     nav.style.marginTop = '25px';
   } else {
     nav.style.marginTop = ''; // Reset for larger screens
@@ -213,30 +223,51 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeMobileMenuButton = document.getElementById("close-mobile-menu")
   const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link")
 
-  mobileMenuButton.addEventListener("click", () => {
-    mobileMenuOverlay.classList.remove("hidden")
-    mobileMenuOverlay.style.width = "100%"
-    mobileMenuOverlay.style.position = "fixed"
-    mobileMenuOverlay.style.top = "0"
-    mobileMenuOverlay.style.left = "0"
-    mobileMenuOverlay.style.right = "0"
-    mobileMenuOverlay.style.bottom = "0"
-  })
+  // Check if elements exist before adding event listeners
+  if (mobileMenuButton && mobileMenuOverlay) {
+    mobileMenuButton.addEventListener("click", (e) => {
+      e.preventDefault()
+      e.stopPropagation()
+      console.log("Mobile menu button clicked") // Debug log
+      mobileMenuOverlay.classList.remove("hidden")
+      mobileMenuOverlay.style.display = "block"
+      mobileMenuOverlay.style.width = "100%"
+      mobileMenuOverlay.style.position = "fixed"
+      mobileMenuOverlay.style.top = "0"
+      mobileMenuOverlay.style.left = "0"
+      mobileMenuOverlay.style.right = "0"
+      mobileMenuOverlay.style.bottom = "0"
+      mobileMenuOverlay.style.zIndex = "50"
 
-  closeMobileMenuButton.addEventListener("click", () => {   
-    mobileMenuOverlay.classList.add("hidden")
-    // Reset inline styles when closing
-    mobileMenuOverlay.style.width = ""
-    mobileMenuOverlay.style.position = ""
-    mobileMenuOverlay.style.top = ""
-    mobileMenuOverlay.style.left = ""
-    mobileMenuOverlay.style.right = ""
-    mobileMenuOverlay.style.bottom = ""
-  })
+      // Apply full width styles to header and nav when mobile menu opens
+      if (header) {
+        header.style.padding = "0"
+        header.style.margin = "0"
+      }
+      if (nav) {
+        nav.style.width = "100%"
+        nav.style.margin = "0"
+        nav.style.padding = "0"
+        nav.style.setProperty('margin-top', '0', 'important')
+        nav.style.boxShadow = "none"
+        nav.style.borderRadius = "0"
+        nav.style.backgroundColor = "transparent"
+      }
 
-  mobileMenuLinks.forEach((link) => {
-    link.addEventListener("click", () => {
+      document.body.style.backgroundColor = "back"
+      document.body.style.backdropFilter = "blur(12px)"
+    })
+  } else {
+    console.error("Mobile menu button or overlay not found")
+  }
+
+  if (closeMobileMenuButton && mobileMenuOverlay) {
+    closeMobileMenuButton.addEventListener("click", (e) => {   
+      e.preventDefault()
+      e.stopPropagation()
+      console.log("Close mobile menu button clicked") // Debug log
       mobileMenuOverlay.classList.add("hidden")
+      mobileMenuOverlay.style.display = "none"
       // Reset inline styles when closing
       mobileMenuOverlay.style.width = ""
       mobileMenuOverlay.style.position = ""
@@ -244,8 +275,105 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileMenuOverlay.style.left = ""
       mobileMenuOverlay.style.right = ""
       mobileMenuOverlay.style.bottom = ""
+      mobileMenuOverlay.style.zIndex = ""
+
+      // Reset header and nav styles based on scroll position when mobile menu closes
+      if (window.scrollY > 0) {
+        // Apply scrolled styles
+        if (header) {
+          header.style.padding = "0 16px"
+        }
+        if (nav) {
+          nav.style.width = "700px"
+          nav.style.margin = "10px auto"
+          nav.style.padding = "10px 20px"
+          nav.style.boxShadow = "0px 4px 12px rgba(0, 0, 0, 0.25)"
+          nav.style.backgroundColor = "rgba(255, 255, 255, 0.6)"
+          nav.style.borderRadius = "20px"
+          nav.style.backdropFilter = "blur(12px)"
+          
+          // Add margin-top: 25px on mobile screens
+          if (window.innerWidth <= 900) {
+            nav.style.marginTop = "25px"
+          } else {
+            nav.style.marginTop = ""
+          }
+        }
+      } else {
+        // Apply top of page styles
+        if (header) {
+          header.style.padding = "0 16px"
+        }
+        if (nav) {
+          nav.style.width = "1200px"
+          nav.style.margin = "0 auto"
+          nav.style.padding = "0"
+          nav.style.boxShadow = "none"
+          nav.style.borderRadius = "20px"
+          nav.style.backgroundColor = "transparent"
+          nav.style.backdropFilter = "blur(12px)"
+          nav.style.marginTop = ""
+        }
+      }
     })
-  })
+  }
+
+  if (mobileMenuLinks.length > 0 && mobileMenuOverlay) {
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        console.log("Mobile menu link clicked") // Debug log
+        mobileMenuOverlay.classList.add("hidden")
+        mobileMenuOverlay.style.display = "none"
+        // Reset inline styles when closing
+        mobileMenuOverlay.style.width = ""
+        mobileMenuOverlay.style.position = ""
+        mobileMenuOverlay.style.top = ""
+        mobileMenuOverlay.style.left = ""
+        mobileMenuOverlay.style.right = ""
+        mobileMenuOverlay.style.bottom = ""
+        mobileMenuOverlay.style.zIndex = ""
+
+        // Reset header and nav styles based on scroll position when menu link is clicked
+        if (window.scrollY > 0) {
+          // Apply scrolled styles
+          if (header) {
+            header.style.padding = "0 16px"
+          }
+          if (nav) {
+            nav.style.width = "700px"
+            nav.style.margin = "10px auto"
+            nav.style.padding = "10px 20px"
+            nav.style.boxShadow = "0px 4px 12px rgba(0, 0, 0, 0.25)"
+            nav.style.backgroundColor = "rgba(255, 255, 255, 0.6)"
+            nav.style.borderRadius = "20px"
+            nav.style.backdropFilter = "blur(12px)"
+            
+            // Add margin-top: 25px on mobile screens
+            if (window.innerWidth <= 900) {
+              nav.style.marginTop = "25px"
+            } else {
+              nav.style.marginTop = ""
+            }
+          }
+        } else {
+          // Apply top of page styles
+          if (header) {
+            header.style.padding = "0 16px"
+          }
+          if (nav) {
+            nav.style.width = "1200px"
+            nav.style.margin = "0 auto"
+            nav.style.padding = "0"
+            nav.style.boxShadow = "none"
+            nav.style.borderRadius = "20px"
+            nav.style.backgroundColor = "transparent"
+            nav.style.backdropFilter = "blur(12px)"
+            nav.style.marginTop = ""
+          }
+        }
+      })
+    })
+  }
 
 
   // --- Interactive Feature Section Logic ---
