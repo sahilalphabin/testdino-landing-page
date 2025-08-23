@@ -662,7 +662,7 @@
 
           <div class="flex items-start gap-3">
             <span class="mt-1 w-[40px] md:w-[25px] h-[16px]">
-              <img class="w-[100%] h-[100%]" src="Te    stdino Landing Page Images/icons/fi_1442912.svg" alt="">
+              <img class="w-[100%] h-[100%]" src="Testdino Landing Page Images/icons/fi_1442912.svg" alt="">
             </span>
             <p class="-[#0B0C0E] text-[16px] md:text-[16px] leading-[24px]">
               Advanced filtering and search by time period, test status, committer, environment, and branch for quick
@@ -1149,24 +1149,21 @@
       <div class="text-center mb-[10px] md:mb-10
                     How do I get a quote for my organization’s penetration test?
                    animate-fade-in" data-animate="true">
-        <h2 class="text-[28px] md:text-[42px] text-[#0B0C0E] leading-normal ff-Manrope">FAQs</h2>
+        <h2 class="faq-header">FAQs</h2>
       </div>
       <!-- Dropdown Item 1 (Active State) -->
       <!-- Added border and border color for active state -->
-      <div
-        class="accordion-item mb-[24px] pb-[22px] md:mb-6 overflow-hidden transition-all duration-300 ease-in-out bg-white border-b-1 border-[#E2E4E9]">
-        <button class="w-full text-left pt-[10px] md:mb-4 flex justify-between items-center focus:outline-none"
-          onclick="toggleAccordion(this)">
+      <div class="faq-accordion-item faq-accordion-item--active">
+        <button class="faq-accordion-button" onclick="toggleAccordion(this)">
           <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
             What is Testdino?
           </span>
-          <svg class="w-6 h-6 text-gray-700 transform transition-transform duration-300" fill="none"
-            stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="faq-accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
-        <div class="accordion-content mt-[12px] md:mt-[4] text-[#0B0C0E] ff-geist" style="display: block;">
-          <p class="text-[#0B0C0E] text-[16px] md:text-[16px]">Testdino is smart test reporting and analytics
+        <div class="faq-accordion-content" style="display: block;">
+          <p class="faq-accordion-text">Testdino is smart test reporting and analytics
             platform
             built for Playwright and Selenium.
             It helps QA and dev teams analyze test failures faster, detect flakiness, and ship with

@@ -665,32 +665,27 @@ const isMonthPlan = document.getElementById("isMonthPlan");
 // --- Hero section modal youtube [S] --- //
 
 function toggleAccordion(button) {
-  const currentItem = button.closest('.accordion-item');
-  const content = currentItem.querySelector('.accordion-content');
+  const currentItem = button.closest('.faq-accordion-item');
+  const content = currentItem.querySelector('.faq-accordion-content');
   const svg = button.querySelector('svg');
 
-  const activeClasses = ['bg-white', 'border-b-1', 'border-[#E2E4E9]'];
-
   // Close all others
-  document.querySelectorAll('.accordion-item').forEach(item => {
-    const itemContent = item.querySelector('.accordion-content');
+  document.querySelectorAll('.faq-accordion-item').forEach(item => {
+    const itemContent = item.querySelector('.faq-accordion-content');
     const icon = item.querySelector('svg');
 
     if (item !== currentItem) {
       itemContent.style.display = 'none';
-      icon.classList.remove('rotate-180');
-      item.classList.remove(...activeClasses);
+      icon.classList.remove('faq-accordion-icon--rotated');
+      item.classList.remove('faq-accordion-item--active');
     }
   });
 
   // Toggle this one
   const isOpen = content.style.display === 'block';
   content.style.display = isOpen ? 'none' : 'block';
-  svg.classList.toggle('rotate-180', !isOpen);
-  currentItem.classList.toggle('bg-white', !isOpen);
-  currentItem.classList.toggle('border-b-1', !isOpen);
-  currentItem.classList.toggle('border-[#E2E4E9]', !isOpen);
-  // currentItem.classList.toggle('', !isOpen);
+  svg.classList.toggle('faq-accordion-icon--rotated', !isOpen);
+  currentItem.classList.toggle('faq-accordion-item--active', !isOpen);
 }
 
 

@@ -331,6 +331,17 @@
    PRICING CARD VARIANTS - Specific Pricing Components
    ============================================== */
 
+.pricing-card.pricing-card--neutral {
+  padding: 24px;
+}
+.pricing-card.pricing-card--pro {
+  padding: 24px;
+}
+.pricing-card.pricing-card--team {
+  padding: 24px;
+}
+
+
 /* Pricing card border variants */
 .pricing-card--neutral {
   border: 1px solid #E2E4E9;
