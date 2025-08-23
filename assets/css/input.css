@@ -1184,7 +1184,7 @@ input[type=range]::-moz-range-thumb {
        right: -2%;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1250px) {
   /* Blog header section mobile fixes */
   .lg\:flex {
     flex-direction: column !important;

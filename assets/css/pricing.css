@@ -948,7 +948,7 @@ input[type="range"]::-moz-range-thumb {
 .mobile-tabs-nav {
   position: sticky;
   top: 66px;
-  z-index: 50;
+  z-index: 5;
   background: white;
   padding-top: 10px;
   padding-bottom: 10px;
