@@ -155,8 +155,8 @@ if (typeof $ !== 'undefined') {
   // home section img 
 function changeImage(id, el) {
   const imageMap = {
-    image1: 'Testdino Landing Page Images/Hero section thumbnail image/Test Runs.svg',
-    image2: 'Testdino Landing Page Images/Hero section thumbnail image/Pull Requests.svg',
+    image1: 'Testdino Landing Page Images/Hero section thumbnail image/Testdino Overview.png',
+    image2: 'Testdino Landing Page Images/Hero section thumbnail image/Test Runs.svg',
     image3: 'Testdino Landing Page Images/Hero section thumbnail image/AI Insights.svg',
     image4: 'Testdino Landing Page Images/Hero section thumbnail image/Analytics.svg'
   };
