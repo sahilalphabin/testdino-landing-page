@@ -900,9 +900,9 @@ input[type="range"]::-moz-range-thumb {
     gap: 16px;
   }
   .why-choose .why-card {
-    min-width: 100% !important;
-    max-width: 100% !important;
-    width: 100% !important;
+    min-width: 95% !important;
+    max-width: 95% !important;
+    width: 95% !important;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -918,9 +918,9 @@ input[type="range"]::-moz-range-thumb {
     margin-right: 12px;
   }
   .why-choose .why-card {
-    min-width: 97% !important;
-    max-width: 97% !important;
-    width: 97% !important;
+    min-width: 95% !important;
+    max-width: 95% !important;
+    width: 95% !important;
     height: auto;
     margin-left: 12px;
     margin-right: 12px;
