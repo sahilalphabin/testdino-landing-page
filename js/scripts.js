@@ -90,15 +90,21 @@ if (typeof $ !== 'undefined') {
       navigator.clipboard.writeText(textToCopy).then(() => {
         // Optional: add visual feedback
         const $button = $('#text-copy');
+        const $icon = $button.find('svg');
         const originalText = $button.find('span.md\\:block').text(); // Copy code
         const originalMobile = $button.find('span.block').text(); // C
+        const originalIcon = $icon.html();
 
-        $button.find('span.md\\:block').text('Copied').addClass('text-green-500');
-        $button.find('span.block').text('âœ"').addClass('text-green-500');
+        // Replace icon with tick/checkmark
+        $icon.html('<path d="M16 6L7 15L3 11" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>');
+        
+        $button.find('span.md\\:block').text('Copied');
+        $button.find('span.block').text('✓');
 
         setTimeout(() => {
-          $button.find('span.md\\:block').text(originalText).removeClass('text-green-500');
-          $button.find('span.block').text(originalMobile).removeClass('text-green-500');
+          $button.find('span.md\\:block').text(originalText);
+          $button.find('span.block').text(originalMobile);
+          $icon.html(originalIcon);
         }, 4000);
       }).catch(err => {
         console.error('Failed to copy text:', err);
