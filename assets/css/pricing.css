@@ -51,7 +51,7 @@
 
 /* Rotate arrow icon when collapsed (assumes the arrow img is within header-content) */
 .comparison-table__header-content img { transition: transform 200ms ease; }
-.comparison-table[data-collapsed="true"] .comparison-table__header-content img { transform: rotate(-90deg); }
+.comparison-table[data-collapsed="true"] .comparison-table__header-content img { transform: rotate(180deg); }
 
 .pricing-table-title {
   font-size: 17.5px;
@@ -1051,7 +1051,6 @@ input[type="range"]::-moz-range-thumb {
   }
   
   .comparison-table__header-content {
-    width: 234px !important;
     padding: 24px 20px 16px 20px !important;
     background: white !important;
     display: flex !important;
