@@ -30,7 +30,7 @@ window.addEventListener('scroll', () => {
   nav.style.borderRadius = '20px';
   header.style.padding = '0 16px';
   
-  // nav.style.backdropFilter = 'blur(12px)';
+  nav.style.backdropFilter = 'blur(12px)';
 
 
   // Add margin-top: 25px on mobile screens
