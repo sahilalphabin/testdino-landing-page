@@ -1793,6 +1793,7 @@ input[type=range]::-moz-range-thumb {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 24px;
 }
 
 .popup-modal-alert {

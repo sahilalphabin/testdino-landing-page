@@ -215,15 +215,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
   mobileMenuButton.addEventListener("click", () => {
     mobileMenuOverlay.classList.remove("hidden")
+    mobileMenuOverlay.style.width = "100%"
+    mobileMenuOverlay.style.position = "fixed"
+    mobileMenuOverlay.style.top = "0"
+    mobileMenuOverlay.style.left = "0"
+    mobileMenuOverlay.style.right = "0"
+    mobileMenuOverlay.style.bottom = "0"
   })
 
   closeMobileMenuButton.addEventListener("click", () => {   
     mobileMenuOverlay.classList.add("hidden")
+    // Reset inline styles when closing
+    mobileMenuOverlay.style.width = ""
+    mobileMenuOverlay.style.position = ""
+    mobileMenuOverlay.style.top = ""
+    mobileMenuOverlay.style.left = ""
+    mobileMenuOverlay.style.right = ""
+    mobileMenuOverlay.style.bottom = ""
   })
 
   mobileMenuLinks.forEach((link) => {
     link.addEventListener("click", () => {
       mobileMenuOverlay.classList.add("hidden")
+      // Reset inline styles when closing
+      mobileMenuOverlay.style.width = ""
+      mobileMenuOverlay.style.position = ""
+      mobileMenuOverlay.style.top = ""
+      mobileMenuOverlay.style.left = ""
+      mobileMenuOverlay.style.right = ""
+      mobileMenuOverlay.style.bottom = ""
     })
   })
 
