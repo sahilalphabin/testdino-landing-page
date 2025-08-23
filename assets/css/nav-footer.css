@@ -544,8 +544,7 @@
 
 /* Accordion Item */
 .faq-accordion-item {
-  margin-bottom: 24px;
-  padding-bottom: 22px;
+  margin-bottom: 32px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   border-bottom: 1px solid #E2E4E9;
@@ -612,6 +611,7 @@
   font-size: 16px;
   margin-bottom: 0;
   padding-right: 22px;
+  padding-bottom: 32px;
 
 }
 
