@@ -389,7 +389,7 @@
   background-color: #171717;
   padding: 0 16px;
   color: #FAFAFA;
-  font-weight: 500;
+  font-weight: 600;
   border: none;
   cursor: pointer;
   display: flex;
@@ -399,10 +399,6 @@
   font-size: 16px;
   font-family: "Geist", sans-serif;
   box-sizing: border-box;
-}
-
-.footer-form-button:hover {
-  background-color: rgba(31, 41, 55, 1);
 }
 
 /* Social icons */
