@@ -195,8 +195,8 @@
           <div class="flex items-center gap-2">
 
             <!-- Main Badge -->
-            <div class="flex items-center border border-gray-300 rounded-full py-[8px] px-[18px] bg-white">
-              <div class="flex items-center justify-center mr-2">
+            <div class="playwright-badge">
+              <div class="playwright-badge-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
                   <path
                     d="M8.12758 1.09876C8.24088 1.03404 8.3691 1 8.49958 1C8.63006 1 8.75828 1.03404 8.87158 1.09876L14.1216 4.09876C14.2363 4.16438 14.3316 4.25915 14.3979 4.37347C14.4642 4.48779 14.4992 4.6176 14.4992 4.74976C14.4992 4.88191 14.4642 5.01172 14.3979 5.12604C14.3316 5.24036 14.2363 5.33513 14.1216 5.40076L8.87158 8.40076C8.75828 8.46548 8.63006 8.49952 8.49958 8.49952C8.3691 8.49952 8.24088 8.46548 8.12758 8.40076L2.87758 5.40076C2.76287 5.33513 2.66753 5.24036 2.60123 5.12604C2.53492 5.01172 2.5 4.88191 2.5 4.74976C2.5 4.6176 2.53492 4.48779 2.60123 4.37347C2.66753 4.25915 2.76287 4.16438 2.87758 4.09876L8.12758 1.09876Z"
@@ -209,9 +209,7 @@
                     fill="#171717" />
                 </svg>
               </div>
-              <span style="color: #171717; font-size: 14px; font-family: Geist, sans-serif; font-weight: 400; line-height: 20px; word-wrap: break-word;">
-                Playwright Reporting
-              </span>
+              <span>Playwright Reporting</span>
             </div>
           </div>
         </div>
@@ -274,7 +272,7 @@
             <button onclick="changeImage('image3', this)" class="w-full px-2 md:px-4 py-2 flex items-center justify-center md:justify-between 
                       text-[10px] md:text-[14px] rounded-md gap-[3px] md:gap-2">
               <img src="Testdino Landing Page Images/icons/AI.svg" alt="" class="md:w-5 md:h-5 w-[12px] h-[12px]">
-              <span>AI Insights</span>
+              <span>Pull Requests</span>
             </button>
           </li>
 
@@ -296,14 +294,13 @@
               class="w-[90vw] h-auto object-contain transition-all duration-500" alt="Dashboard Image"
               style="min-width:320px;">
             <a href="javascript:void(0)" id="svgOverlay"
-              data-video="https://www.youtube.com/embed/MjT2edHkz_0?autoplay=1&amp;rel=0"
+              data-video="https://www.youtube.com/embed/s8wgAsvapSQ"
               class="group absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
               onclick="playVideo(this)">
               <img src="Testdino Landing Page Images/icons/playbutton.svg" alt="Play" class="w-16 h-16">
             </a>
           </div>
         </div>
-
       </div>
 
   </section>
@@ -568,7 +565,7 @@
           </button>
         </div>
         <div class="px-4 py-3 text-white text-[15px] leading-[22px] md:leading-normal md:text-[14px] ff-geist-mono"
-          id="copied-item-text">
+          id="copied-item-text" style="font-family: 'Geist Mono', sans-serif;">
           npx tdpw path/to/json/report --token $SECRET_API_KEY
         </div>
       </div>
@@ -1108,7 +1105,7 @@
       <div class="z-10">
         <h4 class="ff-Manrope text-[28px] md:text-[42px] mb-[24px] md:mb-6 font-[600] text-white z-10">
           Stop wasting <br class="block md:hidden"> time on<br>
-          <span class="rotating-text ff-poppines italic font-[400]">
+          <span class="rotating-text ff-poppines font-[400]">
             <span>flaky tests</span>
             <span>broken builds</span>
             <span>re-run roulette</span>
