@@ -180,9 +180,13 @@
                   <button class="footer-social-link">
                     <img src="Testdino Landing Page Images/icons/social/x-logo.svg" alt="X">
                   </button>
-                  <!-- Link/Share -->
-                  <button class="footer-social-link">
-                    <img src="Testdino Landing Page Images/icons/social/mdi_github.svg" alt="Github">
+                  <!-- Share -->
+                  <button
+                    class="footer-social-link"
+                    type="button"
+                    aria-label="Share"
+                    onclick="navigator.clipboard.writeText(window.location.href)">
+                    <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M14.734 15.8974L19.22 12.1374C19.3971 11.9927 19.4998 11.7761 19.4998 11.5474C19.4998 11.3187 19.3971 11.1022 19.22 10.9574L14.734 7.19743C14.4947 6.9929 14.1598 6.94275 13.8711 7.06826C13.5824 7.19377 13.3906 7.47295 13.377 7.78743V9.27043C7.079 8.17943 5.5 13.8154 5.5 16.9974C6.961 14.5734 10.747 10.1794 13.377 13.8154V15.3024C13.3888 15.6178 13.5799 15.8987 13.8689 16.0254C14.158 16.1521 14.494 16.1024 14.734 15.8974Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                   </button>
                 </div>
               </div>
@@ -482,19 +486,25 @@
             </p>
 
             <!-- Code Snippet (Redesigned) -->
-            <div class="border border-[#e5e7eb] rounded-xl mb-6 p-0 shadow-sm overflow-hidden">
-              <div class="flex items-center justify-between px-5 py-3 border-b border-[#e5e7eb]">
-                <span class="text-[15px] font-semibold text-[#222]">Playwright Reporter Configuration</span>
-                <button type="button"
-                  class="flex items-center gap-2 px-3 py-1.5 rounded-md bg-white border border-gray-200 text-gray-700 text-xs font-medium hover:bg-gray-100 active:bg-gray-200 transition"
-                  onclick="navigator.clipboard.writeText(document.getElementById('playwright-reporter-config').innerText)"
+            <div class="bg-white rounded-xl mb-6 p-0 shadow-sm overflow-hidden border border-[#e5e7eb]">
+              <div class="flex items-center justify-between px-4 py-3 border-b border-[#e5e7eb] bg-[#f8f9fa]">
+                <div class="flex items-center gap-2">
+                  <!-- Terminal icon using SVG -->
+                  <svg viewBox="0 0 28 24" fill="none" stroke="currentColor" class="h-4 w-auto max-w-6 shrink-0 text-gray-500">
+                    <path d="M7.3 7.8L12.55 12L7.3 16.2M14.65 16.2H19.9M2.11562 1.5H25.0844C25.7005 1.5 26.2 1.99948 26.2 2.61562V21.3844C26.2 22.0005 25.7005 22.5 25.0844 22.5H2.11562C1.49948 22.5 1 22.0005 1 21.3844V2.61562C1 1.99948 1.49948 1.5 2.11562 1.5Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  <span class="text-[14px] font-medium text-gray-700">Playwright Reporter Configuration</span>
+                </div>
+                <button type="button" id="copy-button"
+                  class="flex items-center gap-2 px-3 py-1.5 rounded-md bg-white border border-gray-200 text-gray-700 text-xs font-medium hover:bg-gray-50 active:bg-gray-100 transition-all duration-200"
+                  onclick="copyCode()"
                   aria-label="Copy code">
-                  <img src="Testdino Landing Page Images/icons/tabler_copy.svg" alt="Copy" class="w-4 h-4 w-full">
-                  Copy code
+                  <img src="Testdino Landing Page Images/icons/tabler_copy.svg" alt="Copy" class="w-4 h-4">
+                  <span id="copy-text">Copy code</span>
                 </button>
               </div>
               <pre
-                class="text-[13px] text-[#222] px-5 py-4 overflow-x-auto whitespace-pre font-mono leading-relaxed rounded-b-xl"
+                class="text-[13px] text-gray-800 px-4 py-4 overflow-x-auto whitespace-pre font-mono leading-relaxed bg-white"
                 id="playwright-reporter-config"><code>reporter: [
   ['html', {
     outputFolder: 'playwright-report',
@@ -512,6 +522,27 @@
   }]
 ]</code></pre>
             </div>
+
+            <script>
+              function copyCode() {
+                const codeElement = document.getElementById('playwright-reporter-config');
+                const copyButton = document.getElementById('copy-button');
+                const copyText = document.getElementById('copy-text');
+                
+                // Copy the code
+                navigator.clipboard.writeText(codeElement.innerText).then(() => {
+                  // Success state
+                  copyText.textContent = 'Copied!';
+                  
+                  // Reset after 2 seconds
+                  setTimeout(() => {
+                    copyText.textContent = 'Copy code';
+                  }, 2000);
+                }).catch(err => {
+                  console.error('Failed to copy: ', err);
+                });
+              }
+            </script>
 
             <!-- Company 1 -->
             <div class="mb-8">
@@ -675,16 +706,15 @@
                   </div>
                 </div>
               </div>
-              <a href="/signup" class="w-full md:w-auto mt-2 md:mt-0 md:absolute md:right-8">
-                <button
-                  class="btn btn-md font-[16px] bg-white text-black font-semibold rounded-lg shadow-sm px-6 py-2 w-full md:w-auto hover:bg-gray-100 transition-all">
-                  Get Started Free
-                </button>
-              </a>
               <!-- Desktop only Dino image -->
               <img src="Testdino Landing Page Images/icons/CTA DINO.svg" alt="Logo"
                 class="hidden md:block w-8 h-8 absolute right-[120px] top-[80px] scale-[8.5]" />
+                <button
+                  class="pop-up btn btn-md font-[16px] bg-white text-black font-semibold rounded-lg shadow-sm px-6 py-2 w-full md:w-auto hover:bg-gray-100 transition-all w-full md:w-auto mt-2 md:mt-0 md:absolute md:right-8">
+                  Get Started Free
+                </button>
             </div>
+            
           </div>
         </div>
       </div>
