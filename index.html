@@ -95,7 +95,7 @@
 
 </head>
 
-<body class="flex min-h-screen flex-col bg-[#FAFAFA]">
+<body class="flex min-h-screen flex-col">
   <!-- Navigation -->
   <div class="header-container" id="header">
     <nav class="nav-wrapper" id="nav" style="background-color:rgba(255, 255, 255, 0.6)">
@@ -181,8 +181,11 @@
 
   <!-- Hero Section -->
   <section
-    class="relative pt-[96px] px-[20px] pb-[40px] md:pb-[87px] md:pt-[140px] overflow-hidden relative -mt-[80px] h-full min-h-[72vh] md:min-h-[82vh] flex items-center"
-    style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.8) 15%, rgba(255,255,255,0.55) 45%, rgba(255,255,255,0.2) 85%, rgba(255,255,255,0) 100%), url('Testdino Landing Page Images/beautiful-shot-mountains-trees-covered-snow-fog.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
+    class="relative pt-[96px] px-[20px] pb-[40px] md:pb-[87px] md:pt-[140px] overflow-hidden -mt-[80px] h-full min-h-[72vh] md:min-h-[82vh] flex items-center"
+    style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.8) 15%, rgba(255,255,255,0.55) 45%, rgba(255,255,255,0.2) 85%, rgba(255,255,255,0) 100%), url('Testdino Landing Page Images/beautiful-shot-mountains-trees-covered-snow-fog.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;"
+
+    media="(min-width:1440px)"
+    onload="if(window.innerWidth>=1440){this.parentElement.style.backgroundSize='100% 100%'}else{this.parentElement.style.backgroundSize='cover'}">
     <!-- Decorative Star -->
 
     <div class="mx-auto max-w-[1080px]">
@@ -286,7 +289,7 @@
 
         </ul>
         <!-- Image/Video Container -->
-        <div class="w-full">
+        <div class="w-full flex justify-center items-center">
           <div id="imageWrapper"
             class="relative flex overflow-hidden w-[full] h-auto rounded-[3px] md:rounded-[12px] shadow-[0_0_30px_0_rgba(0,0,0,0.24)]">
             <img id="mainImage" src="Testdino Landing Page Images/Hero section thumbnail image/TestDino Overview.svg"
