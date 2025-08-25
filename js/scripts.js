@@ -162,7 +162,7 @@ function changeImage(id, el) {
   const imageMap = {
     image1: 'Testdino Landing Page Images/Hero section thumbnail image/TestDino Overview.svg',
     image2: 'Testdino Landing Page Images/Hero section thumbnail image/Test Runs.svg',
-    image3: 'Testdino Landing Page Images/Hero section thumbnail image/AI Insights.svg',
+    image3: 'Testdino Landing Page Images/Hero section thumbnail image/Pull Request.svg',
     image4: 'Testdino Landing Page Images/Hero section thumbnail image/Analytics.svg'
   };
 
