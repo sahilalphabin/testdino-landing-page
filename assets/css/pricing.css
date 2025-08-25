@@ -111,7 +111,7 @@
 
 /* AI feature sections container */
 .ai-features-container {
-  width: 115%;
+  width: 107%;
   height: 100%;
   padding: 20px;
   background: #EEF4FF;
@@ -368,7 +368,7 @@
 
 .pricing-card-title {
   font-size: 1.125rem;
-s  font-weight: 600;
+  font-weight: 600;
   color: #111827;
   font-family: 'Geist', sans-serif;
 }
