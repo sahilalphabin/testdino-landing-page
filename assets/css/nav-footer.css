@@ -429,6 +429,10 @@
   text-decoration: none;
 }
 
+.footer-social-link img {
+  object-fit: unset !important;
+}
+
 .footer-social-link:hover {
   background-color: rgba(243, 244, 246, 1);
 }
