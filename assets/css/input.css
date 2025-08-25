@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono&display=swap');
 
 @import "tailwindcss";
 
@@ -447,6 +448,14 @@ input[type=range]::-moz-range-thumb {
 
 .ff-geist{
   font-family: "Geist", sans-serif;
+}
+
+.ff-geist-mono{
+  font-family: "Geist Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
 }
 
 .ff-inter{

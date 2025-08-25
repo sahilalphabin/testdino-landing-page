@@ -182,10 +182,21 @@
   <!-- Hero Section -->
   <section
     class="relative pt-[96px] px-[20px] pb-[40px] md:pb-[87px] md:pt-[140px] overflow-hidden -mt-[80px] h-full min-h-[72vh] md:min-h-[82vh] flex items-center"
-    style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.8) 15%, rgba(255,255,255,0.55) 45%, rgba(255,255,255,0.2) 85%, rgba(255,255,255,0) 100%), url('Testdino Landing Page Images/beautiful-shot-mountains-trees-covered-snow-fog.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;"
-
-    media="(min-width:1440px)"
-    onload="if(window.innerWidth>=1440){this.parentElement.style.backgroundSize='100% 100%'}else{this.parentElement.style.backgroundSize='cover'}">
+    style="background: 
+      linear-gradient(
+        to bottom, 
+        #fff 0%, 
+        #fff 10%, 
+        rgba(255,255,255,0.92) 20%, 
+        rgba(255,255,255,0.8) 30%, 
+        rgba(255,255,255,0.55) 40%, 
+        rgba(255,255,255,0.15) 70%, 
+        transparent 100%
+      ),
+      url('Testdino Landing Page Images/beautiful-shot-mountains-trees-covered-snow-fog.jpg');
+      background-repeat: no-repeat;
+      background-size: 120% 120%;
+      background-position: center;">
     <!-- Decorative Star -->
 
     <div class="mx-auto max-w-[1080px]">
@@ -565,7 +576,7 @@
           </button>
         </div>
         <div class="px-4 py-3 text-white text-[15px] leading-[22px] md:leading-normal md:text-[14px] ff-geist-mono"
-          id="copied-item-text" style="font-family: 'Geist Mono', sans-serif;">
+          id="copied-item-text">
           npx tdpw path/to/json/report --token $SECRET_API_KEY
         </div>
       </div>
@@ -881,7 +892,7 @@
   </section>
 
   <!-- Frequently Asked Questions -->
-  <section class="faq-section">
+  <section class="faq-section pb-[0px]">
       <div class="mx-auto max-w-[1000px]">
           <div class="text-center mb-[10px] md:mb-10
                       How do I get a quote for my organization’s penetration test?
