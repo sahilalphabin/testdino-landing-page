@@ -177,44 +177,34 @@ function changeImage(id, el) {
   const imageUrl = imageMap[id];
   const videoUrl = videoMap[id];
   
-  // Find existing elements or create new ones
-  let mainImage = imageWrapper.querySelector('#mainImage');
-  let svgOverlay = imageWrapper.querySelector('#svgOverlay');
+  // Clear everything immediately to prevent overlap
+  imageWrapper.innerHTML = '';
   
-  if (!mainImage) {
-    mainImage = document.createElement('img');
-    mainImage.id = 'mainImage';
-    mainImage.className = 'w-[90vw] h-auto object-contain transition-all duration-500';
-    mainImage.style.minWidth = '320px';
-    imageWrapper.appendChild(mainImage);
-  }
-  
-  if (!svgOverlay) {
-    svgOverlay = document.createElement('a');
-    svgOverlay.id = 'svgOverlay';
-    svgOverlay.href = 'javascript:void(0)';
-    svgOverlay.className = 'group absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2';
-    svgOverlay.onclick = function() { playVideo(this); };
-    
-    const playButton = document.createElement('img');
-    playButton.src = 'Testdino Landing Page Images/icons/playbutton.svg';
-    playButton.alt = 'Play';
-    playButton.className = 'w-16 h-16';
-    svgOverlay.appendChild(playButton);
-    
-    imageWrapper.appendChild(svgOverlay);
-  }
-  
-  // Update attributes smoothly
+  // Create new image
+  const mainImage = document.createElement('img');
+  mainImage.id = 'mainImage';
   mainImage.src = imageUrl;
   mainImage.alt = 'Dashboard Image';
+  mainImage.className = 'w-[90vw] h-auto object-contain transition-all duration-500';
+  mainImage.style.minWidth = '320px';
+  
+  // Create play button overlay
+  const svgOverlay = document.createElement('a');
+  svgOverlay.id = 'svgOverlay';
+  svgOverlay.href = 'javascript:void(0)';
+  svgOverlay.className = 'group absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2';
+  svgOverlay.onclick = function() { playVideo(this); };
   svgOverlay.setAttribute('data-video', videoUrl);
   
-  // Add fade effect
-  mainImage.style.opacity = '0';
-  setTimeout(() => {
-    mainImage.style.opacity = '1';
-  }, 50);
+  const playButton = document.createElement('img');
+  playButton.src = 'Testdino Landing Page Images/icons/playbutton.svg';
+  playButton.alt = 'Play';
+  playButton.className = 'w-16 h-16';
+  svgOverlay.appendChild(playButton);
+  
+  // Add elements to wrapper
+  imageWrapper.appendChild(mainImage);
+  imageWrapper.appendChild(svgOverlay);
 
   // Update active button styles
   const buttons = document.querySelectorAll('#sidebarList button');
@@ -232,20 +222,39 @@ function playVideo(el) {
   // Add autoplay parameter to the video URL
   const autoplayUrl = videoUrl + '?autoplay=1&mute=1';
 
-  imageWrapper.innerHTML = `
-    <div style="position:relative;width:90vw;margin:0 auto;">
-      <div style="padding-top:56.25%;"></div>
-      <iframe
-        src="${autoplayUrl}"
-        style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;min-height:220px;"
-        class="transition-all duration-500 w-full h-full"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen
-        title="Demo Video"
-      ></iframe>
-    </div>
-  `;
+  // Clear the wrapper completely
+  imageWrapper.innerHTML = '';
+  
+  // Create video container
+  const videoContainer = document.createElement('div');
+  videoContainer.style.position = 'relative';
+  videoContainer.style.width = '90vw';
+  videoContainer.style.margin = '0 auto';
+  
+  // Create aspect ratio spacer
+  const spacer = document.createElement('div');
+  spacer.style.paddingTop = '56.25%';
+  
+  // Create iframe
+  const iframe = document.createElement('iframe');
+  iframe.src = autoplayUrl;
+  iframe.style.position = 'absolute';
+  iframe.style.top = '0';
+  iframe.style.left = '0';
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  iframe.style.borderRadius = '12px';
+  iframe.style.minHeight = '220px';
+  iframe.className = 'transition-all duration-500 w-full h-full';
+  iframe.frameBorder = '0';
+  iframe.allow = 'autoplay; encrypted-media';
+  iframe.allowFullscreen = true;
+  iframe.title = 'Demo Video';
+  
+  // Assemble the video structure
+  videoContainer.appendChild(spacer);
+  videoContainer.appendChild(iframe);
+  imageWrapper.appendChild(videoContainer);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
