@@ -1943,6 +1943,29 @@ input[type=range]::-moz-range-thumb {
   display: none !important; /* Hide the blue bar completely */
 }
 
+/* Playwright Reporting Badge */
+.playwright-badge {
+  display: flex;
+  align-items: center;
+  border: 1px solid #D1D5DB;
+  border-radius: 9999px;
+  padding: 8px 18px;
+  background-color: white;
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #171717;
+  word-wrap: break-word;
+}
+
+.playwright-badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
 @media (max-width: 440px) {
   .popup-modal-container {
     padding: 24px;
