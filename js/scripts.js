@@ -167,10 +167,10 @@ function changeImage(id, el) {
   };
 
   const videoMap = {
-    image1: 'https://www.youtube.com/embed/MjT2edHkz_0?autoplay=1&rel=0',
-    image2: 'https://www.youtube.com/embed/qh71aEGs-Zw?autoplay=1&rel=0',
-    image3: 'https://www.youtube.com/embed/X-QRgF7lQJM?autoplay=1&rel=0',
-    image4: 'https://www.youtube.com/embed/X-QRgF7lQJM?autoplay=1&rel=0'
+    image1: 'https://www.youtube.com/embed/s8wgAsvapSQ',
+    image2: 'https://www.youtube.com/embed/5QMQms3wl6s',
+    image3: 'https://www.youtube.com/embed/LM1aK68J-0E',
+    image4: 'https://www.youtube.com/embed/aXUN8222288'
   };
 
   const imageWrapper = document.getElementById('imageWrapper');
