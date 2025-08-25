@@ -15,7 +15,7 @@
 
 .rotating-text span {
   display: block;
-  animation: slideUp 6s infinite;
+  animation: slideUp 8s infinite;
 }
 
 @keyframes slideUp {
