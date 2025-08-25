@@ -544,7 +544,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // update the right side image (use provided path directly)
       if (interactiveFeatureMockup && imgSrc) {
-        interactiveFeatureMockup.src = imgSrc;
+        const spinner = document.getElementById('image-loading-spinner');
+        
+        // Create a new image to preload
+        const newImage = new Image();
+        let spinnerTimeout;
+        let imageLoaded = false;
+        
+        newImage.onload = function() {
+          imageLoaded = true;
+          // Clear the spinner timeout if image loads quickly
+          if (spinnerTimeout) {
+            clearTimeout(spinnerTimeout);
+          }
+          // Update image and hide spinner
+          interactiveFeatureMockup.src = imgSrc;
+          if (spinner && !spinner.classList.contains('hidden')) {
+            spinner.classList.add('hidden');
+          }
+        };
+        
+        newImage.onerror = function() {
+          imageLoaded = true;
+          // Clear timeout and hide spinner on error
+          if (spinnerTimeout) {
+            clearTimeout(spinnerTimeout);
+          }
+          if (spinner && !spinner.classList.contains('hidden')) {
+            spinner.classList.add('hidden');
+          }
+        };
+        
+        // Only show spinner if image takes longer than 200ms to load
+        spinnerTimeout = setTimeout(() => {
+          if (!imageLoaded && spinner) {
+            spinner.classList.remove('hidden');
+          }
+        }, 200);
+        
+        // Start loading the image
+        newImage.src = imgSrc;
       }
 
       // Show/hide mockups based on data-id

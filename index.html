@@ -9,6 +9,48 @@
     img:is([sizes="auto" i], [sizes^="auto," i]) {
       contain-intrinsic-size: 3000px 1500px
     }
+
+    /* Loading Spinner Styles */
+    .loading-spinner {
+      display: inline-block;
+      position: relative;
+      width: 40px;
+      height: 40px;
+    }
+
+    .spinner-ring {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      margin: 4px;
+      border: 3px solid #000;
+      border-radius: 50%;
+      animation: spinner-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: #000 transparent transparent transparent;
+    }
+
+    .spinner-ring:nth-child(1) {
+      animation-delay: -0.45s;
+    }
+
+    .spinner-ring:nth-child(2) {
+      animation-delay: -0.3s;
+    }
+
+    .spinner-ring:nth-child(3) {
+      animation-delay: -0.15s;
+    }
+
+    @keyframes spinner-ring {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   </style>
 
   <!-- This site is optimized with the Yoast SEO plugin v25.6 - https://yoast.com/wordpress/plugins/seo/ -->
@@ -530,10 +572,20 @@
 
         <!-- Right Section - Dashboard Mockup -->
         <div class="flex justify-center">
-          <div class="w-full transition-all duration-500 ease-in-out transform">
+          <div class="w-full transition-all duration-500 ease-in-out transform relative">
             <img src="Testdino Landing Page Images/Analytics section images/Analytics (Test Cases).svg"
               alt="WiserReview Dashboard" class="w-full h-auto rounded-[7px] transition-all duration-500"
               id="interactive-feature-mockup" style="box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.10);" />
+            
+            <!-- Loading Spinner Overlay -->
+            <div id="image-loading-spinner" class="absolute inset-0 bg-white bg-opacity-80 rounded-[7px] flex items-center justify-center hidden transition-opacity duration-300">
+              <div class="loading-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
