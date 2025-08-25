@@ -182,12 +182,17 @@
                   </button>
                   <!-- Share -->
                   <button
-                    class="footer-social-link"
+                    id="share-link-btn"
+                    class="footer-social-link transition-all duration-200"
                     type="button"
                     aria-label="Share"
-                    onclick="navigator.clipboard.writeText(window.location.href)">
-                    <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M14.734 15.8974L19.22 12.1374C19.3971 11.9927 19.4998 11.7761 19.4998 11.5474C19.4998 11.3187 19.3971 11.1022 19.22 10.9574L14.734 7.19743C14.4947 6.9929 14.1598 6.94275 13.8711 7.06826C13.5824 7.19377 13.3906 7.47295 13.377 7.78743V9.27043C7.079 8.17943 5.5 13.8154 5.5 16.9974C6.961 14.5734 10.747 10.1794 13.377 13.8154V15.3024C13.3888 15.6178 13.5799 15.8987 13.8689 16.0254C14.158 16.1521 14.494 16.1024 14.734 15.8974Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                  </button>
+                    onclick="
+                      navigator.clipboard.writeText(window.location.href);
+                      const btn = document.getElementById('share-link-btn');
+                      btn.classList.add('border-2', 'border-[#171717]');
+                      setTimeout(() => btn.classList.remove('border-2', 'border-[#171717]'), 500);
+                    ">
+                    <svg data-sanity-icon="link" width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="size-5 shrink-0"><path d="M8.49993 15.4999L15.4999 8.49991M12.707 18.3639L10.02 21.0509C9.228 21.8429 8.83198 22.2389 8.37532 22.3873C7.97364 22.5178 7.54094 22.5178 7.13926 22.3873C6.6826 22.2389 6.28658 21.8429 5.49455 21.0509L2.94896 18.5053C2.15693 17.7133 1.76091 17.3173 1.61254 16.8606C1.48202 16.4589 1.48202 16.0262 1.61254 15.6245C1.76091 15.1679 2.15693 14.7719 2.94896 13.9798L5.63597 11.2928M18.3639 12.707L21.0509 10.02C21.8429 9.228 22.2389 8.83198 22.3873 8.37532C22.5178 7.97364 22.5178 7.54094 22.3873 7.13926C22.2389 6.6826 21.8429 6.28658 21.0509 5.49455L18.5053 2.94896C17.7133 2.15693 17.3173 1.76091 16.8606 1.61254C16.4589 1.48202 16.0262 1.48202 15.6245 1.61254C15.1679 1.76091 14.7719 2.15693 13.9798 2.94896L11.2928 5.63597" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path></svg>                  </button>
                 </div>
               </div>
             </div>
@@ -504,7 +509,7 @@
                 </button>
               </div>
               <pre
-                class="text-[13px] text-gray-800 px-4 py-4 overflow-x-auto whitespace-pre font-mono leading-relaxed bg-white"
+                class="text-[13px] text-gray-800 px-4 py-4 overflow-x-auto whitespace-pre font-mono ff-geist-mono leading-relaxed bg-white"
                 id="playwright-reporter-config"><code>reporter: [
   ['html', {
     outputFolder: 'playwright-report',
@@ -711,7 +716,7 @@
                 class="hidden md:block w-8 h-8 absolute right-[120px] top-[80px] scale-[8.5]" />
                 <button
                   class="pop-up btn btn-md font-[16px] bg-white text-black font-semibold rounded-lg shadow-sm px-6 py-2 w-full md:w-auto hover:bg-gray-100 transition-all w-full md:w-auto mt-2 md:mt-0 md:absolute md:right-8">
-                  Get Started Free
+                  Get started
                 </button>
             </div>
             
