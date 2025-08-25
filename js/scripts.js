@@ -160,7 +160,7 @@ if (typeof $ !== 'undefined') {
   // home section img 
 function changeImage(id, el) {
   const imageMap = {
-    image1: 'Testdino Landing Page Images/Hero section thumbnail image/Testdino Overview.png',
+    image1: 'Testdino Landing Page Images/Hero section thumbnail image/TestDino Overview.svg',
     image2: 'Testdino Landing Page Images/Hero section thumbnail image/Test Runs.svg',
     image3: 'Testdino Landing Page Images/Hero section thumbnail image/AI Insights.svg',
     image4: 'Testdino Landing Page Images/Hero section thumbnail image/Analytics.svg'
@@ -174,22 +174,47 @@ function changeImage(id, el) {
   };
 
   const imageWrapper = document.getElementById('imageWrapper');
+  const imageUrl = imageMap[id];
   const videoUrl = videoMap[id];
-  // Replace entire wrapper content with responsive video iframe
-  imageWrapper.innerHTML = `
-    <div style="position:relative;width:90vw;margin:0 auto;">
-      <div style="padding-top:56.25%;"></div>
-      <iframe
-        src="${videoUrl}"
-        style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;min-height:220px;"
-        class="transition-all duration-500 w-full h-full"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen
-        title="Demo Video"
-      ></iframe>
-    </div>
-  `;
+  
+  // Find existing elements or create new ones
+  let mainImage = imageWrapper.querySelector('#mainImage');
+  let svgOverlay = imageWrapper.querySelector('#svgOverlay');
+  
+  if (!mainImage) {
+    mainImage = document.createElement('img');
+    mainImage.id = 'mainImage';
+    mainImage.className = 'w-[90vw] h-auto object-contain transition-all duration-500';
+    mainImage.style.minWidth = '320px';
+    imageWrapper.appendChild(mainImage);
+  }
+  
+  if (!svgOverlay) {
+    svgOverlay = document.createElement('a');
+    svgOverlay.id = 'svgOverlay';
+    svgOverlay.href = 'javascript:void(0)';
+    svgOverlay.className = 'group absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2';
+    svgOverlay.onclick = function() { playVideo(this); };
+    
+    const playButton = document.createElement('img');
+    playButton.src = 'Testdino Landing Page Images/icons/playbutton.svg';
+    playButton.alt = 'Play';
+    playButton.className = 'w-16 h-16';
+    svgOverlay.appendChild(playButton);
+    
+    imageWrapper.appendChild(svgOverlay);
+  }
+  
+  // Update attributes smoothly
+  mainImage.src = imageUrl;
+  mainImage.alt = 'Dashboard Image';
+  svgOverlay.setAttribute('data-video', videoUrl);
+  
+  // Add fade effect
+  mainImage.style.opacity = '0';
+  setTimeout(() => {
+    mainImage.style.opacity = '1';
+  }, 50);
 
   // Update active button styles
   const buttons = document.querySelectorAll('#sidebarList button');
@@ -204,11 +229,14 @@ function playVideo(el) {
   const videoUrl = el.getAttribute('data-video');
   const imageWrapper = document.getElementById('imageWrapper');
 
+  // Add autoplay parameter to the video URL
+  const autoplayUrl = videoUrl + '?autoplay=1&mute=1';
+
   imageWrapper.innerHTML = `
     <div style="position:relative;width:90vw;margin:0 auto;">
       <div style="padding-top:56.25%;"></div>
       <iframe
-        src="${videoUrl}"
+        src="${autoplayUrl}"
         style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;min-height:220px;"
         class="transition-all duration-500 w-full h-full"
         frameborder="0"
