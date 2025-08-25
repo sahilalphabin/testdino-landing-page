@@ -166,7 +166,11 @@
 <body class="flex min-h-screen flex-col bg-[#FAFAFA]">
     <!-- Navigation -->
     <div class="header-container" id="header">
-        <nav class="nav-wrapper" id="nav" style="background-color:rgba(255, 255, 255, 0.6)">
+        <nav
+            class="nav-wrapper backdrop-blur-lg"
+            id="nav"
+            style="background-color:rgba(250, 250, 250, 0.6); backdrop-filter: blur(12px);"
+        >
             <div class="nav-content">
                 <!-- Logo -->
                 <a href="https://testdino.com" class="nav-logo">
@@ -1558,10 +1562,10 @@
                     </svg>
                 </button>
                 <div class="faq-accordion-content" style="display: none;">
-                    <p class="faq-accordion-text faq-accordion-text--spaced">TestDino’s AI doesn’t just report failures —
+                    <p class="faq-accordion-text">TestDino’s AI doesn’t just report failures —
                         it explains
                         them.</p>
-                    <p class="faq-accordion-text faq-accordion-text--spaced">Powered by a trained language model, it reads
+                    <p class="faq-accordion-text">Powered by a trained language model, it reads
                         your test
                         failures like a senior developer and suggests the fix. Whether it’s a <br> flaky selector, a UI
                         change, or a
@@ -1630,7 +1634,7 @@
                 </button>
                 <div class="faq-accordion-content" style="display: none;">
                     <p class="-[#0B0C0E] text-[16px] md:text-[16px] mb-1">Absolutely</p>
-                    <ul class="faq-accordion-list">
+                    <ul class="faq-accordion-list mb-[32px]">
                         <li>
                             Slack, Teams, and email alerts
                         </li>
@@ -1665,7 +1669,7 @@
                         <li>Alerting thresholds</li>
                         <li>Custom flake thresholds and filters</li>
                     </ul>
-                    <p class="text-[#0B0C0E] mt-[15px]">It works with pre-PR, post-merge, and multi-env workflows .</p>
+                    <p class="text-[#0B0C0E] mt-[15px] mb-[32px]">It works with pre-PR, post-merge, and multi-env workflows .</p>
                 </div>
             </div>
             <div
@@ -1700,8 +1704,7 @@
                     </svg>
                 </button>
                 <div class="faq-accordion-content" style="display: none;">
-                    <p class="faq-accordion-text">
-                    <p>Beta users get full access to all features during the testing period, <b>plus a lifetime
+                    <p class="faq-accordion-text">Beta users get full access to all features during the testing period, <b>plus a lifetime
                             discount</b> when
                         we launch. This includes AI insights, integrations, alerts, and premium support - all free
                         during beta.</p>
@@ -1711,7 +1714,7 @@
     </section>
 
     <!-- Call to Action Section -->
-    <section class="py-[44px] px-[20px] md:pt-[90px] md:pb-[60px]">
+    <section class="py-[44px] px-[20px] md:pt-[0px] md:pb-[60px] bg-[#FFFFFF] pt-[0px]">
         <div class="w-full max-w-[1280px] mx-auto flex justify-center items-start flex-col px-[20px] md:px-[48px] py-[10px] h-[420px] md:h-[385px] rounded-[8px] relative before:absolute before:inset-0 before:z-10 before:bg-[linear-gradient(270deg,rgba(255,255,255,0)_0%,rgba(34,34,34,0.25)_65.63%,rgba(0,0,0,0.5)_100%)] overflow-hidden"
             style="background-image: url('Testdino Landing Page Images/blog_images/Frame\ 2147226979.svg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
             <div class="z-10 mt-0">
