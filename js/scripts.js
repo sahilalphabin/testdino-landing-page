@@ -177,8 +177,9 @@ function changeImage(id, el) {
   const imageUrl = imageMap[id];
   const videoUrl = videoMap[id];
   
-  // Clear everything immediately to prevent overlap
-  imageWrapper.innerHTML = '';
+  // Create new content container with fade-in animation
+  const newContentContainer = document.createElement('div');
+  newContentContainer.className = 'absolute inset-0 opacity-0 transition-opacity duration-500 ease-in-out';
   
   // Create new image
   const mainImage = document.createElement('img');
@@ -202,9 +203,39 @@ function changeImage(id, el) {
   playButton.className = 'w-16 h-16';
   svgOverlay.appendChild(playButton);
   
-  // Add elements to wrapper
-  imageWrapper.appendChild(mainImage);
-  imageWrapper.appendChild(svgOverlay);
+  // Add elements to new container
+  newContentContainer.appendChild(mainImage);
+  newContentContainer.appendChild(svgOverlay);
+  
+  // Make imageWrapper relative if not already
+  if (imageWrapper.style.position !== 'relative') {
+    imageWrapper.style.position = 'relative';
+  }
+  
+  // Add new content on top
+  imageWrapper.appendChild(newContentContainer);
+  
+  // Trigger fade-in animation
+  setTimeout(() => {
+    newContentContainer.classList.remove('opacity-0');
+    newContentContainer.classList.add('opacity-100');
+  }, 50);
+  
+  // Remove old content after transition completes
+  setTimeout(() => {
+    // Remove all previous content except the new one
+    const children = Array.from(imageWrapper.children);
+    children.forEach(child => {
+      if (child !== newContentContainer) {
+        child.remove();
+      }
+    });
+    
+    // Move new content out of container and directly to imageWrapper
+    imageWrapper.innerHTML = '';
+    imageWrapper.appendChild(mainImage);
+    imageWrapper.appendChild(svgOverlay);
+  }, 550);
 
   // Update active button styles
   const buttons = document.querySelectorAll('#sidebarList button');
@@ -222,8 +253,9 @@ function playVideo(el) {
   // Add autoplay parameter to the video URL
   const autoplayUrl = videoUrl + '?autoplay=1&mute=1';
 
-  // Clear the wrapper completely
-  imageWrapper.innerHTML = '';
+  // Create new video container with fade-in animation
+  const newVideoContainer = document.createElement('div');
+  newVideoContainer.className = 'absolute inset-0 opacity-0 transition-opacity duration-500 ease-in-out';
   
   // Create video container
   const videoContainer = document.createElement('div');
@@ -254,7 +286,36 @@ function playVideo(el) {
   // Assemble the video structure
   videoContainer.appendChild(spacer);
   videoContainer.appendChild(iframe);
-  imageWrapper.appendChild(videoContainer);
+  newVideoContainer.appendChild(videoContainer);
+  
+  // Make imageWrapper relative if not already
+  if (imageWrapper.style.position !== 'relative') {
+    imageWrapper.style.position = 'relative';
+  }
+  
+  // Add new video on top
+  imageWrapper.appendChild(newVideoContainer);
+  
+  // Trigger fade-in animation
+  setTimeout(() => {
+    newVideoContainer.classList.remove('opacity-0');
+    newVideoContainer.classList.add('opacity-100');
+  }, 50);
+  
+  // Remove old content after transition completes
+  setTimeout(() => {
+    // Remove all previous content except the new one
+    const children = Array.from(imageWrapper.children);
+    children.forEach(child => {
+      if (child !== newVideoContainer) {
+        child.remove();
+      }
+    });
+    
+    // Move new content out of container and directly to imageWrapper
+    imageWrapper.innerHTML = '';
+    imageWrapper.appendChild(videoContainer);
+  }, 550);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
