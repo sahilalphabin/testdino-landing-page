@@ -1303,6 +1303,8 @@
         pricingCards.forEach(card => {
           card.classList.remove('active-plan');
           card.classList.remove('active-plan--black');
+          card.classList.remove('active-plan--gradient-pro');
+          card.classList.remove('active-plan--gradient-team');
         });
 
         let activeCardIndex = 0;
@@ -1319,8 +1321,20 @@
         if (pricingCards[activeCardIndex]) {
           if (value === 0 || value === 5) {
             pricingCards[activeCardIndex].classList.add('active-plan--black');
-          } else {
-            pricingCards[activeCardIndex].classList.add('active-plan');
+          } else if (value === 1 || value === 2) {
+            // Apply gradient border to pro plan (15k and 25k)
+            if (pricingCards[activeCardIndex].classList.contains('pricing-card--pro')) {
+              pricingCards[activeCardIndex].classList.add('active-plan--gradient-pro');
+            } else {
+              pricingCards[activeCardIndex].classList.add('active-plan');
+            }
+          } else if (value === 3 || value === 4) {
+            // Apply gradient border to team plan (45k and 100k)
+            if (pricingCards[activeCardIndex].classList.contains('pricing-card--team')) {
+              pricingCards[activeCardIndex].classList.add('active-plan--gradient-team');
+            } else {
+              pricingCards[activeCardIndex].classList.add('active-plan');
+            }
           }
         }
 

@@ -844,6 +844,23 @@ input[type="range"]::-moz-range-thumb {
   transition: all 0.3s ease;
 }
 
+/* Gradient border classes for pro and team plans */
+.active-plan--gradient-pro {
+  border: 2px solid transparent !important;
+  background: linear-gradient(white, white) padding-box, linear-gradient(135deg, #5B75EE, #9C1DE2) border-box !important;
+  box-shadow: 0 4px 12px rgba(156, 29, 226, 0.15) !important;
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
+.active-plan--gradient-team {
+  border: 2px solid transparent !important;
+  background: linear-gradient(white, white) padding-box, linear-gradient(135deg, #5B75EE, #9C1DE2) border-box !important;
+  box-shadow: 0 4px 12px rgba(156, 29, 226, 0.15) !important;
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
 /* Legacy usage limits classes */
 .usage-limits-table {
   background: white;
