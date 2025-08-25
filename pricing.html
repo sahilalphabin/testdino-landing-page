@@ -372,7 +372,7 @@
 
                     <p class="pricing-card-subtitle">For dev teams shipping to production</p>
                     <div class="pricing-card-price">
-                        <p class="pricing-card-price-text">$18 <span class="pricing-card-price-unit">/month</span></p>
+                        <p class="pricing-card-price-text" data-monthly-price="18" data-annual-price="173">$18 <span class="pricing-card-price-unit">/month</span></p>
                     </div>
                     <button class="pricing-card-button">
                         Start 14-day trial
@@ -436,7 +436,7 @@
                     <span class="pricing-card-title">Team Plan</span>
                     <p class="pricing-card-subtitle">Engineering teams at scale</p>
                     <div class="pricing-card-price">
-                        <p class="pricing-card-price-text">$49 <span class="pricing-card-price-unit">/month</span></p>
+                        <p class="pricing-card-price-text" data-monthly-price="49" data-annual-price="471">$49 <span class="pricing-card-price-unit">/month</span></p>
                     </div>
                     <button class="pricing-card-button">
                         Start 14-day trial
@@ -593,12 +593,12 @@
                     <div class="flex items-center gap-2 mt-4 mb-6">
                         <div class="flex flex-col gap-2">
                             <div class="flex items-center">
-                                <input type="radio" id="monthly" name="billing" checked class="mr-2" />
-                                <label for="monthly"
+                                <input type="radio" id="comparison-monthly" name="comparison-billing" value="monthly" class="mr-2" />
+                                <label for="comparison-monthly"
                                     class="text-[14px] text-[#171717] font-[500] ff-geist">Monthly</label>
                                     &nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" id="annually" name="billing" class="mr-2" />
-                                <label for="annually"
+                                <input type="radio" id="comparison-annually" name="comparison-billing" value="annually" class="mr-2" />
+                                <label for="comparison-annually"
                                     class="text-[14px] text-[#171717] font-[500] ff-geist">Annually</label>
                                     &nbsp;
                                 <span
@@ -624,8 +624,8 @@
                 <div class="flex flex-col w-[225px] md:w-[225px] rounded-lg p-6 ">
                     <h4 class="text-[18px] text-[#171717] font-[700] ff-geist">Pro Plan</h4>
                     <div class="flex items-baseline mt-2">
-                        <span class="text-[34px] text-[#171717] font-[600] ff-geist leading-[40px]">$18</span>
-                        <span class="text-[14px] text-[#525252] font-[400] ff-geist ml-1">/month</span>
+                        <span class="comparison-price comparison-price--pro text-[34px] text-[#171717] font-[600] ff-geist leading-[40px]" data-monthly-price="18" data-annual-price="173">$18</span>
+                        <span class="comparison-price-unit comparison-price-unit--pro text-[14px] text-[#525252] font-[400] ff-geist ml-1">/month</span>
                     </div>
                     <button class="mt-6 bg-black text-[#FAFAFA] rounded-md py-2 text-[14px] font-[500] ff-geist">Start
                         14-day trial</button>
@@ -638,8 +638,8 @@
                     </div>
                     <h4 class="text-[18px] text-[#171717] font-[700] ff-geist">Startups</h4>
                     <div class="flex items-baseline mt-2">
-                        <span class="text-[34px] text-[#171717] font-[600] ff-geist leading-[40px]">$49</span>
-                        <span class="text-[14px] text-[#525252] font-[400] ff-geist ml-1">/month</span>
+                        <span class="comparison-price comparison-price--startups text-[34px] text-[#171717] font-[600] ff-geist leading-[40px]" data-monthly-price="49" data-annual-price="471">$49</span>
+                        <span class="comparison-price-unit comparison-price-unit--startups text-[14px] text-[#525252] font-[400] ff-geist ml-1">/month</span>
                     </div>
                     <button class="mt-6 bg-black text-[#FAFAFA] rounded-md py-2 text-[14px] font-[500] ff-geist">Start
                         14-day trial</button>
@@ -1873,13 +1873,13 @@
         document.addEventListener('DOMContentLoaded', function () {
             const slider = document.getElementById('testExecutionSlider');
             const displayValue = document.getElementById('testExecutionValue');
-            const pricingCards = document.querySelectorAll('.pricing-card');
+        const pricingCards = document.querySelectorAll('.pricing-card');
 
             if (!slider || !displayValue) return;
 
             function updateSliderDisplay() {
                 const value = parseInt(slider.value);
-                const values = ['Free', '15k', '25k', '45k', '100k', '200k'];
+            const values = ['Free', '15k', '25k', '45k', '100k', '200k'];
                 const selectedValue = values[value];
                 displayValue.textContent = selectedValue;
 
@@ -1911,6 +1911,156 @@
             updateSliderDisplay();
             slider.addEventListener('input', updateSliderDisplay);
             slider.addEventListener('change', updateSliderDisplay);
+
+            // Billing toggle functionality
+            const billingRadios = document.querySelectorAll('input[name="billing"]');
+            
+            function updatePricing() {
+                const selectedBilling = document.querySelector('input[name="billing"]:checked').value;
+                const pricingElements = document.querySelectorAll('.pricing-card-price-text[data-monthly-price]');
+                                
+                pricingElements.forEach(element => {
+                    const monthlyPrice = element.getAttribute('data-monthly-price');
+                    const annualPrice = element.getAttribute('data-annual-price');
+                    const priceUnit = element.querySelector('.pricing-card-price-unit');
+                    
+                    if (selectedBilling === 'monthly') {
+                        element.childNodes[0].textContent = `$${monthlyPrice} `;
+                        priceUnit.textContent = '/month';
+                    } else {
+                        element.childNodes[0].textContent = `$${annualPrice} `;
+                        priceUnit.textContent = '/year';
+                    }
+                });
+            }
+
+            // Add event listeners to billing radio buttons
+            billingRadios.forEach(radio => {
+                radio.addEventListener('change', updatePricing);
+            });
+
+            // Ensure monthly radio is selected by default
+            const monthlyRadio = document.querySelector('input[name="billing"][value="monthly"]');
+            if (monthlyRadio) {
+                monthlyRadio.checked = true;
+            }
+            
+            // Double-check that a radio button is selected, if not, force monthly
+            const checkedRadio = document.querySelector('input[name="billing"]:checked');
+            if (!checkedRadio) {
+                monthlyRadio.checked = true;
+            }
+            
+            // Initialize pricing display with monthly pricing (after ensuring radio is selected)
+            updatePricing();
+            
+            // Final verification - ensure monthly pricing is displayed
+            setTimeout(() => {
+                const finalCheck = document.querySelector('input[name="billing"]:checked');
+                if (finalCheck && finalCheck.value === 'monthly') {
+                } else {
+                    monthlyRadio.checked = true;
+                    updatePricing();
+                }
+            }, 100);
+
+            // Comparison table pricing toggle functionality - COMPLETELY REWRITTEN
+            function initializeComparisonPricing() {
+                console.log('Initializing comparison pricing...');
+                
+                // Get the radio buttons
+                const comparisonMonthlyRadio = document.querySelector('#comparison-monthly');
+                const comparisonAnnuallyRadio = document.querySelector('#comparison-annually');
+                
+                console.log('Monthly radio found:', comparisonMonthlyRadio);
+                console.log('Annually radio found:', comparisonAnnuallyRadio);
+                
+                if (comparisonMonthlyRadio && comparisonAnnuallyRadio) {
+                    // Force select monthly radio button
+                    comparisonMonthlyRadio.checked = true;
+                    comparisonAnnuallyRadio.checked = false;
+                    
+                    console.log('Monthly radio checked:', comparisonMonthlyRadio.checked);
+                    console.log('Annually radio checked:', comparisonAnnuallyRadio.checked);
+                    
+                    // Update the pricing display immediately
+                    updateComparisonPricing();
+                } else {
+                    console.log('Radio buttons not found!');
+                }
+            }
+            
+            function updateComparisonPricing() {
+                console.log('Updating comparison pricing...');
+                
+                const selectedBilling = document.querySelector('input[name="comparison-billing"]:checked');
+                console.log('Selected billing:', selectedBilling);
+                
+                if (!selectedBilling) {
+                    console.log('No radio selected, forcing monthly...');
+                    const comparisonMonthlyRadio = document.querySelector('#comparison-monthly');
+                    if (comparisonMonthlyRadio) {
+                        comparisonMonthlyRadio.checked = true;
+                    }
+                    return;
+                }
+                
+                const selectedValue = selectedBilling.value;
+                console.log('Selected value:', selectedValue);
+                
+                // Update Pro Plan pricing
+                const proPriceElement = document.querySelector('.comparison-price--pro');
+                const proPriceUnitElement = document.querySelector('.comparison-price-unit--pro');
+                
+                // Update Startups pricing
+                const startupsPriceElement = document.querySelector('.comparison-price--startups');
+                const startupsPriceUnitElement = document.querySelector('.comparison-price-unit--startups');
+                
+                console.log('Found elements:', {
+                    proPriceElement,
+                    proPriceUnitElement,
+                    startupsPriceElement,
+                    startupsPriceUnitElement
+                });
+                
+                if (selectedValue === 'monthly') {
+                    console.log('Setting monthly prices...');
+                    if (proPriceElement) proPriceElement.textContent = '$18';
+                    if (proPriceUnitElement) proPriceUnitElement.textContent = '/month';
+                    if (startupsPriceElement) startupsPriceElement.textContent = '$49';
+                    if (startupsPriceUnitElement) startupsPriceUnitElement.textContent = '/month';
+                } else {
+                    console.log('Setting annual prices...');
+                    if (proPriceElement) proPriceElement.textContent = '$173';
+                    if (proPriceUnitElement) proPriceUnitElement.textContent = '/year';
+                    if (startupsPriceElement) startupsPriceElement.textContent = '$471';
+                    if (startupsPriceUnitElement) startupsPriceUnitElement.textContent = '/year';
+                }
+            }
+
+            // Add event listeners to comparison billing radio buttons
+            const comparisonBillingRadios = document.querySelectorAll('input[name="comparison-billing"]');
+            comparisonBillingRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    console.log('Radio changed to:', this.value);
+                    updateComparisonPricing();
+                });
+            });
+
+            // Initialize comparison pricing with multiple safety checks
+            console.log('Starting comparison pricing initialization...');
+            
+            // First attempt
+            initializeComparisonPricing();
+            
+            // Second attempt after DOM is fully ready
+            setTimeout(initializeComparisonPricing, 10);
+            
+            // Third attempt after a longer delay
+            setTimeout(initializeComparisonPricing, 100);
+            
+            // Final attempt after everything should be loaded
+            setTimeout(initializeComparisonPricing, 500);
         });
     </script>
 </body>

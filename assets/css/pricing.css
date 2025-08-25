@@ -368,9 +368,9 @@
 
 .pricing-card-title {
   font-size: 1.125rem;
-  font-weight: 700;
+s  font-weight: 600;
   color: #111827;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Geist', sans-serif;
 }
 
 .pricing-card-subtitle {
@@ -386,13 +386,53 @@
 
 .pricing-card-price-text {
   font-size: 1.875rem;
-  font-weight: 700;
-  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-family: 'Geist', sans-serif;
+}
+
+/* Ensure Free and Custom texts get the same styling */
+.pricing-card .pricing-card-price-text,
+.pricing-card--neutral .pricing-card-price-text,
+.pricing-card--pro .pricing-card-price-text,
+.pricing-card--team .pricing-card-price-text {
+  font-size: 1.875rem !important;
+  font-weight: 600 !important;
+  font-family: 'Geist', sans-serif !important;
+  color: #171717 !important;
+}
+
+/* Additional specificity for the text content */
+.pricing-card .pricing-card-price .pricing-card-price-text,
+.pricing-card--neutral .pricing-card-price .pricing-card-price-text,
+.pricing-card--pro .pricing-card-price .pricing-card-price-text,
+.pricing-card--team .pricing-card-price .pricing-card-price-text {
+  font-size: 1.875rem !important;
+  font-weight: 600 !important;
+  font-family: 'Geist', sans-serif !important;
+  color: #171717 !important;
+}
+
+/* Comparison table pricing typography */
+.comparison-price {
+  font-family: 'Geist', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 34px !important;
+  line-height: 40px !important;
+  color: #171717 !important;
+}
+
+.comparison-price-unit {
+  font-family: 'Geist', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  color: #525252 !important;
 }
 
 .pricing-card-price-unit {
-  font-size: 0.875rem;
-  font-weight: 400;
+  font-family: 'Geist', sans-serif !important;
+  color: #6B7280 !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
 }
 
 .pricing-card-button {
