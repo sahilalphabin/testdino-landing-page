@@ -494,260 +494,175 @@
               The table below highlights how Testdino stacks up against ReportPortal and why it consistently leads discussions of ReportPortal alternatives.
             </p>
 
-            <!-- Comparison Table -->
-            <div class="w-full max-w-6xl mx-auto mb-8">
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <table class="w-full">
-                  <thead>
-                    <tr class="bg-gray-50 border-b">
-                      <th class="px-6 py-4 text-left font-Geist [18px] text-[#171717]">Capability</th>
-                      <th class="px-6 py-4 text-center font-Geist text-[16px] text-[#171717] bg-[#DCFCE6]">TestDino</th>
-                      <th class="px-6 py-4 text-center font-Geist text-[16px] text-[#171717] ">ReportPortal</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- Setup and Cost Category -->
-                    <tr class="border-b">
-                      <td class="px-6 py-4 font-medium text-gray-800">
-                        <div class="flex items-center justify-between">
-                          <span class="font-Geist text-[16px] text-[#171717] font-semibold">Setup and Cost</span>
-                          <button class="expand-btn text-gray-500 hover:text-gray-700" onclick="toggleCategory('setup-cost')">
-                            
-                          </button>
-                        </div>
-                      </td>
-                      <td class="px-6 py-4 text-center">
-                        <div class="w-6 h-6 mx-auto bg-green-100 rounded-full flex items-center justify-center">
-                          <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </td>
-                      <td class="px-6 py-4 text-center">
-                        <div class="w-6 h-6 mx-auto bg-red-100 rounded-full flex items-center justify-center">
-                          <svg class="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                          </svg>
-
-                          <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                          </svg>
-                        </div>
-                      </td>
-                    </tr>
-                    <!-- Setup and Cost Sub-items -->
-                    <tr class="setup-cost-sub hidden bg-gray-25">
-                      <td class="px-6 py-3 pl-12 text-gray-600">Free entry tier</td>
-                      <td class="px-6 py-3 text-center">
-                        <div class="w-5 h-5 mx-auto bg-green-100 rounded-full flex items-center justify-center">
-                          <svg class="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </td>
-                      <td class="px-6 py-3 text-center">
-                        <div class="w-5 h-5 mx-auto bg-red-100 rounded-full flex items-center justify-center">
-                          <svg class="w-3 h-3 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="setup-cost-sub hidden bg-gray-25">
-                      <td class="px-6 py-3 pl-12 text-gray-600">Pay-as-you-grow billing</td>
-                      <td class="px-6 py-3 text-center">
-                        <div class="w-5 h-5 mx-auto bg-green-100 rounded-full flex items-center justify-center">
-                          <svg class="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </td>
-                      <td class="px-6 py-3 text-center">
-                        <div class="w-5 h-5 mx-auto bg-red-100 rounded-full flex items-center justify-center">
-                          <svg class="w-3 h-3 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="setup-cost-sub hidden bg-gray-25">
-                      <td class="px-6 py-3 pl-12 text-gray-600">Onboarding in under ten minutes</td>
-                      <td class="px-6 py-3 text-center">
-                        <div class="w-5 h-5 mx-auto bg-green-100 rounded-full flex items-center justify-center">
-                          <svg class="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </td>
-                      <td class="px-6 py-3 text-center">
-                        <div class="w-5 h-5 mx-auto bg-red-100 rounded-full flex items-center justify-center">
-                          <svg class="w-3 h-3 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="setup-cost-sub hidden bg-gray-25">
-                      <td class="px-6 py-3 pl-12 text-gray-600">Self-hosted deployment option</td>
-                      <td class="px-6 py-3 text-center">
-                        <span class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">Roadmap</span>
-                      </td>
-                      <td class="px-6 py-3 text-center">
-                        <div class="w-5 h-5 mx-auto bg-green-100 rounded-full flex items-center justify-center">
-                          <svg class="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="setup-cost-sub hidden bg-gray-25">
-                      <td class="px-6 py-3 pl-12 text-gray-600">Data retention over ninety days</td>
-                      <td class="px-6 py-3 text-center">
-                        <div class="w-5 h-5 mx-auto bg-green-100 rounded-full flex items-center justify-center">
-                          <svg class="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </td>
-                      <td class="px-6 py-3 text-center">
-                        <div class="w-5 h-5 mx-auto bg-red-100 rounded-full flex items-center justify-center">
-                          <svg class="w-3 h-3 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <!-- Intelligence and Debugging Category -->
-                    <tr class="border-b">
-                      <td class="px-6 py-4 font-medium text-gray-800">
-                        <div class="flex items-center justify-between">
-                          <span>Intelligence and Debugging</span>
-                          <button class="expand-btn text-gray-500 hover:text-gray-700" onclick="toggleCategory('intelligence-debugging')">
-                            <svg class="w-5 h-5 transform transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                          </button>
-                        </div>
-                      </td>
-                      <td class="px-6 py-4 text-center">
-                        <div class="w-6 h-6 mx-auto bg-green-100 rounded-full flex items-center justify-center">
-                          <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </td>
-                      <td class="px-6 py-4 text-center">
-                        <div class="w-6 h-6 mx-auto bg-red-100 rounded-full flex items-center justify-center">
-                          <svg class="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <!-- Analytics and Observability Category -->
-                    <tr class="border-b">
-                      <td class="px-6 py-4 font-medium text-gray-800">
-                        <div class="flex items-center justify-between">
-                          <span>Analytics and Observability</span>
-                          <button class="expand-btn text-gray-500 hover:text-gray-700" onclick="toggleCategory('analytics-observability')">
-                            <svg class="w-5 h-5 transform transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                          </button>
-                        </div>
-                      </td>
-                      <td class="px-6 py-4 text-center">
-                        <div class="w-6 h-6 mx-auto bg-green-100 rounded-full flex items-center justify-center">
-                          <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </td>
-                      <td class="px-6 py-4 text-center">
-                        <div class="w-6 h-6 mx-auto bg-red-100 rounded-full flex items-center justify-center">
-                          <svg class="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <!-- Integrations and Adaptability Category -->
-                    <tr class="border-b">
-                      <td class="px-6 py-4 font-medium text-gray-800">
-                        <div class="flex items-center justify-between">
-                          <span>Integrations and Adaptability</span>
-                          <button class="expand-btn text-gray-500 hover:text-gray-700" onclick="toggleCategory('integrations-adaptability')">
-                            <svg class="w-5 h-5 transform transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                          </button>
-                        </div>
-                      </td>
-                      <td class="px-6 py-4 text-center">
-                        <div class="w-6 h-6 mx-auto bg-green-100 rounded-full flex items-center justify-center">
-                          <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </td>
-                      <td class="px-6 py-4 text-center">
-                        <div class="w-6 h-6 mx-auto bg-red-100 rounded-full flex items-center justify-center">
-                          <svg class="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <!-- Support and Scalability Category -->
-                    <tr class="border-b">
-                      <td class="px-6 py-4 font-medium text-gray-800">
-                        <div class="flex items-center justify-between">
-                          <span>Support and Scalability</span>
-                          <button class="expand-btn text-gray-500 hover:text-gray-700" onclick="toggleCategory('support-scalability')">
-                            <svg class="w-5 h-5 transform transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                          </button>
-                        </div>
-                      </td>
-                      <td class="px-6 py-4 text-center">
-                        <div class="w-6 h-6 mx-auto bg-green-100 rounded-full flex items-center justify-center">
-                          <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </td>
-                      <td class="px-6 py-4 text-center">
-                        <div class="w-6 h-6 mx-auto bg-red-100 rounded-full flex items-center justify-center">
-                          <svg class="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+            <div class="comparison-table">
+              <!-- Table Header -->
+              <div class="table-header">
+                  <div>Capability</div>
+                  <div class="testdino-col">TestDino</div>
+                  <div class="reportportal-col">ReportPortal</div>
+                  <div></div>
               </div>
-            </div>
-
-            <!-- JavaScript for table functionality -->
-            <script>
-              function toggleCategory(category) {
-                const subRows = document.querySelectorAll('.' + category + '-sub');
-                const btn = event.target.closest('.expand-btn');
-                const icon = btn.querySelector('svg');
-                
-                subRows.forEach(row => {
-                  row.classList.toggle('hidden');
-                });
-                
-                icon.classList.toggle('rotate-180');
+      
+              <!-- Setup and Cost Section -->
+              <div class="section">
+                  <div class="section-header" onclick="toggleSection(this)">
+                      <div>Setup and Cost</div>
+                      <div></div>
+                      <div></div>
+                      <div>
+                          <svg class="dropdown-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                          </svg>
+                      </div>
+                  </div>
+                  <div class="section-content">
+                                             <div class="feature-row">
+                           <div class="feature-name">Free entry tier</div>
+                           <div class="feature-value">
+                               <img src="Testdino Landing Page Images/Testdino vs ReportPortal/Green_check.svg" alt="✓" class="check-mark" style="width: 18px; height: 18px;">
+                           </div>
+                           <div class="feature-value">
+                               <img src="Testdino Landing Page Images/Testdino vs ReportPortal/Red_cross.svg" alt="✕" class="x-mark" style="width: 18px; height: 18px;">
+                           </div>
+                           <div></div>
+                       </div>
+                                             <div class="feature-row">
+                           <div class="feature-name">Pay-as-you-grow billing</div>
+                           <div class="feature-value">
+                               <img src="Testdino Landing Page Images/Testdino vs ReportPortal/Green_check.svg" alt="✓" class="check-mark" style="width: 18px; height: 18px;">
+                           </div>
+                           <div class="feature-value">
+                               <img src="Testdino Landing Page Images/Testdino vs ReportPortal/Red_cross.svg" alt="✕" class="x-mark" style="width: 18px; height: 18px;">
+                           </div>
+                           <div></div>
+                       </div>
+                                             <div class="feature-row">
+                           <div class="feature-name">Onboarding in under ten minutes</div>
+                           <div class="feature-value">
+                               <img src="Testdino Landing Page Images/Testdino vs ReportPortal/Green_check.svg" alt="✓" class="check-mark" style="width: 18px; height: 18px;">
+                           </div>
+                           <div class="feature-value">
+                               <img src="Testdino Landing Page Images/Testdino vs ReportPortal/Red_cross.svg" alt="✕" class="x-mark" style="width: 18px; height: 18px;">
+                           </div>
+                           <div></div>
+                       </div>
+                                             <div class="feature-row">
+                           <div class="feature-name">Self-hosted deployment option</div>
+                           <div class="feature-value">
+                               <span class="road-map">Road - map</span>
+                           </div>
+                           <div class="feature-value">
+                               <img src="Testdino Landing Page Images/Testdino vs ReportPortal/Green_check.svg" alt="✓" class="check-mark" style="width: 18px; height: 18px;">
+                           </div>
+                           <div></div>
+                       </div>
+                                             <div class="feature-row">
+                           <div class="feature-name">Data retention over ninety days</div>
+                           <div class="feature-value">
+                               <img src="Testdino Landing Page Images/Testdino vs ReportPortal/Green_check.svg" alt="✓" class="check-mark" style="width: 18px; height: 18px;">
+                           </div>
+                           <div class="feature-value">
+                               <img src="Testdino Landing Page Images/Testdino vs ReportPortal/Red_cross.svg" alt="✕" class="x-mark" style="width: 18px; height: 18px;">
+                           </div>
+                           <div></div>
+                       </div>
+                  </div>
+              </div>
+      
+              <!-- Intelligence and Debugging Section -->
+              <div class="section">
+                  <div class="section-header" onclick="toggleSection(this)">
+                      <div>Intelligence and Debugging</div>
+                      <div></div>
+                      <div></div>
+                      <div>
+                          <svg class="dropdown-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                          </svg>
+                      </div>
+                  </div>
+                  <div class="section-content">
+                      <!-- Add your Intelligence and Debugging features here -->
+                  </div>
+              </div>
+      
+              <!-- Analytics and Observability Section -->
+              <div class="section">
+                  <div class="section-header" onclick="toggleSection(this)">
+                      <div>Analytics and Observability</div>
+                      <div></div>
+                      <div></div>
+                      <div>
+                          <svg class="dropdown-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                          </svg>
+                      </div>
+                  </div>
+                  <div class="section-content">
+                      <!-- Add your Analytics and Observability features here -->
+                  </div>
+              </div>
+      
+              <!-- Integrations and Adaptability Section -->
+              <div class="section">
+                  <div class="section-header" onclick="toggleSection(this)">
+                      <div>Integrations and Adaptability</div>
+                      <div></div>
+                      <div></div>
+                      <div>
+                          <svg class="dropdown-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                          </svg>
+                      </div>
+                  </div>
+                  <div class="section-content">
+                      <!-- Add your Integrations and Adaptability features here -->
+                  </div>
+              </div>
+      
+              <!-- Support and Scalability Section -->
+              <div class="section">
+                  <div class="section-header" onclick="toggleSection(this)">
+                      <div>Support and Scalability</div>
+                      <div></div>
+                      <div></div>
+                      <div>
+                          <svg class="dropdown-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                          </svg>
+                      </div>
+                  </div>
+                  <div class="section-content">
+                      <!-- Add your Support and Scalability features here -->
+                  </div>
+              </div>
+          </div>
+      
+          <script>
+              function toggleSection(header) {
+                  const content = header.nextElementSibling;
+                  const isExpanded = header.classList.contains('expanded');
+                  
+                  // Close all sections
+                  const allHeaders = document.querySelectorAll('.section-header');
+                  const allContents = document.querySelectorAll('.section-content');
+                  
+                  allHeaders.forEach(h => h.classList.remove('expanded'));
+                  allContents.forEach(c => c.classList.remove('expanded'));
+                  
+                  // If this section wasn't expanded, open it
+                  if (!isExpanded) {
+                      header.classList.add('expanded');
+                      content.classList.add('expanded');
+                  }
               }
-            </script>
+      
+              // Initialize with Setup and Cost section open
+              document.addEventListener('DOMContentLoaded', function() {
+                  const firstSection = document.querySelector('.section-header');
+                  toggleSection(firstSection);
+              });
+          </script>
 
             <style>
               .bg-gray-25 { background-color: #fafafa; }
