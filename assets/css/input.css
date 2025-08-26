@@ -2017,6 +2017,7 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   overflow: hidden;
+  border-collapse: collapse;
 }
 
 .table-header {
@@ -2147,6 +2148,10 @@ body {
   border-bottom: 1px solid #f1f3f5;
   align-items: center;
   transition: background-color 0.2s ease;
+  gap: 0;
+  grid-gap: 0;
+  column-gap: 0;
+  row-gap: 0;
 }
 
 .feature-row:hover {
@@ -2174,11 +2179,44 @@ body {
   padding: 16px 16px;
 }
 
-/* TestDino column (2nd column) - background color and borders */
+/* TestDino column (2nd column) - clean borders and background */
 .feature-row > div:nth-child(2) {
   background-color: #F5FDF7;
   border-left: 1px solid #e9ecef;
   border-right: 1px solid #e9ecef;
+  margin: 0;
+  padding: 16px 16px;
+  position: relative;
+}
+
+/* Ensure borders extend fully by using pseudo-elements */
+.feature-row > div:nth-child(2)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1px;
+  right: -1px;
+  bottom: 0;
+  border-left: 1px solid #e9ecef;
+  border-right: 1px solid #e9ecef;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Section header TestDino column (2nd div) */
+.section-header > div:nth-child(2) {
+  background-color: #F5FDF7;
+  border-left: 1px solid #e9ecef;
+  border-right: 1px solid #e9ecef;
+  margin: 0;
+}
+
+/* Table header TestDino column */
+.table-header .testdino-col {
+  background-color: #F5FDF7;
+  border-left: 1px solid #e9ecef;
+  border-right: 1px solid #e9ecef;
+  margin: 0;
 }
 
 /* ReportPortal column (3rd column) - status indicator centered */
