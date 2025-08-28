@@ -1213,9 +1213,7 @@ input[type=range]::-moz-range-thumb {
   }
   
   .lg\:flex img {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: 250px !important;
+    
     object-fit: cover;
   }
   
