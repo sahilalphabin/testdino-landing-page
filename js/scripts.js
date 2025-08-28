@@ -105,12 +105,8 @@ window.addEventListener('scroll', () => {
     header.style.padding = '0 16px';
     nav.style.backdropFilter = 'blur(12px)';
     
-    // Reset background for mobile at top
-    if (window.innerWidth <= 767) {
-      nav.style.backgroundColor = 'transparent';
-    } else {
-      nav.style.backgroundColor = 'rgba(255, 255, 255, 0.6)';
-    }
+    // Set background to transparent when at top
+    nav.style.backgroundColor = 'transparent';
   }
 });
 
@@ -515,12 +511,6 @@ document.addEventListener("DOMContentLoaded", () => {
           nav.style.borderRadius = "20px"
           nav.style.backdropFilter = "blur(12px)"
           nav.style.marginTop = ""
-          
-          if (isMobile) {
-            nav.style.backgroundColor = "transparent"
-          } else {
-            nav.style.backgroundColor = "rgba(255, 255, 255, 0.6)"
-          }
         }
       }
       
@@ -612,12 +602,6 @@ document.addEventListener("DOMContentLoaded", () => {
             nav.style.borderRadius = "20px"
             nav.style.backdropFilter = "blur(12px)"
             nav.style.marginTop = ""
-            
-            if (isMobile) {
-              nav.style.backgroundColor = "transparent"
-            } else {
-              nav.style.backgroundColor = "rgba(255, 255, 255, 0.6)"
-            }
           }
         }
         

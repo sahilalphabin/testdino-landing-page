@@ -1183,6 +1183,21 @@ input[type=range]::-moz-range-thumb {
     margin: 4px 4px;
 }
 
+/* Desktop navigation - always black */
+@media (min-width: 768px) {
+  .nav-logo-img {
+    content: url("../../Testdino Landing Page Images/icons/logo_testdino.svg") !important;
+  }
+  
+  .mobile-menu-logo .nav-logo-img {
+    content: url("../../Testdino Landing Page Images/icons/logo_testdino.svg") !important;
+  }
+  
+  .mobile-menu-button svg rect {
+    fill: #141414 !important;
+  }
+}
+
 /* Mobile Hero Section Styling */
 @media (max-width: 767px) {
   .hero-section {
@@ -1264,11 +1279,11 @@ input[type=range]::-moz-range-thumb {
   
   /* Navigation styling for mobile */
   .nav-wrapper {
-    background-color: transparent !important;
+    /* background-color: transparent !important; */
   }
   
   .nav-content {
-    background-color: transparent !important;
+    /* background-color: transparent !important; */
   }
   
   /* Make navigation text white for mobile */
