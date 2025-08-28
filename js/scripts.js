@@ -20,18 +20,74 @@ window.addEventListener('scroll', () => {
     return;
   }
   
+  // Use any scroll movement for navigation color changes
+  const isScrolled = window.scrollY > 0;
+  const isMobile = window.innerWidth <= 767;
+  
+  // Add/remove scrolled class for CSS to handle
+  if (isScrolled) {
+    document.body.classList.add('scrolled');
+  } else {
+    document.body.classList.remove('scrolled');
+  }
+  
+  // Handle mobile navigation color changes based on scroll
+  if (isMobile) {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navCta = document.querySelector('.nav-cta-button');
+    const hamburger = document.querySelector('.mobile-menu-button svg rect');
+    const logo = document.querySelector('.nav-logo-img');
+    
+    if (isScrolled) {
+      // Any scroll movement - change to black theme
+      navLinks.forEach(link => {
+        link.style.color = '#171717';
+      });
+      if (navCta) {
+        navCta.style.backgroundColor = '#171717';
+        navCta.style.color = '#ffffff';
+        navCta.style.borderColor = '#171717';
+      }
+      if (hamburger) {
+        document.querySelectorAll('.mobile-menu-button svg rect').forEach(rect => {
+          rect.style.fill = '#141414';
+        });
+      }
+      if (logo) {
+        logo.style.content = 'url("../../Testdino Landing Page Images/icons/logo_testdino.svg")';
+      }
+    } else {
+      // No scroll - keep white theme
+      navLinks.forEach(link => {
+        link.style.color = '#ffffff';
+      });
+      if (navCta) {
+        navCta.style.backgroundColor = '#ffffff';
+        navCta.style.color = '#171717';
+        navCta.style.borderColor = '#ffffff';
+      }
+      if (hamburger) {
+        document.querySelectorAll('.mobile-menu-button svg rect').forEach(rect => {
+          rect.style.fill = '#ffffff';
+        });
+      }
+      if (logo) {
+        logo.style.content = 'url("../../Testdino Landing Page Images/icons/White_testdino_logo.svg")';
+      }
+    }
+  }
+  
  if (window.scrollY > 0) {
   // Apply styles when scrolled
   nav.style.width = '700px';
   nav.style.margin = '10px auto';
   nav.style.padding = '10px 20px';
   nav.style.boxShadow = '0px 4px 12px rgba(0, 0, 0, 0.25)';
-  // nav.style.backgroundColor = "rgba(255, 255, 255, 0.6)";
+  nav.style.backgroundColor = "rgba(255, 255, 255, 0.6)";
   nav.style.borderRadius = '20px';
   header.style.padding = '0 16px';
   
   nav.style.backdropFilter = 'blur(12px)';
-
 
   // Add margin-top: 25px on mobile screens
   if (window.innerWidth <= 900) {
@@ -48,7 +104,13 @@ window.addEventListener('scroll', () => {
     nav.style.borderRadius = '20px';
     header.style.padding = '0 16px';
     nav.style.backdropFilter = 'blur(12px)';
-
+    
+    // Reset background for mobile at top
+    if (window.innerWidth <= 767) {
+      nav.style.backgroundColor = 'transparent';
+    } else {
+      nav.style.backgroundColor = 'rgba(255, 255, 255, 0.6)';
+    }
   }
 });
 
@@ -350,6 +412,9 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileMenuOverlay.style.left = "0"
       mobileMenuOverlay.style.right = "0"
       mobileMenuOverlay.style.bottom = "0"
+      
+      // Add mobile menu open class to body
+      document.body.classList.add('mobile-menu-open')
 
       // Apply full width styles to header and nav when mobile menu opens
       if (header) {
@@ -363,7 +428,38 @@ document.addEventListener("DOMContentLoaded", () => {
         nav.style.setProperty('margin-top', '0', 'important')
         nav.style.boxShadow = "none"
         nav.style.borderRadius = "0"
-        nav.style.backgroundColor = "transparent"
+        nav.style.backgroundColor = "rgba(255, 255, 255, 0.95)"
+      }
+      
+      // Change logo and hamburger to black when mobile menu opens
+      const logo = document.querySelector('.nav-logo-img');
+      const mobileMenuLogo = document.querySelector('.mobile-menu-logo .nav-logo-img');
+      if (logo) {
+        logo.style.content = 'url("../../Testdino Landing Page Images/icons/logo_testdino.svg")' + ' !important';
+        logo.style.setProperty('content', 'url("../../Testdino Landing Page Images/icons/logo_testdino.svg")', 'important');
+      }
+      if (mobileMenuLogo) {
+        mobileMenuLogo.style.content = 'url("../../Testdino Landing Page Images/icons/logo_testdino.svg")' + ' !important';
+        mobileMenuLogo.style.setProperty('content', 'url("../../Testdino Landing Page Images/icons/logo_testdino.svg")', 'important');
+      }
+      
+      // Change hamburger to black (it's not being closed, so it should stay black)
+      document.querySelectorAll('.mobile-menu-button svg rect').forEach(rect => {
+        rect.style.setProperty('fill', '#141414', 'important');
+      });
+      
+      // Change nav links to black
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.style.setProperty('color', '#171717', 'important');
+      });
+      
+      // Change CTA button to black
+      const navCta = document.querySelector('.nav-cta-button');
+      if (navCta) {
+        navCta.style.setProperty('background-color', '#171717', 'important');
+        navCta.style.setProperty('color', '#ffffff', 'important');
+        navCta.style.setProperty('border-color', '#171717', 'important');
       }
     })
   } else {
@@ -377,8 +473,14 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("Close mobile menu button clicked") // Debug log
       mobileMenuOverlay.classList.add("hidden")
       mobileMenuOverlay.style.display = "none"
+      
+      // Remove mobile menu open class from body
+      document.body.classList.remove('mobile-menu-open')
 
       // Reset header and nav styles based on scroll position when mobile menu closes
+      const isScrolled = window.scrollY > 0;
+      const isMobile = window.innerWidth <= 767;
+      
       if (window.scrollY > 0) {
         // Apply scrolled styles
         if (header) {
@@ -411,9 +513,51 @@ document.addEventListener("DOMContentLoaded", () => {
           nav.style.padding = "0"
           nav.style.boxShadow = "none"
           nav.style.borderRadius = "20px"
-          nav.style.backgroundColor = "transparent"
           nav.style.backdropFilter = "blur(12px)"
           nav.style.marginTop = ""
+          
+          if (isMobile) {
+            nav.style.backgroundColor = "transparent"
+          } else {
+            nav.style.backgroundColor = "rgba(255, 255, 255, 0.6)"
+          }
+        }
+      }
+      
+      // Restore logo and navigation colors based on scroll position and screen size
+      if (isMobile) {
+        const logo = document.querySelector('.nav-logo-img');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const navCta = document.querySelector('.nav-cta-button');
+        
+        if (isScrolled) {
+          // Any scroll movement - use black
+          if (logo) {
+            logo.style.content = 'url("../../Testdino Landing Page Images/icons/logo_testdino.svg")';
+          }
+          navLinks.forEach(link => {
+            link.style.color = '#171717';
+          });
+          if (navCta) {
+            navCta.style.backgroundColor = '#171717';
+            navCta.style.color = '#ffffff';
+            navCta.style.borderColor = '#171717';
+          }
+          document.body.classList.add('scrolled');
+        } else {
+          // No scroll - use white
+          if (logo) {
+            logo.style.content = 'url("../../Testdino Landing Page Images/icons/White_testdino_logo.svg")';
+          }
+          navLinks.forEach(link => {
+            link.style.color = '#ffffff';
+          });
+          if (navCta) {
+            navCta.style.backgroundColor = '#ffffff';
+            navCta.style.color = '#171717';
+            navCta.style.borderColor = '#ffffff';
+          }
+          document.body.classList.remove('scrolled');
         }
       }
 
@@ -426,8 +570,14 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Mobile menu link clicked") // Debug log
         mobileMenuOverlay.classList.add("hidden")
         mobileMenuOverlay.style.display = "none"
+        
+        // Remove mobile menu open class from body
+        document.body.classList.remove('mobile-menu-open')
 
         // Reset header and nav styles based on scroll position when menu link is clicked
+        const isScrolled = window.scrollY > 0;
+        const isMobile = window.innerWidth <= 767;
+        
         if (window.scrollY > 0) {
           // Apply scrolled styles
           if (header) {
@@ -438,7 +588,9 @@ document.addEventListener("DOMContentLoaded", () => {
             nav.style.margin = "10px auto"
             nav.style.padding = "10px 20px"
             nav.style.boxShadow = "0px 4px 12px rgba(0, 0, 0, 0.25)"
+            nav.style.backgroundColor = "rgba(255, 255, 255, 0.6)"
             nav.style.borderRadius = "20px"
+            nav.style.backdropFilter = "blur(12px)"
             
             // Add margin-top: 25px on mobile screens
             if (window.innerWidth <= 900) {
@@ -458,9 +610,51 @@ document.addEventListener("DOMContentLoaded", () => {
             nav.style.padding = "0"
             nav.style.boxShadow = "none"
             nav.style.borderRadius = "20px"
-            nav.style.backgroundColor = "transparent"
             nav.style.backdropFilter = "blur(12px)"
             nav.style.marginTop = ""
+            
+            if (isMobile) {
+              nav.style.backgroundColor = "transparent"
+            } else {
+              nav.style.backgroundColor = "rgba(255, 255, 255, 0.6)"
+            }
+          }
+        }
+        
+        // Restore logo and navigation colors based on scroll position and screen size
+        if (isMobile) {
+          const logo = document.querySelector('.nav-logo-img');
+          const navLinks = document.querySelectorAll('.nav-link');
+          const navCta = document.querySelector('.nav-cta-button');
+          
+          if (isScrolled) {
+            // Any scroll movement - use black
+            if (logo) {
+              logo.style.content = 'url("../../Testdino Landing Page Images/icons/logo_testdino.svg")';
+            }
+            navLinks.forEach(link => {
+              link.style.color = '#171717';
+            });
+            if (navCta) {
+              navCta.style.backgroundColor = '#171717';
+              navCta.style.color = '#ffffff';
+              navCta.style.borderColor = '#171717';
+            }
+            document.body.classList.add('scrolled');
+          } else {
+            // No scroll - use white
+            if (logo) {
+              logo.style.content = 'url("../../Testdino Landing Page Images/icons/White_testdino_logo.svg")';
+            }
+            navLinks.forEach(link => {
+              link.style.color = '#ffffff';
+            });
+            if (navCta) {
+              navCta.style.backgroundColor = '#ffffff';
+              navCta.style.color = '#171717';
+              navCta.style.borderColor = '#ffffff';
+            }
+            document.body.classList.remove('scrolled');
           }
         }
 

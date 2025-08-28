@@ -1183,6 +1183,145 @@ input[type=range]::-moz-range-thumb {
     margin: 4px 4px;
 }
 
+/* Mobile Hero Section Styling */
+@media (max-width: 767px) {
+  .hero-section {
+    background: linear-gradient(150.3deg, #8E3A53 0%, #00317B 28.28%, #141E26 78.27%) !important;
+    position: relative;
+  }
+  
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 20% 80%, #ffffff03 1px, transparent 1px),
+      radial-gradient(circle at 80% 20%, #ffffff03 1px, transparent 1px),
+      radial-gradient(circle at 40% 40%, #ffffff03 1px, transparent 1px);
+    background-size: 20px 20px, 30px 30px, 25px 25px;
+    background-position: 0 0, 10px 10px, 15px 15px;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  
+  /* White text styling for mobile */
+  .hero-section h1,
+  .hero-section span,
+  .hero-section p {
+    color: #ffffff !important;
+  }
+  
+  /* White SVG styling for mobile */
+  .hero-section svg path {
+    fill: #ffffff !important;
+  }
+  
+  .hero-section .playwright-badge {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+  }
+  
+  /* White button styling for mobile */
+  .hero-section .pop-up {
+    background-color: #ffffff !important;
+    color: #171717 !important;
+    border: 1px solid #ffffff !important;
+  }
+  
+  .hero-section .pop-up:hover {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    color: #171717 !important;
+  }
+  
+  /* Tabs styling for mobile */
+  .hero-section #sidebarList {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  
+  .hero-section #sidebarList button {
+    color: #ffffff !important;
+    background-color: transparent !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  
+  .hero-section #sidebarList button.bg-\[#F1F2F4\] {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  .hero-section #sidebarList span {
+    color: #ffffff !important;
+  }
+  
+  .hero-section #sidebarList img {
+    filter: brightness(0) invert(1) !important;
+  }
+  
+  /* Navigation styling for mobile */
+  .nav-wrapper {
+    background-color: transparent !important;
+  }
+  
+  .nav-content {
+    background-color: transparent !important;
+  }
+  
+  /* Make navigation text white for mobile */
+  .nav-link {
+    color: #ffffff !important;
+  }
+  
+  .nav-cta-button {
+    background-color: #ffffff !important;
+    color: #171717 !important;
+    border: 1px solid #ffffff !important;
+  }
+  
+  /* White logo and hamburger for mobile when at top (not scrolled and not mobile menu open) */
+  body:not(.mobile-menu-open):not(.scrolled) .nav-logo-img {
+    content: url("../../Testdino Landing Page Images/icons/White_testdino_logo.svg") !important;
+  }
+  
+  body:not(.mobile-menu-open):not(.scrolled) .mobile-menu-logo .nav-logo-img {
+    content: url("../../Testdino Landing Page Images/icons/White_testdino_logo.svg") !important;
+  }
+  
+  body:not(.mobile-menu-open):not(.scrolled) .mobile-menu-button svg rect {
+    fill: #ffffff !important;
+  }
+  
+  /* Black hamburger and logo when scrolled (but not mobile menu open) */
+  body:not(.mobile-menu-open).scrolled .nav-logo-img {
+    content: url("../../Testdino Landing Page Images/icons/logo_testdino.svg") !important;
+  }
+  
+  body:not(.mobile-menu-open).scrolled .mobile-menu-logo .nav-logo-img {
+    content: url("../../Testdino Landing Page Images/icons/logo_testdino.svg") !important;
+  }
+  
+  body:not(.mobile-menu-open).scrolled .mobile-menu-button svg rect {
+    fill: #141414 !important;
+  }
+  
+  /* Black hamburger and logo when mobile menu is open */
+  body.mobile-menu-open .mobile-menu-button svg rect {
+    fill: #141414 !important;
+  }
+  
+  body.mobile-menu-open .nav-logo-img {
+    content: url("../../Testdino Landing Page Images/icons/logo_testdino.svg") !important;
+  }
+  
+  body.mobile-menu-open .mobile-menu-logo .nav-logo-img {
+    content: url("../../Testdino Landing Page Images/icons/logo_testdino.svg") !important;
+  }
+}
+
 @media (max-width: 1250px) {
   .relative .elem-star-hero {
       right: -9%;
