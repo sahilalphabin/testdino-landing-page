@@ -2007,7 +2007,6 @@ input[type=range]::-moz-range-thumb {
 body {
   font-family: 'Geist', sans-serif;
   background-color: #f8f9fa;
-  padding: 40px 20px;
 }
 
 .comparison-table {
