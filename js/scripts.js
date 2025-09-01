@@ -23,6 +23,7 @@ window.addEventListener('scroll', () => {
   // Use any scroll movement for navigation color changes
   const isScrolled = window.scrollY > 0;
   const isMobile = window.innerWidth <= 767;
+  const isIndexPage = document.body.classList.contains('index-page');
   
   // Add/remove scrolled class for CSS to handle
   if (isScrolled) {
@@ -31,8 +32,8 @@ window.addEventListener('scroll', () => {
     document.body.classList.remove('scrolled');
   }
   
-  // Handle mobile navigation color changes based on scroll
-  if (isMobile) {
+  // Handle mobile navigation color changes based on scroll - INDEX PAGE ONLY
+  if (isMobile && isIndexPage) {
     const navLinks = document.querySelectorAll('.nav-link');
     const navCta = document.querySelector('.nav-cta-button');
     const hamburger = document.querySelector('.mobile-menu-button svg rect');
@@ -427,35 +428,38 @@ document.addEventListener("DOMContentLoaded", () => {
         nav.style.backgroundColor = "rgba(255, 255, 255, 0.95)"
       }
       
-      // Change logo and hamburger to black when mobile menu opens
-      const logo = document.querySelector('.nav-logo-img');
-      const mobileMenuLogo = document.querySelector('.mobile-menu-logo .nav-logo-img');
-      if (logo) {
-        logo.style.content = 'url("../../Testdino Landing Page Images/icons/logo_testdino.svg")' + ' !important';
-        logo.style.setProperty('content', 'url("../../Testdino Landing Page Images/icons/logo_testdino.svg")', 'important');
-      }
-      if (mobileMenuLogo) {
-        mobileMenuLogo.style.content = 'url("../../Testdino Landing Page Images/icons/logo_testdino.svg")' + ' !important';
-        mobileMenuLogo.style.setProperty('content', 'url("../../Testdino Landing Page Images/icons/logo_testdino.svg")', 'important');
-      }
-      
-      // Change hamburger to black (it's not being closed, so it should stay black)
-      document.querySelectorAll('.mobile-menu-button svg rect').forEach(rect => {
-        rect.style.setProperty('fill', '#141414', 'important');
-      });
-      
-      // Change nav links to black
-      const navLinks = document.querySelectorAll('.nav-link');
-      navLinks.forEach(link => {
-        link.style.setProperty('color', '#171717', 'important');
-      });
-      
-      // Change CTA button to black
-      const navCta = document.querySelector('.nav-cta-button');
-      if (navCta) {
-        navCta.style.setProperty('background-color', '#171717', 'important');
-        navCta.style.setProperty('color', '#ffffff', 'important');
-        navCta.style.setProperty('border-color', '#171717', 'important');
+      // Change logo and hamburger to black when mobile menu opens - INDEX PAGE ONLY
+      const isIndexPage = document.body.classList.contains('index-page');
+      if (isIndexPage) {
+        const logo = document.querySelector('.nav-logo-img');
+        const mobileMenuLogo = document.querySelector('.mobile-menu-logo .nav-logo-img');
+        if (logo) {
+          logo.style.content = 'url("../../Testdino Landing Page Images/icons/logo_testdino.svg")' + ' !important';
+          logo.style.setProperty('content', 'url("../../Testdino Landing Page Images/icons/logo_testdino.svg")', 'important');
+        }
+        if (mobileMenuLogo) {
+          mobileMenuLogo.style.content = 'url("../../Testdino Landing Page Images/icons/logo_testdino.svg")' + ' !important';
+          mobileMenuLogo.style.setProperty('content', 'url("../../Testdino Landing Page Images/icons/logo_testdino.svg")', 'important');
+        }
+        
+        // Change hamburger to black (it's not being closed, so it should stay black)
+        document.querySelectorAll('.mobile-menu-button svg rect').forEach(rect => {
+          rect.style.setProperty('fill', '#141414', 'important');
+        });
+        
+        // Change nav links to black
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+          link.style.setProperty('color', '#171717', 'important');
+        });
+        
+        // Change CTA button to black
+        const navCta = document.querySelector('.nav-cta-button');
+        if (navCta) {
+          navCta.style.setProperty('background-color', '#171717', 'important');
+          navCta.style.setProperty('color', '#ffffff', 'important');
+          navCta.style.setProperty('border-color', '#171717', 'important');
+        }
       }
     })
   } else {
@@ -476,6 +480,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Reset header and nav styles based on scroll position when mobile menu closes
       const isScrolled = window.scrollY > 0;
       const isMobile = window.innerWidth <= 767;
+      const isIndexPage = document.body.classList.contains('index-page');
       
       if (window.scrollY > 0) {
         // Apply scrolled styles
@@ -514,8 +519,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
       
-      // Restore logo and navigation colors based on scroll position and screen size
-      if (isMobile) {
+      // Restore logo and navigation colors based on scroll position and screen size - INDEX PAGE ONLY
+      if (isMobile && isIndexPage) {
         const logo = document.querySelector('.nav-logo-img');
         const navLinks = document.querySelectorAll('.nav-link');
         const navCta = document.querySelector('.nav-cta-button');
@@ -567,6 +572,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Reset header and nav styles based on scroll position when menu link is clicked
         const isScrolled = window.scrollY > 0;
         const isMobile = window.innerWidth <= 767;
+        const isIndexPage = document.body.classList.contains('index-page');
         
         if (window.scrollY > 0) {
           // Apply scrolled styles
@@ -605,8 +611,8 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
         
-        // Restore logo and navigation colors based on scroll position and screen size
-        if (isMobile) {
+        // Restore logo and navigation colors based on scroll position and screen size - INDEX PAGE ONLY
+        if (isMobile && isIndexPage) {
           const logo = document.querySelector('.nav-logo-img');
           const navLinks = document.querySelectorAll('.nav-link');
           const navCta = document.querySelector('.nav-cta-button');

@@ -1297,43 +1297,56 @@ input[type=range]::-moz-range-thumb {
     border: 1px solid #ffffff !important;
   }
   
-  /* White logo and hamburger for mobile when at top (not scrolled and not mobile menu open) */
-  body:not(.mobile-menu-open):not(.scrolled) .nav-logo-img {
+  /* White logo and hamburger for mobile when at top (not scrolled and not mobile menu open) - INDEX PAGE ONLY */
+  body.index-page:not(.mobile-menu-open):not(.scrolled) .nav-logo-img {
     content: url("../../Testdino Landing Page Images/icons/White_testdino_logo.svg") !important;
   }
   
-  body:not(.mobile-menu-open):not(.scrolled) .mobile-menu-logo .nav-logo-img {
+  body.index-page:not(.mobile-menu-open):not(.scrolled) .mobile-menu-logo .nav-logo-img {
     content: url("../../Testdino Landing Page Images/icons/White_testdino_logo.svg") !important;
   }
   
-  body:not(.mobile-menu-open):not(.scrolled) .mobile-menu-button svg rect {
+  body.index-page:not(.mobile-menu-open):not(.scrolled) .mobile-menu-button svg rect {
     fill: #ffffff !important;
   }
   
-  /* Black hamburger and logo when scrolled (but not mobile menu open) */
-  body:not(.mobile-menu-open).scrolled .nav-logo-img {
+  /* Black hamburger and logo when scrolled (but not mobile menu open) - INDEX PAGE ONLY */
+  body.index-page:not(.mobile-menu-open).scrolled .nav-logo-img {
     content: url("../../Testdino Landing Page Images/icons/logo_testdino.svg") !important;
   }
   
-  body:not(.mobile-menu-open).scrolled .mobile-menu-logo .nav-logo-img {
+  body.index-page:not(.mobile-menu-open).scrolled .mobile-menu-logo .nav-logo-img {
     content: url("../../Testdino Landing Page Images/icons/logo_testdino.svg") !important;
   }
   
-  body:not(.mobile-menu-open).scrolled .mobile-menu-button svg rect {
+  body.index-page:not(.mobile-menu-open).scrolled .mobile-menu-button svg rect {
     fill: #141414 !important;
   }
   
-  /* Black hamburger and logo when mobile menu is open */
-  body.mobile-menu-open .mobile-menu-button svg rect {
+  /* Black hamburger and logo when mobile menu is open - INDEX PAGE ONLY */
+  body.index-page.mobile-menu-open .mobile-menu-button svg rect {
     fill: #141414 !important;
   }
   
-  body.mobile-menu-open .nav-logo-img {
+  body.index-page.mobile-menu-open .nav-logo-img {
     content: url("../../Testdino Landing Page Images/icons/logo_testdino.svg") !important;
   }
   
-  body.mobile-menu-open .mobile-menu-logo .nav-logo-img {
+  body.index-page.mobile-menu-open .mobile-menu-logo .nav-logo-img {
     content: url("../../Testdino Landing Page Images/icons/logo_testdino.svg") !important;
+  }
+  
+  /* Non-index pages: Always use black logo and hamburger */
+  body:not(.index-page) .nav-logo-img {
+    content: url("../../Testdino Landing Page Images/icons/logo_testdino.svg") !important;
+  }
+  
+  body:not(.index-page) .mobile-menu-logo .nav-logo-img {
+    content: url("../../Testdino Landing Page Images/icons/logo_testdino.svg") !important;
+  }
+  
+  body:not(.index-page) .mobile-menu-button svg rect {
+    fill: #141414 !important;
   }
 }
 
