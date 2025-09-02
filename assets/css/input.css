@@ -1853,28 +1853,28 @@ input[type=range]::-moz-range-thumb {
 /* Feature Box Styles */
 .feature-box {
   border: 1px solid #E5E5E5;
-  border-radius: 0.25rem;
-  padding: 1rem;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
   background-color: #FAFAFA;
   display: grid;
-  border-radius: 5px;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 /* Bullet Point Item */
 .bullet-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
+  gap: 1rem;
   margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 .bullet-item .bullet-point {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   background-color: #000;
   border-radius: 50%;
-  margin-top: 0.7rem;
+  margin-top: 0.5rem;
   flex-shrink: 0;
   font-size: 18px;
 }
@@ -1883,10 +1883,12 @@ input[type=range]::-moz-range-thumb {
 .numbered-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.5rem;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 .numbered-item  h4 {
   font-size: 18px;
+  margin-bottom: 0.5rem;
 }
 
 .numbered-item .number {
@@ -1901,25 +1903,98 @@ input[type=range]::-moz-range-thumb {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  flex: 1;
 }
 
 .item-content h4 {
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   margin-right: 0;
   white-space: normal;
+  line-height: 1.4;
 }
 
 .item-content p {
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
+  line-height: 1.5;
+  color: #404040;
 }
 
 /* Responsive adjustments for feature boxes */
 @media (max-width: 768px) {
   .feature-box {
-    padding: 0.75rem;
-    gap: 0.75rem;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  /* Mobile spacing adjustments for bullet items */
+  .bullet-item {
+    margin-bottom: 0.75rem !important;
+    gap: 0.75rem !important;
+  }
+  
+  .bullet-item:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  .bullet-item .item-content h4 {
+    margin-bottom: 0.25rem !important;
+    margin-top: 0 !important;
+    line-height: 1.3 !important;
+    font-size: 1rem !important;
+  }
+  
+  .bullet-item .item-content p {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    font-size: 15px !important;
+  }
+  
+  /* Mobile bullet point alignment */
+  .bullet-item .bullet-point {
+    margin-top: 0.25rem !important;
+    width: 6px !important;
+    height: 6px !important;
+  }
+  
+  /* Mobile numbered item adjustments */
+  .numbered-item {
+    margin-bottom: 1rem !important;
+    gap: 0.75rem !important;
+  }
+  
+  .numbered-item .number {
+    font-size: 1rem !important;
+  }
+  
+  .numbered-item h4 {
+    font-size: 1rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  
+  .numbered-item p {
+    font-size: 15px !important;
+  }
+  
+  /* Improve overall section spacing in mobile */
+  .blog-content-section {
+    margin-bottom: 2rem !important;
+  }
+  
+  /* Better spacing for section headers and intro text */
+  .blog-content-section h2 {
+    margin-bottom: 1rem !important;
+  }
+  
+  .blog-content-section > p:first-of-type {
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Improve feature box visual structure */
+  .feature-box {
+    border-radius: 0.5rem !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
   }
 }
 
