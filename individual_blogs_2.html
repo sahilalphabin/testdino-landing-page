@@ -33,7 +33,7 @@
 
 <body class="flex min-h-screen flex-col bg-white">
   <!-- Navigation -->
-  <div class="header-container" id="header">
+  <div class="header-container md:max-w-7xl mx-auto" id="header">
     <nav class="nav-wrapper" id="nav" style="background-color:rgba(255, 255, 255, 0.6)">
       <div class="nav-content ">
         <!-- Logo -->
@@ -102,7 +102,7 @@
   </div>
 
   <!-- Category Navigation -->
-  <div class="bg-gray-50 border-gray-200 ">
+  <div class="bg-gray-50 border-gray-200 md:max-w-7xl mx-auto">
     <div class="max-w-[1200px] mx-auto">
       <div class="flex items-center gap-[24px] py-4 overflow-x-auto">
         <img src="Testdino Landing Page Images/blog_images/Frame 2147227012.svg" alt="arrow-left" class="w-10 h-10">
@@ -137,10 +137,10 @@
 
   <!-- Main Blog Content -->
   <main class="flex-1 py-12 md:py-20">
-    <div class="max-w-[1200px] mx-auto ">
+    <div class="max-w-[1200px] md:max-w-7xl mx-auto ">
       <!-- Blog Header Section - Full Width -->
-      <div class="mb-20">
-        <div class="lg:flex lg:gap-[40px] items-start" style="max-width: 1200px; height: 360px;">
+      <div class="mb-20 md:max-w-7xl mx-auto">
+        <div class="lg:flex lg:gap-[40px] items-start md:max-w-7xl mx-auto" style="max-width: 1200px; height: 360px;">
           <!-- Left Column: Content -->
           <div class="mb-12 lg:mb-0 flex flex-col justify-between" style="max-width: 600px; height: 360px;">
             <!-- Main Title -->
@@ -203,12 +203,12 @@
     <div class="w-full h-[1px] bg-[#E0E0E0]" style="margin-top: 1px; margin-bottom: 80px;"></div>
 
     <!-- Blog Content -->
-    <div class="max-w-[1200px] mx-auto">
+    <div class="max-w-[1200px] md:max-w-7xl mx-auto">
       <!-- Two Column Layout -->
-      <div class="lg:flex lg:gap-10">
+      <div class="lg:flex lg:gap-10 md:max-w-7xl mx-auto">
         <!-- Left Sidebar - Table of Contents -->
-        <div class="lg:w-1/4 mb-12 lg:mb-0">
-          <div class="sticky top-28" style="font-size: 16px;">
+        <div class="lg:w-1/4 mb-12 lg:mb-0 md:max-w-7xl mx-auto">
+          <div class="sticky top-28 md:max-w-7xl mx-auto" style="font-size: 16px;">
             <nav id="toc-nav" class="flex flex-col gap-2">
               <a href="#what-is-reportportal" class="toc-link relative pl-4 transition-all duration-200"
                 data-section="what-is-reportportal">
@@ -296,9 +296,9 @@
         </script>
 
         <!-- Main Content Area -->
-        <div class="lg:w-3/4">
+        <div class="lg:w-3/4 md:max-w-7xl mx-auto">
           <!-- Introduction Text - Full Width -->
-          <div class="mb-[40px] blog-content-section">
+          <div class="mb-[40px] blog-content-section md:max-w-7xl mx-auto">
             <p class="blog-text" style="font-size: 18px;">
               TestDino, built for Playwright, is a zero-setup platform that delivers instant insights. It auto-detects
               flaky tests, provides root cause analysis, and creates role-based dashboards.
@@ -313,7 +313,7 @@
           <section id="what-is-reportportal" class="blog-content-section">
             <h2 class="blog-header ">What is ReportPortal?</h2>
             <img src="Testdino Landing Page Images/Testdino vs ReportPortal/ReportPortal.svg" alt="ReportPortal"
-              class="w-full h-auto mb-4">
+              class="w-100 h-auto mb-20 scale-125 mt-20">
             <p class="blog-text" style="font-size: 18px;">
               ReportPortal is an open-source test reporting and analytics platform designed to aggregate and visualize
               test execution data. It helps QA teams track test results, monitor trends, and manage defect reporting
@@ -330,7 +330,7 @@
                 <p class="blog-text" style="font-size: 18px;">ReportPortal aggregates test execution data, but its
                   workflow often creates friction for modern QA teams. The reliance on plugins, manual setup, and
                   maintenance slows down adoption and makes scaling difficult.</p>
-                <div class="feature-box mt-4">
+                <div class="feature-box mt-4 mb-4">
                   <div class="bullet-item">
                     <div class="bullet-point"></div>
                     <div class="item-content">
@@ -374,7 +374,7 @@
           <section id="how-testdino-works" class="blog-content-section">
             <h2 class="blog-header">What is TestDino?</h2>
             <img src="Testdino Landing Page Images/Testdino vs ReportPortal/testdino.svg" alt="TestDino"
-              class="w-full h-auto mb-4">
+              class="w-100 h-auto mb-20 scale-125 mt-20">
             <p class="blog-text" style="font-size: 18px;">
               TestDino is an AI-powered test intelligence platform built for Playwright and a top choice among
               ReportPortal alternatives. It integrates seamlessly into your Playwright workflow, parsing HTML reports
@@ -410,7 +410,7 @@
               ReportPortal is often considered in discussions of ReportPortal alternatives and enterprise QA reporting
               tools because of its community-driven ecosystem and long-standing presence in the testing space.
             </p>
-            <div class="feature-box">
+            <div class="feature-box mb-4">
               <div class="bullet-item">
                 <div class="bullet-point"></div>
                 <div class="item-content">
@@ -648,16 +648,16 @@
             <p class="blog-text" style="font-size: 18px;">
               Unlike other ReportPortal alternatives, Testdino was built Playwright-first, so teams get clarity out of the box without dealing with plugins or manual dashboards.
             </p>
-            <img src="Testdino Landing Page Images/Testdino vs ReportPortal/Dashbord_that_matters.svg" alt="Dashboard that matters" class="w-full h-auto mb-4">
+            <img src="Testdino Landing Page Images/Testdino vs ReportPortal/Dashbord_that_matters.svg" alt="Dashboard that matters" class="w-100 h-auto mb-20 scale-125 mt-20">
             <!-- Test Run Intelligence -->
-            <p class="blog-header ">2. <span class="text-[#1F4CF1] font-semibold">Test</span>run intelligence</p>
+            <p class="blog-header ">2. <span class="text-[#1F4CF1] font-semibold">Test</span> run intelligence</p>
             <p class="blog-text" style="font-size: 18px;">
               Failures aren’t just listed, they’re categorized with automated root cause analysis software (timeouts, UI changes, network errors) and grouped by flakiness.          </p>
             <!-- Image/Video Container -->
-            <div class="w-full">
+            <div class="w-100 mb-28 scale-125 mt-20">
               <div id="imageWrapper"
                 class="relative flex overflow-hidden w-[full] h-auto rounded-[3px] md:rounded-[12px] shadow-[0_0_30px_0_rgba(0,0,0,0.24)]">
-                <img id="mainImage" src="Testdino Landing Page Images/Hero section thumbnail image/TestDino Overview.svg"
+                <img id="mainImage" src="Testdino Landing Page Images/Hero section thumbnail image/Test Runs.svg"
                   class="w-[90vw] h-auto object-contain transition-all duration-500" alt="Dashboard Image"
                   style="min-width:320px;">
                 <a href="javascript:void(0)" id="svgOverlay"
@@ -674,10 +674,10 @@
               Testdino’s AI-powered test anThe platform detects regressions and patterns unique to Playwright workflows, saving engineers 6–8 hours a week.alytics tools provide real-time insights into test execution, helping teams identify and fix flaky tests faster.
             </p>
             <!-- Image/Video Container -->
-            <div class="w-full">
+            <div class="w-100 mb-28 scale-125 mt-20">
               <div id="imageWrapper"
                 class="relative flex overflow-hidden w-[full] h-auto rounded-[3px] md:rounded-[12px] shadow-[0_0_30px_0_rgba(0,0,0,0.24)]">
-                <img id="mainImage" src="Testdino Landing Page Images/Hero section thumbnail image/TestDino Overview.svg"
+                <img id="mainImage" src="Testdino Landing Page Images/Hero section thumbnail image/AI insights.svg"
                   class="w-[90vw] h-auto object-contain transition-all duration-500" alt="Dashboard Image"
                   style="min-width:320px;">
                 <a href="javascript:void(0)" id="svgOverlay"
@@ -693,10 +693,10 @@
             <p class="blog-text" style="font-size: 18px;">
               Every PR is linked directly to its test runs, so teams can track pass/fail history and ensure stability before merge.            </p>
             <!-- Image/Video Container -->
-            <div class="w-full">
+            <div class="w-100 mb-28 scale-125 mt-20">
               <div id="imageWrapper"
                 class="relative flex overflow-hidden w-[full] h-auto rounded-[3px] md:rounded-[12px] shadow-[0_0_30px_0_rgba(0,0,0,0.24)]">
-                <img id="mainImage" src="Testdino Landing Page Images/Hero section thumbnail image/TestDino Overview.svg"
+                <img id="mainImage" src="Testdino Landing Page Images/Hero section thumbnail image/Pull Request.svg"
                   class="w-[90vw] h-auto object-contain transition-all duration-500" alt="Dashboard Image"
                   style="min-width:320px;">
                 <a href="javascript:void(0)" id="svgOverlay"
@@ -707,8 +707,132 @@
                 </a>
               </div>
             </div>
+
+            <!--Analytics-->
+            
+            <p class="blog-header ">5. Analytics that drive action</p>
+            <p class="blog-text" style="font-size: 18px;">
+              From flakiness trends to retry behavior, Testdino gives you the data that makes CI/CD pipelines faster, more reliable, and easier to manage.
+            
+              <div class="w-100 mb-28 scale-125 mt-20">
+              <div id="imageWrapper"
+                class="relative flex overflow-hidden w-[full] h-auto rounded-[3px] md:rounded-[12px] shadow-[0_0_30px_0_rgba(0,0,0,0.24)]">
+                <img id="mainImage" src="Testdino Landing Page Images/Hero section thumbnail image/Analytics.svg"
+                  class="w-[90vw] h-auto object-contain transition-all duration-500" alt="Dashboard Image"
+                  style="min-width:320px;">
+                <a href="javascript:void(0)" id="svgOverlay"
+                  data-video="https://www.youtube.com/embed/MjT2edHkz_0?autoplay=1&amp;rel=0"
+                  class="group absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  onclick="playVideo(this)">
+                  <img src="Testdino Landing Page Images/icons/playbutton.svg" alt="Play" class="w-16 h-16">
+                </a>
+              </div>
+            </div>
+
+            <p class="blog-text" style="font-size: 18px;">Where ReportPortal and other ReportPortal competitors leave you managing the reporting tool itself, Testdino focuses on accelerating your testing feedback loop.</p>
+            <p class="blog-text" style="font-size: 18px;">For engineering managers and QA teams, Testdino is not just another tool — it’s the most advanced option among all ReportPortal alternatives, combining AI-powered analytics, zero setup, and enterprise-grade reporting.</p>
+            
+            <p class="blog-header" style="margin-top: 80px;">Pros and Cons</p>
+            <p class="blog-text" style="font-size: 18px;">When analyzing the pros and cons of ReportPortal, it becomes clear why many teams migrate to modern ReportPortal alternatives like Testdino.</p>
           
           </section>
+          <!-- TestDino vs Currents.dev Comparison Table -->
+          <div class="w-100 mb-28 scale-125 mt-32">
+            <div class="currents-comparison-table-container" style="width: 745px; margin: 0 auto; border-radius: 8px; border: 1px solid #F5F5F5; overflow: hidden; background-color: #FAFAFA; cursor: grab;">
+              <table class="currents-comparison-table" style="width: 100%; border-collapse: collapse; background: white; table-layout: fixed;">
+                <thead>
+                  <tr style="background: #FAFAFA">
+                    <th style="padding: 16px; text-align: left; font-family: Geist; font-size: 16px; font-weight: 700; border-bottom: 1px solid #F0F0F1; border-right: 1px solid #E5E5E5; width: 40%;">Category</th>
+                    <th style="padding: 16px; text-align: left; font-family: Geist; font-weight: 500; font-size: 16px; border-bottom: 1px solid #F0F0F1; border-right: 1px solid #E5E5E5; width: 30%; background-color: #DCFCE6;">
+                      <div style="display: flex; align-items: flex-end; justify-content: left; gap: 8px;">
+                        <img src="Testdino Landing Page Images/icons/logo.svg" alt="TestDino" style="width: 30.75px; height: 28.12px;">
+                        <span style="font-family: Geist; font-weight: 500; font-size: 16px;">TestDino</span>
+                      </div>
+                    </th>
+                    <th style="padding: 16px; text-align: left; font-family: Geist; font-weight: 600; font-size: 16px; border-bottom: 1px solid #F0F0F1; width: 30%;">Currents.dev</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Setup & Cost Section -->
+                  <tr style="background: #FCFCFC;">
+                    <td style="padding: 16px; font-family: Geist; font-weight: 400; font-size: 14px; border-bottom: 1px solid #F0F0F1; border-right: 1px solid #F0F0F1; text-align: left; vertical-align: top;">Setup & Cost</td>
+                    <td style="padding: 16px; text-align: left; border-bottom: 1px solid #F0F0F1; border-right: 1px solid #F0F0F1; background-color: #F5FDF7; font-family: Geist; font-weight: 400; font-size: 14px;">
+                      • Free entry tier<br>
+                      • Onboarding under 10 minutes<br>
+                      • Flexible billing<br>
+                      • Cloud-first with roadmap for self-host
+                    </td>
+                    <td style="padding: 16px; text-align: left; border-bottom: 1px solid #F0F0F1; font-family: Geist; font-weight: 400; font-size: 14px;">
+                      • No free tier<br>
+                      • Slower, more setup steps<br>
+                      • Higher starting cost<br>
+                      • Only self-host option
+                    </td>
+                  </tr>
+                  
+                  <!-- Intelligence & Debugging Section -->
+                  <tr style="background: #FCFCFC;">
+                    <td style="padding: 16px; font-family: Geist; font-weight: 400; font-size: 14px; border-bottom: 1px solid #F0F0F1; border-right: 1px solid #F0F0F1; text-align: left; vertical-align: top;">Intelligence & Debugging</td>
+                    <td style="padding: 16px; text-align: left; border-bottom: 1px solid #F0F0F1; border-right: 1px solid #F0F0F1; background-color: #F5FDF7; font-family: Geist; font-weight: 400; font-size: 14px;">
+                      • AI root-cause suggestions<br>
+                      • Automatic flaky detection<br>
+                      • Predictive instability alerts<br>
+                      • MTTR goal tracking
+                    </td>
+                    <td style="padding: 16px; text-align: left; border-bottom: 1px solid #F0F0F1; font-family: Geist; font-weight: 400; font-size: 14px;">
+                      • No AI assistance<br>
+                      • Basic flaky detection
+                    </td>
+                  </tr>
+                  
+                  <!-- Analytics & Observability Section -->
+                  <tr style="background: #FCFCFC;">
+                    <td style="padding: 16px; font-family: Geist; font-weight: 400; font-size: 14px; border-bottom: 1px solid #F0F0F1; border-right: 1px solid #F0F0F1; text-align: left; vertical-align: top;">Analytics & Observability</td>
+                    <td style="padding: 16px; text-align: left; border-bottom: 1px solid #F0F0F1; border-right: 1px solid #F0F0F1; background-color: #F5FDF7; font-family: Geist; font-weight: 400; font-size: 14px;">
+                      • Ready-made dashboards<br>
+                      • Cross-branch trend charts<br>
+                      • Rich visual insights
+                    </td>
+                    <td style="padding: 16px; text-align: left; border-bottom: 1px solid #F0F0F1; font-family: Geist; font-weight: 400; font-size: 14px;">
+                      • Requires manual setup<br>
+                      • Missing<br>
+                      • Limited analytics
+                    </td>
+                  </tr>
+                  
+                  <!-- Integrations & Adaptability Section -->
+                  <tr style="background: #FCFCFC;">
+                    <td style="padding: 16px; font-family: Geist; font-weight: 400; font-size: 14px; border-bottom: 1px solid #F0F0F1; border-right: 1px solid #F0F0F1; text-align: left; vertical-align: top;">Integrations & Adaptability</td>
+                    <td style="padding: 16px; text-align: left; border-bottom: 1px solid #F0F0F1; border-right: 1px solid #F0F0F1; background-color: #F5FDF7; font-family: Geist; font-weight: 400; font-size: 14px;">
+                      • Support Playwright<br>
+                      • Slack, Jira, and Linear integrations<br>
+                      • Alerts & bug tracking
+                    </td>
+                    <td style="padding: 16px; text-align: left; border-bottom: 1px solid #F0F0F1; font-family: Geist; font-weight: 400; font-size: 14px;">
+                      • Limited third-party integrations<br>
+                      • No direct Playwright-first approach
+                    </td>
+                  </tr>
+                  
+                  <!-- Support & Scalability Section -->
+                  <tr style="background: #FCFCFC;">
+                      <td style="padding: 16px; font-family: Geist; font-weight: 400; font-size: 14px; border-bottom: 1px solid #F0F0F1; border-right: 1px solid #F0F0F1; text-align: left; vertical-align: top;">Support & Scalability</td>
+                    <td style="padding: 16px; text-align: left; border-bottom: 1px solid #F0F0F1; border-right: 1px solid #F0F0F1; background-color: #F5FDF7; font-family: Geist; font-weight: 400; font-size: 14px;">
+                      • 24/7 dedicated support<br>
+                      • Personal Slack channel for customers<br>
+                      • Feedback loop inside dashboard
+                    </td>
+                    <td style="padding: 16px; text-align: left; border-bottom: 1px solid #F0F0F1; font-family: Geist; font-weight: 400; font-size: 14px;">
+                      • No dedicated support<br>
+                      • Not offered<br>
+                      • Limited<br>
+                      • Standard scaling only
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
           <!-- CTA Banner -->
           <div class="w-full border border-[#E5E5E5] rounded-xl">
@@ -870,7 +994,7 @@
 
     <div class="footer-bottom">
       <div class="footer-bottom-border">
-        <p class="footer-copyright">© 2025 Testdino. All rights reserved</p>
+        <p class="footer-copyright">© 2025 TestDino. All rights reserved</p>
       </div>
     </div>
   </footer>
