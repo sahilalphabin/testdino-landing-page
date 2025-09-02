@@ -1864,7 +1864,6 @@ input[type=range]::-moz-range-thumb {
 .bullet-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.5rem;
 }
 
 .bullet-item .bullet-point {
@@ -1902,7 +1901,7 @@ input[type=range]::-moz-range-thumb {
   }
   
   .numbered-item {
-    gap: 0.25rem;
+    gap: 0.4rem;
   }
   
   .numbered-item .item-content {
@@ -1921,6 +1920,7 @@ input[type=range]::-moz-range-thumb {
     margin-top: 0.65rem;
     width: 6px;
     height: 6px;
+    margin-right: 10px;
   }
 }
 
@@ -1997,6 +1997,7 @@ input[type=range]::-moz-range-thumb {
   
   .numbered-item .number {
     font-size: 1rem !important;
+    margin-right: 10px !important;
   }
   
   /* Mobile content spacing adjustment */
