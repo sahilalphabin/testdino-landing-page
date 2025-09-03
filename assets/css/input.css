@@ -1949,6 +1949,7 @@ input[type=range]::-moz-range-thumb {
   color: #404040;
 }
 
+
 /* Responsive adjustments for feature boxes */
 @media (max-width: 768px) {
   .feature-box {
