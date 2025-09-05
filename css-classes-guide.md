@@ -137,15 +137,17 @@ This guide provides a comprehensive overview of CSS classes organized by section
 ### Hero Container
 - `.hero-section` - Main hero container with gradient background
 - `.hero-section::before` - Pattern overlay
-- `.alternative-hero-section` - Alternative hero with different gradient
-- `.alternative-hero-section::before` - Alternative pattern overlay
+- `.alternative-hero-section` - Alternative hero with different gradient (linear-gradient(150.3deg, #8E3A53 0%, #00317B 28.28%, #141E26 78.27%))
+- `.alternative-hero-section::before` - Alternative pattern overlay with radial gradients
 
 ### Mobile Hero Styling
 - White text and SVG styling for mobile
-- `.playwright-badge` - Badge styling (border-radius: 9999px, padding: 8px 18px)
-- `.playwright-badge-icon` - Badge icon container
+- `.playwright-badge` - Badge styling (border-radius: 9999px, padding: 8px 18px, background: white, border: 1px solid #D1D5DB)
+- `.playwright-badge-icon` - Badge icon container (display: flex, align-items: center, justify-content: center, margin-right: 8px)
 - `.pop-up` - Button styling
 - `#sidebarList` - Tab navigation
+- Mobile-specific hero background: `linear-gradient(150.3deg, #8E3A53 0%, #00317B 28.28%, #141E26 78.27%)`
+- Mobile pattern overlay with smaller radial gradients (20px, 30px, 25px)
 
 ### Interactive Elements
 - `.elem-star-hero` - Decorative star element
@@ -212,14 +214,14 @@ This guide provides a comprehensive overview of CSS classes organized by section
 - `.slider-label` - Individual slider label (position: absolute, font-size: 15px)
 
 ### Pricing Tables
-- `.pricing-table` - Pricing table container (max-width: 1200px, margin: 0 auto 2rem)
-- `.pricing-table-header` - Table header (flex column, border-bottom: 1px solid #E5E5E5)
-- `.pricing-table-header-content` - Header content wrapper (flex, align-items: center)
-- `.pricing-table-title` - Table title (17.5px, font-weight: 600)
+- `.pricing-table` - Pricing table container (background: white, overflow: hidden, max-width: 1200px, margin: 0 auto 2rem, border-radius: 12px, box-shadow: 0 4px 6px rgb(0 0 0 / 5%))
+- `.pricing-table-header` - Table header (flex column, border-bottom: 1px solid #E5E5E5, padding: 0)
+- `.pricing-table-header-content` - Header content wrapper (flex row, align-items: center, gap: 0.75rem, padding: 1.5rem 1rem, width: 100%)
+- `.pricing-table-title` - Table title (font-size: 17.5px, color: #212123, font-weight: 600, font-family: Geist, line-height: 24px)
 - `.pricing-table-row` - Table row (flex column, border-bottom: 1px solid #E5E5E5)
-- `.pricing-table-cell` - Table cell (padding: 1rem, flex, align-items: center)
-- `.pricing-table-cell--label` - Label cell (width: 100%, font-size: 16px)
-- `.pricing-table-cell--value` - Value cell (font-size: 16px, color: #212123)
+- `.pricing-table-cell` - Table cell (padding: 1rem, border-left: 1px solid #E5E5E5, display: flex, align-items: center, justify-content: center, text-align: center)
+- `.pricing-table-cell--label` - Label cell (width: 100%, font-size: 16px, color: #212123, font-weight: 400, font-family: Geist)
+- `.pricing-table-cell--value` - Value cell (font-size: 16px, color: #212123, font-weight: 400, font-family: Geist)
 - `.pricing-table-cell--highlighted` - Highlighted cell (background: rgb(91 117 238 / 5%))
 
 ### Pricing Sections
@@ -235,9 +237,9 @@ This guide provides a comprehensive overview of CSS classes organized by section
 ## Blog Components
 
 ### Blog Layout
-- `.blog-content-section` - Main blog content area (padding: 6rem left/right on desktop)
-- `.blog-header` - Blog post title (28px, font-weight: 700, color: #0B0C0E)
-- `.blog-text` - Blog paragraph text (18px, line-height: 30px, color: #404040)
+- `.blog-content-section` - Main blog content area (padding: 6rem left/right on desktop, margin-bottom: 40px)
+- `.blog-header` - Blog post title (font-size: 28px, line-height: 2.25rem, font-weight: 700, color: #0B0C0E, margin-bottom: 16px)
+- `.blog-text` - Blog paragraph text (font-size: 18px, line-height: 30px, color: #404040, margin-bottom: 16px)
 
 ### Quote Section
 - `.quote-container` - Quote wrapper (margin: 1.5rem 0)
@@ -276,6 +278,12 @@ This guide provides a comprehensive overview of CSS classes organized by section
 ### Mobile Blog Adjustments
 - Mobile typography improvements (smaller font sizes, adjusted spacing)
 - Responsive feature box adjustments (smaller padding, adjusted gaps)
+- Mobile blog header section fixes (flex-direction: column, height: auto)
+- Mobile author info and share icons stacking (flex-direction: column, align-items: flex-start)
+- Mobile table of contents styling (width: 100%, position: relative, background: #f9f9f9)
+- Mobile content margins and padding adjustments
+- Mobile category tag and title margin adjustments
+- Mobile code block copy button sizing (width: 0.75rem, height: 0.75rem)
 - Mobile TOC styling (full width, relative positioning)
 - Mobile category filter improvements (horizontal scroll, no wrap)
 
@@ -353,13 +361,13 @@ This guide provides a comprehensive overview of CSS classes organized by section
 ## Comparison Tables
 
 ### Table Structure
-- `.comparison-table` - Main comparison table (background: white, max-width: 1200px, margin: 2rem auto)
+- `.comparison-table` - Main comparison table (background: white, overflow: hidden, max-width: 1200px, margin: 2rem auto)
 - `.comparison-table__section` - Table section (border-bottom: 1px solid #E5E5E5)
 - `.comparison-table__header` - Table header (flex column)
-- `.comparison-table__header--desktop` - Desktop header (display: none on mobile)
-- `.comparison-table__header-content` - Header content (flex, align-items: center, cursor: pointer)
-- `.comparison-table__row` - Table row (flex column on mobile, flex row on desktop)
-- `.comparison-table__cell` - Table cell (padding: 1rem, flex, align-items: center)
+- `.comparison-table__header--desktop` - Desktop header (display: none by default, display: flex on desktop)
+- `.comparison-table__header-content` - Header content (flex, align-items: center, cursor: pointer, gap: 0.75rem, padding: 1.5rem 1rem, width: 100%)
+- `.comparison-table__row` - Table row (flex column on mobile, flex row on desktop, border-bottom: 1px solid #E5E5E5)
+- `.comparison-table__cell` - Table cell (padding: 1rem, border-left: 1px solid #E5E5E5, display: flex, align-items: center, justify-content: center, text-align: center)
 - `.comparison-table__tiers` - Plan tiers header (gap: 0 on desktop)
 
 ### Cell Types
@@ -373,9 +381,9 @@ This guide provides a comprehensive overview of CSS classes organized by section
 - `.cell-highlighted` - Highlighted cell styling (background: rgb(91 117 238 / 5%), font-weight: 700)
 
 ### Mobile Tabs
-- `.mobile-tabs-nav` - Mobile tab navigation (position: sticky, top: 66px, z-index: 5)
-- `.mobile-tab-btn` - Mobile tab button (background: transparent, color: #6B7280, font-size: 14px)
-- `.mobile-tab-btn.active` - Active tab state (font-weight: 800, font-size: 16px, border-bottom: 2px solid #171717)
+- `.mobile-tabs-nav` - Mobile tab navigation (position: sticky, top: 66px, z-index: 5, background: white, padding: 10px top/bottom)
+- `.mobile-tab-btn` - Mobile tab button (background: transparent, color: #6B7280, border: none, cursor: pointer, transition: all 0.2s ease, font-family: Geist, font-size: 14px, font-weight: 500, white-space: nowrap, overflow: hidden, text-overflow: ellipsis, width: 100%, height: 100%, display: flex, align-items: center, justify-content: center, padding: 12px 8px, position: relative, z-index: 1)
+- `.mobile-tab-btn.active` - Active tab state (font-weight: 800, font-size: 16px, border-bottom: 2px solid #171717, color: #171717)
 - `.mobile-tab-btn span` - Tab button text (pointer-events: none, user-select: none)
 
 ### Comparison Cards
