@@ -1346,14 +1346,43 @@ document.addEventListener('DOMContentLoaded', function () {
         if (idx === activeIdx) {
           textSpan.classList.add('font-bold', 'text-[#171717]');
           textSpan.classList.remove('text-[#404040]', 'font-light');
+          // Add before pseudo-element classes for desktop view only
+          if (window.innerWidth >= 1024) { // lg breakpoint
+            textSpan.classList.add(
+              'before:absolute', 'before:left-[7px]', 'before:top-0',
+              'before:w-[2px]', 'before:h-full', 'before:bg-[#171717]'
+            );
+          }
         } else {
           textSpan.classList.remove('font-bold', 'text-[#171717]');
           textSpan.classList.add('text-[#404040]', 'font-light');
+          // Remove before pseudo-element classes
+          textSpan.classList.remove(
+            'before:absolute', 'before:left-[7px]', 'before:top-0',
+            'before:w-[2px]', 'before:h-full', 'before:bg-[#171717]'
+          );
         }
       });
     }
 
+    // Add click handlers for smooth scrolling
+    tocLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          const offsetTop = targetSection.offsetTop - 100; // Account for header height
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
     window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
     onScroll();
   }
 });

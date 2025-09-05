@@ -694,6 +694,25 @@ body:has(.alternative-hero-section).scrolled .nav-link {
   font-weight: 700;
   color: #0B0C0E;
   margin-bottom: 16px;
+  margin-top: 60px;
+}
+
+.blog-header-yt {
+  font-size: 28px;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: #0B0C0E;
+  margin-bottom: 16px;
+  margin-top: 170px;
+}
+
+@media (max-width: 768px) {
+  .blog-header-yt {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 16px;
+    margin-top: 80px;
+  }
 }
 
 .blog-text {
