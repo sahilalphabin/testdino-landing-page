@@ -3465,14 +3465,14 @@ img:is([sizes="auto" i], [sizes^="auto," i]) {
 
 /* Wrapper container with consistent padding */
 #wrapper {
-  max-width: 1000px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 0 36px;
+  padding: 0 24px;
 }
 
 @media (min-width: 768px) {
   #wrapper {
-    padding: 0 24px;
+    padding: 0 0px;
   }
 }
 
@@ -3678,6 +3678,277 @@ img:is([sizes="auto" i], [sizes^="auto," i]) {
 
 @media (max-width: 768px) {
   .feature-card-description {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+/* ==============================================
+   WHY CHOOSE TESTDINO SECTION
+   ============================================== */
+
+.why-choose-section {
+  padding: 48px 0 96px 0;
+  background: white;
+}
+
+@media (max-width: 768px) {
+  .why-choose-section {
+    padding: 48px 0;
+  }
+}
+
+.why-choose-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.why-choose-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.why-choose-title {
+  font-size: 42px;
+  color: #171717;
+  font-weight: 600;
+  margin-bottom: 14px;
+  font-family: Manrope, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .why-choose-title {
+    font-size: 28px;
+  }
+}
+
+.why-choose-description {
+  font-size: 16px;
+  color: #0B0C0E;
+  line-height: 24px;
+  max-width: 870px;
+  margin: 0 auto;
+  font-weight: 400;
+  font-family: Geist, sans-serif;
+}
+
+.comparison-table-wrapper {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.comparison-table {
+  background: white;
+}
+
+.table-header {
+  height: 60px;
+  border-bottom: 1px solid #F0F0F1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+  .table-header {
+    height: auto;
+    min-height: 50px;
+  }
+}
+
+.header-feature {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .header-feature {
+    padding: 0 8px;
+  }
+}
+
+.header-currents {
+  padding: 14px 60px;
+  background: #F5F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .header-currents {
+    padding: 10px 8px;
+  }
+}
+
+.header-testdino {
+  padding: 14px 60px;
+  background: #DCFCE6;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6.92px;
+}
+
+@media (max-width: 768px) {
+  .header-testdino {
+    padding: 10px 8px;
+    gap: 4px;
+  }
+}
+
+.header-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #171717;
+  font-family: Geist, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .header-text {
+    font-size: 14px;
+  }
+}
+
+.header-testdino-text {
+  font-size: 19.33px;
+  font-weight: 600;
+  color: #171717;
+  font-family: Manrope, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .header-testdino-text {
+    font-size: 14px;
+  }
+}
+
+.header-logo {
+  width: 30.75px;
+  height: 28.12px;
+}
+
+@media (max-width: 768px) {
+  .header-logo {
+    width: 20px;
+    height: 18px;
+  }
+}
+
+.table-row {
+  height: 60px;
+  border-bottom: 1px solid #F0F0F1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+  .table-row {
+    height: auto;
+    min-height: 50px;
+  }
+}
+
+.row-feature {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .row-feature {
+    padding: 0 8px;
+  }
+}
+
+.row-currents {
+  padding: 14px 60px;
+  background: #FAFAFA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .row-currents {
+    padding: 10px 8px;
+  }
+}
+
+.row-testdino {
+  padding: 14px 60px;
+  background: #F5FDF7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .row-testdino {
+    padding: 10px 8px;
+  }
+}
+
+.feature-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #171717;
+  font-family: Geist, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .feature-text {
+    font-size: 12px;
+  }
+}
+
+.feature-icon {
+  width: 19px;
+  height: 19px;
+}
+
+@media (max-width: 768px) {
+  .feature-icon {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.descriptions-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.description-item {
+  padding-top: 24px;
+}
+
+.description-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #171717;
+  margin-bottom: 16px;
+  font-family: Geist, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .description-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+}
+
+.description-text {
+  font-size: 18px;
+  color: #171717;
+  line-height: 30px;
+  font-weight: 400;
+  font-family: Geist, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .description-text {
     font-size: 14px;
     line-height: 24px;
   }
