@@ -735,8 +735,8 @@ body:has(.alternative-hero-section).scrolled .nav-link {
 /* Desktop only: apply padding and margin to .blog-content-section */
 @media (min-width: 1025px) {
   .blog-content-section {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 13rem;
+    padding-right: 4rem;
     margin-bottom: 40px;
   }
 }
