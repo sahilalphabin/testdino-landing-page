@@ -3766,6 +3766,7 @@ img:is([sizes="auto" i], [sizes^="auto," i]) {
   padding: 0 20px;
   display: flex;
   align-items: center;
+  background: #F0F0F1;
 }
 
 .header-currents {
@@ -3778,7 +3779,7 @@ img:is([sizes="auto" i], [sizes^="auto," i]) {
 
 .header-testdino {
   padding: 14px 60px;
-  background: #DCFCE6;
+  background: #C5FFD7;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -3822,15 +3823,15 @@ img:is([sizes="auto" i], [sizes^="auto," i]) {
   background: #FAFAFA;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
 
 .row-testdino {
   padding: 14px 60px;
-  background: #F5FDF7;
+  background: #E4FFEB;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
 
 .feature-text {

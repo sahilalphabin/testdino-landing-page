@@ -169,19 +169,25 @@
             </div>
             <!-- Dashboard Screenshot -->
             <div class="w-full flex justify-center items-center">
-                <div id="imageWrapper"
-                    class="relative justify-center align-center flex overflow-hidden w-full h-auto rounded-[3px] md:rounded-[12px] shadow-[0_0_30px_0_rgba(0,0,0,0.24)]"
-                    style="z-index:2;">
-                    <img id="mainVideoThumbnail"
-                        src="Testdino Landing Page Images/blog_images/AllureVsTestdino_big_image.svg"
-                        class="w-[90vw] h-auto object-contain transition-all duration-500"
-                        alt="Dashboard Video Thumbnail" style="min-width:320px; z-index:1;">
-                    <a href="javascript:void(0)" id="videoOverlay"
-                        data-video="https://www.youtube.com/embed/s8wgAsvapSQ"
-                        class="group absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hover:scale-110 transition-transform duration-200 z-10"
-                        onclick="playVideo(this)">
-                        <img src="Testdino Landing Page Images/icons/playbutton.svg" alt="Play" class="w-12 h-12 md:w-16 md:h-16">
-                    </a>
+                <div class="border border-white/20 rounded-xl" 
+                     style="background: rgba(255, 255, 255, 0.08); box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.24); padding: 8px 0 0 0;">
+                    <div class="rounded-xl overflow-hidden" 
+                         style="box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.12);">
+                        <div id="imageWrapper"
+                            class="relative justify-center align-center flex overflow-hidden w-full h-auto rounded-lg"
+                            style="z-index:2;">
+                            <img id="mainVideoThumbnail"
+                                src="Testdino Landing Page Images/blog_images/AllureVsTestdino_big_image.svg"
+                                class="w-[90vw] h-auto object-contain transition-all duration-500"
+                                alt="Dashboard Video Thumbnail" style="min-width:320px; z-index:1;">
+                            <a href="javascript:void(0)" id="videoOverlay"
+                                data-video="https://www.youtube.com/embed/s8wgAsvapSQ"
+                                class="group absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hover:scale-110 transition-transform duration-200 z-10"
+                                onclick="playVideo(this)">
+                                <img src="Testdino Landing Page Images/icons/playbutton.svg" alt="Play" class="w-12 h-12 md:w-16 md:h-16">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
