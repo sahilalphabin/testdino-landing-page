@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='robots' content='noindex, nofollow' />
+
+    <title>Home - TestDino</title>
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Home - Testdino" />
+    <meta property="og:url" content="https://testdino.com/" />
+    <meta property="og:site_name" content="Testdino" />
+    <meta property="article:modified_time" content="2025-07-29T10:08:20+00:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+
+
+
+
+    <!-- Global CSS styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Manrope -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Manrope:wght@200..800&display=swap"
+        rel=" stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Geist (via Vercel UI CDN – optional, includes UI styles) -->
+    <link rel="stylesheet" href="https://unpkg.com/@geist-ui/react@latest/dist/geist-ui.css" />
+    <link rel="stylesheet" href="assets/css/input.css">
+    <link rel="stylesheet" href="assets/css/nav-footer.css">
+    <link rel="stylesheet" href="assets/css/rotating-text.css">
+
+</head>
+
+<body class="flex min-h-screen flex-col index-page">
+    <!-- Navigation -->
+    <div class="header-container" id="header">
+        <nav class="nav-wrapper" id="nav">
+            <div class="nav-content">
+                <!-- Logo -->
+                <a href="https://testdino.com" class="nav-logo">
+                    <div class="nav-logo-link">
+                        <img src="Testdino Landing Page Images/icons/logo_testdino.svg" alt="" class="nav-logo-img">
+                        <!-- <span class="text-xl font-bold text-[#171717]">Testdino</span> -->
+                    </div>
+                </a>
+
+                <!-- Centered Nav Links -->
+                <div class="nav-links-desktop">
+                    <a href="/" target="_self" class="nav-link nav-link--active">
+                        Home </a>
+                    <a href="pricing.html" target="_self" class="nav-link">
+                        Pricing </a>
+                    <a href="docs.html" target="_self" class="nav-link">
+                        Docs </a>
+                    <a href="blogs.html" target="_self" class="nav-link">
+                        Blog </a>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="https://app.testdino.com" target="_blank" type="button" class="nav-cta-button">
+                    Start free </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+                        <rect width="30" height="2" fill="#141414" />
+                        <rect x="6" y="8" width="24" height="2" fill="#141414" />
+                        <rect y="16" width="30" height="2" fill="#141414" />
+                    </svg>
+                </button>
+
+                <!-- Mobile Menu Overlay -->
+                <div id="mobile-menu-overlay" class="mobile-menu-overlay hidden">
+                    <div class="mobile-menu-content">
+                        <!-- Mobile Header -->
+                        <div class="mobile-menu-header">
+                            <div class="mobile-menu-logo">
+                                <img src="Testdino Landing Page Images/icons/logo_testdino.svg" alt=""
+                                    class="nav-logo-img">
+                                <!-- <span class="text-xl font-bold text-[#171717]">Testdino</span> -->
+                            </div>
+                            <button id="close-mobile-menu" class="mobile-menu-close">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18"
+                                    fill="none">
+                                    <rect x="1.02203" y="15.8296" width="20.757" height="1.83901"
+                                        transform="rotate(-45 1.02203 15.8296)" fill="#141414" />
+                                    <rect x="1.90918" y="0.869999" width="20.757" height="1.83901"
+                                        transform="rotate(45 1.90918 0.869999)" fill="#141414" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Mobile Menu Items -->
+                        <div class="mobile-menu-nav">
+                            <div class="mobile-menu-links">
+                                <a href="/" target="_self" class="mobile-menu-link mobile-menu-link--active">
+                                    Home </a>
+                                <a href="pricing.html" target="_self" class="mobile-menu-link">
+                                    Pricing </a>
+                                <a href="docs.html" target="_self" class="mobile-menu-link">
+                                    Docs </a>
+                                <a href="blogs.html" target="_self" class="mobile-menu-link">
+                                    Blog </a>
+                            </div>
+
+                        </div>
+
+                        <!-- Mobile CTA -->
+                        <div class="mobile-menu-cta">
+                            <a href="#" target="_self" class="mobile-menu-cta-button">
+                                Start free </a>
+                        </div>
+                    </div>
+                </div>
+
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+        class="alternative-hero-section relative pt-[96px] px-[20px] pb-[40px] md:pb-[87px] md:pt-[140px] overflow-hidden -mt-[80px] h-full min-h-[72vh] md:min-h-[82vh] flex items-center">
+        <!-- Decorative Star -->
+        <div class="mx-auto max-w-[1080px]">
+            <!-- Hero Content -->
+            <div class="text-center mb-[46px] md:mb-[60px]">
+                <div class="flex items-center justify-center mb-[12px] md:mb-6">
+                    <div class="flex items-center gap-2">
+
+                        <!-- Main Badge -->
+                        <div class="playwright-badge">
+                            <div class="playwright-badge-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
+                                    fill="none">
+                                    <path
+                                        d="M8.12758 1.09876C8.24088 1.03404 8.3691 1 8.49958 1C8.63006 1 8.75828 1.03404 8.87158 1.09876L14.1216 4.09876C14.2363 4.16438 14.3316 4.25915 14.3979 4.37347C14.4642 4.48779 14.4992 4.6176 14.4992 4.74976C14.4992 4.88191 14.4642 5.01172 14.3979 5.12604C14.3316 5.24036 14.2363 5.33513 14.1216 5.40076L8.87158 8.40076C8.75828 8.46548 8.63006 8.49952 8.49958 8.49952C8.3691 8.49952 8.24088 8.46548 8.12758 8.40076L2.87758 5.40076C2.76287 5.33513 2.66753 5.24036 2.60123 5.12604C2.53492 5.01172 2.5 4.88191 2.5 4.74976C2.5 4.6176 2.53492 4.48779 2.60123 4.37347C2.66753 4.25915 2.76287 4.16438 2.87758 4.09876L8.12758 1.09876Z"
+                                        fill="#171717" />
+                                    <path
+                                        d="M3.06958 7.23928L2.87758 7.34928C2.76287 7.41491 2.66753 7.50968 2.60123 7.624C2.53492 7.73831 2.5 7.86813 2.5 8.00028C2.5 8.13244 2.53492 8.26225 2.60123 8.37657C2.66753 8.49089 2.76287 8.58566 2.87758 8.65128L8.12758 11.6513C8.24088 11.716 8.3691 11.75 8.49958 11.75C8.63006 11.75 8.75828 11.716 8.87158 11.6513L14.1216 8.65128C14.2365 8.58573 14.3321 8.49093 14.3986 8.3765C14.465 8.26208 14.5 8.13211 14.5 7.99978C14.5 7.86745 14.465 7.73748 14.3986 7.62306C14.3321 7.50864 14.2365 7.41384 14.1216 7.34828L13.9296 7.23828L9.61558 9.70328C9.27568 9.89744 8.89102 9.99956 8.49958 9.99956C8.10814 9.99956 7.72347 9.89744 7.38358 9.70328L3.06958 7.23928Z"
+                                        fill="#171717" />
+                                    <path
+                                        d="M2.87845 10.5993L3.07045 10.4893L7.38445 12.9533C7.72435 13.1474 8.10901 13.2496 8.50045 13.2496C8.89189 13.2496 9.27656 13.1474 9.61645 12.9533L13.9305 10.4883L14.1225 10.5983C14.2374 10.6638 14.333 10.7586 14.3994 10.8731C14.4659 10.9875 14.5009 11.1175 14.5009 11.2498C14.5009 11.3821 14.4659 11.5121 14.3994 11.6265C14.333 11.7409 14.2374 11.8357 14.1225 11.9013L8.87245 14.9013C8.75915 14.966 8.63093 15 8.50045 15C8.36997 15 8.24175 14.966 8.12845 14.9013L2.87845 11.9013C2.7635 11.8357 2.66795 11.7409 2.60148 11.6265C2.53501 11.5121 2.5 11.3821 2.5 11.2498C2.5 11.1175 2.53501 10.9875 2.60148 10.8731C2.66795 10.7586 2.7635 10.6638 2.87845 10.5983V10.5993Z"
+                                        fill="#171717" />
+                                </svg>
+                            </div>
+                            <span>Currents Alternative</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 class="text-[32px] font-[500] leading-normal md:text-[48px] md:leading-[55px] lg:text-[48px] text-[#0B0C0E] mb-[8px] md:mb-3 ff-Manrope"
+                    style="word-wrap: break-word;">
+                    Cleaner Playwright runs. Faster fixes
+                </h1>
+                <span
+                    class="flex items-center justify-center gap-0 text-gray-950 relative font-[500] ff-Manrope text-[18px] md:text-[22px] text-center leading-tight md:leading-normal px-2 md:px-0"
+                    style="word-wrap: break-word;">
+                    Smart reporting that shows what broke, why it broke, and what to fix next.
+                </span>
+
+                <p
+                    class="text-[14px] md:text-[16px] mb-[16px] leading-[20px] md:leading-[24px] md:mb-[20px] text-[#0B0C0E] mb-0 mt-[8px] md:mt-[12px] max-w-100 md:max-w-[664px] mx-auto">
+                    TestDino is smart reporting layer for Playwright. It centralizes runs, groups failures by cause,
+                    tracks flake rate. Saving 6-8 hours per engineer weekly.
+                </p>
+            </div>
+            <!-- Dashboard Screenshot -->
+            <div class="w-full flex justify-center items-center">
+                <div id="imageWrapper" class="relative justify-center align-center flex overflow-hidden w-full h-auto rounded-[3px] md:rounded-[12px] shadow-[0_0_30px_0_rgba(0,0,0,0.24)]"
+                    style="z-index:2;">
+                    <img id="mainVideoThumbnail"
+                        src="Testdino Landing Page Images/blog_images/AllureVsTestdino_big_image.svg"
+                        class="w-[90vw] h-auto object-contain transition-all duration-500"
+                        alt="Dashboard Video Thumbnail" style="min-width:320px; z-index:1;">
+                    <a href="javascript:void(0)" id="videoOverlay"
+                        data-video="https://www.youtube.com/embed/s8wgAsvapSQ"
+                        class="group absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hover:scale-110 transition-transform duration-200 z-10"
+                        onclick="playVideo(this)">
+                        <img src="Testdino Landing Page Images/icons/playbutton.svg" alt="Play" class="w-16 h-16">
+                    </a>
+                </div>
+            </div>
+    </section>
+
+    <!-- Wrapper -->
+    <section id="wrapper">
+        <!-- TestDino and Currents.dev: Which One Stands Out? -->
+        <section>
+            <div class="w-full rounded-xl">
+                <div
+                    class="relative flex flex-col items-center justify-center px-4 md:px-8 py-6 overflow-hidden rounded-lg h-[317px]">
+                    <p>Dummy Content</p>
+                </div>
+            </div>
+        </section>
+
+        <!--  Unique Strengths -->
+        <section class="unique-strengths-section">
+            <div class="unique-strengths-container">
+                <h2 class="unique-strengths-title">Unique Strengths</h2>
+                <div class="unique-strengths-content">
+                    <!-- TestDino -->
+                    <div class="platform-section">
+                        <div class="platform-header">
+                            <h3 class="platform-title">TestDino</h3>
+                            <p class="platform-description">
+                                TestDino is a Playwright-first AI test reporting platform. It classifies failures,
+                                highlights flaky tests, links issues to PRs, posts summaries, and provides release
+                                metrics—saving hours on end-to-end debugging, all with one-step CI integration and
+                                secure,
+                                encrypted data.
+                            </p>
+                        </div>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-card-icon-wrapper">
+                                    <svg class="feature-card-icon" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.66667 4.66675L6.32277 5.59611C5.87183 6.81475 5.64635 7.42408 5.20185 7.86861C4.75735 8.31308 4.14803 8.53855 2.92937 8.98955L2 9.33341L2.92937 9.67728C4.14803 10.1283 4.75735 10.3537 5.20185 10.7982C5.64635 11.2427 5.87183 11.8521 6.32277 13.0707L6.66667 14.0001L7.01053 13.0707C7.46153 11.8521 7.687 11.2427 8.13147 10.7982C8.576 10.3537 9.18533 10.1283 10.4039 9.67728L11.3333 9.33341L10.4039 8.98955C9.18533 8.53855 8.576 8.31308 8.13147 7.86861C7.687 7.42408 7.46153 6.81475 7.01053 5.59611L6.66667 4.66675Z"
+                                            stroke="#0B0C0E" stroke-width="1.15" stroke-linejoin="round" />
+                                        <path
+                                            d="M12 2L11.8526 2.3983C11.6593 2.92058 11.5627 3.18173 11.3722 3.37222C11.1817 3.56272 10.9206 3.65935 10.3983 3.85261L10 4L10.3983 4.14739C10.9206 4.34065 11.1817 4.43728 11.3722 4.62778C11.5627 4.81827 11.6593 5.07942 11.8526 5.6017L12 6L12.1474 5.6017C12.3407 5.07942 12.4373 4.81827 12.6278 4.62777C12.8183 4.43728 13.0794 4.34065 13.6017 4.14739L14 4L13.6017 3.85261C13.0794 3.65935 12.8183 3.56272 12.6278 3.37222C12.4373 3.18173 12.3407 2.92058 12.1474 2.3983L12 2Z"
+                                            stroke="#0B0C0E" stroke-width="0.8" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h4 class="feature-card-title">AI Error Classification</h4>
+                                <p class="feature-card-description">Automatically categorizes and prioritizes test
+                                    failures
+                                    using machine learning</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-card-icon-wrapper">
+                                    <svg class="feature-card-icon" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.66667 4.66675L6.32277 5.59611C5.87183 6.81475 5.64635 7.42408 5.20185 7.86861C4.75735 8.31308 4.14803 8.53855 2.92937 8.98955L2 9.33341L2.92937 9.67728C4.14803 10.1283 4.75735 10.3537 5.20185 10.7982C5.64635 11.2427 5.87183 11.8521 6.32277 13.0707L6.66667 14.0001L7.01053 13.0707C7.46153 11.8521 7.687 11.2427 8.13147 10.7982C8.576 10.3537 9.18533 10.1283 10.4039 9.67728L11.3333 9.33341L10.4039 8.98955C9.18533 8.53855 8.576 8.31308 8.13147 7.86861C7.687 7.42408 7.46153 6.81475 7.01053 5.59611L6.66667 4.66675Z"
+                                            stroke="#0B0C0E" stroke-width="1.15" stroke-linejoin="round" />
+                                        <path
+                                            d="M12 2L11.8526 2.3983C11.6593 2.92058 11.5627 3.18173 11.3722 3.37222C11.1817 3.56272 10.9206 3.65935 10.3983 3.85261L10 4L10.3983 4.14739C10.9206 4.34065 11.1817 4.43728 11.3722 4.62778C11.5627 4.81827 11.6593 5.07942 11.8526 5.6017L12 6L12.1474 5.6017C12.3407 5.07942 12.4373 4.81827 12.6278 4.62777C12.8183 4.43728 13.0794 4.34065 13.6017 4.14739L14 4L13.6017 3.85261C13.0794 3.65935 12.8183 3.56272 12.6278 3.37222C12.4373 3.18173 12.3407 2.92058 12.1474 2.3983L12 2Z"
+                                            stroke="#0B0C0E" stroke-width="0.8" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h4 class="feature-card-title">Role-Based Dashboards</h4>
+                                <p class="feature-card-description">Dedicated views for QA, developers, and managers
+                                    with
+                                    relevant metrics</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-card-icon-wrapper">
+                                    <svg class="feature-card-icon" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.66667 4.66675L6.32277 5.59611C5.87183 6.81475 5.64635 7.42408 5.20185 7.86861C4.75735 8.31308 4.14803 8.53855 2.92937 8.98955L2 9.33341L2.92937 9.67728C4.14803 10.1283 4.75735 10.3537 5.20185 10.7982C5.64635 11.2427 5.87183 11.8521 6.32277 13.0707L6.66667 14.0001L7.01053 13.0707C7.46153 11.8521 7.687 11.2427 8.13147 10.7982C8.576 10.3537 9.18533 10.1283 10.4039 9.67728L11.3333 9.33341L10.4039 8.98955C9.18533 8.53855 8.576 8.31308 8.13147 7.86861C7.687 7.42408 7.46153 6.81475 7.01053 5.59611L6.66667 4.66675Z"
+                                            stroke="#0B0C0E" stroke-width="1.15" stroke-linejoin="round" />
+                                        <path
+                                            d="M12 2L11.8526 2.3983C11.6593 2.92058 11.5627 3.18173 11.3722 3.37222C11.1817 3.56272 10.9206 3.65935 10.3983 3.85261L10 4L10.3983 4.14739C10.9206 4.34065 11.1817 4.43728 11.3722 4.62778C11.5627 4.81827 11.6593 5.07942 11.8526 5.6017L12 6L12.1474 5.6017C12.3407 5.07942 12.4373 4.81827 12.6278 4.62777C12.8183 4.43728 13.0794 4.34065 13.6017 4.14739L14 4L13.6017 3.85261C13.0794 3.65935 12.8183 3.56272 12.6278 3.37222C12.4373 3.18173 12.3407 2.92058 12.1474 2.3983L12 2Z"
+                                            stroke="#0B0C0E" stroke-width="0.8" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h4 class="feature-card-title">PR-Centric View</h4>
+                                <p class="feature-card-description">GitHub-like interface for seamless developer
+                                    workflow
+                                    integration</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Currents.dev -->
+                    <div class="platform-section">
+                        <div class="platform-header">
+                            <h3 class="platform-title">Currents.dev</h3>
+                            <p class="platform-description">
+                                Currents.dev is a cloud-based test reporting and analytics platform for Playwright that
+                                provides real-time streaming of test runs, centralized dashboards for logs, screenshots,
+                                and
+                                videos, and collaboration features to help teams monitor, debug, and analyze their test
+                                executions more effectively.
+                            </p>
+                        </div>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-card-icon-wrapper">
+                                    <svg class="feature-card-icon" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.66667 4.66675L6.32277 5.59611C5.87183 6.81475 5.64635 7.42408 5.20185 7.86861C4.75735 8.31308 4.14803 8.53855 2.92937 8.98955L2 9.33341L2.92937 9.67728C4.14803 10.1283 4.75735 10.3537 5.20185 10.7982C5.64635 11.2427 5.87183 11.8521 6.32277 13.0707L6.66667 14.0001L7.01053 13.0707C7.46153 11.8521 7.687 11.2427 8.13147 10.7982C8.576 10.3537 9.18533 10.1283 10.4039 9.67728L11.3333 9.33341L10.4039 8.98955C9.18533 8.53855 8.576 8.31308 8.13147 7.86861C7.687 7.42408 7.46153 6.81475 7.01053 5.59611L6.66667 4.66675Z"
+                                            stroke="#0B0C0E" stroke-width="1.15" stroke-linejoin="round" />
+                                        <path
+                                            d="M12 2L11.8526 2.3983C11.6593 2.92058 11.5627 3.18173 11.3722 3.37222C11.1817 3.56272 10.9206 3.65935 10.3983 3.85261L10 4L10.3983 4.14739C10.9206 4.34065 11.1817 4.43728 11.3722 4.62778C11.5627 4.81827 11.6593 5.07942 11.8526 5.6017L12 6L12.1474 5.6017C12.3407 5.07942 12.4373 4.81827 12.6278 4.62777C12.8183 4.43728 13.0794 4.34065 13.6017 4.14739L14 4L13.6017 3.85261C13.0794 3.65935 12.8183 3.56272 12.6278 3.37222C12.4373 3.18173 12.3407 2.92058 12.1474 2.3983L12 2Z"
+                                            stroke="#0B0C0E" stroke-width="0.8" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h4 class="feature-card-title">Real-Time Streaming</h4>
+                                <p class="feature-card-description">Live test execution updates with immediate
+                                    visibility
+                                    into running tests</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-card-icon-wrapper">
+                                    <svg class="feature-card-icon" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.66667 4.66675L6.32277 5.59611C5.87183 6.81475 5.64635 7.42408 5.20185 7.86861C4.75735 8.31308 4.14803 8.53855 2.92937 8.98955L2 9.33341L2.92937 9.67728C4.14803 10.1283 4.75735 10.3537 5.20185 10.7982C5.64635 11.2427 5.87183 11.8521 6.32277 13.0707L6.66667 14.0001L7.01053 13.0707C7.46153 11.8521 7.687 11.2427 8.13147 10.7982C8.576 10.3537 9.18533 10.1283 10.4039 9.67728L11.3333 9.33341L10.4039 8.98955C9.18533 8.53855 8.576 8.31308 8.13147 7.86861C7.687 7.42408 7.46153 6.81475 7.01053 5.59611L6.66667 4.66675Z"
+                                            stroke="#0B0C0E" stroke-width="1.15" stroke-linejoin="round" />
+                                        <path
+                                            d="M12 2L11.8526 2.3983C11.6593 2.92058 11.5627 3.18173 11.3722 3.37222C11.1817 3.56272 10.9206 3.65935 10.3983 3.85261L10 4L10.3983 4.14739C10.9206 4.34065 11.1817 4.43728 11.3722 4.62778C11.5627 4.81827 11.6593 5.07942 11.8526 5.6017L12 6L12.1474 5.6017C12.3407 5.07942 12.4373 4.81827 12.6278 4.62777C12.8183 4.43728 13.0794 4.34065 13.6017 4.14739L14 4L13.6017 3.85261C13.0794 3.65935 12.8183 3.56272 12.6278 3.37222C12.4373 3.18173 12.3407 2.92058 12.1474 2.3983L12 2Z"
+                                            stroke="#0B0C0E" stroke-width="0.8" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h4 class="feature-card-title">Self-Hosted Option</h4>
+                                <p class="feature-card-description">Complete control over data and infrastructure with
+                                    on-premise deployment</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-card-icon-wrapper">
+                                    <svg class="feature-card-icon" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.66667 4.66675L6.32277 5.59611C5.87183 6.81475 5.64635 7.42408 5.20185 7.86861C4.75735 8.31308 4.14803 8.53855 2.92937 8.98955L2 9.33341L2.92937 9.67728C4.14803 10.1283 4.75735 10.3537 5.20185 10.7982C5.64635 11.2427 5.87183 11.8521 6.32277 13.0707L6.66667 14.0001L7.01053 13.0707C7.46153 11.8521 7.687 11.2427 8.13147 10.7982C8.576 10.3537 9.18533 10.1283 10.4039 9.67728L11.3333 9.33341L10.4039 8.98955C9.18533 8.53855 8.576 8.31308 8.13147 7.86861C7.687 7.42408 7.46153 6.81475 7.01053 5.59611L6.66667 4.66675Z"
+                                            stroke="#0B0C0E" stroke-width="1.15" stroke-linejoin="round" />
+                                        <path
+                                            d="M12 2L11.8526 2.3983C11.6593 2.92058 11.5627 3.18173 11.3722 3.37222C11.1817 3.56272 10.9206 3.65935 10.3983 3.85261L10 4L10.3983 4.14739C10.9206 4.34065 11.1817 4.43728 11.3722 4.62778C11.5627 4.81827 11.6593 5.07942 11.8526 5.6017L12 6L12.1474 5.6017C12.3407 5.07942 12.4373 4.81827 12.6278 4.62777C12.8183 4.43728 13.0794 4.34065 13.6017 4.14739L14 4L13.6017 3.85261C13.0794 3.65935 12.8183 3.56272 12.6278 3.37222C12.4373 3.18173 12.3407 2.92058 12.1474 2.3983L12 2Z"
+                                            stroke="#0B0C0E" stroke-width="0.8" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h4 class="feature-card-title">Rich Media Support</h4>
+                                <p class="feature-card-description">Comprehensive screenshots, videos, and trace
+                                    collection
+                                    for debugging</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- When to Choose Which -->
+        <section class="comparison-section">
+            <div class="comparison-container">
+                <h2 class="comparison-title">When to Choose Which</h2>
+                <div class="comparison-cards-container">
+                    <!-- Currents.dev -->
+                    <div class="comparison-card comparison-card--currents">
+                        <h3 class="comparison-card-title">Choose Currents.dev if you're looking for...</h3>
+                        <ul class="comparison-features-list">
+                            <li class="comparison-feature-item">
+                                <img src="Testdino Landing Page Images/icons/tick1.svg" alt=""
+                                    class="comparison-feature-icon">
+                                <span class="comparison-feature-text">Real-time test streaming and live execution
+                                    visibility</span>
+                            </li>
+                            <li class="comparison-feature-item">
+                                <img src="Testdino Landing Page Images/icons/tick1.svg" alt=""
+                                    class="comparison-feature-icon">
+                                <span class="comparison-feature-text">Self-hosted deployment with full data
+                                    control</span>
+                            </li>
+                            <li class="comparison-feature-item">
+                                <img src="Testdino Landing Page Images/icons/tick1.svg" alt=""
+                                    class="comparison-feature-icon">
+                                <span class="comparison-feature-text">Comprehensive media collection (screenshots,
+                                    videos,
+                                    traces)</span>
+                            </li>
+                            <li class="comparison-feature-item">
+                                <img src="Testdino Landing Page Images/icons/tick1.svg" alt=""
+                                    class="comparison-feature-icon">
+                                <span class="comparison-feature-text">Established platform with proven
+                                    scalability</span>
+                            </li>
+                            <li class="comparison-feature-item">
+                                <img src="Testdino Landing Page Images/icons/tick1.svg" alt=""
+                                    class="comparison-feature-icon">
+                                <span class="comparison-feature-text">Traditional test reporting without AI
+                                    complexity</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- TestDino -->
+                    <div class="comparison-card comparison-card--testdino">
+                        <h3 class="comparison-card-title">Choose TestDino if you're looking for...</h3>
+                        <ul class="comparison-features-list">
+                            <li class="comparison-feature-item">
+                                <img src="Testdino Landing Page Images/icons/tick1.svg" alt=""
+                                    class="comparison-feature-icon">
+                                <span class="comparison-feature-text">AI-powered error analysis and failure
+                                    classification</span>
+                            </li>
+                            <li class="comparison-feature-item">
+                                <img src="Testdino Landing Page Images/icons/tick1.svg" alt=""
+                                    class="comparison-feature-icon">
+                                <span class="comparison-feature-text">Role-specific dashboards for QA, developers, and
+                                    managers</span>
+                            </li>
+                            <li class="comparison-feature-item">
+                                <img src="Testdino Landing Page Images/icons/tick1.svg" alt=""
+                                    class="comparison-feature-icon">
+                                <span class="comparison-feature-text">PR-centric workflow with GitHub-like
+                                    interface</span>
+                            </li>
+                            <li class="comparison-feature-item">
+                                <img src="Testdino Landing Page Images/icons/tick1.svg" alt=""
+                                    class="comparison-feature-icon">
+                                <span class="comparison-feature-text">Predictive instability alerts and smart
+                                    insights</span>
+                            </li>
+                            <li class="comparison-feature-item">
+                                <img src="Testdino Landing Page Images/icons/tick1.svg" alt=""
+                                    class="comparison-feature-icon">
+                                <span class="comparison-feature-text">Quick setup with free entry tier</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="faq-section pb-[0px]">
+        <div class="mx-auto max-w-[1000px]">
+            <div class="text-center mb-[10px] md:mb-10
+                        How do I get a quote for my organization’s penetration test?
+                    animate-fade-in" data-animate="true">
+                <h2 class="faq-header">FAQs</h2>
+            </div>
+            <!-- Dropdown Item 1 (Active State) -->
+            <!-- Added border and border color for active state -->
+            <div class="faq-accordion-item faq-accordion-item--active">
+                <button class="faq-accordion-button" onclick="toggleAccordion(this)">
+                    <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
+                        What is TestDino?
+                    </span>
+                    <svg class="faq-accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-accordion-content" style="display: block;">
+                    <p class="faq-accordion-text">TestDino is smart test reporting and analytics
+                        platform
+                        built for Playwright and Selenium.
+                        It helps QA and dev teams analyze test failures faster, detect flakiness, and ship with
+                        confidence.</p>
+                </div>
+            </div>
+
+            <div class="faq-accordion-item">
+                <button class="faq-accordion-button" onclick="toggleAccordion(this)">
+                    <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
+                        How does TestDino work?
+                    </span>
+                    <svg class="faq-accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-accordion-content" style="display: none;">
+                    <p class="faq-accordion-text">TestDino connects to your CI pipeline (GitHub
+                        Actions,
+                        GitLab, etc.) and analyzes every test run.
+                        It collects execution data, classifies failures using AI, and visualizes trends across branches,
+                        commits,
+                        and environments .</p>
+                </div>
+            </div>
+
+            <!-- Dropdown Item 2 (Normal State) -->
+            <!-- No border for normal state -->
+            <div class="faq-accordion-item">
+                <button class="faq-accordion-button" onclick="toggleAccordion(this)">
+                    <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
+                        What kind of AI insights does it provide?
+                    </span>
+                    <svg class="faq-accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-accordion-content" style="display: none;">
+                    <p class="faq-accordion-text">TestDino’s AI doesn’t just report failures —
+                        it explains
+                        them.</p>
+                    <p class="faq-accordion-text">Powered by a trained language model, it reads
+                        your test
+                        failures like a senior developer and suggests the fix. Whether it’s a <br> flaky selector, a UI
+                        change, or a
+                        real bug, you’ll get a root-cause diagnosis with confidence scores, historical context, and <br>
+                        actionable
+                        recommendations.</p>
+                    <p class="faq-accordion-text">Instead of logs, you get insight.<br>Instead of
+                        re-runs, you
+                        get resolution.</p>
+                </div>
+            </div>
+            <!-- Dropdown Item 3 (Normal State) -->
+            <!-- No border for normal state -->
+            <div class="faq-accordion-item">
+                <button class="faq-accordion-button" onclick="toggleAccordion(this)">
+                    <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
+                        What testing frameworks does it support?
+                    </span>
+                    <svg class="faq-accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-accordion-content" style="display: none;">
+                    <p class="faq-accordion-text">Currently Playwright only. Support for Selenium and
+                        Cypress
+                        are coming soon .</p>
+                </div>
+            </div>
+            <!-- Dropdown Item 4 (Normal State) -->
+            <!-- No border for normal state -->
+            <div class="faq-accordion-item">
+                <button class="faq-accordion-button" onclick="toggleAccordion(this)">
+                    <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
+                        Can it detect flaky tests automatically?
+                    </span>
+                    <svg class="faq-accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-accordion-content" style="display: none;">
+                    <p class="faq-accordion-text">Yes. TestDino spots inconsistent pass/fail patterns
+                        and flags
+                        them as flaky. It also categorizes flakiness into timing, network, <br> or environment-related
+                        issues .</p>
+                </div>
+            </div>
+            <!-- Dropdown Item 5 (Normal State) -->
+            <!-- No border for normal state -->
+            <div class="faq-accordion-item">
+                <button class="faq-accordion-button" onclick="toggleAccordion(this)">
+                    <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
+                        Can I get alerts or export reports?
+                    </span>
+                    <svg class="faq-accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-accordion-content" style="display: none;">
+                    <p class="-[#0B0C0E] text-[16px] md:text-[16px] mb-1">Absolutely</p>
+                    <ul class="faq-accordion-list mb-[32px]">
+                        <li>
+                            Slack, Teams, and email alerts
+                        </li>
+                        <li>
+                            Export test runs as CSV/PDF
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- No border for normal state -->
+            <div class="faq-accordion-item">
+                <button class="faq-accordion-button" onclick="toggleAccordion(this)">
+                    <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
+                        Is it customizable to our environments, branches, and workflows?
+                    </span>
+                    <svg class="faq-accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="faq-accordion-content" style="display: none;">
+                    <p class="-[#0B0C0E] text-[16px] md:text-[16px] mb-1">Fully. You can configure:</p>
+                    <ul class="faq-accordion-list">
+                        <li>
+                            Branch and environment mappings
+                        </li>
+                        <li>
+                            Test tagging (e.g., production-sanity)
+                        </li>
+                        <li>Alerting thresholds</li>
+                        <li>Custom flake thresholds and filters</li>
+                    </ul>
+                    <p class="text-[#0B0C0E] mt-[15px] mb-[32px]">It works with pre-PR, post-merge, and multi-env
+                        workflows .</p>
+                </div>
+            </div>
+            <div class="faq-accordion-item">
+                <button class="faq-accordion-button" onclick="toggleAccordion(this)">
+                    <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
+                        How much time does TestDino save each developer?
+                    </span>
+                    <svg class="faq-accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-accordion-content" style="display: none;">
+                    <p class="faq-accordion-text"> <span class="font-[700]">Each developer saves 6–8
+                            hours per
+                            week</span> by avoiding flaky test reruns, log hunting, slow triage and lack of analytics
+                    </p>
+                </div>
+            </div>
+            <div class="faq-accordion-item">
+                <button class="faq-accordion-button" onclick="toggleAccordion(this)">
+                    <span class="font-[500] text-[16px] md:text-[22px] text-[#0B0C0E] ff-Manrope">
+                        What's included in the beta?
+                    </span>
+                    <svg class="faq-accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-accordion-content" style="display: none;">
+                    <p class="faq-accordion-text">Beta users get full access to all features during the testing period,
+                        <b>plus a lifetime
+                            discount</b> when
+                        we launch. This includes AI insights, integrations, alerts, and premium support - all free
+                        during beta.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compare Both, Choose What Fits Best -->
+    <section class="w-full max-w-[1080px] mx-auto px-2 sm:px-4">
+        <div class="w-full border border-[#E5E5E5] rounded-xl mb-8">
+            <div
+                class="relative flex flex-col items-center justify-center px-3 sm:px-4 md:px-8 py-6 bg-gradient-to-r from-[#002781] via-[#0F0F23] to-[#4D006E] overflow-hidden rounded-lg h-[260px] md:h-[317px]">
+                <h2 class="text-white text-xl sm:text-2xl md:text-3xl font-semibold ff-Manrope mb-2 text-center"
+                    style="font-size: 22px;">
+                    Compare Both, Choose What Fits Best
+                </h2>
+                <p class="text-white text-sm sm:text-base md:text-lg text-center max-w-full sm:max-w-[600px] mb-6">
+                    For teams comparing Currents competitors, TestDino stands out as the most advanced Currents
+                    alternative. Start using our automated test reporting tool today.
+                </p>
+                <a href="https://app.testdino.com" target="_blank"
+                    class="btn btn-md bg-white text-black font-semibold rounded-lg shadow-sm px-4 sm:px-6 py-2 hover:bg-gray-100 transition-all">
+                    Try TestDino
+                </a>
+                <!-- Desktop Dino Image -->
+                <img src="Testdino Landing Page Images/blog_images/Group 626031.svg" alt="Dino"
+                    class="hidden md:block scale-[0.8] absolute right-[-10px] bottom-[-50px] h-auto opacity-30 pointer-events-none select-none"
+                    style="z-index:1;">
+                <!-- Mobile Dino Image -->
+                <img src="Testdino Landing Page Images/blog_images/Group 626031.svg" alt="Dino"
+                    class="block md:hidden scale-[0.6] absolute right-0 bottom-[-30px] h-[80px] opacity-20 pointer-events-none select-none"
+                    style="z-index:1;">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <div class="footer-content">
+            <img src="Testdino Landing Page Images/icons/CTA DINO.svg" alt="Logo" class="footer-dino-logo" />
+
+            <!-- Main Footer Content -->
+            <div class="footer-main-grid">
+                <!-- Logo and Newsletter -->
+                <div class="footer-newsletter">
+                    <div class="footer-logo-container">
+                        <div class="footer-logo">
+                            <img src="Testdino Landing Page Images/icons/logo_testdino.svg" alt="Testdino">
+                        </div>
+                    </div>
+                    <p class="footer-newsletter-text">Join our email list for product
+                        updates, tips, and offers.</p>
+                    <div class="footer-form">
+                        <input type="email" placeholder="example@mail.com" class="footer-form-input">
+                        <button type="submit" class="footer-form-button">Subscribe</button>
+                    </div>
+
+                    <!-- Social Icons -->
+                    <div class="footer-social">
+                        <a href="#" target="_blank" class="footer-social-link">
+                            <img src="Testdino Landing Page Images/icons/social/x-logo.svg" alt="X">
+                        </a>
+                        <a href="#" target="_blank" class="footer-social-link">
+                            <img src="Testdino Landing Page Images/icons/social/fa-brands_linkedin.svg" alt="LinkedIn">
+                        </a>
+                        <a href="#" target="_blank" class="footer-social-link">
+                            <img src="Testdino Landing Page Images/icons/social/mdi_github.svg" alt="GitHub">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Resources and Legal Links -->
+                <div class="footer-links-section">
+                    <!-- Resources Section -->
+                    <div class="footer-links-group">
+                        <h3 class="footer-links-title">Resources</h3>
+                        <ul class="footer-links-list">
+                            <li class="footer-links-item"><a href="pricing.html" target="_self"
+                                    class="footer-links-link">Pricing</a></li>
+                            <li class="footer-links-item"><a href="docs.html" target="_self"
+                                    class="footer-links-link">Documentation</a>
+                            </li>
+                            <li class="footer-links-item"><a href="blogs.html" target="_self"
+                                    class="footer-links-link">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Legal -->
+                    <div class="footer-links-group">
+                        <h3 class="footer-links-title">Legal</h3>
+                        <ul class="footer-links-list">
+                            <li class="footer-links-item"><a href="/terms-conditions/" target="_self"
+                                    class="footer-links-link">Terms &
+                                    Conditions</a></li>
+                            <li class="footer-links-item"><a href="/privacy-policy/" target="_self"
+                                    class="footer-links-link">Privacy
+                                    Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-border">
+                <p class="footer-copyright">© 2025 TestDino. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loader Container -->
+    <div id="customLoader" class="fixed inset-0 z-50 bg-white bg-opacity-80 flex items-center justify-center hidden">
+        <div class="animate-spin-slow p-6 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="34" viewBox="0 0 37 34" fill="none">
+                <path
+                    d="M23.0165 1.79674C22.5534 2.11069 22.26 2.4219 22.1226 2.93857C22.0205 3.58608 22.1459 4.09039 22.569 4.6176C23.2746 5.36369 24.4592 5.74822 25.5047 5.83421C25.9703 5.84669 26.3872 5.78947 26.8344 5.67195C27.2734 5.60708 27.6774 5.8716 27.9887 6.18795C29.6928 7.92003 30.7872 10.5242 30.8883 12.7627C30.9307 14.3131 30.9454 16.0379 29.7658 17.2612C28.9102 18.028 27.8003 18.3169 26.6344 18.3221C25.815 18.3089 25.0463 18.1117 24.2593 17.9186C22.8083 17.5709 21.4463 17.3183 19.9356 17.3203C19.8412 17.3204 19.8412 17.3204 19.7449 17.3205C16.1345 17.3346 12.9024 18.7567 10.3604 21.0726C9.28341 22.0823 8.46065 23.2934 7.69366 24.5105C6.98754 25.6273 6.17723 26.6065 5.18459 27.5233C5.03223 27.665 4.86343 27.7891 4.67898 27.8854C4.51357 27.9717 4.35792 28.0479 4.21122 28.115C3.0786 28.633 0.703655 27.6747 1.0294 28.8768C1.32393 29.9637 3.8622 31.9561 9.32273 30.4186C10.5368 30.0768 11.5972 29.4156 12.6791 28.8096C12.7544 28.7674 12.848 28.8176 12.8548 28.9037C12.9354 29.8541 13.2603 30.8567 13.4937 31.7968C14.0539 33.0789 16.7613 32.908 17.2281 32.1387C17.3325 31.9443 17.3856 31.7392 17.4461 31.5308C17.5496 31.1195 17.6345 30.7064 17.7124 30.2904C17.729 30.2046 17.7455 30.1188 17.7626 30.0303C17.7828 29.9254 17.8028 29.8204 17.8228 29.7155C17.8561 29.54 18.0194 29.42 18.1967 29.4411C19.6533 29.6064 21.0717 29.5826 22.5295 29.5011C22.6465 29.4945 22.7493 29.5782 22.7662 29.6942C22.8061 29.9647 22.847 30.2438 22.8881 30.518C22.9611 31.0057 22.9438 31.5281 23.175 31.9637C24.0992 33.7047 28.434 33.6776 29.7245 32.1007C30.3218 31.3709 30.1046 30.2851 30.2112 29.3481C30.2466 29.0351 30.2814 28.7221 30.3144 28.409C30.3467 28.1039 30.3817 27.7991 30.4171 27.4943C30.4264 27.4006 30.4356 27.3069 30.4452 27.2104C30.4948 26.7961 30.5057 26.7057 30.6513 26.4716C30.7514 26.3108 30.889 26.177 31.0455 26.0703C31.1532 25.9902 31.1532 25.9902 31.2632 25.9084C31.3778 25.8273 31.3778 25.8273 31.4948 25.7445C32.6598 24.8768 33.6981 23.9024 34.4998 22.737C34.5334 22.6888 34.5671 22.6406 34.6017 22.5909C35.6248 21.1056 36.146 19.4096 36.3904 17.6782C36.3982 17.623 36.406 17.5678 36.414 17.5109C36.9359 13.7196 36.4323 9.87583 34.4064 6.49761C34.374 6.44343 34.3415 6.38925 34.308 6.33343C33.3698 4.79169 32.0899 3.32787 30.5787 2.22409C30.4866 2.15468 30.3945 2.08527 30.2997 2.01375C28.023 0.326533 25.4116 0.335139 23.0165 1.79674ZM30.2986 3.76256C30.3476 3.80416 30.3965 3.84577 30.447 3.88864C33.2755 6.3009 35.0326 9.83691 35.1725 13.3846C35.1839 13.8097 35.1845 14.2348 35.1825 14.66C35.1824 14.7351 35.1822 14.8101 35.1821 14.8875C35.1782 16.0664 35.1211 17.2181 34.8732 18.378C34.8593 18.4449 34.8453 18.5118 34.8309 18.5808C34.2228 21.3967 32.3773 23.7217 29.8099 25.3452C28.9646 25.9403 28.9006 25.9853 28.087 26.2554C27.9854 26.2892 27.882 26.2077 27.8916 26.101C27.9353 25.5875 27.9752 25.0734 27.9937 24.5586C27.9947 24.5368 27.9954 24.5189 27.9961 24.5035C28.0016 24.3761 28.0118 24.2423 27.9569 24.1273C27.8874 23.9816 27.7235 23.8967 27.5646 23.8684C27.5481 23.8655 27.5319 23.8632 27.5157 23.8615C27.1938 23.8284 26.8396 24.0283 26.7915 24.3484C26.7861 24.3836 26.781 24.423 26.775 24.4682C26.7645 24.5442 26.7539 24.6201 26.7431 24.6984C26.7271 24.8232 26.7271 24.8232 26.7108 24.9505C26.699 25.0376 26.6873 25.1246 26.6751 25.2143C26.637 25.4995 26.6004 25.7849 26.5642 26.0703C26.546 26.2134 26.546 26.2134 26.5274 26.3595C26.4402 27.0499 26.356 27.7406 26.2724 28.4314C26.2238 28.8332 26.1749 29.235 26.1258 29.6367C26.1149 29.7274 26.104 29.8181 26.0928 29.9116C26.0825 29.9959 26.0722 30.0802 26.0616 30.1671C26.0527 30.2407 26.0438 30.3143 26.0346 30.3901C26.0215 30.4804 26.0276 30.8596 26.0357 31.2836C26.0509 32.0824 25.4463 32.4813 24.8315 31.9711C24.5152 31.7085 24.3347 31.3592 24.3047 30.9493C24.2751 30.546 24.2497 30.0938 24.2068 29.8524C24.1963 29.7934 24.1858 29.7343 24.1749 29.6735C24.0573 29.0113 23.9432 28.3489 23.8425 27.6842C23.8261 27.5761 23.8097 27.468 23.7928 27.3566C23.762 27.1509 23.7318 26.945 23.7022 26.7391C23.6883 26.646 23.6744 26.5529 23.6601 26.4569C23.6484 26.3758 23.6367 26.2946 23.6247 26.211C23.6155 26.1676 23.6052 26.1253 23.5939 26.0838C23.5003 25.7408 23.1209 25.4336 22.768 25.4769C22.5523 25.5034 22.418 25.6327 22.3601 25.842C22.2498 26.2409 22.3952 26.7308 22.4563 27.1173C22.4736 27.2165 22.491 27.3157 22.5088 27.4178C22.5689 27.8247 22.2597 28.1757 21.851 28.2222C21.3002 28.2848 20.7528 28.3089 20.1865 28.3086C20.1008 28.3086 20.0151 28.3087 19.9268 28.3087C18.9218 28.3309 18.2868 27.3516 18.5096 26.3715C18.524 26.308 18.5383 26.2446 18.5531 26.1792C18.6125 25.9163 18.6721 25.6534 18.733 25.3907C18.9473 24.4643 19.0431 24.0505 19.0658 23.7866C19.0957 23.439 18.8625 23.0916 18.5146 23.0652C18.2947 23.0486 18.0436 23.1268 17.9213 23.3103C17.826 23.4531 17.7923 23.616 17.7473 23.8221C17.7248 23.9224 17.7024 24.0227 17.6792 24.1261C17.6559 24.2353 17.6325 24.3445 17.6085 24.4571C17.5831 24.5719 17.5576 24.6867 17.5321 24.8016C17.4646 25.1057 17.3984 25.4101 17.3324 25.7145C17.2286 26.1928 17.1228 26.6707 17.0173 27.1487C16.9913 27.2666 16.9654 27.3844 16.9395 27.5023C16.7311 28.4507 16.5684 29.7214 16.3613 30.7926C16.277 31.2284 15.8952 31.5308 15.4513 31.5308C14.9734 31.5308 14.5543 31.1822 14.475 30.7109C14.4636 30.6431 14.4545 30.588 14.4494 30.5544C14.3714 30.0381 14.2918 29.522 14.2113 29.006C14.1626 28.6932 14.1144 28.3803 14.0676 28.0672C14.0223 27.765 13.9756 27.463 13.9277 27.1611C13.9098 27.046 13.8923 26.9309 13.8755 26.8156C13.8518 26.654 13.8259 26.4927 13.7999 26.3313C13.7934 26.289 13.7869 26.2466 13.7804 26.204C13.765 26.1035 13.7447 26.003 13.704 25.9098C13.6659 25.8226 13.6224 25.7529 13.5656 25.6888C13.4197 25.5238 13.1874 25.4539 12.9691 25.483C12.9381 25.4872 12.9074 25.4928 12.8726 25.5007C12.7285 25.533 12.594 25.5875 12.5307 25.7209C12.4832 25.8212 12.4734 25.9565 12.488 26.0665C12.502 26.1716 12.5173 26.2765 12.536 26.381C12.5461 26.4411 12.555 26.495 12.5628 26.5439C12.6634 27.1761 12.1123 27.6781 11.5331 27.9507C11.4197 28.0124 11.3068 28.0748 11.1943 28.138C9.13614 29.562 6.7041 29.9869 4.24723 29.9283C3.53537 29.9114 3.21616 29.1496 3.92819 29.1427C3.99393 29.1421 4.11418 29.135 4.1782 29.1201C6.6331 28.5462 7.83086 26.8073 9.40952 24.3796C11.1502 21.7268 13.8245 19.6454 17.1346 18.8457C17.8399 18.6924 18.5577 18.5825 19.282 18.5489C19.374 18.5444 19.4659 18.5399 19.5607 18.5352C21.2606 18.4932 22.8922 18.8629 24.5251 19.2514C24.6193 19.2738 24.6193 19.2738 24.7154 19.2966C24.8872 19.3376 25.0588 19.3792 25.2305 19.4207C26.7806 19.7664 28.3541 19.5702 29.7556 18.8755C31.0199 18.1274 31.6933 17.1391 32.0218 15.8123C32.7188 12.7655 32.0622 9.53125 30.2248 6.91213C29.3429 5.69867 28.4282 3.72423 26.6867 4.40893C25.9302 4.67489 25.1999 4.56746 24.4657 4.29207C24.2298 4.18975 24.0264 4.1006 23.8564 3.97863C23.5044 3.72597 23.4055 3.18492 23.7342 2.90251C26.1546 1.24613 28.3103 2.03386 30.2986 3.76256ZM28.0201 27.5923C28.5319 27.2874 29.0202 27.7884 28.9471 28.3796C28.8297 29.33 28.695 30.4224 28.5856 31.3056C28.5464 31.6228 28.4538 31.8702 28.199 32.0632C27.5857 32.5274 26.9838 32.0987 27.1272 31.343C27.2469 30.712 27.3705 30.0724 27.3873 29.8767C27.3991 29.7275 27.4088 29.5782 27.4168 29.4288C27.4263 28.6193 27.4273 28.5338 27.7036 27.9552C27.7749 27.8057 27.8779 27.677 28.0201 27.5923Z"
+                    fill="black" stroke="black" stroke-width="0.202574"></path>
+            </svg>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/scripts.js" defer></script>
+
+</body>
+
+</html>
