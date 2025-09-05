@@ -736,14 +736,14 @@ body:has(.alternative-hero-section).scrolled .nav-link {
 @media (min-width: 1025px) {
   .blog-content-section {
     padding-left: 12rem;
-    padding-right: 4rem;
+    padding-right: 1rem;
     margin-bottom: 40px;
   }
 }
 
 /* Responsive adjustments for the content sections */
 @media (width <= 1024px) {
-  /* .blog-content-section {
+  /* .blog-content-section {;
     padding-left: 1rem;
     padding-right: 1rem;
   } */
