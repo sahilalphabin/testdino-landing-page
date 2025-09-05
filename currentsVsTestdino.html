@@ -941,9 +941,9 @@
                     <div class="feature-section-title">
                         5. Analytics
                     </div>
-                    <div class="feature-comparison-grid">
+                    <div class="feature-comparison-grid flex flex-col gap-4">
                         <!-- Currents.dev Card -->
-                        <div class="comparison-card">
+                        <div class="comparison-card border-0 bg-white">
                             <div class="card-header">
                                 <span class="card-title">
                                     Currents.dev
@@ -952,7 +952,7 @@
                             <p class="card-description">
                                 Currents.dev is a cloud-based test reporting and analytics platform for Playwright that provides real-time streaming of test runs. Unlike Currents, TestDino organizes analytics into four clear categories instead of just throwing a long list at users.
                             </p>
-                            <div class="feature-details">
+                            <div class="feature-details bg-[#FAFAFA]">
                                 <div>
                                     <span class="feature-label">
                                         What Currents provides
@@ -982,7 +982,7 @@
                             </div>
                         </div>
                         <!-- TestDino Card -->
-                        <div class="comparison-card testdino-card">
+                        <div class="comparison-card testdino-card border-0 bg-white">
                             <div class="card-header">
                                 <span class="card-logo">
                                     <img src="Testdino Landing Page Images/icons/logo.svg" alt="TestDino">
@@ -995,74 +995,75 @@
                                 Unlike Currents, TestDino organizes analytics into four clear categories instead of just throwing a long list at users. We provide meaningful insights thoughtfully arranged into: Summary, Test Run, Test Case, and Environment.
                             </p>
                             <div class="feature-details">
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 16px;">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                                     <!-- 1. Summary -->
-                                    <div>
-                                        <div class="feature-label" style="margin-bottom: 8px;">
+                                    <div class="border rounded-lg bg-[#FAFAFA] p-4">
+                                        <div class="font-semibold feature-label mb-2">
                                             1. Summary
                                         </div>
-                                        <div style="font-size: 14px;">• Test run volume per day</div>
-                                        <div style="font-size: 14px;">• Test flakiness trends</div>
-                                        <div style="font-size: 14px;">• New failures introduced</div>
-                                        <div style="font-size: 14px;">• Total test retry trends</div>
+                                        <ul class="list-disc list-inside text-[14px] text-[#404040] space-y-1">
+                                            <li>Test run volume per day</li>
+                                            <li>Test flakiness trends</li>
+                                            <li>New failures introduced</li>
+                                            <li>Total test retry trends</li>
+                                        </ul>
                                     </div>
-                                    
                                     <!-- 2. Test Run -->
-                                    <div>
-                                        <div class="feature-label" style="margin-bottom: 8px;">
+                                    <div class="border rounded-lg bg-[#FAFAFA] p-4">
+                                        <div class="font-semibold feature-label mb-2">
                                             2. Test Run
                                         </div>
-                                        <div style="font-size: 14px;">• Average run time benchmarking</div>
-                                        <div style="font-size: 14px;">• Speed by branch performance</div>
-                                        <div style="font-size: 14px;">• Test execution efficiency trends</div>
-                                        <div style="font-size: 14px;">• Test run speed distribution</div>
+                                        <ul class="list-disc list-inside text-[14px] text-[#404040] space-y-1">
+                                            <li>Average run time benchmarking</li>
+                                            <li>Speed by branch performance</li>
+                                            <li>Test execution efficiency trends</li>
+                                            <li>Test run speed distribution</li>
+                                        </ul>
                                     </div>
-                                    
                                     <!-- 3. Test Case -->
-                                    <div>
-                                        <div class="feature-label" style="margin-bottom: 8px;">
+                                    <div class="border rounded-lg bg-[#FAFAFA] p-4">
+                                        <div class="font-semibold feature-label mb-2">
                                             3. Test Case
                                         </div>
-                                        <div style="font-size: 14px;">• Most frequently failing test cases</div>
-                                        <div style="font-size: 14px;">• Flaky vs stable tests visibility</div>
-                                        <div style="font-size: 14px;">• Failure frequency patterns</div>
+                                        <ul class="list-disc list-inside text-[14px] text-[#404040] space-y-1">
+                                            <li>Most frequently failing test cases</li>
+                                            <li>Flaky vs stable tests visibility</li>
+                                            <li>Failure frequency patterns</li>
+                                        </ul>
                                     </div>
-                                    
                                     <!-- 4. Environment -->
-                                    <div>
-                                        <div class="feature-label" style="margin-bottom: 8px;">
+                                    <div class="border rounded-lg bg-[#FAFAFA] p-4">
+                                        <div class="font-semibold feature-label mb-2">
                                             4. Environment
                                         </div>
-                                        <div style="font-size: 14px;">• Cross-environment performance comparison</div>
-                                        <div style="font-size: 14px;">• Environment-specific failure identification</div>
-                                        <div style="font-size: 14px;">• Team velocity and blocking transparency</div>
+                                        <ul class="list-disc list-inside text-[14px] text-[#404040] space-y-1">
+                                            <li>Cross-environment performance comparison</li>
+                                            <li>Environment-specific failure identification</li>
+                                            <li>Team velocity and blocking transparency</li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                     <!-- Image slider will be added after this section -->
-                    <div class="feature-image-slider-container">
+                    <!-- <div class="feature-image-slider-container">
                         <div class="slider-wrapper">
 
-                            <!-- Main Image -->
                             <div class="slider-main-container" style="background-color: #F0F4FF;">
                                 <h3 class="slider-title">TestDino: Analytics</h3>
                                 <img id="slider-main-image"
                                     src="Testdino Landing Page Images/Hero section thumbnail image/Analytics.svg"
                                     alt="Analytics" class="slider-main-image" loading="lazy" />
                             </div>
-                            <!-- Thumbnails with Navigation -->
                             <div class="slider-thumbnails-container"
                                 data-images='["Testdino Landing Page Images/Hero section thumbnail image/Analytics.svg","Testdino Landing Page Images/Hero section thumbnail image/TestDino Overview.svg"]'
                                 data-alts='["Analytics","TestDino Overview"]'>
-                                <!-- Left Arrow -->
+
                                 <button id="slider-prev" type="button" class="slider-nav-button" aria-label="Previous">
                                     <img src="Testdino Landing Page Images/blog_images/next-arrow(1).svg" alt="Previous"
                                         class="slider-nav-icon rotate-180" />
                                 </button>
 
-                                <!-- Thumbnails Wrapper -->
                                 <div class="slider-thumbnails-wrapper">
                                     <button type="button" class="slider-thumb" data-index="0"
                                         aria-label="Show Analytics">
@@ -1075,8 +1076,6 @@
                                             alt="TestDino Overview" loading="lazy" />
                                     </button>
                                 </div>
-
-                                <!-- Right Arrow -->
                                 <button id="slider-next" type="button" class="slider-nav-button" aria-label="Next">
                                     <img src="Testdino Landing Page Images/blog_images/next-arrow(1).svg" alt="Next"
                                         class="slider-nav-icon" />
@@ -1084,9 +1083,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-
+                </div> -->
             </div>
         </section>
 
