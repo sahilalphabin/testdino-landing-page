@@ -4344,8 +4344,9 @@ img:is([sizes="auto" i], [sizes^="auto," i]) {
 
 .slider-thumb:focus,
 .slider-thumb.active {
-  border: 2px solid #16A34A;
+  border: 1px solid #A3A3A3;
   border-radius: 8px;
+  box-shadow: 0px 0px 4px 0px #00000033;
   outline: none;
 }
 
