@@ -611,9 +611,7 @@ body:has(.alternative-hero-section).scrolled .nav-link {
 
 
   /* Mobile category tag and title margins */
-  main .tag-product-led-growth {
-    margin-left: 0.5rem !important;
-  }
+
   .blog-text {
     font-size: 16px !important;
     line-height: 30px !important;
@@ -693,8 +691,8 @@ body:has(.alternative-hero-section).scrolled .nav-link {
   line-height: 2.25rem;
   font-weight: 700;
   color: #0B0C0E;
-  margin-bottom: 16px;
-  margin-top: 60px;
+  margin-bottom: 28px;
+  margin-top: 48px;
 }
 
 .blog-header-yt {
@@ -704,6 +702,15 @@ body:has(.alternative-hero-section).scrolled .nav-link {
   color: #0B0C0E;
   margin-bottom: 16px;
   margin-top: 170px;
+}
+
+.sub-blog-header {
+  font-size: 24px;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: #0B0C0E;
+  margin-bottom: 28px;
+  margin-top: 48px;
 }
 
 @media (max-width: 768px) {

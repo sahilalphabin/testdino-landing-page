@@ -102,7 +102,7 @@
   <!-- Category Navigation -->
   <div class="bg-gray-50 border-gray-200 md:max-w-7xl mx-auto">
     <div class="max-w-[1200px] mx-auto">
-      <div class="flex items-center gap-[24px] py-4 overflow-x-auto scrollbar-hide">
+      <div class="flex items-center gap-[24px] py-4 overflow-x-auto scrollbar-hide ml-[20px]">
         <img src="Testdino Landing Page Images/blog_images/Frame 2147227012.svg" alt="arrow-left" class="w-10 h-10">
         <a href="#" class="text-sm font-semibold text-[#404040] whitespace-nowrap">Test Analytics</a>
         <a href="#"
@@ -144,34 +144,34 @@
             </p>
             <div>
               <!-- Author Info and Share Icons -->
-              <div class="flex items-center justify-between mt-20">
+              <div class="flex items-center mt-20 mb-20">
+                <!-- Author Info (left) -->
                 <div class="flex items-center gap-[12px]">
                   <img src="Testdino Landing Page Images/icons/Profile-1.webp" alt="Testdino team"
-                    class="w-[46px] h-[46px] rounded-full">
+                    class="w-[46.05px] h-[46.05px] rounded-full">
                   <div>
-                    <p class="text-[14px] font-bold text-[#0B0C0E]">Testdino team</p>
-                    <p class="text-[14px] text-gray-500">Jun 21, 2025</p>
+                    <p class="text-[16px] font-bold text-[#0B0C0E]">Testdino team</p>
+                    <p class="text-[15px] text-gray-500">Jun 21, 2025</p>
                   </div>
                 </div>
-
-                <!-- Social Media Icons -->
+                <!-- Spacer -->
+                <div class="flex-1"></div>
+                <!-- Social Media Icons (right) -->
                 <div class="flex gap-4">
                   <!-- LinkedIn -->
                   <button class="footer-social-link">
-                    <img src="Testdino Landing Page Images/icons/social/fa-brands_linkedin.svg" alt="LinkedIn" height="20" width="20">
+                    <img src="Testdino Landing Page Images/icons/social/fa-brands_linkedin.svg" alt="LinkedIn" height="23" width="23">
                   </button>
                   <!-- X (Twitter) -->
                   <button class="footer-social-link">
-                    <img src="Testdino Landing Page Images/icons/social/x-logo.svg" alt="X" height="20" width="20">
+                    <img src="Testdino Landing Page Images/icons/social/x-logo.svg" alt="X" height="30" width="30">
                   </button>
                   <!-- Link/Share -->
                   <button class="footer-social-link">
-                    <img src="Testdino Landing Page Images/icons/social/mdi_github.svg" alt="Github" height="20" width="20">
+                    <img src="Testdino Landing Page Images/icons/social/mdi_github.svg" alt="Github" height="25" width="25">
                   </button>
                 </div>
               </div>
-            </div>
-          </div>
 
           <!-- Right Column: Featured Image -->
           <div class="flex justify-center">
@@ -182,7 +182,7 @@
       </div>
     </div>
     <!-- Line -->
-    <div class="w-full h-[1px] bg-[#E0E0E0]" style="margin-top: 1px; margin-bottom: 40px;"></div>
+    <div class="w-full h-[1px] bg-[#E0E0E0]" style="margin-top: 1px; margin-bottom: 60px;"></div>
 
     <!-- Blog Content -->
     <div class="max-w-[1200px] md:max-w-7xl mx-auto">
@@ -191,7 +191,7 @@
         <!-- Left Sidebar - Table of Contents -->
         <div class="lg:w-1/4 mb-12 lg:mb-0 md:max-w-7xl mx-auto">
           <div class="sticky top-28 md:max-w-7xl mx-auto" style="font-size: 16px;">
-            <nav id="toc-nav" class="flex flex-col gap-2">
+            <nav id="toc-nav" class="flex flex-col gap-4">
               <a href="#what-is-reportportal" class="toc-link relative pl-0 lg:pl-4 transition-all duration-200"
                 data-section="what-is-reportportal">
                 <span class="text-[16px] font-bold text-[#171717] leading-tight">What is ReportPortal?</span>
@@ -234,7 +234,7 @@
           <section id="what-is-reportportal" class="blog-content-section">
             <h2 class="blog-header ">What is ReportPortal?</h2>
             <img src="Testdino Landing Page Images/Testdino vs ReportPortal/ReportPortal.svg" alt="ReportPortal"
-              class="lg:w-[856px] lg:h-[483px] mb-[50px] lg:scale-125"
+            class="w-100 h-auto lg:mb-[90px] mb-[50px] mt-20 lg:scale-125">
             <p class="blog-text" style="font-size: 18px;">
               ReportPortal is an open-source test reporting and analytics platform designed to aggregate and visualize
               test execution data. It helps QA teams track test results, monitor trends, and manage defect reporting
@@ -247,7 +247,7 @@
 
             <div class="w-full max-w-4xl mx-auto mb-6">
               <div class="">
-                <h3 class="text-[22px] font-semibold lg:mb-[16px] mb-4 lg:mt-[60px] mt-[60px]">1. How ReportPortal Works</h3>
+                <h3 class="text-[22px] font-semibold lg:mb-[16px] mb-4 lg:mt-[40px] mt-[50px]">1. How ReportPortal Works</h3>
                 <p class="blog-text" style="font-size: 18px;">ReportPortal aggregates test execution data, but its
                   workflow often creates friction for modern QA teams. The reliance on plugins, manual setup, and
                   maintenance slows down adoption and makes scaling difficult.</p>
@@ -527,7 +527,7 @@
               Instead of asking QA teams to wrestle with configuration, Testdino simply reads the Playwright reports you already generate and transforms them into AI-powered test analytics tools. This means you get:
             </p>
             <!-- Dashboards that matter -->
-            <p class="blog-header ">1. <span class="text-[#1F4CF1] font-semibold">Dashboards</span> that matter</p>
+            <h3 class="sub-blog-header ">1. Dashboards that matter</h3>
             <p class="blog-text" style="font-size: 18px;">
               Role-based views for QA leads, developers, and managers, highlighting test health, failure trends, and flakiness without drowning you in infrastructure data. 
             </p>
@@ -536,7 +536,7 @@
             </p>
             <img src="Testdino Landing Page Images/Testdino vs ReportPortal/Dashbord_that_matters.svg" alt="Dashboard that matters" class="w-100 h-auto lg:mb-[150px] mb-[32px] lg:scale-125 mt-20">
             <!-- Test Run Intelligence -->
-            <p class="blog-header ">2. <span class="text-[#1F4CF1] font-semibold">Test</span> run intelligence</p>
+            <h3 class="sub-blog-header ">2. Test run intelligence</h3>
             <p class="blog-text" style="font-size: 18px;">
               Failures aren’t just listed, they’re categorized with automated root cause analysis software (timeouts, UI changes, network errors) and grouped by flakiness.          </p>
             <!-- Image/Video Container -->
@@ -555,7 +555,7 @@
               </div>
             </div>
             <!-- AI insights -->
-            <p class="blog-header-yt ">3. AI insights</p>
+            <h3 class="sub-blog-header ">3. AI insights</h3>
             <p class="blog-text" style="font-size: 18px;">
               Testdino’s AI-powered test anThe platform detects regressions and patterns unique to Playwright workflows, saving engineers 6–8 hours a week.alytics tools provide real-time insights into test execution, helping teams identify and fix flaky tests faster.
             </p>
@@ -575,7 +575,7 @@
               </div>
             </div>
           <!-- Pull Request Visibility -->
-            <p class="blog-header-yt ">4. Pull Request Visibility</p>
+            <h3 class="sub-blog-header ">4. Pull Request Visibility</h3>
             <p class="blog-text" style="font-size: 18px;">
               Every PR is linked directly to its test runs, so teams can track pass/fail history and ensure stability before merge.            </p>
             <!-- Image/Video Container -->
@@ -596,7 +596,7 @@
 
             <!--Analytics-->
             
-            <p class="blog-header-yt ">5. Analytics that drive action</p>
+          <h3 class="sub-blog-header ">5. Analytics that drive action</h3>
             <p class="blog-text" style="font-size: 18px;">
               From flakiness trends to retry behavior, Testdino gives you the data that makes CI/CD pipelines faster, more reliable, and easier to manage.
             
