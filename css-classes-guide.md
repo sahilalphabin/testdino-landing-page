@@ -155,9 +155,15 @@ This guide provides a comprehensive overview of CSS classes organized by section
 
 ### Hero Section States
 - `.hero-section` - Default hero styling
-- `.alternative-hero-section` - Alternative gradient hero
+- `.alternative-hero-section` - Alternative gradient hero with specific styling (relative pt-[96px] px-[20px] pb-[40px] md:pb-[87px] md:pt-[140px] overflow-hidden -mt-[80px] h-full min-h-[72vh] md:min-h-[82vh] flex items-center)
 - Mobile-specific white text and SVG styling
 - Responsive navigation logo switching (white/black based on scroll state)
+
+### Hero Video/Image Elements
+- `.border border-white/20 rounded-xl` - Video container with white border and rounded corners
+- `.rounded-xl overflow-hidden` - Inner container with rounded corners and overflow hidden
+- `.group absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hover:scale-110 transition-transform duration-200 z-10` - Video overlay button with hover effects
+- `.w-12 h-12 md:w-16 md:h-16` - Responsive play button sizing
 
 ### Hero Responsive Behavior
 - Mobile: Always white text and SVG
@@ -370,6 +376,22 @@ This guide provides a comprehensive overview of CSS classes organized by section
 - `.comparison-table__cell` - Table cell (padding: 1rem, border-left: 1px solid #E5E5E5, display: flex, align-items: center, justify-content: center, text-align: center)
 - `.comparison-table__tiers` - Plan tiers header (gap: 0 on desktop)
 
+### Currents vs TestDino Comparison Table
+- `.comparison-table-wrapper` - Table wrapper (overflow: hidden, border-radius: 8px)
+- `.table-header` - Table header (height: 60px/auto, grid-template-columns: repeat(3, 1fr))
+- `.header-feature` - Feature column header (padding: 0 20px/8px)
+- `.header-currents` - Currents column header (padding: 14px 60px/10px 8px, background: #F5F5F5)
+- `.header-testdino` - TestDino column header (padding: 14px 60px/10px 8px, background: #DCFCE6)
+- `.header-text` - Header text (font-size: 18px/14px, font-weight: 500)
+- `.header-testdino-text` - TestDino header text (font-size: 19.33px/14px, font-weight: 600)
+- `.header-logo` - Header logo (30.75px x 28.12px/20px x 18px)
+- `.table-row` - Table row (height: 60px/auto, grid-template-columns: repeat(3, 1fr))
+- `.row-feature` - Feature column (padding: 0 20px/8px)
+- `.row-currents` - Currents column (padding: 14px 60px/10px 8px, background: #FAFAFA)
+- `.row-testdino` - TestDino column (padding: 14px 60px/10px 8px, background: #F5FDF7)
+- `.feature-text` - Feature text (font-size: 16px/12px, font-weight: 500)
+- `.feature-icon` - Feature icon (19px x 19px/15px x 15px)
+
 ### Cell Types
 - `.comparison-table__cell--label` - Feature label cell (width: 100%, font-size: 16px, color: #212123)
 - `.comparison-table__cell--value` - Feature value cell (font-size: 16px, color: #212123)
@@ -495,6 +517,41 @@ This guide provides a comprehensive overview of CSS classes organized by section
 - `.text-brand-blue` - Brand blue color (#5B75EE)
 - `.text-neutral` - Neutral text color (#212123)
 - `.text-muted` - Muted text color (#6B7280)
+
+### Tailwind Utility Classes (from currentsVsTestdino.html)
+- `.font-weight-600` - Font weight 600
+- `.font-manrope` - Manrope font family
+- `.font-geist` - Geist font family
+- `.font-normal` - Font weight normal
+- `.font-medium` - Font weight medium
+- `.font-bold` - Font weight bold
+- `.text-[#AEA6A6]` - Custom text color (muted gray)
+- `.text-[#16181D]` - Custom text color (dark gray)
+- `.text-[#0B0C0E]` - Custom text color (very dark)
+- `.bg-gradient-to-r` - Right gradient background
+- `.from-[#002781]` - Gradient start color (dark blue)
+- `.via-[#0F0F23]` - Gradient middle color (very dark blue)
+- `.to-[#4D006E]` - Gradient end color (purple)
+- `.border-white/20` - White border with 20% opacity
+- `.hover:scale-110` - Scale on hover (110%)
+- `.hover:bg-gray-100` - Gray background on hover
+- `.transition-all` - Transition all properties
+- `.duration-200` - Transition duration 200ms
+- `.duration-500` - Transition duration 500ms
+- `.leading-tight` - Tight line height
+- `.leading-[32px]` - Custom line height
+- `.leading-[55px]` - Custom line height
+- `.opacity-30` - 30% opacity
+- `.opacity-20` - 20% opacity
+- `.pointer-events-none` - Disable pointer events
+- `.select-none` - Disable text selection
+- `.overflow-hidden` - Hide overflow
+- `.rounded-xl` - Extra large border radius
+- `.rounded-lg` - Large border radius
+- `.shadow-sm` - Small shadow
+- `.z-10` - Z-index 10
+- `.z-1` - Z-index 1
+- `.z-2` - Z-index 2
 
 ### Layout Utilities
 - `.flex-center` - Center alignment (display: flex, align-items: center, justify-content: center)
@@ -637,6 +694,26 @@ This guide provides a comprehensive overview of CSS classes organized by section
 - `.feature-details` - Feature details container (padding-left: 4px, margin-top: 8px)
 - `.feature-label` - Feature label (font-size: 18px/14px, font-weight: 700, line-height: 30px/24px)
 - `.feature-value` - Feature value (font-size: 18px/14px, font-weight: 400, line-height: 30px/24px)
+
+---
+
+## CTA/Footer Sections
+
+### Compare Both CTA Section
+- `.w-full max-w-[1080px] mx-auto px-2 sm:px-4` - CTA section container (full width with max-width and responsive padding)
+- `.w-full border border-[#E5E5E5] rounded-xl mb-8` - CTA card wrapper (full width with border and rounded corners)
+- `.relative flex flex-col items-center justify-center px-3 sm:px-4 md:px-8 py-6 bg-gradient-to-r from-[#002781] via-[#0F0F23] to-[#4D006E] overflow-hidden rounded-lg h-[260px] md:h-[317px]` - CTA content container (gradient background, centered content, responsive sizing)
+- `.text-white text-[28px] sm:text-[30px] md:text-[32px] font-bold font-manrope mb-2 text-center` - CTA title (responsive text sizing, white color, bold weight)
+- `.text-white text-[12px] sm:text-[14px] md:text-[16px] font-geist font-normal text-center max-w-full sm:max-w-[600px] mb-6` - CTA description (responsive text sizing, white color, normal weight)
+- `.btn btn-md bg-white text-[#16181D] text-[12px] sm:text-[14px] md:text-[16px] font-geist font-medium rounded-lg shadow-sm px-4 sm:px-6 py-2 hover:bg-gray-100 transition-all` - CTA button (white background, dark text, responsive sizing, hover effects)
+
+### Decorative Dino Images
+- `.hidden md:block scale-[0.8] absolute right-[-10px] bottom-[-50px] h-auto opacity-30 pointer-events-none select-none` - Desktop dino image (hidden on mobile, scaled, positioned, low opacity)
+- `.block md:hidden scale-[0.6] absolute right-0 bottom-[-30px] h-[80px] opacity-20 pointer-events-none select-none` - Mobile dino image (visible on mobile, smaller scale, positioned, very low opacity)
+
+### Disclaimer Text
+- `.w-full px-4 absolute left-1/2 bottom-4 transform -translate-x-1/2` - Disclaimer container (full width, centered, positioned at bottom)
+- `.text-center text-[#AEA6A6] text-[8px] xs:text-[9px] sm:text-[11px] md:text-[12px] font-manrope font-medium leading-tight max-w-full sm:max-w-[420px] mx-auto` - Disclaimer text (responsive sizing, muted color, centered, constrained width)
 
 ---
 
