@@ -1517,92 +1517,105 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 // ============================================================================
 
 document.addEventListener('DOMContentLoaded', function() {
-  let current = 0;
-  const mainImg = document.getElementById('slider-main-image');
-  const thumbs = document.querySelectorAll('.slider-thumb');
-  const prevBtn = document.getElementById('slider-prev');
-  const nextBtn = document.getElementById('slider-next');
-  const container = document.querySelector('.slider-thumbnails-container');
-  
-  // Only initialize if elements exist
-  if (!mainImg || !thumbs.length || !prevBtn || !nextBtn || !container) {
-    return;
-  }
-
-  // Get images and alts from HTML data attributes
-  let images, alts;
-  try {
-    images = JSON.parse(container.getAttribute('data-images') || '[]');
-    alts = JSON.parse(container.getAttribute('data-alts') || '[]');
-  } catch (e) {
-    console.error('Error parsing slider data attributes:', e);
-    return;
-  }
-  
-  // Fallback if data attributes are empty
-  if (!images.length) {
-    console.error('No images found in data attributes');
-    return;
-  }
-
-  function showSlide(idx) {
-    current = idx;
-    mainImg.src = images[idx];
-    mainImg.alt = alts[idx];
+  // Initialize all sliders
+  function initSlider(sliderId) {
+    let current = 0;
+    const mainImg = document.getElementById(`slider-main-image-${sliderId}`);
+    const prevBtn = document.getElementById(`slider-prev-${sliderId}`);
+    const nextBtn = document.getElementById(`slider-next-${sliderId}`);
     
-    thumbs.forEach((btn, i) => {
-      if (i === idx) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
-    });
-  }
+    // Find the container for this specific slider
+    const sliderWrapper = mainImg?.closest('.slider-wrapper');
+    if (!sliderWrapper) return;
+    
+    const container = sliderWrapper.querySelector('.slider-thumbnails-container');
+    const thumbs = sliderWrapper.querySelectorAll('.slider-thumb');
+    
+    // Only initialize if all elements exist
+    if (!mainImg || !thumbs.length || !prevBtn || !nextBtn || !container) {
+      return;
+    }
 
-  // Thumbnail click handlers
-  thumbs.forEach((btn, idx) => {
-    btn.addEventListener('click', (e) => {
+    // Get images and alts from HTML data attributes
+    let images, alts;
+    try {
+      images = JSON.parse(container.getAttribute('data-images') || '[]');
+      alts = JSON.parse(container.getAttribute('data-alts') || '[]');
+    } catch (e) {
+      console.error(`Error parsing slider ${sliderId} data attributes:`, e);
+      return;
+    }
+    
+    // Fallback if data attributes are empty
+    if (!images.length) {
+      console.error(`No images found in data attributes for slider ${sliderId}`);
+      return;
+    }
+
+    function showSlide(idx) {
+      current = idx;
+      mainImg.src = images[idx];
+      mainImg.alt = alts[idx] || `Image ${idx + 1}`;
+      
+      thumbs.forEach((btn, i) => {
+        if (i === idx) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+
+    // Thumbnail click handlers
+    thumbs.forEach((btn, idx) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        showSlide(idx);
+      });
+    });
+
+    // Navigation button handlers
+    prevBtn.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
+      const idx = (current - 1 + images.length) % images.length;
       showSlide(idx);
     });
-  });
 
-  // Navigation button handlers
-  prevBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const idx = (current - 1 + images.length) % images.length;
-    showSlide(idx);
-  });
-
-  nextBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const idx = (current + 1) % images.length;
-    showSlide(idx);
-  });
-
-  // Keyboard navigation
-  const sliderContainer = mainImg.closest('.feature-image-slider-container');
-  if (sliderContainer) {
-    sliderContainer.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') {
-        e.preventDefault();
-        prevBtn.click();
-      }
-      if (e.key === 'ArrowRight') {
-        e.preventDefault();
-        nextBtn.click();
-      }
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const idx = (current + 1) % images.length;
+      showSlide(idx);
     });
-    
-    // Make container focusable for keyboard navigation
-    sliderContainer.setAttribute('tabindex', '0');
+
+    // Keyboard navigation
+    const sliderContainer = mainImg.closest('.feature-image-slider-container');
+    if (sliderContainer) {
+      sliderContainer.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          prevBtn.click();
+        }
+        if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          nextBtn.click();
+        }
+      });
+      
+      // Make container focusable for keyboard navigation
+      sliderContainer.setAttribute('tabindex', '0');
+    }
+
+    // Initialize first slide
+    showSlide(0);
   }
 
-  // Initialize first slide
-  showSlide(0);
+  // Initialize all sliders (1, 2, 3, 4)
+  for (let i = 1; i <= 4; i++) {
+    initSlider(i);
+  }
 });
 
 // ============================================================================
