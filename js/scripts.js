@@ -1346,25 +1346,9 @@ document.addEventListener('DOMContentLoaded', function () {
         if (idx === activeIdx) {
           textSpan.classList.add('font-bold', 'text-[#171717]');
           textSpan.classList.remove('text-[#404040]', 'font-light');
-          textSpan.classList.add(
-            'before:absolute',
-            'before:left-[7px]',
-            'before:top-0',
-            'before:w-[2px]',
-            'before:h-full',
-            'before:bg-[#171717]'
-          );
         } else {
           textSpan.classList.remove('font-bold', 'text-[#171717]');
           textSpan.classList.add('text-[#404040]', 'font-light');
-          textSpan.classList.remove(
-            'before:absolute',
-            'before:left-[7px]',
-            'before:top-0',
-            'before:w-[2px]',
-            'before:h-full',
-            'before:bg-[#171717]'
-          );
         }
       });
     }
