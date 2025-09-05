@@ -3766,7 +3766,7 @@ img:is([sizes="auto" i], [sizes^="auto," i]) {
   padding: 0 20px;
   display: flex;
   align-items: center;
-  background: #F0F0F1;
+  background: #F5F5F5;
 }
 
 .header-currents {
