@@ -25,140 +25,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/input.css">
     <link rel="stylesheet" href="assets/css/nav-footer.css">
-    <link rel="stylesheet" href="assets/css/pricing.css">
     <link rel="stylesheet" href="assets/css/rotating-text.css">
-
-    <style>
-        /* Custom radio buttons */
-        input[type="radio"] {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            border: 2px solid #d1d5db;
-            border-radius: 50%;
-            outline: none;
-            transition: all 0.15s ease-in-out;
-        }
-
-        input[type="radio"]:checked {
-            border-color: #171717;
-            background-color: #171717;
-            box-shadow: inset 0 0 0 4px white;
-        }
-
-        /* Gradient border styles for pricing cards */
-        .pricing-card {
-            transition: all 0.3s ease-in-out;
-            position: relative;
-        }
-
-        .pricing-card.recommended {
-            border: 2px solid transparent !important;
-            background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, #8B5CF6, #EC4899) border-box !important;
-            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.15) !important;
-            border-radius: 16px !important;
-        }
-    </style>
-
-    <style>
-        /* Slider tick labels exact positioning */
-        .slider-labels {
-            position: relative;
-            height: 18px;
-        }
-
-        .slider-labels .slider-label {
-            position: absolute;
-            top: 0;
-            transform: translateX(-50%);
-            font-size: 15px;
-            color: #4B5563;
-            /* gray-600 */
-            white-space: nowrap;
-        }
-
-        .slider-labels .slider-label:nth-child(1) {
-            left: 0%;
-            transform: translateX(0);
-        }
-
-        .slider-labels .slider-label:nth-child(2) {
-            left: 20%;
-        }
-
-        .slider-labels .slider-label:nth-child(3) {
-            left: 40%;
-        }
-
-        .slider-labels .slider-label:nth-child(4) {
-            left: 60%;
-        }
-
-        .slider-labels .slider-label:nth-child(5) {
-            left: 80%;
-        }
-
-        .slider-labels .slider-label:nth-child(6) {
-            left: 100%;
-            transform: translateX(-100%);
-        }
-    </style>
-
-    <style>
-        /* Test execution slider - consistent alignment and filled track */
-        #testExecutionSlider {
-            -webkit-appearance: none;
-            appearance: none;
-            height: 8px; /* match track height for a single, clean bar */
-            border-radius: 9999px;
-            background: linear-gradient(to right, #171717 0%, #171717 20%, #ffffff 20%, #ffffff 100%) !important;
-            outline: none;
-            box-shadow: inset 0 0 0 1px #E2E4E9; /* subtle border */
-        }
-
-        #testExecutionSlider::-webkit-slider-runnable-track {
-            height: 8px;
-            background: transparent;
-            border-radius: 9999px;
-        }
-
-        #testExecutionSlider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 16px;
-            height: 16px;
-            background: #ffffff;
-            border: 2px solid #171717;
-            border-radius: 9999px;
-            margin-top: -4px; /* centers the 16px thumb on 8px track */
-            cursor: pointer;
-            transform: translateY(0); /* override any inherited transforms */
-        }
-
-        /* Firefox */
-        #testExecutionSlider::-moz-range-track {
-            height: 8px;
-            background: transparent;
-            border-radius: 9999px;
-        }
-
-        #testExecutionSlider::-moz-range-progress {
-            height: 8px;
-            background: #171717;
-            border-radius: 9999px;
-        }
-
-        #testExecutionSlider::-moz-range-thumb {
-            width: 16px;
-            height: 16px;
-            background: #ffffff;
-            border: 2px solid #171717;
-            border-radius: 9999px;
-            cursor: pointer;
-        }
-    </style>
 
     <title>Pricing - TestDino</title>
 </head>
@@ -188,7 +55,7 @@
                 </div>
 
                 <!-- CTA Button -->
-                <a href="#" target="_self" type="button" id="pop-up" class="pop-up nav-cta-button">Join waitlist</a>
+                <a href="https://app.testdino.com" target="_blank" type="button" class="nav-cta-button">Join waitlist</a>
 
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-button" class="mobile-menu-button">
@@ -230,7 +97,7 @@
 
                         <!-- Mobile CTA -->
                         <div class="mobile-menu-cta">
-                            <a href="#" target="_self" id="pop-up" class="pop-up mobile-menu-cta-button">Join waitlist</a>
+                            <a href="https://app.testdino.com" target="_blank" class="mobile-menu-cta-button">Join waitlist</a>
                         </div>
                     </div>
                 </div>
@@ -243,7 +110,7 @@
         <div class="mx-auto max-w-[1200px]">
             <div class="flex flex-col items-center">
                 <div class="playwright-badge mb-6 font-[150px] flex items-center gap-2">
-                    <img src="Testdino Landing Page Images/pricing/lucide_tag.svg" alt="Checkmark" class="w-5 h-5">
+                    <img src="Testdino Landing Page Images/Pricing/lucide_tag.svg" alt="Checkmark" class="w-5 h-5">
                     <span class="text-[14px] ff-geiest line-height-[20px]">Simple Pricing, No Credit Card Required.</span>
                 </div>
 
@@ -301,8 +168,7 @@
                                 <input type="radio" name="billing" value="annually"
                                     class="form-radio h-5 w-5 text-black">
                                 <span class="ml-2">Annually</span>
-                                <span class="ml-2 text-xs bg-[#E7EFFE] text-[#004AB3] px-2 py-1 rounded">SAVE UP TO
-                                    20%</span>
+                                <span class="ml-2 text-xs bg-[#E7EFFE] text-[#004AB3] px-2 py-1 rounded whitespace-nowrap">SAVE UP TO 20%</span>
                             </label>
                         </div>
                     </div>
@@ -321,11 +187,11 @@
                     <div class="pricing-card-price">
                         <p class="pricing-card-price-text">Free</p>
                     </div>
-                    <button class="pricing-card-button">
+                    <a href="https://app.testdino.com" target="_blank" class="pricing-card-button">
                         Get started free
                         <img src="Testdino Landing Page Images/Pricing/icons/start_trial_arrow.svg" alt="Arrow"
                             class="btn-arrow">
-                    </button>
+                    </a>
                     <p class="text-sm text-gray-700 font-bold mb-4">Free, forever</p>
                     <div class="pricing-card-features">
                         <div class="feature-item">
@@ -374,11 +240,11 @@
                     <div class="pricing-card-price">
                         <p class="pricing-card-price-text" data-monthly-price="18" data-annual-price="173">$18 <span class="pricing-card-price-unit">/month</span></p>
                     </div>
-                    <button class="pricing-card-button">
+                    <a href="https://app.testdino.com" target="_blank" class="pricing-card-button">
                         Start 14-day trial
                         <img src="Testdino Landing Page Images/Pricing/icons/start_trial_arrow.svg" alt="Arrow"
                             class="btn-arrow">
-                    </button>
+                    </a>
                     <p class="text-sm text-gray-700 font-bold mb-4">Everything in Community, plus:</p>
                     <div class="pricing-card-features">
                         <div class="feature-item">
@@ -438,11 +304,11 @@
                     <div class="pricing-card-price">
                         <p class="pricing-card-price-text" data-monthly-price="49" data-annual-price="471">$49 <span class="pricing-card-price-unit">/month</span></p>
                     </div>
-                    <button class="pricing-card-button">
+                    <a href="https://app.testdino.com" target="_blank" class="pricing-card-button">
                         Start 14-day trial
                         <img src="Testdino Landing Page Images/Pricing/icons/start_trial_arrow.svg" alt="Arrow"
                             class="btn-arrow">
-                    </button>
+                    </a>
                     <p class="text-sm text-gray-700 font-bold mb-4">Everything in Pro Plan, plus:</p>
                     <div class="pricing-card-features">
                         <div class="feature-item">
@@ -506,11 +372,11 @@
                     <div class="pricing-card-price">
                         <p class="pricing-card-price-text">Custom</p>
                     </div>
-                    <button class="pricing-card-button">
+                    <a href="https://app.testdino.com" target="_blank" class="pricing-card-button">
                         Contact sales
                         <img src="Testdino Landing Page Images/Pricing/icons/start_trial_arrow.svg" alt="Arrow"
                             class="btn-arrow">
-                    </button>
+                    </a>
                     <p class="text-sm text-gray-700 font-bold mb-4">Everything in Team Plan, plus:</p>
                     <div class="pricing-card-features">
                         <div class="feature-item">
@@ -602,8 +468,7 @@
                                     class="text-[14px] text-[#171717] font-[500] ff-geist">Annually</label>
                                     &nbsp;
                                 <span
-                                    class="text-[10px] text-[#004AB3] font-[600] uppercase ff-geist leading-[10px] ml-1" style="border: 1px solid #E7EFFE; padding: 4px; background-color: #E7EFFE; border-radius: 4px;">Save
-                                    up to 20%</span>
+                                    class="text-[10px] text-[#004AB3] font-[600] uppercase ff-geist leading-[10px] ml-1 whitespace-nowrap" style="border: 1px solid #E7EFFE; padding: 4px; background-color: #E7EFFE; border-radius: 4px;">Save up to 20%</span>
                             </div>
                         </div>
                     </div>
@@ -616,8 +481,8 @@
                         <span class="text-[34px] text-[#171717] font-[600] ff-geist leading-[40px]">$0</span>
                         <span class="text-[14px] text-[#525252] font-[400] ff-geist ml-1">/month</span>
                     </div>
-                    <button class="mt-6 bg-black text-[#FAFAFA] rounded-md py-2 text-[14px] font-[500] ff-geist">Get
-                        started free</button>
+                    <a href="https://app.testdino.com" target="_blank" class="mt-6 bg-black text-[#FAFAFA] rounded-md py-2 text-[14px] font-[500] ff-geist block text-center">Get
+                        started free</a>
                 </div>
 
                 <!-- Pro Plan tier -->
@@ -627,8 +492,8 @@
                         <span class="comparison-price comparison-price--pro text-[34px] text-[#171717] font-[600] ff-geist leading-[40px]" data-monthly-price="18" data-annual-price="173">$18</span>
                         <span class="comparison-price-unit comparison-price-unit--pro text-[14px] text-[#525252] font-[400] ff-geist ml-1">/month</span>
                     </div>
-                    <button class="mt-6 bg-black text-[#FAFAFA] rounded-md py-2 text-[14px] font-[500] ff-geist">Start
-                        14-day trial</button>
+                    <a href="https://app.testdino.com" target="_blank" class="mt-6 bg-black text-[#FAFAFA] rounded-md py-2 text-[14px] font-[500] ff-geist block text-center">Start
+                        14-day trial</a>
                 </div>
 
                 <!-- Startups tier -->
@@ -641,8 +506,8 @@
                         <span class="comparison-price comparison-price--startups text-[34px] text-[#171717] font-[600] ff-geist leading-[40px]" data-monthly-price="49" data-annual-price="471">$49</span>
                         <span class="comparison-price-unit comparison-price-unit--startups text-[14px] text-[#525252] font-[400] ff-geist ml-1">/month</span>
                     </div>
-                    <button class="mt-6 bg-black text-[#FAFAFA] rounded-md py-2 text-[14px] font-[500] ff-geist">Start
-                        14-day trial</button>
+                    <a href="https://app.testdino.com" target="_blank" class="mt-6 bg-black text-[#FAFAFA] rounded-md py-2 text-[14px] font-[500] ff-geist block text-center">Start
+                        14-day trial</a>
                 </div>
 
                 <!-- Enterprise tier -->
@@ -651,8 +516,8 @@
                     <div class="flex items-baseline mt-2">
                         <span class="text-[34px] text-[#171717] font-[600] ff-geist leading-[40px]">Custom</span>
                     </div>
-                    <button class="mt-6 bg-black text-[#FAFAFA] rounded-md py-2 text-[14px] font-[500] ff-geist">Contact
-                        sales</button>
+                    <a href="https://app.testdino.com" target="_blank" class="mt-6 bg-black text-[#FAFAFA] rounded-md py-2 text-[14px] font-[500] ff-geist block text-center">Contact
+                        sales</a>
                 </div>
             </div>
         </div>
@@ -664,6 +529,7 @@
                     onclick="toggleTable('community')"
                     class="mobile-tab-btn flex-1 py-3 text-base font-semibold transition-all duration-200 border-b-2 border-transparent text-[#171717] hover:text-black active"
                     data-tier="community"
+                    type="button"
                 >
                     <span class="block" style="font-size: 14px;">Community</span>
                 </button>
@@ -671,6 +537,7 @@
                     onclick="toggleTable('pro')"
                     class="mobile-tab-btn flex-1 py-3 text-base font-normal transition-all duration-200 border-b-2 border-transparent text-[#171717] hover:text-black"
                     data-tier="pro"
+                    type="button"
                 >
                     <span class="block" style="font-size: 14px;">Pro Plan</span>
                 </button>
@@ -678,6 +545,7 @@
                     onclick="toggleTable('startups')"
                     class="mobile-tab-btn flex-1 py-3 text-base font-normal transition-all duration-200 border-b-2 border-transparent text-[#171717] hover:text-black"
                     data-tier="startups"
+                    type="button"
                 >
                     <span class="block" style="font-size: 14px;">Startups</span>
                 </button>
@@ -685,6 +553,7 @@
                     onclick="toggleTable('custom')"
                     class="mobile-tab-btn flex-1 py-3 text-base font-normal transition-all duration-200 border-b-2 border-transparent text-[#171717] hover:text-black"
                     data-tier="custom"
+                    type="button"
                 >
                     <span class="block" style="font-size: 14px;">Enterprise</span>
                 </button>
@@ -1461,7 +1330,7 @@
         <!-- Card 1 -->
         <div class="flex flex-col min-w-[400px] max-w-[400px] w-[400px] h-[332px] bg-white  rounded-xl border border-[#E5E5E5] p-8 shadow-sm transition-all why-card">
           <div class="flex flex-col items-center md:items-start h-[120px] justify-center">
-            <img src="Testdino Landing Page Images/pricing/Why choose team shape 1.svg" alt="80% Faster Fixes" class="w-[74px] h-[90px] rounded-[2px] mb-2" loading="lazy" />
+            <img src="Testdino Landing Page Images/Pricing/Why choose team shape 1.svg" alt="80% Faster Fixes" class="w-[74px] h-[90px] rounded-[2px] mb-2" loading="lazy" />
             <p class="text-[#141414] text-[20px] font-bold ff-Manrope capitalize mt-2 text-center md:text-left">80% Faster Fixes</p>
           </div>
           <p class="text-[#141414] text-[20px] ff-geist font-normal leading-[30px] mt-4 text-center md:text-left">
@@ -1472,7 +1341,7 @@
         <div class="flex flex-col min-w-[400px] max-w-[400px] w-[400px] h-[332px] bg-white rounded-xl border border-[#E5E5E5] p-8 shadow-sm transition-all why-card">
           <div class="flex flex-col items-center md:items-start h-[120px] justify-center">
             <div class="flex items-center justify-center w-[90px] h-[90px] rounded-full mb-2">
-              <img src="Testdino Landing Page Images/pricing/Why choose team shape 2.svg" alt="Get Zero Flaky" class="w-[73px] h-[73px]" loading="lazy" />
+              <img src="Testdino Landing Page Images/Pricing/Why choose team shape 2.svg" alt="Get Zero Flaky" class="w-[73px] h-[73px]" loading="lazy" />
             </div>
             <p class="text-[#141414] text-[20px] font-bold ff-Manrope capitalize mt-2 text-center md:text-left">Get Zero Flaky</p>
           </div>
@@ -1483,7 +1352,7 @@
         <!-- Card 3 -->
         <div class="flex flex-col min-w-[400px] max-w-[400px] w-[400px] h-[332px] bg-white rounded-xl border border-[#E5E5E5] p-8 shadow-sm transition-all why-card">
           <div class="flex flex-col items-center md:items-start h-[120px] justify-center">
-            <img src="Testdino Landing Page Images/pricing/cube.svg" alt="2x Release Speed" class="w-[87px] h-[65px] mb-2" loading="lazy" />
+            <img src="Testdino Landing Page Images/Pricing/cube.svg" alt="2x Release Speed" class="w-[87px] h-[65px] mb-2" loading="lazy" />
             <p class="text-[#141414] text-[20px] font-bold ff-Manrope capitalize mt-2 text-center md:text-left">2x Release Speed</p>
           </div>
           <p class="text-[#141414] text-[20px] ff-geist font-normal leading-[30px] mt-4 text-center md:text-left">
@@ -1724,10 +1593,10 @@
                       <span>stall your pipeline</span>
                     </span>
                 </h4>
-                <button type="button" id="pop-up"
-                    class="pop-up bg-[#FFFF] ff-geist rounded-lg inline-block px-6 md:px-[16px] py-2 md:py-[10px] text-[#171717] font-medium transition-colors font-[500] text-[12px] md:text-[16px]">
+                <a href="https://app.testdino.com" target="_blank" 
+                    class="bg-[#FFFF] ff-geist rounded-lg inline-block px-6 md:px-[16px] py-2 md:py-[10px] text-[#171717] font-medium transition-colors font-[500] text-[12px] md:text-[16px]">
                     Join waitlist
-                </button>
+                </a>
             </div>
             <img src="Testdino Landing Page Images/blog_images/Group 626031.svg" alt="Logo"
                 class="block md:hidden absolute right-[20px] bottom-[20px] w-[200px] h-[200px] mt-0" />
@@ -1801,282 +1670,9 @@
         </div>
     </footer>
 
-    <!-- Popup Modal -->
-    <div id="popup-overlay" class="popup-modal-overlay hidden">
-        <div class="popup-modal-container">
-            <h2 class="popup-modal-title">Join our waitlist</h2>
-            <p class="popup-modal-alert">
-                <span>🎉</span> First 50 qualified users get private beta access + lifetime discount!
-            </p>
-
-            <form class="popup-modal-form">
-                <div class="popup-modal-form-group">
-                    <label for="name" class="popup-modal-label">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" class="popup-modal-input">
-                </div>
-
-                <div class="popup-modal-form-group">
-                    <label for="role" class="popup-modal-label">Your role</label>
-                    <input type="text" id="role" name="role"
-                        placeholder="Enter your role (DevOps, Fullstack Engineer, SDET, QA etc.)"
-                        class="popup-modal-input">
-                </div>
-
-                <div class="popup-modal-form-group">
-                    <label for="workEmail" class="popup-modal-label">Work Email</label>
-                    <input type="email" id="workEmail" name="workEmail" placeholder="Enter your business email"
-                        class="popup-modal-input">
-                </div>
-
-                <div class="popup-modal-form-group">
-                    <label for="biggestIssue" class="popup-modal-label">Biggest issue with your current reports</label>
-                    <textarea id="biggestIssue" name="biggestIssue" rows="4"
-                        placeholder="e.g.&#10;• Flaky tests, no root cause shown&#10;• Too noisy, lacks insights&#10;• Briefly share your test reporting pain…"
-                        class="popup-modal-input popup-modal-textarea"></textarea>
-                </div>
-
-                <div class="popup-modal-actions">
-                    <button type="button" id="cancel-button"
-                        class="popup-modal-btn popup-modal-btn-cancel">Cancel</button>
-                    <button type="submit" class="popup-modal-btn popup-modal-btn-submit">Join</button>
-                </div>
-            </form>
-        </div>
-    </div>
+    
 
     <script src="js/scripts.js" defer></script>
-    <script>
-        // Mobile menu functionality is handled by scripts.js
-
-        // Popup functionality
-        document.querySelectorAll('.pop-up').forEach(function (button) {
-            button.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.getElementById('popup-overlay').classList.remove('hidden');
-            });
-        });
-
-        document.getElementById('cancel-button').addEventListener('click', function () {
-            document.getElementById('popup-overlay').classList.add('hidden');
-        });
-
-        // Close popup when clicking outside
-        document.getElementById('popup-overlay').addEventListener('click', function (e) {
-            if (e.target === this) {
-                this.classList.add('hidden');
-            }
-        });
-
-        // Slider behavior handled in external JS
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const slider = document.getElementById('testExecutionSlider');
-            const displayValue = document.getElementById('testExecutionValue');
-        const pricingCards = document.querySelectorAll('.pricing-card');
-
-            if (!slider || !displayValue) return;
-
-            function updateSliderDisplay() {
-                const value = parseInt(slider.value);
-            const values = ['Free', '15k', '25k', '45k', '100k', '200k'];
-                const selectedValue = values[value];
-                displayValue.textContent = selectedValue;
-
-                pricingCards.forEach(card => {
-                    card.classList.remove('active-plan');
-                    card.classList.remove('active-plan--black');
-                    card.classList.remove('active-plan--gradient-pro');
-                    card.classList.remove('active-plan--gradient-team');
-                });
-
-                let activeCardIndex = 0;
-                if (value === 0) { activeCardIndex = 0; }
-                else if (value === 1 || value === 2) { activeCardIndex = 1; }
-                else if (value === 3 || value === 4) { activeCardIndex = 2; }
-                else if (value === 5) { activeCardIndex = 3; }
-
-                if (pricingCards[activeCardIndex]) {
-                    if (value === 0 || value === 5) {
-                        pricingCards[activeCardIndex].classList.add('active-plan--black');
-                    } else if (value === 1 || value === 2) {
-                        // Apply gradient border to pro plan (15k and 25k)
-                        if (pricingCards[activeCardIndex].classList.contains('pricing-card--pro')) {
-                            pricingCards[activeCardIndex].classList.add('active-plan--gradient-pro');
-                        } else {
-                            pricingCards[activeCardIndex].classList.add('active-plan');
-                        }
-                    } else if (value === 3 || value === 4) {
-                        // Apply gradient border to team plan (45k and 100k)
-                        if (pricingCards[activeCardIndex].classList.contains('pricing-card--team')) {
-                            pricingCards[activeCardIndex].classList.add('active-plan--gradient-team');
-                        } else {
-                            pricingCards[activeCardIndex].classList.add('active-plan');
-                        }
-                    }
-                }
-
-                const min = parseFloat(slider.min);
-                const max = parseFloat(slider.max);
-                const percentage = ((value - min) / (max - min)) * 100;
-                slider.style.setProperty('background', `linear-gradient(to right, #171717 0%, #171717 ${percentage}%, #ffffff ${percentage}%, #ffffff 100%)`, 'important');
-            }
-
-            updateSliderDisplay();
-            slider.addEventListener('input', updateSliderDisplay);
-            slider.addEventListener('change', updateSliderDisplay);
-
-            // Billing toggle functionality
-            const billingRadios = document.querySelectorAll('input[name="billing"]');
-            
-            function updatePricing() {
-                const selectedBilling = document.querySelector('input[name="billing"]:checked').value;
-                const pricingElements = document.querySelectorAll('.pricing-card-price-text[data-monthly-price]');
-                                
-                pricingElements.forEach(element => {
-                    const monthlyPrice = element.getAttribute('data-monthly-price');
-                    const annualPrice = element.getAttribute('data-annual-price');
-                    const priceUnit = element.querySelector('.pricing-card-price-unit');
-                    
-                    if (selectedBilling === 'monthly') {
-                        element.childNodes[0].textContent = `$${monthlyPrice} `;
-                        priceUnit.textContent = '/month';
-                    } else {
-                        element.childNodes[0].textContent = `$${annualPrice} `;
-                        priceUnit.textContent = '/year';
-                    }
-                });
-            }
-
-            // Add event listeners to billing radio buttons
-            billingRadios.forEach(radio => {
-                radio.addEventListener('change', updatePricing);
-            });
-
-            // Ensure monthly radio is selected by default
-            const monthlyRadio = document.querySelector('input[name="billing"][value="monthly"]');
-            if (monthlyRadio) {
-                monthlyRadio.checked = true;
-            }
-            
-            // Double-check that a radio button is selected, if not, force monthly
-            const checkedRadio = document.querySelector('input[name="billing"]:checked');
-            if (!checkedRadio) {
-                monthlyRadio.checked = true;
-            }
-            
-            // Initialize pricing display with monthly pricing (after ensuring radio is selected)
-            updatePricing();
-            
-            // Final verification - ensure monthly pricing is displayed
-            setTimeout(() => {
-                const finalCheck = document.querySelector('input[name="billing"]:checked');
-                if (finalCheck && finalCheck.value === 'monthly') {
-                } else {
-                    monthlyRadio.checked = true;
-                    updatePricing();
-                }
-            }, 100);
-
-            // Comparison table pricing toggle functionality - COMPLETELY REWRITTEN
-            function initializeComparisonPricing() {
-                console.log('Initializing comparison pricing...');
-                
-                // Get the radio buttons
-                const comparisonMonthlyRadio = document.querySelector('#comparison-monthly');
-                const comparisonAnnuallyRadio = document.querySelector('#comparison-annually');
-                
-                console.log('Monthly radio found:', comparisonMonthlyRadio);
-                console.log('Annually radio found:', comparisonAnnuallyRadio);
-                
-                if (comparisonMonthlyRadio && comparisonAnnuallyRadio) {
-                    // Force select monthly radio button
-                    comparisonMonthlyRadio.checked = true;
-                    comparisonAnnuallyRadio.checked = false;
-                    
-                    console.log('Monthly radio checked:', comparisonMonthlyRadio.checked);
-                    console.log('Annually radio checked:', comparisonAnnuallyRadio.checked);
-                    
-                    // Update the pricing display immediately
-                    updateComparisonPricing();
-                } else {
-                    console.log('Radio buttons not found!');
-                }
-            }
-            
-            function updateComparisonPricing() {
-                console.log('Updating comparison pricing...');
-                
-                const selectedBilling = document.querySelector('input[name="comparison-billing"]:checked');
-                console.log('Selected billing:', selectedBilling);
-                
-                if (!selectedBilling) {
-                    console.log('No radio selected, forcing monthly...');
-                    const comparisonMonthlyRadio = document.querySelector('#comparison-monthly');
-                    if (comparisonMonthlyRadio) {
-                        comparisonMonthlyRadio.checked = true;
-                    }
-                    return;
-                }
-                
-                const selectedValue = selectedBilling.value;
-                console.log('Selected value:', selectedValue);
-                
-                // Update Pro Plan pricing
-                const proPriceElement = document.querySelector('.comparison-price--pro');
-                const proPriceUnitElement = document.querySelector('.comparison-price-unit--pro');
-                
-                // Update Startups pricing
-                const startupsPriceElement = document.querySelector('.comparison-price--startups');
-                const startupsPriceUnitElement = document.querySelector('.comparison-price-unit--startups');
-                
-                console.log('Found elements:', {
-                    proPriceElement,
-                    proPriceUnitElement,
-                    startupsPriceElement,
-                    startupsPriceUnitElement
-                });
-                
-                if (selectedValue === 'monthly') {
-                    console.log('Setting monthly prices...');
-                    if (proPriceElement) proPriceElement.textContent = '$18';
-                    if (proPriceUnitElement) proPriceUnitElement.textContent = '/month';
-                    if (startupsPriceElement) startupsPriceElement.textContent = '$49';
-                    if (startupsPriceUnitElement) startupsPriceUnitElement.textContent = '/month';
-                } else {
-                    console.log('Setting annual prices...');
-                    if (proPriceElement) proPriceElement.textContent = '$173';
-                    if (proPriceUnitElement) proPriceUnitElement.textContent = '/year';
-                    if (startupsPriceElement) startupsPriceElement.textContent = '$471';
-                    if (startupsPriceUnitElement) startupsPriceUnitElement.textContent = '/year';
-                }
-            }
-
-            // Add event listeners to comparison billing radio buttons
-            const comparisonBillingRadios = document.querySelectorAll('input[name="comparison-billing"]');
-            comparisonBillingRadios.forEach(radio => {
-                radio.addEventListener('change', function() {
-                    console.log('Radio changed to:', this.value);
-                    updateComparisonPricing();
-                });
-            });
-
-            // Initialize comparison pricing with multiple safety checks
-            console.log('Starting comparison pricing initialization...');
-            
-            // First attempt
-            initializeComparisonPricing();
-            
-            // Second attempt after DOM is fully ready
-            setTimeout(initializeComparisonPricing, 10);
-            
-            // Third attempt after a longer delay
-            setTimeout(initializeComparisonPricing, 100);
-            
-            // Final attempt after everything should be loaded
-            setTimeout(initializeComparisonPricing, 500);
-        });
-    </script>
 </body>
 
 </html>

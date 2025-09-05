@@ -26,70 +26,6 @@
   <link rel="stylesheet" href="assets/css/input.css">
   <link rel="stylesheet" href="assets/css/nav-footer.css">
   <link rel="stylesheet" href="assets/css/rotating-text.css">
-  <style>
-    /* Hide scrollbar for category filters */
-    .scrollbar-hide {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-    .scrollbar-hide::-webkit-scrollbar {
-      display: none;
-    }
-
-    /* Blog category filters */
-    .blog-filters-container {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 2rem;
-    }
-
-    .blog-filters-scroll {
-      display: flex;
-      gap: 1rem;
-      overflow-x: auto;
-      padding: 0.5rem 1rem;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-
-    .blog-filters-scroll::-webkit-scrollbar {
-      display: none;
-    }
-
-    .category-btn {
-      height: 2.5rem;
-      padding: 0.4375rem 1rem;
-      border-radius: 0.25rem;
-      border: 1px solid;
-      font-size: 0.875rem;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    .category-btn.active {
-      background-color: #E5E5E5;
-      border-color: #D4D4D4;
-      color: #171717;
-      font-weight: 500;
-    }
-
-    .category-btn.inactive {
-      background-color: white;
-      border-color: #E8E8E8;
-      color: #404040;
-      font-weight: 400;
-    }
-
-    /* Desktop responsive */
-    @media (min-width: 768px) {
-      .blog-filters-scroll {
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 0;
-      }
-    }
-  </style>
 
   <title>Blog - TestDino</title>
 </head>
@@ -119,7 +55,7 @@
         </div>
 
         <!-- CTA Button -->
-        <a href="#" target="_self" type="button" id="pop-up" class="pop-up nav-cta-button">Join
+        <a href="https://app.testdino.com" target="_blank" type="button" class="nav-cta-button">Join
           waitlist</a>
 
         <!-- Mobile Menu Button -->
@@ -161,7 +97,7 @@
 
             <!-- Mobile CTA -->
             <div class="mobile-menu-cta">
-              <a href="#" target="_self" id="pop-up" class="pop-up mobile-menu-cta-button">Join waitlist</a>
+              <a href="https://app.testdino.com" target="_blank" class="mobile-menu-cta-button">Join waitlist</a>
             </div>
           </div>
         </div>
@@ -203,26 +139,6 @@
         </button>
         </div>
       </div>
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          const filterContainer = document.getElementById('blog-category-filters');
-          if (!filterContainer) return;
-          filterContainer.addEventListener('click', function (e) {
-            const btn = e.target.closest('.category-btn');
-            if (!btn) return;
-            filterContainer.querySelectorAll('.category-btn').forEach((b, i) => {
-              if (b === btn) {
-                b.classList.remove('inactive');
-                b.classList.add('active');
-              } else {
-                b.classList.remove('active');
-                b.classList.add('inactive');
-              }
-            });
-            // TODO: Filter blog posts by btn.dataset.category
-          });
-        });
-      </script>
 
       <!-- Search Bar -->
       <div class="flex justify-center mx-auto">
@@ -393,10 +309,10 @@
             <span>false failures</span>
           </span>
         </h4>
-        <button type="button" id="pop-up"
-          class="pop-up bg-[#FFFF] font-light ff-geist rounded-lg inline-block px-6 md:px-[16px] py-2 md:py-[10px] text-[#171717] transition-colors font-[500] text-[12px] md:text-[16px]">
+        <a href="https://app.testdino.com" target="_blank" 
+          class="bg-[#FFFF] font-light ff-geist rounded-lg inline-block px-6 md:px-[16px] py-2 md:py-[10px] text-[#171717] transition-colors font-[500] text-[12px] md:text-[16px]">
           Join waitlist
-        </button>
+        </a>
       </div>
       <img src="Testdino Landing Page Images/blog_images/Group 626031.svg" alt="Logo"
         class="block md:hidden absolute right-[20px] bottom-[20px] w-[200px] h-[200px] mt-0" />
@@ -475,76 +391,11 @@
     </div>
   </footer>
 
-  <!-- Popup Modal -->
-  <div id="popup-overlay" class="popup-modal-overlay hidden">
-    <div class="popup-modal-container">
-      <h2 class="popup-modal-title">Join our waitlist</h2>
-      <p class="popup-modal-alert">
-        <span>🎉</span> First 50 qualified users get private beta access + lifetime discount!
-      </p>
-
-      <form class="popup-modal-form">
-        <div class="popup-modal-form-group">
-          <label for="name" class="popup-modal-label">Name</label>
-          <input type="text" id="name" name="name" placeholder="Enter your name" class="popup-modal-input">
-        </div>
-
-        <div class="popup-modal-form-group">
-          <label for="role" class="popup-modal-label">Your role</label>
-          <input type="text" id="role" name="role"
-            placeholder="Enter your role (DevOps, Fullstack Engineer, SDET, QA etc.)" class="popup-modal-input">
-        </div>
-
-        <div class="popup-modal-form-group">
-          <label for="workEmail" class="popup-modal-label">Work Email</label>
-          <input type="email" id="workEmail" name="workEmail" placeholder="Enter your business email"
-            class="popup-modal-input">
-        </div>
-
-        <div class="popup-modal-form-group">
-          <label for="biggestIssue" class="popup-modal-label">Biggest issue with your current reports</label>
-          <textarea id="biggestIssue" name="biggestIssue" rows="4"
-            placeholder="e.g.&#10;• Flaky tests, no root cause shown&#10;• Too noisy, lacks insights&#10;• Briefly share your test reporting pain…"
-            class="popup-modal-input popup-modal-textarea"></textarea>
-        </div>
-
-        <div class="popup-modal-actions">
-          <button type="button" id="cancel-button" class="popup-modal-btn popup-modal-btn-cancel">Cancel</button>
-          <button type="submit" class="popup-modal-btn popup-modal-btn-submit">Join</button>
-        </div>
-      </form>
-    </div>
-  </div>
+  
 
   <script src="js/scripts.js" defer></script>
 
-  <script>
-    // Ensure popup is hidden on page load/reload
-    document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('popup-overlay').classList.add('hidden');
-    });
-
-    // Mobile menu functionality is handled by scripts.js
-
-    // Popup functionality
-    document.querySelectorAll('.pop-up').forEach(function (button) {
-      button.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.getElementById('popup-overlay').classList.remove('hidden');
-      });
-    });
-
-    document.getElementById('cancel-button').addEventListener('click', function () {
-      document.getElementById('popup-overlay').classList.add('hidden');
-    });
-
-    // Close popup when clicking outside
-    document.getElementById('popup-overlay').addEventListener('click', function (e) {
-      if (e.target === this) {
-        this.classList.add('hidden');
-      }
-    });
-  </script>
+  
 
 </body>
 

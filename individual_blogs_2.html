@@ -52,7 +52,7 @@
         </div>
 
         <!-- CTA Button -->
-        <a href="#" target="_self" type="button" id="pop-up" class="pop-up nav-cta-button">Join waitlist</a>
+        <a href="https://app.testdino.com" target="_blank" type="button" class="nav-cta-button">Join waitlist</a>
 
         <!-- Mobile Menu Button -->
         <button id="mobile-menu-button" class="mobile-menu-button">
@@ -93,7 +93,7 @@
 
             <!-- Mobile CTA -->
             <div class="mobile-menu-cta">
-              <a href="#" target="_self" id="pop-up" class="pop-up mobile-menu-cta-button">Join waitlist</a>
+              <a href="https://app.testdino.com" target="_blank" class="mobile-menu-cta-button">Join waitlist</a>
             </div>
           </div>
         </div>
@@ -118,22 +118,6 @@
       </div>
     </div>
   </div>
-  <script>
-    // Simple JS to highlight selected tab
-    document.addEventListener('DOMContentLoaded', function () {
-      const navLinks = document.querySelectorAll('.flex.items-center.gap-\\[24px\\] a');
-      navLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-          navLinks.forEach(l => {
-            l.classList.remove('font-semibold', 'text-[#404040]');
-            l.classList.add('text-gray-600');
-          });
-          this.classList.add('font-semibold', 'text-[#404040]');
-          this.classList.remove('text-gray-600');
-        });
-      });
-    });
-  </script>
 
   <!-- Main Blog Content -->
   <main class="flex-1 py-12 md:py-20">
@@ -233,67 +217,6 @@
             </nav>
           </div>
         </div>
-        <script>
-          // Highlight active section in ToC as user scrolls
-          document.addEventListener('DOMContentLoaded', function () {
-            const tocLinks = Array.from(document.querySelectorAll('.toc-link'));
-            const sectionIds = tocLinks.map(link => link.getAttribute('href'));
-            const sections = sectionIds.map(id => document.querySelector(id));
-
-            function onScroll() {
-              let activeIdx = 0;
-              for (let i = 0; i < sections.length; i++) {
-                if (sections[i] && window.scrollY + 120 >= sections[i].offsetTop) {
-                  activeIdx = i;
-                }
-              }
-
-              tocLinks.forEach((link, idx) => {
-                const textSpan = link.querySelector('span');
-                if (idx === activeIdx) {
-                  // Active section: bold text, dark color, full-height, narrow left bar
-                  textSpan.classList.add('font-bold', 'text-[#171717]');
-                  textSpan.classList.remove('text-[#404040]', 'font-light');
-                  link.classList.add(
-                    'before:absolute',
-                    'before:left-0',
-                    'before:top-0',
-                    'before:w-[2px]',
-                    'before:h-full',
-                    'before:bg-[#171717]',
-                    'before:transform'
-                  );
-                  link.classList.remove(
-                    'before:top-1/2',
-                    'before:-translate-y-1/2',
-                    'before:w-1',
-                    'before:h-4',
-                  );
-                } else {
-                  // Inactive section: normal text, gray color, no bar
-                  textSpan.classList.remove('font-bold', 'text-[#171717]');
-                  textSpan.classList.add('text-[#404040]', 'font-light');
-                  link.classList.remove(
-                    'before:absolute',
-                    'before:left-0',
-                    'before:top-0',
-                    'before:w-[2px]',
-                    'before:h-full',
-                    'before:bg-[#171717]',
-                    'before:transform',
-                    'before:top-1/2',
-                    'before:-translate-y-1/2',
-                    'before:w-1',
-                    'before:h-4'
-                  );
-                }
-              });
-            }
-
-            window.addEventListener('scroll', onScroll, { passive: true });
-            onScroll();
-          });
-        </script>
 
         <!-- Main Content Area -->
         <div class="lg:w-3/4 md:max-w-7xl mx-auto">
@@ -591,43 +514,6 @@
                 </table>
             </div>
 
-            <script>
-                // Toggle functionality for expandable sections
-                document.addEventListener('DOMContentLoaded', function() {
-                    const toggleIcons = document.querySelectorAll('.toggle-icon');
-                    
-                    toggleIcons.forEach(icon => {
-                        icon.addEventListener('click', function() {
-                            const categoryRow = this.closest('.category-row');
-                            const nextRows = [];
-                            let nextRow = categoryRow.nextElementSibling;
-                            
-                            // Collect all sub-feature rows until next category
-                            while (nextRow && nextRow.classList.contains('sub-feature')) {
-                                nextRows.push(nextRow);
-                                nextRow = nextRow.nextElementSibling;
-                            }
-                            
-                            // Toggle visibility
-                            const isExpanded = nextRows[0] && nextRows[0].style.display === 'table-row';
-                            
-                            if (isExpanded) {
-                                // Collapse
-                                nextRows.forEach(row => {
-                                    row.style.display = 'none';
-                                });
-                                this.style.transform = 'rotate(0deg)'; // Reset rotation
-                            } else {
-                                // Expand
-                                nextRows.forEach(row => {
-                                    row.style.display = 'table-row';
-                                });
-                                this.style.transform = 'rotate(180deg)'; // Rotate 180 degrees
-                            }
-                        });
-                    });
-              });
-          </script>
 
           </section>
 
@@ -999,75 +885,10 @@
     </div>
   </footer>
 
-  <!-- Popup Modal -->
-  <div id="popup-overlay" class="popup-modal-overlay hidden">
-    <div class="popup-modal-container">
-      <h2 class="popup-modal-title">Join our waitlist</h2>
-      <p class="popup-modal-alert">
-        <span>🎉</span> First 50 qualified users get private beta access + lifetime discount!
-      </p>
-
-      <form class="popup-modal-form">
-        <div class="popup-modal-form-group">
-          <label for="name" class="popup-modal-label">Name</label>
-          <input type="text" id="name" name="name" placeholder="Enter your name" class="popup-modal-input">
-        </div>
-
-        <div class="popup-modal-form-group">
-          <label for="role" class="popup-modal-label">Your role</label>
-          <input type="text" id="role" name="role"
-            placeholder="Enter your role (DevOps, Fullstack Engineer, SDET, QA etc.)" class="popup-modal-input">
-        </div>
-
-        <div class="popup-modal-form-group">
-          <label for="workEmail" class="popup-modal-label">Work Email</label>
-          <input type="email" id="workEmail" name="workEmail" placeholder="Enter your business email"
-            class="popup-modal-input">
-        </div>
-
-        <div class="popup-modal-form-group">
-          <label for="biggestIssue" class="popup-modal-label">Biggest issue with your current reports</label>
-          <textarea id="biggestIssue" name="biggestIssue" rows="4"
-            placeholder="e.g.&#10;• Flaky tests, no root cause shown&#10;• Too noisy, lacks insights&#10;• Briefly share your test reporting pain…"
-            class="popup-modal-input popup-modal-textarea"></textarea>
-        </div>
-
-        <div class="popup-modal-actions">
-          <button type="button" id="cancel-button" class="popup-modal-btn popup-modal-btn-cancel">Cancel</button>
-          <button type="submit" class="popup-modal-btn popup-modal-btn-submit">Join</button>
-        </div>
-      </form>
-    </div>
-  </div>
+  
 
   <script src="js/scripts.js" defer></script>
-  <script>
-    // Ensure popup is hidden on page load/reload
-    document.addEventListener('DOMContentLoaded', function () {
-      document.getElementById('popup-overlay').classList.add('hidden');
-    });
-
-    // Mobile menu functionality is handled by scripts.js
-
-    // Popup functionality
-    document.querySelectorAll('.pop-up').forEach(function (button) {
-      button.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.getElementById('popup-overlay').classList.remove('hidden');
-      });
-    });
-
-    document.getElementById('cancel-button').addEventListener('click', function () {
-      document.getElementById('popup-overlay').classList.add('hidden');
-    });
-
-    // Close popup when clicking outside
-    document.getElementById('popup-overlay').addEventListener('click', function (e) {
-      if (e.target === this) {
-        this.classList.add('hidden');
-      }
-    });
-  </script>
+  
 </body>
 
 </html>
