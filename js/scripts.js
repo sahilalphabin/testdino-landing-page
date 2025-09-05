@@ -1349,10 +1349,9 @@ document.addEventListener('DOMContentLoaded', function () {
           textSpan.classList.add(
             'before:absolute',
             'before:left-[7px]',
-            'before:top-1/2',
-            'before:-translate-y-1/2',
+            'before:top-0',
             'before:w-[2px]',
-            'before:h-[40px]',
+            'before:h-full',
             'before:bg-[#171717]'
           );
         } else {
@@ -1361,10 +1360,9 @@ document.addEventListener('DOMContentLoaded', function () {
           textSpan.classList.remove(
             'before:absolute',
             'before:left-[7px]',
-            'before:top-1/2',
-            'before:-translate-y-1/2',
+            'before:top-0',
             'before:w-[2px]',
-            'before:h-[40px]',
+            'before:h-full',
             'before:bg-[#171717]'
           );
         }

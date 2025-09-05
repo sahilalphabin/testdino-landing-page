@@ -437,7 +437,6 @@ input[type="range"]::-moz-range-thumb {
   main .flex.items-center.justify-between {
     flex-direction: column !important;
     align-items: flex-start !important;
-    gap: 1rem !important;
   }
 
   main .flex.items-center.justify-between .flex.gap-4 {
@@ -475,7 +474,6 @@ input[type="range"]::-moz-range-thumb {
 
   .toc-link {
     /* padding: 16px !important; */
-    margin-bottom: 16px !important;
     position: relative !important;
   
   }
@@ -519,13 +517,6 @@ input[type="range"]::-moz-range-thumb {
   main .tag-product-led-growth {
     margin-left: 0.5rem !important;
   }
-
-  main h1 {
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-  }
-  
-
   .blog-text {
     font-size: 1rem !important;
     line-height: 30px !important;
@@ -1270,7 +1261,7 @@ input[type="radio"]:checked {
 .ai-features-container {
   width: 107%;
   height: 100%;
-  padding: 20px;
+  padding: 16px;
   background: #EEF4FF;
   margin-right: 0;
   margin-left: 0;
@@ -1506,7 +1497,7 @@ input[type="radio"]:checked {
 }
 
 .pricing-card.pricing-card--team {
-  padding: 24px;
+  padding: 18px;
 }
 
 
@@ -1536,15 +1527,16 @@ input[type="radio"]:checked {
 
 .pricing-card-title {
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #111827;
   font-family: Geist, sans-serif;
 }
 
 .pricing-card-subtitle {
-  font-size: 0.75rem;
+  font-size: 14px;
   color: #6B7280;
-  margin-bottom: 1rem;
+  font-family: Geist, sans-serif;
+  font-weight: 400;
 }
 
 .pricing-card-price {
@@ -1574,7 +1566,7 @@ input[type="radio"]:checked {
 .pricing-card--neutral .pricing-card-price .pricing-card-price-text,
 .pricing-card--pro .pricing-card-price .pricing-card-price-text,
 .pricing-card--team .pricing-card-price .pricing-card-price-text {
-  font-size: 1.875rem !important;
+  font-size: 34px !important;
   font-weight: 600 !important;
   font-family: Geist, sans-serif !important;
   color: #171717 !important;
@@ -1599,7 +1591,7 @@ input[type="radio"]:checked {
 .pricing-card-price-unit {
   font-family: Geist, sans-serif !important;
   color: #6B7280 !important;
-  font-size: 0.75rem !important;
+  font-size: 14px !important;
   font-weight: 600 !important;
 }
 
@@ -1650,8 +1642,8 @@ input[type="radio"]:checked {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2rem;
-  margin-bottom: 3rem;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 @media (width >= 768px) {
@@ -2783,7 +2775,8 @@ input[type="range"]::-moz-range-thumb {
   max-width: 400px;
   flex-direction: row;
   gap: 12px;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .footer-form .wpcf7-form-control-wrap {

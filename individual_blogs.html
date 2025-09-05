@@ -124,9 +124,9 @@
     <div class="max-w-[1200px] mx-auto">
       <!-- Blog Header Section - Full Width -->
       <div class="mb-20">
-        <div class="lg:flex lg:gap-[40px] items-start mt-[40px] lg:mt-[90px] mb-[40px] lg:mb-[90px]" style="max-width: 1200px; height: 360px;">
+        <div class="lg:flex lg:gap-[40px] items-start mt-[40px] lg:mt-[90px] mb-[40px] lg:mb-[90px]">
           <!-- Left Column: Content -->
-          <div class="mb-12 lg:mb-0 flex flex-col justify-between" style="max-width: 600px; height: 360px;">
+          <div class="mb-12 lg:mb-0 flex-1">
             <!-- Main Title -->
             <div>
               <!-- Category Tag -->
@@ -139,60 +139,58 @@
               </h1>
             </div>
             <!-- Truncated Intro Paragraph -->
-            <p class="blog-text"">
+            <p class="blog-text mb-5">
               Imagine downloading an app, and inputting your personal data, and a hacker in seconds finds a flaw to
               steal your information. Sounds scary, right? And today, mobile app security is no...
             </p>
-            <div>
-              <!-- Author Info and Share Icons -->
-              <div class=" flex items-center justify-between mt-5">
-            <div class="flex items-center gap-[12px]">
-              <img src="Testdino Landing Page Images/icons/Profile-1.webp" alt="Testdino team"
-                class="w-[46px] h-[46px] rounded-full">
-              <div>
-                <p class="text-[14px] font-bold text-[#0B0C0E]">Testdino team</p>
-                <p class="text-[14px] text-gray-500">Jun 21, 2025</p>
+            <!-- Author Info and Share Icons -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-[12px]">
+                <img src="Testdino Landing Page Images/icons/Profile-1.webp" alt="Testdino team"
+                  class="w-[46px] h-[46px] rounded-full">
+                <div>
+                  <p class="text-[14px] font-bold text-[#0B0C0E]">Testdino team</p>
+                  <p class="text-[14px] text-gray-500">Jun 21, 2025</p>
+                </div>
+              </div>
+
+              <!-- Social Media Icons -->
+              <div class="flex gap-4 ">
+                <!-- LinkedIn -->
+                <button class="footer-social-link">
+                  <img src="Testdino Landing Page Images/icons/social/fa-brands_linkedin.svg" alt="LinkedIn">
+                </button>
+                <!-- X (Twitter) -->
+                <button class="footer-social-link">
+                  <img src="Testdino Landing Page Images/icons/social/x-logo.svg" alt="X">
+                </button>
+                <!-- Share -->
+                <button id="share-link-btn" class="footer-social-link transition-all duration-200" type="button"
+                  aria-label="Share" onclick="
+                        navigator.clipboard.writeText(window.location.href);
+                        const btn = document.getElementById('share-link-btn');
+                        btn.classList.add('border-2', 'border-[#171717]');
+                        setTimeout(() => btn.classList.remove('border-2', 'border-[#171717]'), 500);
+                      ">
+                  <svg data-sanity-icon="link" width="1em" height="1em" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" class="size-5 shrink-0">
+                    <path
+                      d="M8.49993 15.4999L15.4999 8.49991M12.707 18.3639L10.02 21.0509C9.228 21.8429 8.83198 22.2389 8.37532 22.3873C7.97364 22.5178 7.54094 22.5178 7.13926 22.3873C6.6826 22.2389 6.28658 21.8429 5.49455 21.0509L2.94896 18.5053C2.15693 17.7133 1.76091 17.3173 1.61254 16.8606C1.48202 16.4589 1.48202 16.0262 1.61254 15.6245C1.76091 15.1679 2.15693 14.7719 2.94896 13.9798L5.63597 11.2928M18.3639 12.707L21.0509 10.02C21.8429 9.228 22.2389 8.83198 22.3873 8.37532C22.5178 7.97364 22.5178 7.54094 22.3873 7.13926C22.2389 6.6826 21.8429 6.28658 21.0509 5.49455L18.5053 2.94896C17.7133 2.15693 17.3173 1.76091 16.8606 1.61254C16.4589 1.48202 16.0262 1.48202 15.6245 1.61254C15.1679 1.76091 14.7719 2.15693 13.9798 2.94896L11.2928 5.63597"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path>
+                  </svg> </button>
               </div>
             </div>
-
-            <!-- Social Media Icons -->
-            <div class="flex gap-4">
-              <!-- LinkedIn -->
-              <button class="footer-social-link">
-                <img src="Testdino Landing Page Images/icons/social/fa-brands_linkedin.svg" alt="LinkedIn">
-              </button>
-              <!-- X (Twitter) -->
-              <button class="footer-social-link">
-                <img src="Testdino Landing Page Images/icons/social/x-logo.svg" alt="X">
-              </button>
-              <!-- Share -->
-              <button id="share-link-btn" class="footer-social-link transition-all duration-200" type="button"
-                aria-label="Share" onclick="
-                      navigator.clipboard.writeText(window.location.href);
-                      const btn = document.getElementById('share-link-btn');
-                      btn.classList.add('border-2', 'border-[#171717]');
-                      setTimeout(() => btn.classList.remove('border-2', 'border-[#171717]'), 500);
-                    ">
-                <svg data-sanity-icon="link" width="1em" height="1em" viewBox="0 0 24 24" fill="none"
-                  xmlns="http://www.w3.org/2000/svg" class="size-5 shrink-0">
-                  <path
-                    d="M8.49993 15.4999L15.4999 8.49991M12.707 18.3639L10.02 21.0509C9.228 21.8429 8.83198 22.2389 8.37532 22.3873C7.97364 22.5178 7.54094 22.5178 7.13926 22.3873C6.6826 22.2389 6.28658 21.8429 5.49455 21.0509L2.94896 18.5053C2.15693 17.7133 1.76091 17.3173 1.61254 16.8606C1.48202 16.4589 1.48202 16.0262 1.61254 15.6245C1.76091 15.1679 2.15693 14.7719 2.94896 13.9798L5.63597 11.2928M18.3639 12.707L21.0509 10.02C21.8429 9.228 22.2389 8.83198 22.3873 8.37532C22.5178 7.97364 22.5178 7.54094 22.3873 7.13926C22.2389 6.6826 21.8429 6.28658 21.0509 5.49455L18.5053 2.94896C17.7133 2.15693 17.3173 1.76091 16.8606 1.61254C16.4589 1.48202 16.0262 1.48202 15.6245 1.61254C15.1679 1.76091 14.7719 2.15693 13.9798 2.94896L11.2928 5.63597"
-                    stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path>
-                </svg> </button>
-            </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Right Column: Featured Image -->
-      <div class="flex justify-center">
-        <img 
-          src="Testdino Landing Page Images/blog_images/Green Fern.png" 
-          alt="Laptop with code and green plant"
-          class="w-full max-w-[600px] aspect-[5/3] object-cover rounded-lg"
-          style="height:auto"
-        >
-      </div>
+          <!-- Right Column: Featured Image -->
+          <div class="flex justify-center items-center lg:justify-between lg:items-center align-center">
+            <img 
+              src="Testdino Landing Page Images/blog_images/Green Fern.png" 
+              alt="Laptop with code and green plant"
+              class="w-full max-w-[600px] aspect-[5/3] object-cover rounded-lg top-[10px]"
+              style="height:auto"
+            >
+          </div>
     </div>
     </div>
     </div>
@@ -205,7 +203,7 @@
       <div class="lg:flex lg:gap-10"> 
          <!-- Left Sidebar - Table of Contents -->
         <div class="lg:w-1/4 mb-12 lg:mb-0">
-          <div class="sticky top-28 lg:w-[335px] lg:h-[auto] lg:rounded-md lg:border lg:border-[#E5E5E5] lg:p-4 rounded-lg " style="font-size: 16px;">
+          <div class="sticky top-28 lg:w-[335px] lg:h-[auto] lg:rounded-md lg:p-4 rounded-lg" style="font-size: 16px;">
             <nav id="toc-nav" class="flex flex-col gap-4 bg-[#FAFAFA] lg:bg-transparent">
               <a href="#why-security" class="toc-link relative pl-4 transition-all duration-200"
                 data-section="why-security">
@@ -940,40 +938,41 @@
           </section>
 
           <!-- CTA Banner -->
-          <div class="w-full border border-[#E5E5E5] rounded-xl">
+          <div class="w-full border border-[#E5E5E5] rounded-xl margin-bottom: 32px;">
             <div
-              class="relative flex flex-col md:flex-row items-center justify-between px-4 md:px-8 py-6 bg-gradient-to-r from-[#002781] via-[#0F0F23] to-[#4D006E] overflow-hidden rounded-lg h-auto md:h-[176px]">
-              <div class="flex flex-col md:ml-12 mx-auto px-0 w-full md:w-auto ">
+              class="relative flex flex-col md:flex-row items-center justify-between px-4 md:px-8 py-6 bg-gradient-to-r from-[#002781] via-[#0F0F23] to-[#4D006E] overflow-hidden rounded-lg h-auto md:h-[176px]" style="padding-top: 43px; padding-bottom: 43px; padding-left: 32px; padding-right: 32px;">
+              <div class="flex flex-col md:ml-12 mx-auto px-0 w-full md:w-auto">
                 <h2
-                  class="text-white text-2xl md:text-4xl font-bold ff-Manrope mb-3 md:mb-3 leading-tight md:leading-tight">
+                  class="text-white text-2xl md:text-4xl font-ff-Manrope mb-3 md:mb-3 leading-tight md:leading-tight" style="font-size: 34px; margin-bottom: 12px;" style="font-weight: 600;">
                   Stop chasing false failures
                 </h2>
+
                 <div
-                  class="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 text-white text-sm md:text-sm mb-4 md:mb-0">
-                  <div class="flex items-center gap-2">
+                  class="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 text-white text-sm md:text-sm md:mb-0" >
+                  <div class="flex items-center gap-2" style="margin-bottom: 8px;">
                     <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
                       <circle cx="8" cy="8" r="7.5" stroke="white" />
                       <path d="M5 8L7 10L11 6" stroke="white" stroke-width="1.5" stroke-linecap="round"
                         stroke-linejoin="round" />
                     </svg>
-                    <span>No credit card required</span>
+                    <span style="font-size: 17px;">No credit card required</span>
                   </div>
-                  <div class="flex items-center gap-2">
-                    <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
+                  <div class="flex items-center gap-2" style="margin-bottom: 32px;">
+                      <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
                       <circle cx="8" cy="8" r="7.5" stroke="white" />
                       <path d="M5 8L7 10L11 6" stroke="white" stroke-width="1.5" stroke-linecap="round"
                         stroke-linejoin="round" />
                     </svg>
-                    <span>Know why tests fail in seconds</span>
+                    <span style="font-size: 17px;">Know why tests fail in seconds</span>
                   </div>
                 </div>
               </div>
               <!-- Desktop only Dino image -->
               <img src="Testdino Landing Page Images/icons/CTA DINO.svg" alt="Logo"
-                class="hidden md:block w-8 h-8 absolute right-[120px] top-[80px] scale-[8.5]" />
+                class="hidden md:block w-8 h-8 absolute right-[120px] top-[80px] scale-[8.5]">
               <a href="https://app.testdino.com" target="_blank"
-                class="btn btn-md font-[16px] bg-white text-black font-semibold rounded-lg shadow-sm px-6 py-2 w-full md:w-auto hover:bg-gray-100 transition-all w-full md:w-auto mt-2 md:mt-0 md:absolute md:right-8">
-                Get started
+                class="btn btn-md font-[16px] bg-white text-black font-semibold rounded-lg shadow-sm px-6 py-2 w-full md:w-auto hover:bg-gray-100 align-center transition-all w-full md:w-auto mt-2 md:mt-0 md:absolute md:right-8">
+                <center>Get Started Free</center>
               </a>
             </div>
 
@@ -987,7 +986,7 @@
   <section class="py-16">
     <div class="max-w-[1200px] mx-auto px-4">
       <div class="text-center mb-[40px]">
-        <h2 class="text-[40px] font-bold  mb-[8px] ff-Manrope">Get started fast</h2>
+        <h2 class="text-[40px] font-mb-[8px] ff-Manrope" style="font-weight: 600;">Get started fast</h2>
         <p class="text-[16px] text-[#0B0C0E] max-w-4xl mx-auto blog-text">
           Step-by-step guides, real-world examples, and proven strategies to maximize your test reporting success
         </p>
