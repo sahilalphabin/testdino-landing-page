@@ -121,8 +121,8 @@
   <main class="flex-1 mt-60px pt-0"">
     <div class="max-w-[1200px] mx-auto">
       <!-- Blog Header Section - Full Width -->
-      <div class="mb-20">
-        <div class="lg:flex lg:gap-[40px] items-start mt-[40px] lg:mt-[90px] mb-[40px] lg:mb-[90px]">
+      <div class="">
+        <div class="lg:flex lg:gap-[40px] items-start mt-[40px]">
           <!-- Left Column: Content -->
           <div class="mb-12 lg:mb-0 flex-1">
             <!-- Main Title -->
@@ -142,42 +142,34 @@
               steal your information. Sounds scary, right? And today, mobile app security is no...
             </p>
             <!-- Author Info and Share Icons -->
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-[12px]">
-                <img src="Testdino Landing Page Images/icons/Profile-1.webp" alt="Testdino team"
-                  class="w-[46px] h-[46px] rounded-full">
-                <div>
-                  <p class="text-[14px] font-bold text-[#0B0C0E]">Testdino team</p>
-                  <p class="text-[14px] text-gray-500">Jun 21, 2025</p>
+              <div class="flex items-center mt-20 mb-20">
+                <!-- Author Info (left) -->
+                <div class="flex items-center gap-[12px]">
+                  <img src="Testdino Landing Page Images/icons/Profile-1.webp" alt="Testdino team"
+                    class="w-[46.05px] h-[46.05px] rounded-full">
+                  <div>
+                    <p class="text-[16px] font-bold text-[#0B0C0E]">Testdino team</p>
+                    <p class="text-[15px] text-gray-500">Jun 21, 2025</p>
+                  </div>
                 </div>
-              </div>
-
-              <!-- Social Media Icons -->
-              <div class="flex gap-4 ">
-                <!-- LinkedIn -->
-                <button class="footer-social-link">
-                  <img src="Testdino Landing Page Images/icons/social/fa-brands_linkedin.svg" alt="LinkedIn">
-                </button>
-                <!-- X (Twitter) -->
-                <button class="footer-social-link">
-                  <img src="Testdino Landing Page Images/icons/social/x-logo.svg" alt="X">
-                </button>
-                <!-- Share -->
-                <button id="share-link-btn" class="footer-social-link transition-all duration-200" type="button"
-                  aria-label="Share" onclick="
-                        navigator.clipboard.writeText(window.location.href);
-                        const btn = document.getElementById('share-link-btn');
-                        btn.classList.add('border-2', 'border-[#171717]');
-                        setTimeout(() => btn.classList.remove('border-2', 'border-[#171717]'), 500);
-                      ">
-                  <svg data-sanity-icon="link" width="1em" height="1em" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg" class="size-5 shrink-0">
-                    <path
-                      d="M8.49993 15.4999L15.4999 8.49991M12.707 18.3639L10.02 21.0509C9.228 21.8429 8.83198 22.2389 8.37532 22.3873C7.97364 22.5178 7.54094 22.5178 7.13926 22.3873C6.6826 22.2389 6.28658 21.8429 5.49455 21.0509L2.94896 18.5053C2.15693 17.7133 1.76091 17.3173 1.61254 16.8606C1.48202 16.4589 1.48202 16.0262 1.61254 15.6245C1.76091 15.1679 2.15693 14.7719 2.94896 13.9798L5.63597 11.2928M18.3639 12.707L21.0509 10.02C21.8429 9.228 22.2389 8.83198 22.3873 8.37532C22.5178 7.97364 22.5178 7.54094 22.3873 7.13926C22.2389 6.6826 21.8429 6.28658 21.0509 5.49455L18.5053 2.94896C17.7133 2.15693 17.3173 1.76091 16.8606 1.61254C16.4589 1.48202 16.0262 1.48202 15.6245 1.61254C15.1679 1.76091 14.7719 2.15693 13.9798 2.94896L11.2928 5.63597"
-                      stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path>
-                  </svg> </button>
-              </div>
-            </div>
+                <!-- Spacer -->
+                <div class="flex-1"></div>
+                <!-- Social Media Icons (right) -->
+                <div class="flex gap-4">
+                  <!-- LinkedIn -->
+                  <button class="footer-social-link">
+                    <img src="Testdino Landing Page Images/icons/social/fa-brands_linkedin.svg" alt="LinkedIn" height="23" width="23">
+                  </button>
+                  <!-- X (Twitter) -->
+                  <button class="footer-social-link">
+                    <img src="Testdino Landing Page Images/icons/social/x-logo.svg" alt="X" height="30" width="30">
+                  </button>
+                  <!-- Link/Share -->
+                  <button class="footer-social-link">
+                    <img src="Testdino Landing Page Images/icons/social/mdi_github.svg" alt="Github" height="25" width="25">
+                  </button>
+                </div>
+                </div>
           </div>
 
           <!-- Right Column: Featured Image -->
@@ -203,38 +195,38 @@
         <div class="lg:w-1/4 mb-12 lg:mb-0">
           <div class="sticky top-28 lg:w-[335px] lg:h-[auto] lg:rounded-md lg:p-4 rounded-lg" style="font-size: 16px;">
             <nav id="toc-nav" class="flex flex-col gap-4 bg-[#FAFAFA] lg:bg-transparent">
-              <span class="text-[16px] font-bold text-[#171717] leading-tight" style="font-style: Geist, sans-serif; font-weight: 600;">IN THIS ARTICLE</span>
-              <a href="#why-security" class="toc-link relative transition-all duration-200"
+              
+              <a href="#why-security" class="toc-link relative pl-0 lg:pl-4 transition-all duration-200"
                 data-section="why-security">
                 <span class="text-[16px] font-bold text-[#171717] leading-tight" style="font-style: Geist, sans-serif;">Why Mobile App Security Can't Be an
                   Afterthought</span>
               </a>
-              <a href="#what-makes-secure" class="toc-link relative transition-all duration-200"
+              <a href="#what-makes-secure" class="toc-link relative pl-0 lg:pl-4 transition-all duration-200"
                 data-section="what-makes-secure">
                 <span class="text-[16px] text-[#404040] font-light leading-tight" style="font-style: Geist, sans-serif;">What Makes a Mobile App Secure?</span>
               </a>
-              <a href="#key-features" class="toc-link relative transition-all duration-200"
+              <a href="#key-features" class="toc-link relative pl-0 lg:pl-4 transition-all duration-200"
                 data-section="key-features">
                 <span class="text-[16px] text-[#404040] font-light leading-tight" style="font-style: Geist, sans-serif;">Key Features of a Mobile App Security
                   Company</span>
               </a>
-              <a href="#security-practices" class="toc-link relative transition-all duration-200"
+              <a href="#security-practices" class="toc-link relative pl-0 lg:pl-4 transition-all duration-200"
                 data-section="security-practices">
                 <span class="text-[16px] text-[#404040] font-light leading-tight" style="font-style: Geist, sans-serif;">Security Practices and
                   Protocols</span>
               </a>
-              <a href="#top-10-leaders" class="toc-link relative transition-all duration-200"
+              <a href="#top-10-leaders" class="toc-link relative pl-0 lg:pl-4 transition-all duration-200"
                 data-section="top-10-leaders">
                 <span class="text-[16px] text-[#404040] font-light leading-tight" style="font-style: Geist, sans-serif;">Meet the Top 10 Mobile App Security
                   Leaders
                   of 2025</span>
               </a>
-              <a href="#choosing-partner" class="toc-link relative transition-all duration-200"
+              <a href="#choosing-partner" class="toc-link relative pl-0 lg:pl-4 transition-all duration-200"
                 data-section="choosing-partner">
                 <span class="text-[16px] text-[#404040] font-light leading-tight" style="font-style: Geist, sans-serif;">Choosing the Best Security
                   Partner</span>
               </a>
-              <a href="#conclusion" class="toc-link relative transition-all duration-200"
+              <a href="#conclusion" class="toc-link relative pl-0 lg:pl-4 transition-all duration-200"
                 data-section="conclusion">
                 <span class="text-[16px] text-[#404040] font-light leading-tight" style="font-style: Geist, sans-serif;">Conclusion</span>
               </a>
