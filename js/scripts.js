@@ -1346,37 +1346,26 @@ document.addEventListener('DOMContentLoaded', function () {
         if (idx === activeIdx) {
           textSpan.classList.add('font-bold', 'text-[#171717]');
           textSpan.classList.remove('text-[#404040]', 'font-light');
-          link.classList.add(
+          textSpan.classList.add(
             'before:absolute',
-            'before:left-0',
-            'before:top-0',
-            'before:w-[2px]',
-            'before:h-full',
-            'before:bg-[#171717]',
-            'before:transform'
-          );
-          link.classList.remove(
+            'before:left-[7px]',
             'before:top-1/2',
             'before:-translate-y-1/2',
-            'before:w-1',
-            'before:h-4',
+            'before:w-[2px]',
+            'before:h-[40px]',
+            'before:bg-[#171717]'
           );
         } else {
           textSpan.classList.remove('font-bold', 'text-[#171717]');
-          textSpan.classList.add('text-[#404040]');
-          link.classList.remove(
+          textSpan.classList.add('text-[#404040]', 'font-light');
+          textSpan.classList.remove(
             'before:absolute',
-            'before:left-0',
-            'before:top-0',
-            'before:w-[2px]',
-            'before:h-full',
-            'before:bg-[#171717]',
-            'before:transform',
+            'before:left-[7px]',
             'before:top-1/2',
             'before:-translate-y-1/2',
-            'before:w-1',
-            'before:h-4',
-            'font-light'
+            'before:w-[2px]',
+            'before:h-[40px]',
+            'before:bg-[#171717]'
           );
         }
       });
@@ -1391,6 +1380,29 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function() {
   const toggleIcons = document.querySelectorAll('.toggle-icon');
   
+  // Initialize chevron directions based on current state
+  toggleIcons.forEach(icon => {
+    const categoryRow = icon.closest('.category-row');
+    const nextRows = [];
+    let nextRow = categoryRow.nextElementSibling;
+    
+    while (nextRow && nextRow.classList.contains('sub-feature')) {
+      nextRows.push(nextRow);
+      nextRow = nextRow.nextElementSibling;
+    }
+    
+    // Check if table is currently open (sub-features are visible)
+    const isCurrentlyOpen = nextRows[0] && nextRows[0].style.display === 'table-row';
+    
+    // Set initial chevron direction based on current state
+    if (isCurrentlyOpen) {
+      icon.style.transform = 'rotate(180deg)'; // Point up when open
+    } else {
+      icon.style.transform = 'rotate(0deg)'; // Point down when closed
+    }
+  });
+  
+  // Add click event listeners
   toggleIcons.forEach(icon => {
     icon.addEventListener('click', function() {
       const categoryRow = this.closest('.category-row');
@@ -1402,18 +1414,32 @@ document.addEventListener('DOMContentLoaded', function() {
         nextRow = nextRow.nextElementSibling;
       }
       
-      const isExpanded = nextRows[0] && nextRows[0].style.display === 'table-row';
-      
-      if (isExpanded) {
-        nextRows.forEach(row => {
-          row.style.display = 'none';
-        });
-        this.style.transform = 'rotate(0deg)';
+      // Check if there are sub-features to toggle
+      if (nextRows.length > 0) {
+        // Has sub-features, toggle them
+        const isExpanded = nextRows[0] && nextRows[0].style.display === 'table-row';
+        
+        if (isExpanded) {
+          // Currently open, so close it and show down arrow
+          nextRows.forEach(row => {
+            row.style.display = 'none';
+          });
+          this.style.transform = 'rotate(0deg)'; // Point down when closed
+        } else {
+          // Currently closed, so open it and show up arrow
+          nextRows.forEach(row => {
+            row.style.display = 'table-row';
+          });
+          this.style.transform = 'rotate(180deg)'; // Point up when open
+        }
       } else {
-        nextRows.forEach(row => {
-          row.style.display = 'table-row';
-        });
-        this.style.transform = 'rotate(180deg)';
+        // No sub-features, just toggle the chevron direction
+        const currentTransform = this.style.transform;
+        if (currentTransform === 'rotate(180deg)' || currentTransform === '') {
+          this.style.transform = 'rotate(0deg)'; // Point down
+        } else {
+          this.style.transform = 'rotate(180deg)'; // Point up
+        }
       }
     });
   });

@@ -52,7 +52,7 @@
         </div>
 
         <!-- CTA Button -->
-        <a href="https://app.testdino.com" target="_blank" type="button" class="nav-cta-button">Join waitlist</a>
+        <a href="https://app.testdino.com" target="_blank" type="button" class="nav-cta-button">Start free</a>
 
         <!-- Mobile Menu Button -->
         <button id="mobile-menu-button" class="mobile-menu-button">
@@ -93,7 +93,7 @@
 
             <!-- Mobile CTA -->
             <div class="mobile-menu-cta">
-              <a href="https://app.testdino.com" target="_blank" class="mobile-menu-cta-button">Join waitlist</a>
+              <a href="https://app.testdino.com" target="_blank" class="mobile-menu-cta-button">Start free</a>
             </div>
           </div>
         </div>
@@ -104,25 +104,27 @@
   <!-- Category Navigation -->
   <div class="bg-gray-50 border-gray-200 ">
     <div class="max-w-[1200px] mx-auto">
-      <div class="flex items-center gap-[24px] py-4 overflow-x-auto">
+      <div class="flex items-center gap-[24px] py-4 overflow-x-auto scrollbar-hide">
         <a href="blogs.html" aria-label="Back to blogs">
-          <img src="Testdino Landing Page Images/blog_images/Frame 2147227012.svg" alt="arrow-left" class="w-10 h-10" />
+          <img src="Testdino Landing Page Images/blog_images/Frame 2147227012.svg" alt="arrow-left" class="w-[38px] h-[38px]" />
         </a>
         <a href="#" class="text-sm font-semibold text-[#404040] whitespace-nowrap">Playwright</a>
-        <a href="#" class="text-sm text-gray-600 hover:text-[#404040] transition-colors whitespace-nowrap">Quality Engineering</a>
+        <a href="#" class="text-sm text-gray-600 hover:text-[#404040] transition-colors whitespace-nowrap">Quality
+          Engineering</a>
         <a href="#" class="text-sm text-gray-600 hover:text-[#404040] transition-colors whitespace-nowrap">CI CD</a>
         <a href="#" class="text-sm text-gray-600 hover:text-[#404040] transition-colors whitespace-nowrap">AI in QA</a>
-        <a href="#" class="text-sm text-gray-600 hover:text-[#404040] transition-colors whitespace-nowrap">Alternatives</a>
+        <a href="#"
+          class="text-sm text-gray-600 hover:text-[#404040] transition-colors whitespace-nowrap">Alternatives</a>
       </div>
     </div>
   </div>
 
   <!-- Main Blog Content -->
-  <main class="flex-1 py-12 md:py-20">
-    <div class="max-w-[1200px] mx-auto ">
+  <main class="flex-1 mt-60px pt-0"">
+    <div class="max-w-[1200px] mx-auto">
       <!-- Blog Header Section - Full Width -->
       <div class="mb-20">
-        <div class="lg:flex lg:gap-[40px] items-start" style="max-width: 1200px; height: 360px;">
+        <div class="lg:flex lg:gap-[40px] items-start mt-[40px] lg:mt-[90px] mb-[40px] lg:mb-[90px]" style="max-width: 1200px; height: 360px;">
           <!-- Left Column: Content -->
           <div class="mb-12 lg:mb-0 flex flex-col justify-between" style="max-width: 600px; height: 360px;">
             <!-- Main Title -->
@@ -143,100 +145,106 @@
             </p>
             <div>
               <!-- Author Info and Share Icons -->
-              <div class="flex items-center justify-between mt-5">
-                <div class="flex items-center gap-[12px]">
-                  <img src="Testdino Landing Page Images/icons/Profile-1.webp" alt="Testdino team"
-                    class="w-[46px] h-[46px] rounded-full">
-                  <div>
-                    <p class="text-[14px] font-bold text-[#0B0C0E]">Testdino team</p>
-                    <p class="text-[14px] text-gray-500">Jun 21, 2025</p>
-                  </div>
-                </div>
+              <div class=" flex items-center justify-between mt-5">
+            <div class="flex items-center gap-[12px]">
+              <img src="Testdino Landing Page Images/icons/Profile-1.webp" alt="Testdino team"
+                class="w-[46px] h-[46px] rounded-full">
+              <div>
+                <p class="text-[14px] font-bold text-[#0B0C0E]">Testdino team</p>
+                <p class="text-[14px] text-gray-500">Jun 21, 2025</p>
+              </div>
+            </div>
 
-                <!-- Social Media Icons -->
-                <div class="flex gap-4">
-                  <!-- LinkedIn -->
-                  <button class="footer-social-link">
-                    <img src="Testdino Landing Page Images/icons/social/fa-brands_linkedin.svg" alt="LinkedIn">
-                  </button>
-                  <!-- X (Twitter) -->
-                  <button class="footer-social-link">
-                    <img src="Testdino Landing Page Images/icons/social/x-logo.svg" alt="X">
-                  </button>
-                  <!-- Share -->
-                  <button
-                    id="share-link-btn"
-                    class="footer-social-link transition-all duration-200"
-                    type="button"
-                    aria-label="Share"
-                    onclick="
+            <!-- Social Media Icons -->
+            <div class="flex gap-4">
+              <!-- LinkedIn -->
+              <button class="footer-social-link">
+                <img src="Testdino Landing Page Images/icons/social/fa-brands_linkedin.svg" alt="LinkedIn">
+              </button>
+              <!-- X (Twitter) -->
+              <button class="footer-social-link">
+                <img src="Testdino Landing Page Images/icons/social/x-logo.svg" alt="X">
+              </button>
+              <!-- Share -->
+              <button id="share-link-btn" class="footer-social-link transition-all duration-200" type="button"
+                aria-label="Share" onclick="
                       navigator.clipboard.writeText(window.location.href);
                       const btn = document.getElementById('share-link-btn');
                       btn.classList.add('border-2', 'border-[#171717]');
                       setTimeout(() => btn.classList.remove('border-2', 'border-[#171717]'), 500);
                     ">
-                    <svg data-sanity-icon="link" width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="size-5 shrink-0"><path d="M8.49993 15.4999L15.4999 8.49991M12.707 18.3639L10.02 21.0509C9.228 21.8429 8.83198 22.2389 8.37532 22.3873C7.97364 22.5178 7.54094 22.5178 7.13926 22.3873C6.6826 22.2389 6.28658 21.8429 5.49455 21.0509L2.94896 18.5053C2.15693 17.7133 1.76091 17.3173 1.61254 16.8606C1.48202 16.4589 1.48202 16.0262 1.61254 15.6245C1.76091 15.1679 2.15693 14.7719 2.94896 13.9798L5.63597 11.2928M18.3639 12.707L21.0509 10.02C21.8429 9.228 22.2389 8.83198 22.3873 8.37532C22.5178 7.97364 22.5178 7.54094 22.3873 7.13926C22.2389 6.6826 21.8429 6.28658 21.0509 5.49455L18.5053 2.94896C17.7133 2.15693 17.3173 1.76091 16.8606 1.61254C16.4589 1.48202 16.0262 1.48202 15.6245 1.61254C15.1679 1.76091 14.7719 2.15693 13.9798 2.94896L11.2928 5.63597" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path></svg>                  </button>
-                </div>
-              </div>
+                <svg data-sanity-icon="link" width="1em" height="1em" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" class="size-5 shrink-0">
+                  <path
+                    d="M8.49993 15.4999L15.4999 8.49991M12.707 18.3639L10.02 21.0509C9.228 21.8429 8.83198 22.2389 8.37532 22.3873C7.97364 22.5178 7.54094 22.5178 7.13926 22.3873C6.6826 22.2389 6.28658 21.8429 5.49455 21.0509L2.94896 18.5053C2.15693 17.7133 1.76091 17.3173 1.61254 16.8606C1.48202 16.4589 1.48202 16.0262 1.61254 15.6245C1.76091 15.1679 2.15693 14.7719 2.94896 13.9798L5.63597 11.2928M18.3639 12.707L21.0509 10.02C21.8429 9.228 22.2389 8.83198 22.3873 8.37532C22.5178 7.97364 22.5178 7.54094 22.3873 7.13926C22.2389 6.6826 21.8429 6.28658 21.0509 5.49455L18.5053 2.94896C17.7133 2.15693 17.3173 1.76091 16.8606 1.61254C16.4589 1.48202 16.0262 1.48202 15.6245 1.61254C15.1679 1.76091 14.7719 2.15693 13.9798 2.94896L11.2928 5.63597"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path>
+                </svg> </button>
             </div>
-          </div>
-
-          <!-- Right Column: Featured Image -->
-          <div class="flex justify-center">
-            <img src="Testdino Landing Page Images/blog_images/Green Fern.png" alt="Laptop with code and green plant"
-              class="w-[600px] h-[360px] object-cover rounded-lg">
           </div>
         </div>
       </div>
+
+      <!-- Right Column: Featured Image -->
+      <div class="flex justify-center">
+        <img 
+          src="Testdino Landing Page Images/blog_images/Green Fern.png" 
+          alt="Laptop with code and green plant"
+          class="w-full max-w-[600px] aspect-[5/3] object-cover rounded-lg"
+          style="height:auto"
+        >
+      </div>
     </div>
-    <!-- Line -->
-    <div class="w-full h-[1px] bg-[#E0E0E0]" style="margin-top: 1px; margin-bottom: 80px;"></div>
+    </div>
+    </div>
+    <!-- Line (hidden on mobile) -->
+    <div class="w-full h-[1px] bg-[#E0E0E0] hidden sm:block" style="margin-top: 1px; margin-bottom: 0px;"></div>
 
     <!-- Blog Content -->
-    <div class="max-w-[1200px] mx-auto">
+    <div class="max-w-[1200px] mx-auto" style="margin-top: 60px;">
       <!-- Two Column Layout -->
-      <div class="lg:flex lg:gap-10">
-        <!-- Left Sidebar - Table of Contents -->
+      <div class="lg:flex lg:gap-10"> 
+         <!-- Left Sidebar - Table of Contents -->
         <div class="lg:w-1/4 mb-12 lg:mb-0">
-          <div class="sticky top-28" style="font-size: 16px;">
-            <nav id="toc-nav" class="flex flex-col gap-2">
+          <div class="sticky top-28 lg:w-[335px] lg:h-[auto] lg:rounded-md lg:border lg:border-[#E5E5E5] lg:p-4 rounded-lg " style="font-size: 16px;">
+            <nav id="toc-nav" class="flex flex-col gap-4 bg-[#FAFAFA] lg:bg-transparent">
               <a href="#why-security" class="toc-link relative pl-4 transition-all duration-200"
                 data-section="why-security">
-                <span class="text-[16px] font-bold text-[#171717] leading-tight">Why Mobile App Security Can't Be an
+                <span class="text-[16px] font-bold text-[#171717] leading-tight" style="font-style: Geist, sans-serif;">Why Mobile App Security Can't Be an
                   Afterthought</span>
               </a>
               <a href="#what-makes-secure" class="toc-link relative pl-4 transition-all duration-200"
                 data-section="what-makes-secure">
-                <span class="text-[16px] text-[#404040] font-light leading-tight">What Makes a Mobile App Secure?</span>
+                <span class="text-[16px] text-[#404040] font-light leading-tight" style="font-style: Geist, sans-serif;">What Makes a Mobile App Secure?</span>
               </a>
               <a href="#key-features" class="toc-link relative pl-4 transition-all duration-200"
                 data-section="key-features">
-                <span class="text-[16px] text-[#404040] font-light leading-tight">Key Features of a Mobile App Security
+                <span class="text-[16px] text-[#404040] font-light leading-tight" style="font-style: Geist, sans-serif;">Key Features of a Mobile App Security
                   Company</span>
               </a>
               <a href="#security-practices" class="toc-link relative pl-4 transition-all duration-200"
                 data-section="security-practices">
-                <span class="text-[16px] text-[#404040] font-light leading-tight">Security Practices and
+                <span class="text-[16px] text-[#404040] font-light leading-tight" style="font-style: Geist, sans-serif;">Security Practices and
                   Protocols</span>
               </a>
               <a href="#top-10-leaders" class="toc-link relative pl-4 transition-all duration-200"
                 data-section="top-10-leaders">
-                <span class="text-[16px] text-[#404040] font-light leading-tight">Meet the Top 10 Mobile App Security
+                <span class="text-[16px] text-[#404040] font-light leading-tight" style="font-style: Geist, sans-serif;">Meet the Top 10 Mobile App Security
                   Leaders
                   of 2025</span>
               </a>
               <a href="#choosing-partner" class="toc-link relative pl-4 transition-all duration-200"
                 data-section="choosing-partner">
-                <span class="text-[16px] text-[#404040] font-light leading-tight">Choosing the Best Security
+                <span class="text-[16px] text-[#404040] font-light leading-tight" style="font-style: Geist, sans-serif;">Choosing the Best Security
                   Partner</span>
               </a>
               <a href="#conclusion" class="toc-link relative pl-4 transition-all duration-200"
                 data-section="conclusion">
-                <span class="text-[16px] text-[#404040] font-light leading-tight">Conclusion</span>
+                <span class="text-[16px] text-[#404040] font-light leading-tight" style="font-style: Geist, sans-serif;">Conclusion</span>
               </a>
             </nav>
           </div>
         </div>
+      
 
         <!-- Main Content Area -->
         <div class="lg:w-3/4">
@@ -269,7 +277,10 @@
               </div>
               <div class="quote-text">
                 <p class="blog-text">
-                  There's a twist on this too. If you keep extrapolating this out — at some point you cross the line of buying software at all. Why don't I just create my own custom software? Then you get to the point where you might not think it makes sense to put it on the martech landscape. But if you think about who else could use and benefit from that software, I think we're going to see a ton of those things.
+                  There's a twist on this too. If you keep extrapolating this out — at some point you cross the line of
+                  buying software at all. Why don't I just create my own custom software? Then you get to the point
+                  where you might not think it makes sense to put it on the martech landscape. But if you think about
+                  who else could use and benefit from that software, I think we're going to see a ton of those things.
                 </p>
               </div>
             </div>
@@ -282,91 +293,106 @@
               Before choosing a security provider, ensure they tick all the right boxes:
             </p>
             <div class="feature-box">
-                  <div class="bullet-item">
-                  <div class="bullet-point"></div>
-                  <div class="item-content">
-                  <p class="blog-text"><b>Data Protection:</b> Safeguarding sensitive user information and business data from unauthorized
+              <div class="bullet-item">
+                <div class="bullet-point"></div>
+                <div class="item-content">
+                  <p class="blog-text"><b>Data Protection:</b> Safeguarding sensitive user information and business data
+                    from unauthorized
                     access.</p>
-                  </div>
-               
+                </div>
+
               </div>
               <div class="bullet-item">
                 <div class="bullet-point"></div>
                 <div class="item-content">
-                  <p class="blog-text"><b>Compliance: </b>Meeting industry standards and regulatory requirements for data security.</p>
+                  <p class="blog-text"><b>Compliance: </b>Meeting industry standards and regulatory requirements for
+                    data security.</p>
                 </div>
               </div>
               <div class="bullet-item">
                 <div class="bullet-point"></div>
                 <div class="item-content">
-                  <p class="blog-text"><b>Reputation:</b> Protecting brand trust and customer confidence through secure practices.</p>
+                  <p class="blog-text"><b>Reputation:</b> Protecting brand trust and customer confidence through secure
+                    practices.</p>
                 </div>
               </div>
               <div class="bullet-item">
                 <div class="bullet-point"></div>
                 <div class="item-content">
-                  <p class="blog-text"><b>Business Continuity:</b> Ensuring uninterrupted operations and service delivery to customers.</p>
+                  <p class="blog-text"><b>Business Continuity:</b> Ensuring uninterrupted operations and service
+                    delivery to customers.</p>
                 </div>
               </div>
               <div class="bullet-item">
                 <div class="bullet-point"></div>
                 <div class="item-content">
-                  <p class="blog-text"><b>Competitive Advantage:</b> Gaining market differentiation through superior security measures.</p>
+                  <p class="blog-text"><b>Competitive Advantage:</b> Gaining market differentiation through superior
+                    security measures.</p>
                 </div>
               </div>
             </div>
           </section>
 
 
-           <!-- Why Mobile App Security Section 2-->
+          <!-- Why Mobile App Security Section 2-->
           <section id="why-security" class="blog-content-section">
-            
+
             <div class="feature-box">
-                  <div class="item-content">
-                  <p class="blog-text"><b>Data Protection:</b> Safeguarding sensitive user information and business data from unauthorized
-                    access.</p>
-                  </div>
-               
               <div class="item-content">
-                  <p class="blog-text"><b>Compliance: </b>Meeting industry standards and regulatory requirements for data security.</p>
-                </div>
+                <p class="blog-text"><b>Data Protection:</b> Safeguarding sensitive user information and business data
+                  from unauthorized
+                  access.</p>
+              </div>
+
               <div class="item-content">
-                  <p class="blog-text"><b>Reputation:</b> Protecting brand trust and customer confidence through secure practices.</p>
-                </div>
+                <p class="blog-text"><b>Compliance: </b>Meeting industry standards and regulatory requirements for data
+                  security.</p>
+              </div>
               <div class="item-content">
-                  <p class="blog-text"><b>Business Continuity:</b> Ensuring uninterrupted operations and service delivery to customers.</p>
-                </div>
+                <p class="blog-text"><b>Reputation:</b> Protecting brand trust and customer confidence through secure
+                  practices.</p>
+              </div>
               <div class="item-content">
-                  <p class="blog-text"><b>Competitive Advantage:</b> Gaining market differentiation through superior security measures.</p>
-                </div>
+                <p class="blog-text"><b>Business Continuity:</b> Ensuring uninterrupted operations and service delivery
+                  to customers.</p>
+              </div>
+              <div class="item-content">
+                <p class="blog-text"><b>Competitive Advantage:</b> Gaining market differentiation through superior
+                  security measures.</p>
+              </div>
             </div>
           </section>
 
           <!-- Why Mobile App Security Section 3-->
           <section id="why-security" class="blog-content-section">
-            
+
             <div class="feature-box">
-                  <div class="item-content">
-                  <p class="blog-text"><b>Data Protection</b></p>
-                  <p class="blog-text" style="font-size: 17px;">Safeguarding sensitive user information and business data from unauthorized
-                  </div>
-               
               <div class="item-content">
-                  <p class="blog-text"><b>Compliance</b></p>
-                  <p class="blog-text" style="font-size: 17px;">Meeting industry standards and regulatory requirements for data security.</p>
-                </div>
+                <p class="blog-text"><b>Data Protection</b></p>
+                <p class="blog-text" style="font-size: 18px;">Safeguarding sensitive user information and business data
+                  from unauthorized
+              </div>
+
               <div class="item-content">
-                  <p class="blog-text"><b>Reputation</b></p>
-                  <p class="blog-text" style="font-size: 17px;">Protecting brand trust and customer confidence through secure practices.</p>
-                </div>
+                <p class="blog-text"><b>Compliance</b></p>
+                <p class="blog-text" style="font-size: 18px;">Meeting industry standards and regulatory requirements for
+                  data security.</p>
+              </div>
               <div class="item-content">
-                  <p class="blog-text"><b>Business Continuity</b></p>
-                  <p class="blog-text" style="font-size: 17px;">Ensuring uninterrupted operations and service delivery to customers.</p>
-                </div>
+                <p class="blog-text"><b>Reputation</b></p>
+                <p class="blog-text" style="font-size: 18px;">Protecting brand trust and customer confidence through
+                  secure practices.</p>
+              </div>
               <div class="item-content">
-                  <p class="blog-text"><b>Competitive Advantage</b></p>
-                  <p class="blog-text" style="font-size: 17px;">Gaining market differentiation through superior security measures.</p>
-                </div>
+                <p class="blog-text"><b>Business Continuity</b></p>
+                <p class="blog-text" style="font-size: 18px;">Ensuring uninterrupted operations and service delivery to
+                  customers.</p>
+              </div>
+              <div class="item-content">
+                <p class="blog-text"><b>Competitive Advantage</b></p>
+                <p class="blog-text" style="font-size: 18px;">Gaining market differentiation through superior security
+                  measures.</p>
+              </div>
             </div>
           </section>
 
@@ -387,115 +413,129 @@
               <div class="bullet-item">
                 <div class="bullet-point"></div>
                 <div class="item-content">
-                  <p class="blog-text"><b>Secure Authentication:</b> Robust login systems with biometric and multi-factor options.</p>
+                  <p class="blog-text"><b>Secure Authentication:</b> Robust login systems with biometric and
+                    multi-factor options.</p>
                 </div>
               </div>
               <div class="bullet-item">
                 <div class="bullet-point"></div>
                 <div class="item-content">
-                  <p class="blog-text"><b>Regular Security Updates:</b> Continuous patching and vulnerability management.</p>
+                  <p class="blog-text"><b>Regular Security Updates:</b> Continuous patching and vulnerability
+                    management.</p>
                 </div>
               </div>
             </div>
           </section>
 
-            <!-- What Makes Mobile App Secure Section 2-->
-           <section id="what-makes-secure" class="blog-content-section">
-            
-             <div class="feature-box">
-               <div class="item-content">
-                   <p class="blog-text"><b>Encryption:</b> End-to-end encryption for data in transit and at rest.</p>
-                 </div>
-               <div class="item-content">
-                   <p class="blog-text"><b>Secure Authentication:</b> Robust login systems with biometric and multi-factor options.</p>
-                 </div>
-               <div class="item-content">
-                   <p class="blog-text"><b>Regular Security Updates:</b> Continuous patching and vulnerability management.</p>
-                 </div>
-             </div>
-           </section>
+          <!-- What Makes Mobile App Secure Section 2-->
+          <section id="what-makes-secure" class="blog-content-section">
 
-            <!-- What Makes Mobile App Secure Section 3-->
-           <section id="what-makes-secure" class="blog-content-section">
-            
-             <div class="feature-box">
-               <div class="item-content">
-                   <p class="blog-text"><b>Encryption</b></p>
-                   <p class="blog-text" style="font-size: 17px;">End-to-end encryption for data in transit and at rest.</p>
-                 </div>
-               <div class="item-content">
-                   <p class="blog-text"><b>Secure Authentication</b></p>
-                   <p class="blog-text" style="font-size: 17px;">Robust login systems with biometric and multi-factor options.</p>
-                 </div>
-               <div class="item-content">
-                   <p class="blog-text"><b>Regular Security Updates</b></p>
-                   <p class="blog-text" style="font-size: 17px;">Continuous patching and vulnerability management.</p>
-                 </div>
-             </div>
-           </section>
+            <div class="feature-box">
+              <div class="item-content">
+                <p class="blog-text"><b>Encryption:</b> End-to-end encryption for data in transit and at rest.</p>
+              </div>
+              <div class="item-content">
+                <p class="blog-text"><b>Secure Authentication:</b> Robust login systems with biometric and multi-factor
+                  options.</p>
+              </div>
+              <div class="item-content">
+                <p class="blog-text"><b>Regular Security Updates:</b> Continuous patching and vulnerability management.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- What Makes Mobile App Secure Section 3-->
+          <section id="what-makes-secure" class="blog-content-section">
+
+            <div class="feature-box">
+              <div class="item-content">
+                <p class="blog-text"><b>Encryption</b></p>
+                <p class="blog-text" style="font-size: 18px;">End-to-end encryption for data in transit and at rest.</p>
+              </div>
+              <div class="item-content">
+                <p class="blog-text"><b>Secure Authentication</b></p>
+                <p class="blog-text" style="font-size: 18px;">Robust login systems with biometric and multi-factor
+                  options.</p>
+              </div>
+              <div class="item-content">
+                <p class="blog-text"><b>Regular Security Updates</b></p>
+                <p class="blog-text" style="font-size: 18px;">Continuous patching and vulnerability management.</p>
+              </div>
+            </div>
+          </section>
 
           <!-- Key Features Section -->
           <section id="key-features" class="blog-content-section">
             <h2 class="blog-header ">Key Features of a Mobile App Security Company</h2>
             <p class="blog-text" style="font-size: 18px;">
-              When evaluating security providers, look for these essential capabilities that ensure comprehensive protection.
+              When evaluating security providers, look for these essential capabilities that ensure comprehensive
+              protection.
             </p>
             <div class="feature-box">
               <div class="bullet-item">
                 <div class="bullet-point"></div>
                 <div class="item-content">
-                  <p class="blog-text"><b>Threat Intelligence:</b> Advanced monitoring and analysis of emerging security threats.</p>
+                  <p class="blog-text"><b>Threat Intelligence:</b> Advanced monitoring and analysis of emerging security
+                    threats.</p>
                 </div>
               </div>
               <div class="bullet-item">
                 <div class="bullet-point"></div>
                 <div class="item-content">
-                  <p class="blog-text"><b>Compliance Management:</b> Expertise in industry standards and regulatory requirements.</p>
+                  <p class="blog-text"><b>Compliance Management:</b> Expertise in industry standards and regulatory
+                    requirements.</p>
                 </div>
               </div>
               <div class="bullet-item">
                 <div class="bullet-point"></div>
                 <div class="item-content">
-                  <p class="blog-text"><b>24/7 Support:</b> Round-the-clock security monitoring and incident response.</p>
+                  <p class="blog-text"><b>24/7 Support:</b> Round-the-clock security monitoring and incident response.
+                  </p>
                 </div>
               </div>
             </div>
           </section>
 
-            <!-- Key Features Section 2-->
-           <section id="key-features" class="blog-content-section">
-            
-             <div class="feature-box">
-               <div class="item-content">
-                   <p class="blog-text"><b>Threat Intelligence:</b> Advanced monitoring and analysis of emerging security threats.</p>
-                 </div>
-               <div class="item-content">
-                   <p class="blog-text"><b>Compliance Management:</b> Expertise in industry standards and regulatory requirements.</p>
-                 </div>
-               <div class="item-content">
-                   <p class="blog-text"><b>24/7 Support:</b> Round-the-clock security monitoring and incident response.</p>
-                 </div>
-             </div>
-           </section>
+          <!-- Key Features Section 2-->
+          <section id="key-features" class="blog-content-section">
 
-            <!-- Key Features Section 3-->
-           <section id="key-features" class="blog-content-section">
-            
-             <div class="feature-box">
-               <div class="item-content">
-                   <p class="blog-text"><b>Threat Intelligence:</b></p>
-                   <p class="blog-text" style="font-size: 17px;">Advanced monitoring and analysis of emerging security threats.</p>
-                 </div>
-               <div class="item-content">
-                   <p class="blog-text"><b>Compliance Management:</b></p>
-                   <p class="blog-text" style="font-size: 17px;">Expertise in industry standards and regulatory requirements.</p>
-                 </div>
-               <div class="item-content">
-                   <p class="blog-text"><b>24/7 Support:</b></p>
-                   <p class="blog-text" style="font-size: 17px;">Round-the-clock security monitoring and incident response.</p>
-                 </div>
-             </div>
-           </section>
+            <div class="feature-box">
+              <div class="item-content">
+                <p class="blog-text"><b>Threat Intelligence:</b> Advanced monitoring and analysis of emerging security
+                  threats.</p>
+              </div>
+              <div class="item-content">
+                <p class="blog-text"><b>Compliance Management:</b> Expertise in industry standards and regulatory
+                  requirements.</p>
+              </div>
+              <div class="item-content">
+                <p class="blog-text"><b>24/7 Support:</b> Round-the-clock security monitoring and incident response.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Key Features Section 3-->
+          <section id="key-features" class="blog-content-section">
+
+            <div class="feature-box">
+              <div class="item-content">
+                <p class="blog-text" style="margin-bottom: 8px;"><b>Threat Intelligence:</b></p>
+                <p class="blog-text" style="font-size: 18px;">Advanced monitoring and analysis of emerging security
+                  threats.</p>
+              </div>
+              <div class="item-content">
+                <p class="blog-text" style="margin-bottom: 8px;"><b>Compliance Management:</b></p>
+                <p class="blog-text" style="font-size: 18px;">Expertise in industry standards and regulatory
+                  requirements.</p>
+              </div>
+              <div class="item-content">
+                <p class="blog-text" style="margin-bottom: 8px;"><b>24/7 Support:</b></p>
+                <p class="blog-text" style="font-size: 18px;">Round-the-clock security monitoring and incident response.
+                </p>
+              </div>
+            </div>
+          </section>
 
           <!-- Security Practices Section -->
           <section id="security-practices" class="blog-content-section">
@@ -508,13 +548,15 @@
               <div class="bullet-item">
                 <div class="bullet-point"></div>
                 <div class="item-content">
-                  <p class="blog-text"><b>Secure Development Lifecycle:</b> Integrating security into every phase of app development.</p>
+                  <p class="blog-text"><b>Secure Development Lifecycle:</b> Integrating security into every phase of app
+                    development.</p>
                 </div>
               </div>
               <div class="bullet-item">
                 <div class="bullet-point"></div>
                 <div class="item-content">
-                  <p class="blog-text"><b>Penetration Testing:</b> Regular security assessments to identify vulnerabilities.</p>
+                  <p class="blog-text"><b>Penetration Testing:</b> Regular security assessments to identify
+                    vulnerabilities.</p>
                 </div>
               </div>
               <div class="bullet-item">
@@ -527,38 +569,42 @@
           </section>
 
           <!-- Security Practices Section 2-->
-           <section id="security-practices" class="blog-content-section">
-             <div class="feature-box">
-               <div class="item-content">
-                   <p class="blog-text"><b>Secure Development Lifecycle</b> Integrating security into every phase of app development.</p>
-                 </div>
-               <div class="item-content">
-                   <p class="blog-text"><b>Penetration Testing:</b> Regular security assessments to identify vulnerabilities.</p>
-                 </div>
-               <div class="item-content">
-                   <p class="blog-text"><b>Incident Response:</b> Prepared protocols for handling security breaches.</p>
-                 </div>
-             </div>
-           </section>
+          <section id="security-practices" class="blog-content-section">
+            <div class="feature-box">
+              <div class="item-content">
+                <p class="blog-text"><b>Secure Development Lifecycle</b> Integrating security into every phase of app
+                  development.</p>
+              </div>
+              <div class="item-content">
+                <p class="blog-text"><b>Penetration Testing:</b> Regular security assessments to identify
+                  vulnerabilities.</p>
+              </div>
+              <div class="item-content">
+                <p class="blog-text"><b>Incident Response:</b> Prepared protocols for handling security breaches.</p>
+              </div>
+            </div>
+          </section>
 
           <!-- Security Practices Section 3-->
-           <section id="security-practices" class="blog-content-section">
-            
-             <div class="feature-box">
-               <div class="item-content">
-                   <p class="blog-text"><b>Secure Development Lifecycle</b></p>
-                    <p class="blog-text" style="font-size: 17px;">Integrating security into every phase of app development.</p>
-                 </div>
-               <div class="item-content">
-                   <p class="blog-text"><b>Penetration Testing:</b></p>
-                   <p class="blog-text" style="font-size: 17px;">Regular security assessments to identify vulnerabilities.</p>
-                 </div>
-               <div class="item-content">
-                   <p class="blog-text"><b>Incident Response:</b></p>
-                   <p class="blog-text" style="font-size: 17px;">Prepared protocols for handling security breaches.</p>
-                 </div>
-             </div>
-           </section>
+          <section id="security-practices" class="blog-content-section">
+
+            <div class="feature-box">
+              <div class="item-content">
+                <p class="blog-text" style="margin-bottom: 8px;"><b>Secure Development Lifecycle</b></p>
+                <p class="blog-text" style="font-size: 18px;">Integrating security into every phase of app development.
+                </p>
+              </div>
+              <div class="item-content">
+                <p class="blog-text" style="margin-bottom: 8px;"><b>Penetration Testing:</b></p>
+                <p class="blog-text" style="font-size: 18px;">Regular security assessments to identify vulnerabilities.
+                </p>
+              </div>
+              <div class="item-content">
+                <p class="blog-text" style="margin-bottom: 8px;"><b>Incident Response:</b></p>
+                <p class="blog-text" style="font-size: 18px;">Prepared protocols for handling security breaches.</p>
+              </div>
+            </div>
+          </section>
 
           <!-- Top 10 Leaders Section -->
           <section id="top-10-leaders" class="blog-content-section">
@@ -573,15 +619,17 @@
               <div class="flex items-center justify-between px-4 py-3 border-b border-[#e5e7eb] bg-[#f8f9fa]">
                 <div class="flex items-center gap-2">
                   <!-- Terminal icon using SVG -->
-                  <svg viewBox="0 0 28 24" fill="none" stroke="currentColor" class="h-4 w-auto max-w-6 shrink-0 text-gray-500">
-                    <path d="M7.3 7.8L12.55 12L7.3 16.2M14.65 16.2H19.9M2.11562 1.5H25.0844C25.7005 1.5 26.2 1.99948 26.2 2.61562V21.3844C26.2 22.0005 25.7005 22.5 25.0844 22.5H2.11562C1.49948 22.5 1 22.0005 1 21.3844V2.61562C1 1.99948 1.49948 1.5 2.11562 1.5Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <svg viewBox="0 0 28 24" fill="none" stroke="currentColor"
+                    class="h-4 w-auto max-w-6 shrink-0 text-gray-500">
+                    <path
+                      d="M7.3 7.8L12.55 12L7.3 16.2M14.65 16.2H19.9M2.11562 1.5H25.0844C25.7005 1.5 26.2 1.99948 26.2 2.61562V21.3844C26.2 22.0005 25.7005 22.5 25.0844 22.5H2.11562C1.49948 22.5 1 22.0005 1 21.3844V2.61562C1 1.99948 1.49948 1.5 2.11562 1.5Z"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                   <span class="text-[14px] font-medium text-gray-700">Playwright Reporter Configuration</span>
                 </div>
                 <button type="button" id="copy-button"
                   class="flex items-center gap-2 px-3 py-1.5 rounded-md bg-white border border-gray-200 text-gray-700 text-xs font-medium hover:bg-gray-50 active:bg-gray-100 transition-all duration-200"
-                  onclick="copyCode()"
-                  aria-label="Copy code">
+                  onclick="copyCode()" aria-label="Copy code">
                   <img src="Testdino Landing Page Images/icons/tabler_copy.svg" alt="Copy" class="w-4 h-4">
                   <span id="copy-text">Copy code</span>
                 </button>
@@ -610,7 +658,7 @@
             <!-- Company 1 -->
             <div class="mb-8">
               <h3 class="text-[22px] font-bold  mb-3">1. Alphabin</h3>
-              <p class="text-[22px] font-semibold mb-3">The Unmatched Leader in Mobile Security</p>
+              <h4 class="text-[20px] font-semibold mb-3">The Unmatched Leader in Mobile Security</h4>
               <p class=" mb-4" style="font-size: 18px;">
                 Alphabin stands at the forefront of mobile app security with its cutting-edge AI-powered threat
                 intelligence platform. Their comprehensive approach to security has made them the go-to choice for
@@ -618,34 +666,30 @@
               </p>
               <div class="feature-box">
                 <div class="numbered-item">
-                  <div class="number">1.</div>
                   <div class="item-content">
-                    <h4 class="font-semibold mb-1">AI-Powered Threat Intelligence</h4>
-                    <p class="text-sm"">Advanced machine learning algorithms for proactive
+                    <h4 class="font-semibold mb-1">1. AI-Powered Threat Intelligence</h4>
+                    <p>Advanced machine learning algorithms for proactive
                       threat detection</p>
                   </div>
                 </div>
                 <div class="numbered-item">
-                  <div class="number">2.</div>
                   <div class="item-content">
-                    <h4 class="font-semibold mb-1">Proactive Vulnerability Scanning</h4>
-                    <p class="text-sm" >Continuous monitoring and early threat identification
+                    <h4 class="font-semibold mb-1">2. Proactive Vulnerability Scanning</h4>
+                    <p>Continuous monitoring and early threat identification
                     </p>
                   </div>
                 </div>
                 <div class="numbered-item">
-                  <div class="number">3.</div>
                   <div class="item-content">
-                    <h4 class="font-semibold mb-1">DevSecOps Integration</h4>
-                    <p class="text-sm" >Seamless security integration into development workflows
+                    <h4 class="font-semibold mb-1">3. DevSecOps Integration</h4>
+                    <p>Seamless security integration into development workflows
                     </p>
                   </div>
                 </div>
                 <div class="numbered-item">
-                  <div class="number">4.</div>
                   <div class="item-content">
-                    <h4 class="font-semibold mb-1">24/7 Customer Support</h4>
-                    <p class="text-sm" >Round-the-clock expert assistance and monitoring</p>
+                    <h4 class="font-semibold mb-1">4. 24/7 Customer Support</h4>
+                    <p>Round-the-clock expert assistance and monitoring</p>
                   </div>
                 </div>
               </div>
@@ -656,29 +700,29 @@
               <div class="feature-box">
                 <div class="numbered-item">
                   <div class="item-content">
-                    <h4 class="font-semibold mb-1">AI-Powered Threat Intelligence</h4>
-                    <p class="text-sm"">Advanced machine learning algorithms for proactive
+                    <h4 class="font-semibold mb-1"> AI-Powered Threat Intelligence</h4>
+                    <p>Advanced machine learning algorithms for proactive
                       threat detection</p>
                   </div>
                 </div>
                 <div class="numbered-item">
                   <div class="item-content">
                     <h4 class="font-semibold mb-1">Proactive Vulnerability Scanning</h4>
-                    <p class="text-sm" >Continuous monitoring and early threat identification
+                    <p>Continuous monitoring and early threat identification
                     </p>
                   </div>
                 </div>
                 <div class="numbered-item">
                   <div class="item-content">
                     <h4 class="font-semibold mb-1">DevSecOps Integration</h4>
-                    <p class="text-sm" >Seamless security integration into development workflows
+                    <p>Seamless security integration into development workflows
                     </p>
                   </div>
                 </div>
                 <div class="numbered-item">
-                    <div class="item-content">
+                  <div class="item-content">
                     <h4 class="font-semibold mb-1">24/7 Customer Support</h4>
-                    <p class="text-sm" >Round-the-clock expert assistance and monitoring</p>
+                    <p>Round-the-clock expert assistance and monitoring</p>
                   </div>
                 </div>
               </div>
@@ -689,29 +733,33 @@
               <div class="feature-box">
                 <div class="numbered-item">
                   <div class="item-content">
-                    <p class="text-md"><b>AI-Powered Threat Intelligence:</b>
-                    Advanced machine learning algorithms for proactive
-                    threat detection</p>
+                    <p style="text-align: left;"><b>1. AI-Powered Threat Intelligence:</b>
+                      Advanced machine learning algorithms for proactive
+                      threat detection</p>
                   </div>
                 </div>
                 <div class="numbered-item">
                   <div class="item-content">
-                    <p class="text-md"><b>Proactive Vulnerability Scanning:</b>
-                    Continuous monitoring and early threat identification
-                    </p>
+                    <p style="text-align: left;"><b>2. Proactive Vulnerability Scanning:</b>
+                      Continuous monitoring and early threat identification                    </p>
                   </div>
                 </div>
                 <div class="numbered-item">
                   <div class="item-content">
-                    <p class="text-md"><b>DevSecOps Integration:</b>
-                    Seamless security integration into development workflows
-                    </p>
-                  </div>
-                </div>
-                <div class="numbered-item">
                     <div class="item-content">
-                    <p class="text-md"><b>24/7 Customer Support:</b>
-                    Round-the-clock expert assistance and monitoring</p>
+                      <p style="text-align: left;"><b>3. DevSecOps Integration:</b>
+                        Seamless security integration into development workflows
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="numbered-item">
+                  <div class="item-content">
+                    <div class="item-content">
+                      <p style="text-align: left;"><b>4. 24/7 Customer Support:</b>
+                        Round-the-clock expert assistance and monitoring
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -720,31 +768,28 @@
             <!-- Company 2 -->
             <div class="mb-8">
               <h3 class="text-[22px] font-bold  mb-3">2. Veracode</h3>
-              <p class="text-[22px] font-semibold mb-3">The Application Security Powerhouse</p>
+              <h4 class="text-[20px] font-semibold mb-3">The Application Security Powerhouse</h4>
               <p class=" mb-4" style="font-size: 18px;">
                 Veracode specializes in comprehensive application security testing, providing businesses with the tools
                 and insights needed to build secure applications from the ground up.
               </p>
               <div class="feature-box">
                 <div class="numbered-item">
-                  <div class="number">1.</div>
                   <div class="item-content">
-                    <h4 class="font-semibold mb-1">SAST & DAST</h4>
-                    <p class="text-sm" >Static and dynamic application security testing</p>
+                    <h4 class="font-semibold mb-1">1. SAST & DAST</h4>
+                    <p>Static and dynamic application security testing</p>
                   </div>
                 </div>
                 <div class="numbered-item">
-                  <div class="number">2.</div>
                   <div class="item-content">
-                    <h4 class="font-semibold mb-1">AI-Driven Threat Detection</h4>
-                    <p class="text-sm" >Intelligent security analysis and risk assessment</p>
+                    <h4 class="font-semibold mb-1">2. AI-Driven Threat Detection</h4>
+                    <p>Intelligent security analysis and risk assessment</p>
                   </div>
                 </div>
                 <div class="numbered-item">
-                  <div class="number">3.</div>
                   <div class="item-content">
-                    <h4 class="font-semibold mb-1">Seamless DevOps Integration</h4>
-                    <p class="text-sm" >Security tools that work with existing workflows</p>
+                    <h4 class="font-semibold mb-1">3. Seamless DevOps Integration</h4>
+                    <p>Security tools that work with existing workflows</p>
                   </div>
                 </div>
               </div>
@@ -756,47 +801,51 @@
                 <div class="numbered-item">
                   <div class="item-content">
                     <h4 class="font-semibold mb-1">SAST & DAST</h4>
-                    <p class="text-sm" >Static and dynamic application security testing</p>
+                    <p>Static and dynamic application security testing</p>
                   </div>
                 </div>
                 <div class="numbered-item">
                   <div class="item-content">
                     <h4 class="font-semibold mb-1">AI-Driven Threat Detection</h4>
-                    <p class="text-sm" >Intelligent security analysis and risk assessment</p>
+                    <p>Intelligent security analysis and risk assessment</p>
                   </div>
                 </div>
                 <div class="numbered-item">
                   <div class="item-content">
                     <h4 class="font-semibold mb-1">Seamless DevOps Integration</h4>
-                    <p class="text-sm" >Security tools that work with existing workflows</p>
+                    <p>Security tools that work with existing workflows</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Company 2 b-->
-            <div class="mb-8">
-              <div class="feature-box">
-                <div class="numbered-item">
-                  <div class="item-content">
-                    <p class="text-md"><b>SAST & DAST:</b>
-                    Static and dynamic application security testing</p>
+              <!-- Company 2 b-->
+              <div class="mb-8">
+                <div class="feature-box">
+                  <div class="numbered-item">
+                    <div class="item-content">
+                      <p style="text-align: left;"><b>1. SAST & DAST:</b>
+                        Static and dynamic application security testing</p>
+                    </div>
                   </div>
-                </div>
-                <div class="numbered-item">
-                  <div class="item-content">
-                    <p class="text-md"><b>AI-Driven Threat Detection:</b>
-                    Intelligent security analysis and risk assessment</p>
+                  <div class="numbered-item">
+                    <div class="item-content">
+                      <p style="text-align: left;"><b>2. AI-Driven Threat Detection:</b>
+                        Intelligent security analysis and risk assessment
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div class="numbered-item">
-                  <div class="item-content">
-                    <p class="text-md"><b>Seamless DevOps Integration:</b>
-                    Security tools that work with existing workflows</p>
+                  <div class="numbered-item">
+                    <div class="item-content">
+                      <div class="item-content">
+                        <p style="text-align: left;"><b>3. Seamless DevOps Integration:</b>
+                          Security tools that work with existing workflows
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
           </section>
 
           <!-- Choosing the Best Security Partner Section -->
@@ -810,57 +859,66 @@
               <div class="bullet-item">
                 <div class="bullet-point"></div>
                 <div class="item-content">
-                <p class="blog-text"><b>Technology Stack Compatibility:</b> Ensure the security solution integrates seamlessly with your existing development tools and infrastructure.</p>
+                  <p class="blog-text"><b>Technology Stack Compatibility:</b> Ensure the security solution integrates
+                    seamlessly with your existing development tools and infrastructure.</p>
                 </div>
               </div>
               <div class="bullet-item">
                 <div class="bullet-point"></div>
                 <div class="item-content">
-                  <p class="blog-text"><b>Compliance Requirements:</b> Verify that the provider meets industry-specific regulations and compliance standards.</p>
+                  <p class="blog-text"><b>Compliance Requirements:</b> Verify that the provider meets industry-specific
+                    regulations and compliance standards.</p>
                 </div>
               </div>
               <div class="bullet-item">
                 <div class="bullet-point"></div>
                 <div class="item-content">
-                  <p class="blog-text"><b>Support and Response Time:</b> Evaluate the level of support provided and response times for security incidents.</p>
+                  <p class="blog-text"><b>Support and Response Time:</b> Evaluate the level of support provided and
+                    response times for security incidents.</p>
                 </div>
               </div>
             </div>
           </section>
 
-            <!-- Choosing the Best Security Partner Section 2-->
-           <section id="choosing-partner" class="blog-content-section">
-            
-             <div class="feature-box" style="font-size: 30px;">
-               <div class="item-content">
-                 <p class="blog-text"><b>Technology Stack Compatibility:</b> Ensure the security solution integrates seamlessly with your existing development tools and infrastructure.</p>
-                 </div>
-               <div class="item-content">
-                   <p class="blog-text"><b>Compliance Requirements:</b> Verify that the provider meets industry-specific regulations and compliance standards.</p>
-                 </div>
-               <div class="item-content">
-                   <p class="blog-text"><b>Support and Response Time:</b> Evaluate the level of support provided and response times for security incidents.</p>
-                 </div>
-             </div>
-           </section>
+          <!-- Choosing the Best Security Partner Section 2-->
+          <section id="choosing-partner" class="blog-content-section">
 
-            <!-- Choosing the Best Security Partner Section 3-->
-           <section id="choosing-partner" class="blog-content-section">
-             <div class="feature-box" style="font-size: 30px;">
-               <div class="item-content">
-                 <p class="blog-text"><b>Technology Stack Compatibility</b></p>
-                 <p class="blog-text" style="font-size: 17px;">Ensure the security solution integrates seamlessly with your existing development tools and infrastructure.</p>
-                 </div>
-               <div class="item-content">
-                   <p class="blog-text"><b>Compliance Requirements:</b></p>
-                   <p class="blog-text" style="font-size: 17px;">Verify that the provider meets industry-specific regulations and compliance standards.</p>
-                 </div>
-               <div class="item-content">
-                   <p class="blog-text"><b>Support and Response Time:</b></p>
-                   <p class="blog-text" style="font-size: 17px;">Evaluate the level of support provided and response times for security incidents.</p>
-                 </div>
-             </div>
-           </section>
+            <div class="feature-box" style="font-size: 30px;">
+              <div class="item-content">
+                <p class="blog-text"><b>Technology Stack Compatibility:</b> Ensure the security solution integrates
+                  seamlessly with your existing development tools and infrastructure.</p>
+              </div>
+              <div class="item-content">
+                <p class="blog-text"><b>Compliance Requirements:</b> Verify that the provider meets industry-specific
+                  regulations and compliance standards.</p>
+              </div>
+              <div class="item-content">
+                <p class="blog-text"><b>Support and Response Time:</b> Evaluate the level of support provided and
+                  response times for security incidents.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Choosing the Best Security Partner Section 3-->
+          <section id="choosing-partner" class="blog-content-section">
+            <div class="feature-box" style="font-size: 30px;">
+              <div class="item-content">
+                <p class="blog-text" style="margin-bottom: 8px;"><b>Technology Stack Compatibility</b></p>
+                <p class="blog-text" style="font-size: 17px;">Ensure the security solution integrates seamlessly with
+                  your existing development tools and infrastructure.</p>
+              </div>
+              <div class="item-content">
+                <p class="blog-text" style="margin-bottom: 8px;"><b>Compliance Requirements:</b></p>
+                <p class="blog-text" style="font-size: 17px;">Verify that the provider meets industry-specific
+                  regulations and compliance standards.</p>
+              </div>
+              <div class="item-content">
+                <p class="blog-text" style="margin-bottom: 8px;"><b>Support and Response Time:</b></p>
+                <p class="blog-text" style="font-size: 17px;">Evaluate the level of support provided and response times
+                  for security incidents.</p>
+              </div>
+            </div>
+          </section>
 
           <!-- Conclusion -->
           <section id="conclusion" class="blog-content-section">
@@ -913,12 +971,12 @@
               <!-- Desktop only Dino image -->
               <img src="Testdino Landing Page Images/icons/CTA DINO.svg" alt="Logo"
                 class="hidden md:block w-8 h-8 absolute right-[120px] top-[80px] scale-[8.5]" />
-                <a href="https://app.testdino.com" target="_blank" 
-                  class="btn btn-md font-[16px] bg-white text-black font-semibold rounded-lg shadow-sm px-6 py-2 w-full md:w-auto hover:bg-gray-100 transition-all w-full md:w-auto mt-2 md:mt-0 md:absolute md:right-8">
-                  Get started
-                </a>
+              <a href="https://app.testdino.com" target="_blank"
+                class="btn btn-md font-[16px] bg-white text-black font-semibold rounded-lg shadow-sm px-6 py-2 w-full md:w-auto hover:bg-gray-100 transition-all w-full md:w-auto mt-2 md:mt-0 md:absolute md:right-8">
+                Get started
+              </a>
             </div>
-            
+
           </div>
         </div>
       </div>
@@ -1046,10 +1104,10 @@
     </div>
   </footer>
 
-  
+
 
   <script src="js/scripts.js" defer></script>
-  
+
 </body>
 
 </html>

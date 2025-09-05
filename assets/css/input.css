@@ -117,6 +117,12 @@ p {
   font-size: 16px;
 }
 
+.ff-geist-mono {
+  font-family: "Geist Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
 @keyframes spin-slow {
   0% {
@@ -461,18 +467,17 @@ input[type="range"]::-moz-range-thumb {
   }
 
   #toc-nav {
-    padding: 1rem !important;
     background: #f9f9f9 !important;
     border-radius: 0.5rem !important;
     border: 1px solid #e5e7eb !important;
+    padding: 16px !important;
   }
 
   .toc-link {
-    padding: 0.5rem 0.75rem !important;
-    margin-bottom: 0.5rem !important;
-    border-bottom: 1px solid #e5e7eb !important;
+    /* padding: 16px !important; */
+    margin-bottom: 16px !important;
     position: relative !important;
-    padding-left: 1rem !important;
+  
   }
 
   .toc-link:last-child {
@@ -481,7 +486,7 @@ input[type="range"]::-moz-range-thumb {
   }
 
   .toc-link span {
-    font-size: 0.875rem !important;
+    font-size: 16px !important;
     line-height: 1.25 !important;
   }
 
@@ -489,19 +494,18 @@ input[type="range"]::-moz-range-thumb {
   .lg\:w-3\/4 {
     width: 100% !important;
   }
-
   /* Mobile typography improvements */
-  .blog-content-section {
+ /* .blog-content-section {
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
     margin-bottom: 40px !important;
-  }
+  }  */
 
   /* Mobile content margins */
   main .max-w-\[1200px\] {
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-  }
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+   } 
 
   main .lg\:flex {
     padding-left: 0 !important;
@@ -509,10 +513,7 @@ input[type="range"]::-moz-range-thumb {
   }
 
   /* Mobile blog header content margins */
-  main .lg\:flex>div:first-child {
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-  }
+
 
   /* Mobile category tag and title margins */
   main .tag-product-led-growth {
@@ -523,22 +524,7 @@ input[type="range"]::-moz-range-thumb {
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
   }
-
-  main .lg\:flex p {
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-  }
-
-  /* Feature boxes and content sections consistent margins */
-  .feature-box {
-    margin-left: 0.5rem !important;
-    margin-right: 0.5rem !important;
-  }
-
-  main section {
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-  }
+  
 
   .blog-text {
     font-size: 1rem !important;
@@ -589,7 +575,7 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 
-@media (width >= 1024px) {
+/* @media (width >= 1024px) {
   .mb-py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -599,7 +585,7 @@ input[type="range"]::-moz-range-thumb {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
-}
+} */
 
 @media screen and (width <= 767px) {
   .relative .elem-star-hero {
@@ -631,22 +617,22 @@ input[type="range"]::-moz-range-thumb {
   margin-bottom: 16px;
 }
 
-.blog-content-section {
-  padding-left: 6rem;
-
-  /* lg:pl-24 equivalent */
-  padding-right: 6rem;
-
-  /* lg:pr-24 equivalent */
-  margin-bottom: 40px;
+/* Mobile: do not apply these styles */
+/* Desktop only: apply padding and margin to .blog-content-section */
+@media (min-width: 1025px) {
+  .blog-content-section {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    margin-bottom: 40px;
+  }
 }
 
 /* Responsive adjustments for the content sections */
 @media (width <= 1024px) {
-  .blog-content-section {
+  /* .blog-content-section {
     padding-left: 1rem;
     padding-right: 1rem;
-  }
+  } */
 }
 
 @media (width <= 768px) {
@@ -686,10 +672,10 @@ input[type="range"]::-moz-range-thumb {
 .quote-text .blog-text {
   font-size: 22px;
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 36px;
   letter-spacing: 0;
-  color: #0B373C;
-  font-family: saansFont, sans-serif;
+  color: #171717;
+  font-family: Geist, sans-serif;
   margin-bottom: 0;
 }
 
@@ -736,7 +722,7 @@ input[type="range"]::-moz-range-thumb {
 
 .numbered-item h4 {
   font-size: 18px;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .numbered-item .number {
@@ -749,7 +735,7 @@ input[type="range"]::-moz-range-thumb {
 /* Desktop-specific number alignment */
 @media (width >= 769px) {
   .numbered-item .number {
-    margin-top: 0.05rem;
+    margin-top: 1.75px;
   }
 
   .numbered-item {
@@ -763,8 +749,8 @@ input[type="range"]::-moz-range-thumb {
 
   .numbered-item p,
   .numbered-item .text-sm {
-    font-size: 17px !important;
-    margin-top: 0.5rem !important;
+    font-size: 18px !important;
+    margin-top:8px;
   }
 
   /* Desktop bullet point alignment for larger font size */
@@ -787,7 +773,7 @@ input[type="range"]::-moz-range-thumb {
 
 .item-content h4 {
   font-weight: 600;
-  margin-bottom: 0;
+  margin-bottom: 8px;
   margin-right: 0;
   white-space: normal;
   line-height: 1.4;
@@ -867,7 +853,15 @@ input[type="range"]::-moz-range-thumb {
 
   .numbered-item p,
   .numbered-item .text-sm {
-    font-size: 14px !important;
+    font-size: 18px !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 0.5rem !important;
+    text-indent: 0 !important;
+  }
+
+  .numbered-item-b p{
+    font-size: 15px !important;
     padding-left: 0 !important;
     margin-left: 0 !important;
     margin-top: 0.5rem !important;
@@ -3216,11 +3210,40 @@ img:is([sizes="auto" i], [sizes^="auto," i]) {
   font-weight: 400;
 }
 
+/* Mobile alignment for numbered-item-b - match numbered-item behavior */
+@media (max-width: 768px) {
+  .numbered-item-b .item-content {
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .numbered-item-b .item-content p {
+    text-align: left !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    text-indent: 0 !important;
+  }
+}
+
 /* Desktop responsive */
 @media (min-width: 768px) {
   .blog-filters-scroll {
     justify-content: center;
     flex-wrap: wrap;
     padding: 0;
+  }
+  
+  .numbered-item-b .item-content {
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .numbered-item-b .item-content p {
+    text-align: left !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    text-indent: 0 !important;
+
+    
   }
 }
