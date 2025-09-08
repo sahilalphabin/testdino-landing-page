@@ -693,6 +693,16 @@ body:has(.alternative-hero-section).scrolled .nav-link {
   color: #0B0C0E;
   margin-bottom: 28px;
   margin-top: 48px;
+
+}
+.blog-header-2 {
+  font-size: 28px;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: #0B0C0E;
+  margin-bottom: 28px;
+  margin-top: 48px;
+  margin-left: 22px;
 }
 
 .blog-header-yt {
@@ -702,6 +712,7 @@ body:has(.alternative-hero-section).scrolled .nav-link {
   color: #0B0C0E;
   margin-bottom: 16px;
   margin-top: 170px;
+  margin-left: 22px;
 }
 
 .sub-blog-header {
@@ -730,6 +741,26 @@ body:has(.alternative-hero-section).scrolled .nav-link {
   color: #404040;
   margin-bottom: 16px;
 }
+
+
+.blog-text-2 {
+  font-size: 18px;
+  margin-left: 22px;
+
+  /* text-lg equivalent */
+  line-height: 30px;
+  color: #404040;
+  margin-bottom: 16px;
+}
+.blog-text-3 {
+  font-size: 18px;
+
+  /* text-lg equivalent */
+  line-height: 30px;
+  color: #404040;
+  margin-bottom: 16px;
+}
+
 
 /* Mobile: do not apply these styles */
 /* Desktop only: apply padding and margin to .blog-content-section */
@@ -803,13 +834,23 @@ body:has(.alternative-hero-section).scrolled .nav-link {
 
 /* Feature Box Styles */
 .feature-box {
-  border: 1px solid #E5E5E5;
+  border: 1px solid #e5e7eb;
   border-radius: 0.5rem;
   padding: 1.5rem;
-  background-color: #FAFAFA;
+  background-color: #dbe9fe;
   display: grid;
   gap: 16px;
 }
+
+/* .feature-box-numbered{
+  border: 1px solid #E5E5E5;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  background-color: #fff7e6;
+  display: grid;
+  color: #8e5305 ;
+  gap: 16px;
+} */
 
 /* Bullet Point Item */
 .bullet-item {
@@ -878,7 +919,6 @@ body:has(.alternative-hero-section).scrolled .nav-link {
 
 /* Content styling for both bullet and numbered items */
 .item-content {
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
   flex: 1;
@@ -893,12 +933,20 @@ body:has(.alternative-hero-section).scrolled .nav-link {
   line-height: 1.4;
 }
 
-.item-content p {
+/* .item-content-numbered p {
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  color: #8e5305;
+} */
+.item-content-l p {
   font-size: 18px;
   margin: 0;
   padding: 0;
   line-height: 1.5;
   color: #404040;
+  margin-bottom: 12px !important;
 }
 
 
