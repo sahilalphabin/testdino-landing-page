@@ -909,7 +909,6 @@ body:has(.alternative-hero-section).scrolled .nav-link {
   .numbered-item p,
   .numbered-item .text-sm {
     font-size: 18px !important;
-    margin-top:8px;
   }
 
   /* Desktop bullet point alignment for larger font size */
