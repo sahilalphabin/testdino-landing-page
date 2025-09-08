@@ -702,7 +702,9 @@ body:has(.alternative-hero-section).scrolled .nav-link {
   color: #0B0C0E;
   margin-bottom: 28px;
   margin-top: 48px;
-  margin-left: 22px;
+  @media (min-width: 1025px) {
+    margin-left: 22px;
+  }
 }
 
 .blog-header-yt {
@@ -739,13 +741,15 @@ body:has(.alternative-hero-section).scrolled .nav-link {
   /* text-lg equivalent */
   line-height: 30px;
   color: #404040;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 }
 
 
 .blog-text-2 {
   font-size: 18px;
-  margin-left: 22px;
+  @media (min-width: 1025px) {
+    margin-left: 22px;
+  }
 
   /* text-lg equivalent */
   line-height: 30px;
@@ -2686,11 +2690,10 @@ input[type="range"]::-moz-range-thumb {
   font-weight: 700;
 }
 
-/* CTA Button */
 .nav-cta-button {
   display: none;
   border-radius: 6px;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 8px;
@@ -2700,6 +2703,21 @@ input[type="range"]::-moz-range-thumb {
   text-decoration: none;
   transition: background-color 0.2s ease;
 }
+/* CTA Button */
+.currentVsTestdino-html .nav-cta-button {
+  display: none;
+  border-radius: 6px;
+  background-color: #000000;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #404040;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
 
 @media (min-width: 900px) {
   .nav-cta-button {
@@ -2708,7 +2726,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .nav-cta-button:hover {
-  background-color: #151515;
+  background-color: #000000;
 }
 
 /* Mobile menu button */
@@ -3896,9 +3914,20 @@ img:is([sizes="auto" i], [sizes^="auto," i]) {
   font-family: Geist, sans-serif;
 }
 
-.feature-icon {
+.feature-icon-green {
   width: 19px;
   height: 19px;
+  @media (max-width: 768px) {
+    margin-left: 50px;
+  }
+}
+.feature-icon-red {
+  width: 19px;
+  height: 19px;
+  margin-left:84px;
+  @media (max-width: 768px) {
+    margin-left: 50px;
+  }
 }
 
 .descriptions-section {
@@ -4119,14 +4148,12 @@ img:is([sizes="auto" i], [sizes^="auto," i]) {
 
 .feature-comparison-grid {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 24px;
   margin-bottom: 32px;
 }
 
 @media (min-width: 768px) {
   .feature-comparison-grid {
-    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -4190,11 +4217,17 @@ img:is([sizes="auto" i], [sizes^="auto," i]) {
 .feature-details {
   padding-left: 4px;
   margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: #FAFAFA;
+  gap: 12px;
+  padding: 8px;
 }
 
-.feature-details > div {
-  margin-bottom: 4px;
-}
+/* .feature-details > div {
+margin-bottom: 12px;
+/* } */
+
 
 .feature-label {
   color: #171717;

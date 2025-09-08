@@ -648,7 +648,7 @@ function changeImage(id, el) {
 }
 
 // Video player functionality
-function playVideo(el) {
+function playVideo(el, width='90vw') {
   const videoUrl = el.getAttribute('data-video');
   const imageWrapper = document.getElementById('imageWrapper');
 
@@ -659,7 +659,7 @@ function playVideo(el) {
   
   const videoContainer = document.createElement('div');
   videoContainer.style.position = 'relative';
-  videoContainer.style.width = '90vw';
+  videoContainer.style.width = width;
   videoContainer.style.margin = '0 auto';
   
   const spacer = document.createElement('div');
