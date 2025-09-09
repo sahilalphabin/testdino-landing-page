@@ -1309,6 +1309,25 @@ window.copyCode = function() {
   });
 };
 
+// Copy current URL functionality for blog pages
+window.copyCurrentUrl = function(btn) {
+  const url = window.location.href;
+  const img = btn.querySelector('img');
+  const originalSrc = img.src;
+  
+  navigator.clipboard.writeText(url).then(() => {
+    img.src = 'Testdino Landing Page Images/Pricing/icons/tick.svg';
+    img.alt = 'Copied';
+    
+    setTimeout(() => {
+      img.src = originalSrc;
+      img.alt = 'SVG';
+    }, 1200);
+  }).catch(err => {
+    console.error('Failed to copy URL: ', err);
+  });
+};
+
 // Category navigation highlighting functionality for individual blog pages
 document.addEventListener('DOMContentLoaded', function () {
   const navLinks = document.querySelectorAll('.flex.items-center.gap-\\[24px\\] a');
