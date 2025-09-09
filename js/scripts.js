@@ -1406,12 +1406,18 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// Comparison table toggle functionality for individual blog pages
-document.addEventListener('DOMContentLoaded', function() {
-  const toggleIcons = document.querySelectorAll('.toggle-icon');
+// Reusable comparison table toggle functionality
+function initializeComparisonTable(tableSelector) {
+  const tableContainer = document.querySelector(tableSelector);
+  if (!tableContainer) {
+    console.warn(`Table with selector "${tableSelector}" not found`);
+    return;
+  }
   
-  // Initialize chevron directions based on current state
-  toggleIcons.forEach(icon => {
+  const toggleIcons = tableContainer.querySelectorAll('.toggle-icon');
+  
+  // Initialize: keep first section open, hide all others
+  toggleIcons.forEach((icon, index) => {
     const categoryRow = icon.closest('.category-row');
     const nextRows = [];
     let nextRow = categoryRow.nextElementSibling;
@@ -1421,13 +1427,18 @@ document.addEventListener('DOMContentLoaded', function() {
       nextRow = nextRow.nextElementSibling;
     }
     
-    // Check if table is currently open (sub-features are visible)
-    const isCurrentlyOpen = nextRows[0] && nextRows[0].style.display === 'table-row';
-    
-    // Set initial chevron direction based on current state
-    if (isCurrentlyOpen) {
+    // First section (index 0) stays open, others are hidden
+    if (index === 0) {
+      // Keep first section open
+      nextRows.forEach(row => {
+        row.style.display = 'table-row';
+      });
       icon.style.transform = 'rotate(180deg)'; // Point up when open
     } else {
+      // Hide all other sections
+      nextRows.forEach(row => {
+        row.style.display = 'none';
+      });
       icon.style.transform = 'rotate(0deg)'; // Point down when closed
     }
   });
@@ -1447,7 +1458,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Check if there are sub-features to toggle
       if (nextRows.length > 0) {
         // Has sub-features, toggle them
-        const isExpanded = nextRows[0] && nextRows[0].style.display === 'table-row';
+        const isExpanded = nextRows[0] && nextRows[0].style.display !== 'none';
         
         if (isExpanded) {
           // Currently open, so close it and show down arrow
@@ -1462,17 +1473,15 @@ document.addEventListener('DOMContentLoaded', function() {
           });
           this.style.transform = 'rotate(180deg)'; // Point up when open
         }
-      } else {
-        // No sub-features, just toggle the chevron direction
-        const currentTransform = this.style.transform;
-        if (currentTransform === 'rotate(180deg)' || currentTransform === '') {
-          this.style.transform = 'rotate(0deg)'; // Point down
-        } else {
-          this.style.transform = 'rotate(180deg)'; // Point up
-        }
       }
     });
   });
+}
+
+// Initialize comparison tables for individual blog pages
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize the main comparison table
+  initializeComparisonTable('.comparison-table-container');
 });
 
 // Blog table of contents toggle
