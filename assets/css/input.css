@@ -322,7 +322,7 @@ body:has(.alternative-hero-section).scrolled .nav-link {
 }
 
 /* Mobile Hero Section Styling */
-@media (width <= 767px) {
+@media (width <= 1100px) {
   .hero-section {
     background: linear-gradient(150.3deg, #8E3A53 0%, #00317B 28.28%, #141E26 78.27%) !important;
     position: relative;
@@ -473,7 +473,7 @@ body:has(.alternative-hero-section).scrolled .nav-link {
   }
 }
 
-@media (width <= 1250px) {
+@media (width <= 1100px) {
   /* Blog header section mobile fixes */
   .lg\:flex {
     flex-direction: column !important;
@@ -673,7 +673,7 @@ body:has(.alternative-hero-section).scrolled .nav-link {
   }
 } */
 
-@media screen and (width <= 767px) {
+@media screen and (width <= 1100px) {
   .relative .elem-star-hero {
     right: 0;
     top: -62px;
@@ -1997,7 +1997,7 @@ input[type="radio"]:checked {
   }
 }
 
-@media (width <= 767px) {
+@media (width <= 1100px) {
   .ai-features-container {
     width: 100%;
 
@@ -2263,7 +2263,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* Mobile responsive utilities */
-@media (width <= 767px) {
+@media (width <= 1100px) {
   .comparison-table__cell {
     padding: 0.75rem;
     width: 100% !important;
@@ -2398,7 +2398,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* Mobile column visibility controls */
-@media (width <= 767px) {
+@media (width <= 1100px) {
   /* Hide all columns by default on mobile */
   .comparison-table__cell[data-tier] {
     display: none;
@@ -4510,6 +4510,11 @@ margin-bottom: 12px;
 /* CTA Banner 1 - Medium Desktop (1000px to 1280px) */
 @media (min-width: 1000px) and (max-width: 1280px) {
 
+  .comaprison-table {
+    width: 100% !important;
+    max-width: 1000px !important;
+    margin-left: 0 !important;
+  }
 
   .blog-content-section {
     justify-content: center !important;
@@ -4517,13 +4522,16 @@ margin-bottom: 12px;
   .blog-content-section img {
     justify-content: center !important;
     max-width: 900px !important;
-    margin-left: 10vw !important;
+    margin: 0px !important;
+    margin-left: -8vw !important;
+    margin-bottom: 5vw !important;
+    scale: 0.8 !important;
   }
 
   .cta-banner-1 {
     width: 100% !important;
     max-width: 900px !important;
-    margin-left: 10vw !important;
+    margin-left: 3vw !important;
     margin-right: 0 !important;
   }
   
