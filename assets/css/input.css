@@ -4519,19 +4519,19 @@ margin-bottom: 12px;
   .blog-content-section {
     justify-content: center !important;
   }
-  .blog-content-section img {
+  /* .blog-content-section img {
     justify-content: center !important;
     max-width: 900px !important;
     margin: 0px !important;
     margin-left: -8vw !important;
     margin-bottom: 5vw !important;
     scale: 0.8 !important;
-  }
+  } */
 
   .cta-banner-1 {
     width: 100% !important;
     max-width: 900px !important;
-    margin-left: 3vw !important;
+    margin-left: 10vw !important;
     margin-right: 0 !important;
   }
   
