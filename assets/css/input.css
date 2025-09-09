@@ -702,9 +702,7 @@ body:has(.alternative-hero-section).scrolled .nav-link {
   color: #0B0C0E;
   margin-bottom: 28px;
   margin-top: 48px;
-  @media (min-width: 1025px) {
-    margin-left: 22px;
-  }
+  margin-left: 0px;
 }
 
 .blog-header-yt {
@@ -723,7 +721,7 @@ body:has(.alternative-hero-section).scrolled .nav-link {
   font-weight: 700;
   color: #0B0C0E;
   margin-bottom: 28px;
-  margin-top: 48px;
+  margin-top: 28px;
 }
 
 @media (max-width: 768px) {
