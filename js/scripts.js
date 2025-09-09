@@ -1314,17 +1314,19 @@ window.copyCurrentUrl = function(btn) {
   const url = window.location.href;
   const img = btn.querySelector('img');
   const originalSrc = img.src;
-  const originalScale = img.style.scale || '';
+  // const originalScale = img.style.scale || '';
   
   navigator.clipboard.writeText(url).then(() => {
     img.src = 'Testdino Landing Page Images/Pricing/icons/tick.svg';
     img.alt = 'Copied';
-    img.style.scale = '0.8';
+    img.style.width = '24px';
+    img.style.height = '24px';
     
     setTimeout(() => {
       img.src = originalSrc;
       img.alt = 'SVG';
-      img.style.scale = originalScale;
+      img.style.width = '';
+      img.style.height = '';
     }, 1200);
   }).catch(err => {
     console.error('Failed to copy URL: ', err);
