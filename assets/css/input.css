@@ -475,9 +475,17 @@ body:has(.alternative-hero-section).scrolled .nav-link {
   .relative .elem-star-hero {
     right: -2%;
   }
+  .blog-header-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .blog-header-section-image {
+    scale: 0.9 !important;
+  }
 }
 
-@media (width <= 1100px) {
+@media (width <= 1000px) {
   /* Blog header section mobile fixes */
   .lg\:flex {
     flex-direction: column !important;
