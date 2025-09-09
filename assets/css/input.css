@@ -4506,6 +4506,79 @@ margin-bottom: 12px;
 }
 
 /* ==============================================
+    RESPONSIVE STYLES - 1000px to 1280px
+   ============================================== */
+
+/* CTA Banner 1 - Medium Desktop (1000px to 1280px) */
+@media (min-width: 1000px) and (max-width: 1280px) {
+
+
+  .blog-content-section {
+    justify-content: center !important;
+  }
+  .blog-content-section img {
+    justify-content: center !important;
+    max-width: 900px !important;
+    margin-left: 10vw !important;
+  }
+
+  .cta-banner-1 {
+    width: 100% !important;
+    max-width: 900px !important;
+    margin-left: 10vw !important;
+    margin-right: 0 !important;
+  }
+  
+  .cta-banner-1 .cta-content {
+    padding: 1.5rem 2rem !important;
+    height: auto !important;
+    min-height: 140px !important;
+  }
+  
+  .cta-banner-1 .cta-text-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  
+  .cta-banner-1 .cta-title {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 12px !important;
+    font-weight: 600 !important;
+  }
+  
+  .cta-banner-1 .cta-features {
+    flex-direction: row !important;
+    gap: 1.5rem !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .cta-banner-1 .cta-feature-item {
+    margin-bottom: 0 !important;
+  }
+  
+  .cta-banner-1 .cta-feature-text {
+    font-size: 14px !important;
+  }
+  
+  .cta-banner-1 .cta-dino-image {
+    right: 100px !important;
+    top: 60px !important;
+    scale: 7 !important;
+  }
+  
+  .cta-banner-1 .cta-button {
+    position: absolute !important;
+    right: 2rem !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: auto !important;
+    padding: 0.5rem 1.5rem !important;
+  }
+}
+
+/* ==============================================
    DETAILED COMPARISON TABLE SECTION
    ============================================== */
 
